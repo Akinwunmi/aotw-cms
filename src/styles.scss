@@ -14,6 +14,12 @@ body {
   background-color: var(--aotw-color-grey-200);
   color: var(--aotw-color-primary-400);
   font-family: var(--aotw-font-family-primary);
+  transition: background-color 150ms ease-in-out;
+
+  &.create {
+    background-color: var(--aotw-color-primary-400);
+    color: var(--aotw-color-white);
+  }
 }
 
 h1,
@@ -25,4 +31,5 @@ h6 {
   font-weight: var(--aotw-font-weight-medium);
   font-size: var(--aotw-font-size-l);
   line-height: var(--aotw-font-line-height-s);
+  margin: 0;
 }

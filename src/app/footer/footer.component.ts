@@ -17,6 +17,7 @@ export class FooterComponent implements OnInit {
   public sitemap!: SitemapItem[];
 
   public ngOnInit(): void {
+    routes.shift();
     this.sitemap = routes.map(({ path, title }) => ({
       path: path || '',
       title: title as string

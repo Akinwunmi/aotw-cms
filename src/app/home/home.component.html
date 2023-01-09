@@ -1,6 +1,35 @@
-<aotw-tab-group>
-  <aotw-tab>Search</aotw-tab>
-  <aotw-tab>Discover</aotw-tab>
-</aotw-tab-group>
-<button ghost (click)="goToCreate()"><aotw-icon name="add" size="medium"></aotw-icon></button>
-<router-outlet></router-outlet>
+<header>
+  <h2>Archives</h2>
+</header>
+<button type="button" ghost (click)="goToCreate()">
+  New archive
+  <aotw-icon name="add" size="medium"></aotw-icon>
+</button>
+<section>
+  <div class="filters">
+    <button ghost>
+      Search
+      <aotw-icon name="search" size="medium"></aotw-icon>
+    </button>
+    <button ghost>
+      Sort
+      <aotw-icon name="sort" size="medium"></aotw-icon>
+    </button>
+    <button ghost>
+      Filters
+      <aotw-icon name="filter" size="medium"></aotw-icon>
+    </button>
+    <aotw-chip-group>
+      <aotw-chip size="medium" active><aotw-icon name="grid" size="extra-large"></aotw-icon></aotw-chip>
+      <aotw-chip size="medium"><aotw-icon name="list" size="extra-large"></aotw-icon></aotw-chip>
+    </aotw-chip-group>
+  </div>
+  <div class="archives">
+    <div *ngFor="let archive of archives" class="card" (click)="goToArchive()">
+      <div class="card-header">
+        <img src="https://unsplash.it/600/400" alt="Placeholder image">
+        {{ archive }}
+      </div>
+    </div>
+  </div>
+</section>

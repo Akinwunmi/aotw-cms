@@ -6,8 +6,10 @@
   padding: var(--aotw-space-l);
 }
 
-header {
-  align-items: center;
-  display: grid;
-  height: var(--aotw-height-l);
+aotw-tab-group {
+  padding-top: var(--aotw-space-s);
+
+  aotw-tab {
+    box-sizing: content-box;
+  }
 }

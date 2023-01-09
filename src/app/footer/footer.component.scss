@@ -3,7 +3,7 @@
   color: var(--aotw-color-grey-300);
   display: grid;
   gap: var(--aotw-space-l);
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr;
   height: calc(var(--aotw-height-xl) * 3);
   padding: var(--aotw-space-s);
 }

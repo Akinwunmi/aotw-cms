@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostBinding, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import '@aotw/components';
 import { Router } from '@angular/router';
@@ -12,6 +12,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @HostBinding('class.create')
+  @Input()
+  public createMode = false;
+
   constructor(private router: Router) {}
 
   public goToHome(): void {

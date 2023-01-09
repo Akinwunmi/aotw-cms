@@ -72,6 +72,16 @@ export const icons: Icon[] = [
   },
   {
     data: `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
+        <title>Edit Icon</title>
+        <path d="M8 1L17 1L17 17L1 17L1 8L3 8L3 15L15 15L15 3L8 3Z" fill="currentColor" />
+        <path d="M0 3L3 0L11 8L13 13L8 11Z" fill="currentColor" />
+      </svg>
+    `,
+    name: 'edit'
+  },
+  {
+    data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
         <line x1="9" y1="19" x2="22" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
         <line x1="2" y1="19" x2="5" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
@@ -82,7 +92,7 @@ export const icons: Icon[] = [
         <circle cx="7" cy="5" r="2" stroke="currentColor" stroke-width="2"/>
         <line x1="9" y1="5" x2="22" y2="5" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
         <line x1="2" y1="5" x2="5" y2="5" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-      </svg>  
+      </svg>
     `,
     name: 'filter'
   },
@@ -130,12 +140,22 @@ export const icons: Icon[] = [
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
         <title>Menu Icon</title>
-        <rect x="1.25" y="2.75" width="15.5" height="2.5" fill="currentColor" />
-        <rect x="1.25" y="7.75" width="15.5" height="2.5" fill="currentColor" />
-        <rect x="1.25" y="12.75" width="15.5" height="2.5" fill="currentColor" />
+        <rect x="1" y="3" width="16" height="2" fill="currentColor" />
+        <rect x="1" y="8" width="16" height="2" fill="currentColor" />
+        <rect x="1" y="13" width="16" height="2" fill="currentColor" />
       </svg>  
     `,
     name: 'menu'
+  },
+  {
+    data: `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
+        <title>Search Icon</title>
+        <circle cx="6.75" cy="6.75" r="5" stroke="currentColor" stroke-width="2" />
+        <path d="M9 11L11 9L17 15L15 17Z" fill="currentColor" />
+      </svg>  
+    `,
+    name: 'search'
   },
   {
     data: `
@@ -153,5 +173,15 @@ export const icons: Icon[] = [
       </svg>
     `,
     name: 'shine'
+  },
+  {
+    data: `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+        <line x1="2" y1="5" x2="22" y2="5" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+        <line x1="2" y1="12" x2="15" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+        <line x1="2" y1="19" x2="8" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+      </svg>
+    `,
+    name: 'sort'
   }
 ];

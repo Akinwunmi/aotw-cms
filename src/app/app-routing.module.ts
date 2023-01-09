@@ -10,12 +10,17 @@ export const routes: Routes = [
   {
     path: 'home',
     title: 'Home',
-    loadChildren: () => import('./home/home.routes').then(m => m.HOME_ROUTES)
+    loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'archive',
+    title: 'Archive',
+    loadChildren: () => import('./archive/archive.routes').then(m => m.ARCHIVE_ROUTES)
   },
   {
     path: 'create',
-    loadComponent: () => import('./create/create.component').then(m => m.CreateComponent),
-    title: 'Create'
+    title: 'Create',
+    loadComponent: () => import('./create/create.component').then(m => m.CreateComponent)
   }
 ];
 

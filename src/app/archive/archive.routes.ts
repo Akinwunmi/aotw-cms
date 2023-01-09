@@ -1,13 +1,13 @@
 import { Route } from '@angular/router';
 
 import { SearchComponent } from '../search';
-import { HomeComponent } from './home.component';
+import { ArchiveComponent } from './archive.component';
 
-export const HOME_ROUTES: Route[] = [
+export const ARCHIVE_ROUTES: Route[] = [
   {
     path: '',
-    component: HomeComponent,
-    title: 'Home',
+    component: ArchiveComponent,
+    title: 'Archive',
     children: [
       {
         path: '',
