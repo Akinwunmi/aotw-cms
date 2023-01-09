@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: var(--aotw-space-s);
+  max-width: 100%;
+  min-width: 15rem;
+  padding-inline: var(--aotw-space-s);
+}

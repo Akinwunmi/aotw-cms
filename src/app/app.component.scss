@@ -1,0 +1,15 @@
+:host {
+  height: 100%;
+}
+
+app-header {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+main {
+  min-height: calc(100% - var(--aotw-height-m) - var(--aotw-height-xl) * 3);
+  margin-top: var(--aotw-height-m);
+}
