@@ -3,7 +3,7 @@
   display: grid;
   gap: var(--aotw-space-l);
   grid-template-columns: 1fr auto;
-  padding: var(--aotw-space-l);
+  padding-block: var(--aotw-space-l);
 }
 
 aotw-tab-group {
@@ -12,4 +12,12 @@ aotw-tab-group {
   aotw-tab {
     box-sizing: content-box;
   }
+}
+
+button {
+  margin-right: var(--aotw-space-s);
+}
+
+.main {
+  grid-column: 1 / -1;
 }

@@ -1,0 +1,25 @@
+.header {
+  border-bottom: 2px solid var(--aotw-color-white);
+  color: var(--aotw-color-white);
+  display: grid;
+  font-weight: var(--aotw-font-weight-regular);
+  gap: var(--aotw-space-xs);
+  padding-bottom: var(--aotw-space-m);
+  padding-inline: var(--aotw-space-s);
+
+  h2 {
+    font-size: var(--aotw-font-size-s);
+    line-height: var(--aotw-font-line-height-s);
+    text-transform: uppercase;
+  }
+
+  ul {
+    display: grid;
+    font-size: var(--aotw-font-size-m);
+    grid-template-columns: repeat(2, 1fr);
+    line-height: var(--aotw-font-line-height-m);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
