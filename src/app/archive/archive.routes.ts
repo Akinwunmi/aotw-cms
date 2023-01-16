@@ -13,7 +13,7 @@ export const ARCHIVE_ROUTES: Route[] = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'search'
+        redirectTo: 'discover'
       },
       {
         path: 'search',

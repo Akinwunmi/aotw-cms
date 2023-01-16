@@ -1,11 +1,16 @@
 <aotw-tab-group [activeTab]="activeTab">
-  <aotw-tab (click)="goToPage('archive/search')">Search</aotw-tab>
-  <aotw-tab (click)="goToPage('archive/discover')">Discover</aotw-tab>
+  <aotw-tab
+    *ngFor="let tab of tabs"
+    [attr.disabled]="tab.disabled || undefined"
+    (click)="goToPage('archive/' + tab.name)"
+  >
+    {{ tab.label }}
+  </aotw-tab>
 </aotw-tab-group>
 <button type="button" ghost (click)="goToPage('create')">
   Edit archive
   <aotw-icon name="edit" size="medium"></aotw-icon>
 </button>
-<div>
+<div class="main">
   <router-outlet></router-outlet>
 </div>
