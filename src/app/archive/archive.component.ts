@@ -1,7 +1,9 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
-import { Subject } from 'rxjs';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { filter, map, Subject } from 'rxjs';
+
+import { Tab } from './archive.model';
 
 @Component({
   selector: 'app-archive',
@@ -12,6 +14,10 @@ import { Subject } from 'rxjs';
   styleUrls: ['./archive.component.scss']
 })
 export class ArchiveComponent implements OnDestroy, OnInit {
+  public tabs: Tab[] = [
+    { id: 0, name: 'search', label: 'Search', disabled: false },
+    { id: 1, name: 'discover', label: 'Discover', disabled: false }
+  ];
   public activeTab = 0;
 
   private destroy$ = new Subject<void>();
@@ -19,17 +25,24 @@ export class ArchiveComponent implements OnDestroy, OnInit {
   constructor(private router: Router) {}
 
   public ngOnInit(): void {
-    const childPage = this.router.url.split('/')[2];
-    if (childPage === 'search') {
-      this.activeTab = 0;
-    }
-    if (childPage === 'discover') {
-      this.activeTab = 1;
-    }
+    this.setActiveTab(this.router.url);
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+      map(event => event as NavigationEnd)
+    ).subscribe(({ url }) => {
+      this.setActiveTab(url);
+    })
   }
 
   public goToPage(path: string): void {
     this.router.navigate([path]);
+  }
+
+  private setActiveTab(url: string): void {
+    const tabFound = this.tabs.find(tab => tab.name === url.split('/')[2]);
+    if (tabFound) {
+      this.activeTab = tabFound.id;
+    }
   }
 
   public ngOnDestroy(): void {
