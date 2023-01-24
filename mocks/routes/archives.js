@@ -6,55 +6,73 @@
 const ARCHIVES = [
   {
     id: 1,
-    name: 'Basketball'
+    name: 'Flags',
+    reference: 'flags'
   },
   {
     id: 2,
-    name: 'Birds'
+    name: 'Football',
+    reference: 'football'
   },
   {
     id: 3,
-    name: 'Books'
+    name: 'Birds',
+    reference: 'birds'
   },
   {
     id: 4,
-    name: 'Cats'
+    name: 'Basketball',
+    reference: 'basketball'
   },
   {
     id: 5,
-    name: 'Coats of Arms'
+    name: 'License Plates',
+    reference: 'license-plates'
   },
   {
     id: 6,
-    name: 'Countries'
+    name: 'Pokémon',
+    reference: 'pokemon'
   },
   {
     id: 7,
-    name: 'Dogs'
+    name: 'Coats of Arms',
+    reference: 'coats-of-arms'
   },
   {
     id: 8,
-    name: 'Flags'
+    name: 'Pokémon TCG',
+    reference: 'pokemon-tcg'
   },
   {
     id: 9,
-    name: 'Football'
+    name: 'Countries',
+    reference: 'countries'
   },
   {
     id: 10,
-    name: 'License Plates'
+    name: 'Cars',
+    reference: 'cars'
   },
   {
     id: 11,
-    name: 'Music Artists'
+    name: 'Books',
+    reference: 'books'
   },
   {
     id: 12,
-    name: 'Pokémon'
+    name: 'Cats',
+    reference: 'cats'
   },
   {
     id: 13,
-    name: 'Pokémon TCG'
+    name: 'Music Artists',
+    reference: 'music-artists'
+  },
+  {
+    id: 14,
+    name: 'Dogs',
+    reference: 'dogs'
   }
 ];
 

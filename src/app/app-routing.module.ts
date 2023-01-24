@@ -13,7 +13,7 @@ export const routes: Routes = [
     loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
   },
   {
-    path: 'archive',
+    path: 'archive/:id',
     title: 'Archive',
     loadChildren: () => import('./archive/archive.routes').then(m => m.ARCHIVE_ROUTES)
   },

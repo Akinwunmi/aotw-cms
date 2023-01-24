@@ -7,11 +7,12 @@
 </button>
 <section>
   <div class="filters">
-    <button ghost>
+    <button ghost (click)="toggleSearchBar()">
       Search
       <aotw-icon name="search" size="medium"></aotw-icon>
     </button>
-    <button ghost>
+    <!-- TODO Add dropdown with overlay w/ multiple sorting options -->
+    <button ghost (click)="setFilter('a-z')">
       Sort
       <aotw-icon name="sort" size="medium"></aotw-icon>
     </button>
@@ -20,15 +21,17 @@
       <aotw-icon name="filter" size="medium"></aotw-icon>
     </button>
     <aotw-chip-group>
-      <aotw-chip size="medium" active><aotw-icon name="grid" size="extra-large"></aotw-icon></aotw-chip>
-      <aotw-chip size="medium"><aotw-icon name="list" size="extra-large"></aotw-icon></aotw-chip>
+      <aotw-chip *ngFor="let view of viewFilter" size="medium" [attr.active]="view.active || undefined" (click)="setView(view.name)">
+        <aotw-icon [name]="view.name" size="extra-large"></aotw-icon>
+      </aotw-chip>
     </aotw-chip-group>
   </div>
-  <div class="archives">
-    <div *ngFor="let archive of archives" class="card" (click)="goToArchive()">
+  <input *ngIf="showSearchBar" aotw-input />
+  <div class="archives" [ngClass]="{ 'list': activeView === 'list' }">
+    <div *ngFor="let archive of filteredArchives" class="card" (click)="goToArchive(archive.reference)">
       <div class="card-header">
         <img src="https://unsplash.it/600/400" alt="Placeholder image">
-        {{ archive }}
+        {{ archive.name }}
       </div>
     </div>
   </div>

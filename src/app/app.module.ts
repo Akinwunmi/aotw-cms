@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import '@aotw/components';
@@ -18,6 +19,7 @@ import { HeaderComponent } from './header';
     BrowserModule,
     FooterComponent,
     HeaderComponent,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

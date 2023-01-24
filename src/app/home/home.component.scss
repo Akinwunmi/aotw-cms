@@ -45,5 +45,16 @@ section {
         }
       }
     }
+
+    &.list {
+      grid-template-columns: repeat(3, 1fr);
+
+      .card {
+        &-header {
+          gap: var(--aotw-space-s);
+          grid-template-columns: 2rem 1fr;
+        }
+      }
+    }
   }
 }

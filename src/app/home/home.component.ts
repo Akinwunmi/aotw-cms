@@ -1,8 +1,8 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
-import { archives } from './home.mock';
+import { Archive, ArchiveService } from '../services/archive';
 
 @Component({
   selector: 'app-home',
@@ -12,16 +12,72 @@ import { archives } from './home.mock';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-  public archives = archives;
+export class HomeComponent implements OnInit {
+  private archives!: Archive[];
+  public filteredArchives!: Archive[];
 
-  constructor(private router: Router) {}
+  private activeFilters: string[] = [];
+  public showSearchBar = false;
 
-  public goToArchive(): void {
-    this.router.navigate(['archive']);
+  public viewFilter: { name: 'grid' | 'list'; active: boolean }[] = [
+    { name: 'grid', active: true },
+    { name: 'list', active: false }
+  ];
+  public activeView: 'grid' | 'list' = 'grid';
+
+
+  constructor(private archiveService: ArchiveService, private router: Router) {}
+
+  public ngOnInit(): void {
+    this.archiveService.getArchives().subscribe(archives => {
+      this.archives = archives;
+      this.filteredArchives = this.archives;
+    })
+  }
+
+  public goToArchive(name: string): void {
+    this.router.navigate(['archive/' + name]);
   }
 
   public goToCreate(): void {
     this.router.navigate(['create']);
+  }
+
+  // TODO Convert to generic filter service or util
+  public setFilter(type: string): void {
+    if (this.activeFilters.includes(type)) {
+      this.filteredArchives = this.archives;
+      this.activeFilters = this.activeFilters.filter(activeFilter => activeFilter !== type);
+    } else {
+      this.activeFilters = [...this.activeFilters, type];
+      if (type === 'a-z') {
+        this.filteredArchives = [...this.archives].sort((a, b) => {
+          const nameA = a.name.toLowerCase();
+          const nameB = b.name.toLowerCase();
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+  
+          return 0;
+        });
+      }
+    }
+  }
+
+  public setView(name: 'grid' | 'list'): void {
+    this.viewFilter.forEach(view => {
+      view.active = false;
+      if (view.name === name) {
+        view.active = true;
+      }
+    });
+    this.activeView = name;
+  }
+
+  public toggleSearchBar(): void {
+    this.showSearchBar = !this.showSearchBar;
   }
 }
