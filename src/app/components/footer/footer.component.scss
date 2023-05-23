@@ -4,7 +4,7 @@
   display: grid;
   gap: var(--aotw-space-l);
   grid-template-rows: auto 1fr;
-  height: calc(var(--aotw-height-xl) * 3);
+  height: calc(var(--aotw-size-xl) * 3);
   padding: var(--aotw-space-s);
 }
 

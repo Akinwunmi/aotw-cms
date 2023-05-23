@@ -2,7 +2,7 @@
   <aotw-tab
     *ngFor="let tab of tabs"
     [attr.disabled]="tab.disabled || undefined"
-    (click)="goToPage('archive/' + tab.name)"
+    (click)="goToPage(tab.name)"
   >
     {{ tab.label }}
   </aotw-tab>

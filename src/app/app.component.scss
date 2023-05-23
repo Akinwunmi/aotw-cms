@@ -1,7 +1,7 @@
 :host {
   display: block;
-  height: calc(100% - var(--aotw-height-m));
-  margin-top: var(--aotw-height-m);
+  height: calc(100% - var(--aotw-size-m));
+  margin-top: var(--aotw-size-m);
 }
 
 app-header {
@@ -13,6 +13,6 @@ app-header {
 }
 
 main {
-  min-height: calc(100% - var(--aotw-height-xl) * 3);
+  min-height: calc(100% - var(--aotw-size-xl) * 3);
   z-index: 1;
 }

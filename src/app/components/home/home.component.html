@@ -25,10 +25,10 @@
     </aotw-chip-group>
   </div>
   <div class="archives">
-    <div *ngFor="let archive of archives" class="card" (click)="goToArchive()">
+    <div *ngFor="let archive of archives" class="card" (click)="goToArchive(archive.id)">
       <div class="card-header">
-        <img src="https://unsplash.it/600/400" alt="Placeholder image">
-        {{ archive }}
+        <img [src]="archive.image.src" [alt]="archive.image.alt">
+        {{ archive.name }}
       </div>
     </div>
   </div>

@@ -2,12 +2,11 @@
   align-items: center;
   display: grid;
   gap: var(--aotw-space-l);
-  grid-template-columns: 1fr auto;
   padding: var(--aotw-space-l);
 }
 
 header {
   align-items: center;
   display: grid;
-  height: var(--aotw-height-l);
+  height: var(--aotw-size-l);
 }

@@ -1,12 +1,11 @@
 import { Route } from '@angular/router';
 
-import { DiscoverComponent } from '../discover';
 import { SearchComponent } from '../search';
 import { ArchiveComponent } from './archive.component';
 
 export const ARCHIVE_ROUTES: Route[] = [
   {
-    path: '',
+    path: ':id',
     component: ArchiveComponent,
     title: 'Archive',
     children: [
@@ -22,7 +21,7 @@ export const ARCHIVE_ROUTES: Route[] = [
       },
       {
         path: 'discover',
-        component: DiscoverComponent,
+        loadChildren: () => import('../discover/discover.routes').then(m => m.DISCOVER_ROUTES),
         title: 'Discover'
       }
     ]
