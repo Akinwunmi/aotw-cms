@@ -7,36 +7,1845 @@
       "name": "Continents"
     },
     {
-      "id": "0-a",
+      "id": "0-af",
       "name": "Africa"
     },
     {
-      "id": "0-a-a",
+      "id": "0-af-dza",
       "name": "Algeria"
     },
     {
-      "id": "0-a-b",
+      "id": "0-af-ago",
       "name": "Angola"
     },
     {
-      "id": "0-b",
+      "id": "0-af-ben",
+      "name": "Benin"
+    },
+    {
+      "id": "0-af-bwa",
+      "name": "Botswana"
+    },
+    {
+      "id": "0-af-bfa",
+      "name": "Burkina Faso"
+    },
+    {
+      "id": "0-af-bdi",
+      "name": "Burundi"
+    },
+    {
+      "id": "0-af-cmr",
+      "name": "Cameroon"
+    },
+    {
+      "id": "0-af-",
+      "name": "Canary Islands",
+      "flag": true
+    },
+    {
+      "id": "0-af-cpv",
+      "name": "Cape Verde"
+    },
+    {
+      "id": "0-af-caf",
+      "name": "Central African Republic"
+    },
+    {
+      "id": "0-af-ceu",
+      "name": "Ceuta",
+      "flag": true
+    },
+    {
+      "id": "0-af-tcd",
+      "name": "Chad"
+    },
+    {
+      "id": "0-af-com",
+      "name": "Comoros, the"
+    },
+    {
+      "id": "0-af-com-anjo",
+      "name": "Anjouan"
+    },
+    {
+      "id": "0-af-com-gran",
+      "name": "Grande Comore"
+    },
+    {
+      "id": "0-af-com-mohe",
+      "name": "Mohéli"
+    },
+    {
+      "id": "0-af-cod",
+      "name": "Congo, Democratic Republic of the"
+    },
+    {
+      "id": "0-af-cog",
+      "name": "Congo, Republic of the"
+    },
+    {
+      "id": "0-af-dji",
+      "name": "Djibouti"
+    },
+    {
+      "id": "0-af-egy",
+      "name": "Egypt"
+    },
+    {
+      "id": "0-af-gnq",
+      "name": "Equatorial Guinea"
+    },
+    {
+      "id": "0-af-eri",
+      "name": "Eritrea"
+    },
+    {
+      "id": "0-af-swz",
+      "name": "Eswatini"
+    },
+    {
+      "id": "0-af-eth",
+      "name": "Ethiopia"
+    },
+    {
+      "id": "0-af-eth-afar",
+      "name": "Afar"
+    },
+    {
+      "id": "0-af-eth-amha",
+      "name": "Amhara"
+    },
+    {
+      "id": "0-af-eth-begu",
+      "name": "Benishangul-Gumuz"
+    },
+    {
+      "id": "0-af-eth-gamb",
+      "name": "Gambella"
+    },
+    {
+      "id": "0-af-eth-hara",
+      "name": "Harari"
+    },
+    {
+      "id": "0-af-eth-orom",
+      "name": "Oromia"
+    },
+    {
+      "id": "0-af-eth-sida",
+      "name": "Sidama"
+    },
+    {
+      "id": "0-af-eth-soma",
+      "name": "Somali"
+    },
+    {
+      "id": "0-af-eth-snnp",
+      "name": "Southern Nations, Nationalities, and Peoples' Region"
+    },
+    {
+      "id": "0-af-eth-tigr",
+      "name": "Tigray"
+    },
+    {
+      "id": "0-af-atf",
+      "name": "French Southern and Antarctic Lands"
+    },
+    {
+      "id": "0-af-gab",
+      "name": "Gabon"
+    },
+    {
+      "id": "0-af-gmb",
+      "name": "Gambia, the"
+    },
+    {
+      "id": "0-af-gha",
+      "name": "Ghana"
+    },
+    {
+      "id": "0-af-gin",
+      "name": "Guinea"
+    },
+    {
+      "id": "0-af-gnb",
+      "name": "Guinea-Bissau"
+    },
+    {
+      "id": "0-af-civ",
+      "name": "Ivory Coast"
+    },
+    {
+      "id": "0-af-ken",
+      "name": "Kenya"
+    },
+    {
+      "id": "0-af-lso",
+      "name": "Lesotho"
+    },
+    {
+      "id": "0-af-lbr",
+      "name": "Liberia"
+    },
+    {
+      "id": "0-af-lby",
+      "name": "Libya"
+    },
+    {
+      "id": "0-af-mdg",
+      "name": "Madagascar"
+    },
+    {
+      "id": "0-af-mad",
+      "name": "Madeira"
+    },
+    {
+      "id": "0-af-mwi",
+      "name": "Malawi"
+    },
+    {
+      "id": "0-af-mli",
+      "name": "Mali"
+    },
+    {
+      "id": "0-af-mrt",
+      "name": "Mauritania"
+    },
+    {
+      "id": "0-af-mus",
+      "name": "Mauritius"
+    },
+    {
+      "id": "0-af-myt",
+      "name": "Mayotte"
+    },
+    {
+      "id": "0-af-mel",
+      "name": "Melilla"
+    },
+    {
+      "id": "0-af-mar",
+      "name": "Morocco"
+    },
+    {
+      "id": "0-af-moz",
+      "name": "Mozambique"
+    },
+    {
+      "id": "0-af-nam",
+      "name": "Namibia"
+    },
+    {
+      "id": "0-af-ner",
+      "name": "Niger"
+    },
+    {
+      "id": "0-af-nga",
+      "name": "Nigeria"
+    },
+    {
+      "id": "0-af-reu",
+      "name": "Réunion"
+    },
+    {
+      "id": "0-af-rwa",
+      "name": "Rwanda"
+    },
+    {
+      "id": "0-af-sah",
+      "name": "Sahrawi Arab Democratic Republic"
+    },
+    {
+      "id": "0-af-shn",
+      "name": "Saint Helena, Ascension and Tristan da Cunha"
+    },
+    {
+      "id": "0-af-shn-asce",
+      "name": "Ascension Island"
+    },
+    {
+      "id": "0-af-shn-sain",
+      "name": "Saint Helena"
+    },
+    {
+      "id": "0-af-shn-tris",
+      "name": "Tristan da Cunha"
+    },
+    {
+      "id": "0-af-stp",
+      "name": "São Tomé and Príncipe"
+    },
+    {
+      "id": "0-af-sen",
+      "name": "Senegal"
+    },
+    {
+      "id": "0-af-syc",
+      "name": "Seychelles"
+    },
+    {
+      "id": "0-af-sle",
+      "name": "Sierra Leone"
+    },
+    {
+      "id": "0-af-som",
+      "name": "Somalia"
+    },
+    {
+      "id": "0-af-sml",
+      "name": "Somaliland"
+    },
+    {
+      "id": "0-af-zaf",
+      "name": "South Africa"
+    },
+    {
+      "id": "0-af-ssd",
+      "name": "South Sudan"
+    },
+    {
+      "id": "0-af-sdn",
+      "name": "Sudan"
+    },
+    {
+      "id": "0-af-tza",
+      "name": "Tanzania"
+    },
+    {
+      "id": "0-af-tgo",
+      "name": "Togo"
+    },
+    {
+      "id": "0-af-tun",
+      "name": "Tunisia"
+    },
+    {
+      "id": "0-af-uga",
+      "name": "Uganda"
+    },
+    {
+      "id": "0-af-zmb",
+      "name": "Zambia"
+    },
+    {
+      "id": "0-af-zwe",
+      "name": "Zimbabwe"
+    },
+    {
+      "id": "0-as",
       "name": "Asia"
     },
     {
-      "id": "0-c",
+      "id": "0-as-afg",
+      "name": "Afghanistan"
+    },
+    {
+      "id": "0-as-arm",
+      "name": "Armenia"
+    },
+    {
+      "id": "0-as-aze",
+      "name": "Azerbaijan"
+    },
+    {
+      "id": "0-as-bhr",
+      "name": "Bahrain"
+    },
+    {
+      "id": "0-as-bgd",
+      "name": "Bangladesh"
+    },
+    {
+      "id": "0-as-btn",
+      "name": "Bhutan"
+    },
+    {
+      "id": "0-as-brn",
+      "name": "Brunei Darussalam"
+    },
+    {
+      "id": "0-as-khm",
+      "name": "Cambodia"
+    },
+    {
+      "id": "0-as-chn",
+      "name": "China"
+    },
+    {
+      "id": "0-as-cyp",
+      "name": "Cyprus"
+    },
+    {
+      "id": "0-as-tls",
+      "name": "East Timor"
+    },
+    {
+      "id": "0-as-geo",
+      "name": "Georgia"
+    },
+    {
+      "id": "0-as-ind",
+      "name": "India"
+    },
+    {
+      "id": "0-as-idn",
+      "name": "Indonesia"
+    },
+    {
+      "id": "0-as-irn",
+      "name": "Iran"
+    },
+    {
+      "id": "0-as-irq",
+      "name": "Iraq"
+    },
+    {
+      "id": "0-as-isr",
+      "name": "Israel"
+    },
+    {
+      "id": "0-as-jap",
+      "name": "Japan"
+    },
+    {
+      "id": "0-as-jor",
+      "name": "Jordan"
+    },
+    {
+      "id": "0-as-kaz",
+      "name": "Kazakhstan"
+    },
+    {
+      "id": "0-as-kwt",
+      "name": "Kuwait"
+    },
+    {
+      "id": "0-as-kgz",
+      "name": "Kyrgyzstan"
+    },
+    {
+      "id": "0-as-lao",
+      "name": "Laos"
+    },
+    {
+      "id": "0-as-lbn",
+      "name": "Lebanon"
+    },
+    {
+      "id": "0-as-mys",
+      "name": "Malaysia"
+    },
+    {
+      "id": "0-as-mdv",
+      "name": "Maldives"
+    },
+    {
+      "id": "0-as-mng",
+      "name": "Mongolia"
+    },
+    {
+      "id": "0-as-mmr",
+      "name": "Myanmar"
+    },
+    {
+      "id": "0-as-npl",
+      "name": "Nepal"
+    },
+    {
+      "id": "0-as-prk",
+      "name": "North Korea"
+    },
+    {
+      "id": "0-as-omn",
+      "name": "Oman"
+    },
+    {
+      "id": "0-as-pak",
+      "name": "Pakistan"
+    },
+    {
+      "id": "0-as-pse",
+      "name": "Palestine, State of"
+    },
+    {
+      "id": "0-as-phl",
+      "name": "Philippines, the"
+    },
+    {
+      "id": "0-as-qat",
+      "name": "Qatar"
+    },
+    {
+      "id": "0-as-rus",
+      "name": "Russia"
+    },
+    {
+      "id": "0-as-sau",
+      "name": "Saudi Arabia"
+    },
+    {
+      "id": "0-as-sgp",
+      "name": "Singapore"
+    },
+    {
+      "id": "0-as-kor",
+      "name": "South Korea"
+    },
+    {
+      "id": "0-as-lka",
+      "name": "Sri Lanka"
+    },
+    {
+      "id": "0-as-syr",
+      "name": "Syria"
+    },
+    {
+      "id": "0-as-twn",
+      "name": "Taiwan"
+    },
+    {
+      "id": "0-as-tjk",
+      "name": "Tajikistan"
+    },
+    {
+      "id": "0-as-tha",
+      "name": "Thailand"
+    },
+    {
+      "id": "0-as-tur",
+      "name": "Turkey"
+    },
+    {
+      "id": "0-as-tkm",
+      "name": "Turkmenistan"
+    },
+    {
+      "id": "0-as-are",
+      "name": "United Arab Emirates, the"
+    },
+    {
+      "id": "0-as-uzb",
+      "name": "Uzbekistan"
+    },
+    {
+      "id": "0-as-vnm",
+      "name": "Vietnam"
+    },
+    {
+      "id": "0-as-yem",
+      "name": "Yemen"
+    },
+    {
+      "id": "0-au",
       "name": "Australia/Oceania"
     },
     {
-      "id": "0-d",
+      "id": "0-au-asm",
+      "name": "American Samoa"
+    },
+    {
+      "id": "0-au-aus",
+      "name": "Australia"
+    },
+    {
+      "id": "0-au-cok",
+      "name": "Cook Islands"
+    },
+    {
+      "id": "0-au-",
+      "name": "Easter Island"
+    },
+    {
+      "id": "0-au-fsm",
+      "name": "Federated States of Micronesia"
+    },
+    {
+      "id": "0-au-fji",
+      "name": "Fiji"
+    },
+    {
+      "id": "0-au-pyf",
+      "name": "French Polynesia"
+    },
+    {
+      "id": "0-au-gal",
+      "name": "Galápagos Islands"
+    },
+    {
+      "id": "0-au-gum",
+      "name": "Guam"
+    },
+    {
+      "id": "0-au-haw",
+      "name": "Hawaii"
+    },
+    {
+      "id": "0-au-kir",
+      "name": "Kiribati"
+    },
+    {
+      "id": "0-au-mhl",
+      "name": "Marshall Islands"
+    },
+    {
+      "id": "0-au-nru",
+      "name": "Nauru"
+    },
+    {
+      "id": "0-au-ncl",
+      "name": "New Caledonia"
+    },
+    {
+      "id": "0-au-nzl",
+      "name": "New Zealand"
+    },
+    {
+      "id": "0-au-niu",
+      "name": "Niue"
+    },
+    {
+      "id": "0-au-mnp",
+      "name": "Northern Mariana Islands"
+    },
+    {
+      "id": "0-au-plw",
+      "name": "Palau"
+    },
+    {
+      "id": "0-au-png",
+      "name": "Papua New Guinea"
+    },
+    {
+      "id": "0-au-pcn",
+      "name": "Pitcairn Islands"
+    },
+    {
+      "id": "0-au-wsm",
+      "name": "Samoa"
+    },
+    {
+      "id": "0-au-slb",
+      "name": "Solomon Islands"
+    },
+    {
+      "id": "0-au-tkl",
+      "name": "Tokelau"
+    },
+    {
+      "id": "0-au-ton",
+      "name": "Tonga"
+    },
+    {
+      "id": "0-au-tuv",
+      "name": "Tuvalu"
+    },
+    {
+      "id": "0-au-vut",
+      "name": "Vanuatu"
+    },
+    {
+      "id": "0-au-wlf",
+      "name": "Wallis and Futuna"
+    },
+    {
+      "id": "0-eu",
       "name": "Europe"
     },
     {
-      "id": "0-e",
+      "id": "0-eu-alb",
+      "name": "Albania"
+    },
+    {
+      "id": "0-eu-and",
+      "name": "Andorra"
+    },
+    {
+      "id": "0-eu-arm",
+      "name": "Armenia"
+    },
+    {
+      "id": "0-eu-aut",
+      "name": "Austria"
+    },
+    {
+      "id": "0-eu-blr",
+      "name": "Belarus"
+    },
+    {
+      "id": "0-eu-bel",
+      "name": "Belgium"
+    },
+    {
+      "id": "0-eu-bih",
+      "name": "Bosnia and Herzegovina"
+    },
+    {
+      "id": "0-eu-bgr",
+      "name": "Bulgaria"
+    },
+    {
+      "id": "0-eu-hrv",
+      "name": "Croatia"
+    },
+    {
+      "id": "0-eu-cyp",
+      "name": "Cyprus"
+    },
+    {
+      "id": "0-eu-cze",
+      "name": "Czechia"
+    },
+    {
+      "id": "0-eu-dnk",
+      "name": "Denmark"
+    },
+    {
+      "id": "0-eu-est",
+      "name": "Estonia"
+    },
+    {
+      "id": "0-eu-fin",
+      "name": "Finland"
+    },
+    {
+      "id": "0-eu-fra",
+      "name": "France"
+    },
+    {
+      "id": "0-eu-geo",
+      "name": "Georgia"
+    },
+    {
+      "id": "0-eu-deu",
+      "name": "Germany",
+      "nameLocal": "Deutschland",
+      "languages": ["German"],
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-deu-bade",
+      "name": "Baden-Württemberg",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-bade-albdo",
+      "name": "Alb-Donau",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-baden",
+      "name": "Baden-Baden",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Urban district"
+    },
+    {
+      "id": "0-eu-deu-bade-biber",
+      "name": "Biberach",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-boden",
+      "name": "Bodensee",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-bobli",
+      "name": "Böblingen",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-breis",
+      "name": "Breisgau-Hochschwarzwald",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-calwx",
+      "name": "Calw",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-emmen",
+      "name": "Emmendingen",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-enzxx",
+      "name": "Enz",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-essli",
+      "name": "Esslingen",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-freib",
+      "name": "Freiburg im Breisgau",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Urban district"
+    },
+    {
+      "id": "0-eu-deu-bade-freud",
+      "name": "Freudenstadt",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-goppi",
+      "name": "Göppingen",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-heidl",
+      "name": "Heidelberg",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Urban district"
+    },
+    {
+      "id": "0-eu-deu-bade-heidn",
+      "name": "Heidenheim",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-heilb",
+      "name": "Heilbronn",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Urban district"
+    },
+    {
+      "id": "0-eu-deu-bade-heild",
+      "name": "Heilbronn (district)",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-hohen",
+      "name": "Hohenlohe",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-karls",
+      "name": "Karlsruhe",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Urban district"
+    },
+    {
+      "id": "0-eu-deu-bade-karld",
+      "name": "Karlsruhe (district)",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-konst",
+      "name": "Konstanz"
+    },
+    {
+      "id": "0-eu-deu-bade-konst-konsta",
+      "name": "Konstanz"
+    },
+    {
+      "id": "0-eu-deu-bade-lorra",
+      "name": "Lörrach",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-ludwi",
+      "name": "Ludwigsburg",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-maint",
+      "name": "Main-Tauber",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-mannh",
+      "name": "Mannheim",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Urban district"
+    },
+    {
+      "id": "0-eu-deu-bade-necka",
+      "name": "Neckar-Odenwald",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-orten",
+      "name": "Ortenau",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-ostal",
+      "name": "Ostalbkreis",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-pforz",
+      "name": "Pforzheim",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-rasta",
+      "name": "Rastatt",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-raven",
+      "name": "Ravensburg",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-remsm",
+      "name": "Rems-Murr",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-reutl",
+      "name": "Reutlingen",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-rhein",
+      "name": "Rhein-Neckar",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-rottw",
+      "name": "Rottweil",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-schwb",
+      "name": "Schwarzwald-Baar",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-schwh",
+      "name": "Schwäbisch Hall",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-sigma",
+      "name": "Sigmaringen",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-stutt",
+      "name": "Stuttgart",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Urban district"
+    },
+    {
+      "id": "0-eu-deu-bade-tubin",
+      "name": "Tübingen",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-tuttl",
+      "name": "Tuttlingen",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-ulmxx",
+      "name": "Ulm",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Urban district"
+    },
+    {
+      "id": "0-eu-deu-bade-walds",
+      "name": "Waldshut",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bade-zolle",
+      "name": "Zollernalb",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Rural district"
+    },
+    {
+      "id": "0-eu-deu-bava",
+      "name": "Bavaria",
+      "nameLocal": "Beieren",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-berl",
+      "name": "Berlin",
+      "nameLocal": "Berlin",
+      "flag": true,
+      "regionType": "City-state"
+    },
+    {
+      "id": "0-eu-deu-bran",
+      "name": "Brandenburg",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-brem",
+      "name": "Bremen",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "City-state"
+    },
+    {
+      "id": "0-eu-deu-hamb",
+      "name": "Hamburg",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "City-state"
+    },
+    {
+      "id": "0-eu-deu-hess",
+      "name": "Hesse",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-lowe",
+      "name": "Lower Saxony",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-meck",
+      "name": "Mecklenburg-Vorpommern",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-nort",
+      "name": "North Rhine-Westphalia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-rhin",
+      "name": "Rhineland-Palatinate",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-saar",
+      "name": "Saarland",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-saxo",
+      "name": "Saxony",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-saxa",
+      "name": "Saxony-Anhalt",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-schl",
+      "name": "Schleswig-Holstein",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-deu-thur",
+      "name": "Thuringia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "State"
+    },
+    {
+      "id": "0-eu-grc",
+      "name": "Greece",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-hun",
+      "name": "Hungary",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-isl",
+      "name": "Iceland",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-irl",
+      "name": "Ireland",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-ita",
+      "name": "Italy",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-kos",
+      "name": "Kosovo",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-lva",
+      "name": "Latvia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-lie",
+      "name": "Liechtenstein",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-ltu",
+      "name": "Lithuania",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-lux",
+      "name": "Luxembourg",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-mlt",
+      "name": "Malta",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-mda",
+      "name": "Moldova",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-mco",
+      "name": "Monaco",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-mne",
+      "name": "Montenegro",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-ned",
+      "name": "Netherlands, the",
+      "nameLocal": "Nederland",
+      "languages": ["Dutch", "English", "Frisian", "Papiamento"],
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-mkd",
+      "name": "North Macedonia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-nor",
+      "name": "Norway",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-pol",
+      "name": "Poland",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-prt",
+      "name": "Portugal",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-rou",
+      "name": "Romania",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-rus",
+      "name": "Russia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-smr",
+      "name": "San Marino",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-srb",
+      "name": "Serbia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-svk",
+      "name": "Slovakia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-svn",
+      "name": "Slovenia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-esp",
+      "name": "Spain",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-swe",
+      "name": "Sweden",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-che",
+      "name": "Switzerland",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-tur",
+      "name": "Turkey",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-ukr",
+      "name": "Ukraine",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-gbr",
+      "name": "United Kingdom",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-eu-vat",
+      "name": "Vatican City",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na",
       "name": "North America"
     },
     {
-      "id": "0-f",
+      "id": "0-na-aia",
+      "name": "Anguilla",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-gbr",
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-atg",
+      "name": "Antigua and Barbuda",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-abw",
+      "name": "Aruba",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-nld",
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-bhs",
+      "name": "Bahamas, the",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-brb",
+      "name": "Barbados",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-blz",
+      "name": "Belize",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-bmu",
+      "name": "Bermuda",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-gbr",
+      "regionType": "Overseas Territory"
+    },
+    {
+      "id": "0-na-bes",
+      "name": "Bonaire",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-nld",
+      "regionType": "Special Municipality"
+    },
+    {
+      "id": "0-na-vgb",
+      "name": "British Virgin Islands",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-gbr",
+      "regionType": "Overseas Territory"
+    },
+    {
+      "id": "0-na-can",
+      "name": "Canada",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-cym",
+      "name": "Cayman Islands",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-gbr",
+      "regionType": "Overseas Territory"
+    },
+    {
+      "id": "0-na-clip",
+      "name": "Clipperton Island",
+      "nameLocal": "",
+      "flag": false,
+      "parent": "00-eu-fra",
+      "regionType": "Overseas State Private Property"
+    },
+    {
+      "id": "0-na-cri",
+      "name": "Costa Rica",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-cub",
+      "name": "Cuba",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-cuw",
+      "name": "Curaçao",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-nld",
+      "regionType": "Constituent Country"
+    },
+    {
+      "id": "0-na-dma",
+      "name": "Dominica",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-dom",
+      "name": "Dominican Republic",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-slv",
+      "name": "El Salvador",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-fdov",
+      "name": "Federal Dependencies of Venezuela",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "0-sa-ven",
+      "regionType": "Special Administrative Division"
+    },
+    {
+      "id": "0-na-grl",
+      "name": "Greenland",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "0-eu-dnk",
+      "regionType": "Autonomous Territory"
+    },
+    {
+      "id": "0-na-grd",
+      "name": "Grenada",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-glp",
+      "name": "Guadeloupe",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-fra",
+      "regionType": "Overseas Department"
+    },
+    {
+      "id": "0-na-gtm",
+      "name": "Guatemala",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-hti",
+      "name": "Haiti",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-hnd",
+      "name": "Honduras",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-jam",
+      "name": "Jamaica",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-mtq",
+      "name": "Martinique",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-fra",
+      "regionType": "Overseas Department"
+    },
+    {
+      "id": "0-na-mex",
+      "name": "Mexico",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-msr",
+      "name": "Montserrat",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-gbr",
+      "regionType": "Overseas Territory"
+    },
+    {
+      "id": "0-na-nic",
+      "name": "Nicaragua",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-nuev",
+      "name": "Nueva Esparta",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-sa-ven",
+      "regionType": "State"
+    },
+    {
+      "id": "0-na-pan",
+      "name": "Panama",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-pri",
+      "name": "Puerto Rico",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-na-usa",
+      "regionType": "Unincorporated Territory"
+    },
+    {
+      "id": "0-na-saba",
+      "name": "Saba",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-nld",
+      "regionType": "Special Municipality"
+    },
+    {
+      "id": "0-na-blm",
+      "name": "Saint Barthélemy",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-fra",
+      "regionType": "Overseas Collectivity"
+    },
+    {
+      "id": "0-na-kna",
+      "name": "Saint Kitts and Nevis",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-lca",
+      "name": "Saint Lucia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-maf",
+      "name": "Saint Martin",
+      "nameLocal": "",
+      "flag": false,
+      "parent": "00-eu-fra",
+      "regionType": "Overseas Collectivity"
+    },
+    {
+      "id": "0-na-spm",
+      "name": "Saint Pierre and Miquelon",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-fra",
+      "regionType": "Overseas Collectivity"
+    },
+    {
+      "id": "0-na-vct",
+      "name": "Saint Vincent and the Grenadines",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-sapr",
+      "name": "San Andrés and Providencia",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-sa-col",
+      "regionType": "Department"
+    },
+    {
+      "id": "0-na-",
+      "name": "Sint Eustatius",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-nld",
+      "regionType": "Special Municipality"
+    },
+    {
+      "id": "0-na-sxm",
+      "name": "Sint Maarten",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-nld",
+      "regionType": "Constituent Country"
+    },
+    {
+      "id": "0-na-tto",
+      "name": "Trinidad and Tobago",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-tca",
+      "name": "Turks and Caicos Islands",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-gbr",
+      "regionType": "Overseas Territory"
+    },
+    {
+      "id": "0-na-usa",
+      "name": "United States",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-na-vir",
+      "name": "United States Virgin Islands",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-na-usa",
+      "regionType": "Unincorporated Territory"
+    },
+    {
+      "id": "0-sa",
       "name": "South America"
+    },
+    {
+      "id": "0-sa-arg",
+      "name": "Argentina",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-bol",
+      "name": "Bolivia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-bvt",
+      "name": "Bouvet Island",
+      "nameLocal": "",
+      "flag": false,
+      "parent": "00-eu-nor",
+      "regionType": "Dependent Territory"
+    },
+    {
+      "id": "0-sa-bra",
+      "name": "Brazil",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-chl",
+      "name": "Chile",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-col",
+      "name": "Colombia",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-ecu",
+      "name": "Ecuador",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-flk",
+      "name": "Falkland Islands",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-gbr",
+      "regionType": "Overseas Territory"
+    },
+    {
+      "id": "0-sa-guf",
+      "name": "French Guiana",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-fra",
+      "regionType": "Overseas Collectivity"
+    },
+    {
+      "id": "0-sa-guy",
+      "name": "Guyana",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-pry",
+      "name": "Paraguay",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-per",
+      "name": "Peru",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-sgs",
+      "name": "South Georgia and the South Sandwich Islands",
+      "nameLocal": "",
+      "flag": true,
+      "parent": "00-eu-gbr",
+      "regionType": "Overseas Territory"
+    },
+    {
+      "id": "0-sa-sur",
+      "name": "Suriname",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-ury",
+      "name": "Uruguay",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
+    },
+    {
+      "id": "0-sa-ven",
+      "name": "Venezuela",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
     }
   ]
 }

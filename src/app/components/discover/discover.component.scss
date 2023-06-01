@@ -25,9 +25,14 @@
     li {
       a {
         color: var(--aotw-color-white);
+        cursor: pointer;
         text-decoration: none;
 
         &:hover {
+          color: var(--aotw-color-primary-500);
+        }
+
+        &.active {
           color: var(--aotw-color-primary-500);
         }
       }

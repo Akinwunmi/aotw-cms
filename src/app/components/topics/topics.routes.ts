@@ -1,11 +1,11 @@
 import { Route } from '@angular/router';
-import { TopicComponent } from './topic.component';
 
-// TODO: Fix routing
+import { TopicsComponent } from './topics.component';
+
 export const TOPIC_ROUTES: Route[] = [
   {
     path: ':id',
-    component: TopicComponent,
+    component: TopicsComponent,
     title: 'Topic'
   }
 ];

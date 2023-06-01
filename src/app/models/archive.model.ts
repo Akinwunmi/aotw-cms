@@ -15,4 +15,5 @@ export interface ArchiveTopics extends DefaultInfo {
 
 export interface Topic extends DefaultInfo {
   image?: Image;
+  parent?: string;
 }

@@ -2,14 +2,10 @@
   <h2>{{ mainTopicName }}</h2>
   <ul>
     <li *ngFor="let topic of mainTopics">
-      <a (click)="setActiveTopic(topic.id)">
+      <a [ngClass]="{ active: topic.id === activeMainTopicId }" (click)="setActiveTopic(topic.id)">
         {{ topic.name }}
       </a>
     </li>
   </ul>
 </section>
-
-{{ archiveData | json }}
-
-<!-- TODO: Fix displaying topic component in router-outlet -->
 <router-outlet></router-outlet>
