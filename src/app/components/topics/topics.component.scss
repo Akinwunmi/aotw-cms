@@ -1,5 +1,49 @@
 :host {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: var(--aotw-size-xl);
+  gap: var(--aotw-space-xl) var(--aotw-space-l);
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.topic {
+  cursor: pointer;
+  display: grid;
+  gap: var(--aotw-space-xs);
+  grid-template-rows: auto var(--aotw-size-s);
+  margin: 0;
+  width: 100%;
+
+  div {
+    aspect-ratio: 3 / 2;
+    display: flex;
+
+    img {
+      margin: auto 0;
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    &.no-image {
+      background-color: var(--aotw-color-primary-100);
+    }
+  }
+
+  figcaption {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    height: 1.5rem;
+    overflow: hidden;
+
+    .name {
+      display: -webkit-box;
+      word-break: break-all;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+    .parent {
+      color: var(--aotw-color-white);
+      font-size: var(--aotw-font-size-xs);
+      line-height: 1.5rem;
+    }
+  }
 }

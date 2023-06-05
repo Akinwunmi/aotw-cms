@@ -654,67 +654,101 @@
     },
     {
       "id": "0-eu-alb",
-      "name": "Albania"
+      "name": "Albania",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-and",
-      "name": "Andorra"
+      "name": "Andorra",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-arm",
-      "name": "Armenia"
+      "name": "Armenia",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-aut",
-      "name": "Austria"
+      "name": "Austria",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-blr",
-      "name": "Belarus"
+      "name": "Belarus",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-bel",
-      "name": "Belgium"
+      "name": "Belgium",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-bih",
-      "name": "Bosnia and Herzegovina"
+      "name": "Bosnia and Herzegovina",
+      "nameLocal": "",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-bgr",
-      "name": "Bulgaria"
+      "name": "Bulgaria",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-hrv",
-      "name": "Croatia"
+      "name": "Croatia",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-cyp",
-      "name": "Cyprus"
+      "name": "Cyprus",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-cze",
-      "name": "Czechia"
+      "name": "Czechia",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-dnk",
-      "name": "Denmark"
+      "name": "Denmark",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-est",
-      "name": "Estonia"
+      "name": "Estonia",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-fin",
-      "name": "Finland"
+      "name": "Finland",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-fra",
-      "name": "France"
+      "name": "France",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-geo",
-      "name": "Georgia"
+      "name": "Georgia",
+      "flag": true,
+      "regionType": "Country"
     },
     {
       "id": "0-eu-deu",
@@ -1682,7 +1716,7 @@
       "regionType": "Department"
     },
     {
-      "id": "0-na-",
+      "id": "0-na-sxe",
       "name": "Sint Eustatius",
       "nameLocal": "",
       "flag": true,

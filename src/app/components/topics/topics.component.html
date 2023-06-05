@@ -1,3 +1,9 @@
-<p *ngFor="let topic of topics">
-  {{ topic.name }} {{ topic.parent }}
-</p>
+<figure *ngFor="let topic of topics" class="topic" [routerLink]="'../' + topic.id">
+  <div [ngClass]="{ 'no-image': !topic.flag }">
+    <img *ngIf="topic.flag" [src]="getImage(topic.id)" [alt]="topic.name">
+  </div>
+  <figcaption>
+    <span class="name">{{ topic.name }}</span>
+    <span class="parent">{{ topic.parent }}</span>
+  </figcaption>
+</figure>
