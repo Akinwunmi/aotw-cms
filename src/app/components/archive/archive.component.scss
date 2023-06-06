@@ -16,6 +16,12 @@ aotw-tab-group {
 
 button {
   margin-right: var(--aotw-space-s);
+
+  @media only screen and (max-width: 30rem) {
+    span {
+      display: none;
+    }
+  }
 }
 
 .main {

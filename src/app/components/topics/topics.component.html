@@ -1,6 +1,6 @@
 <figure *ngFor="let topic of topics" class="topic" [routerLink]="'../' + topic.id">
-  <div [ngClass]="{ 'no-image': !topic.flag }">
-    <img *ngIf="topic.flag" [src]="getImage(topic.id)" [alt]="topic.name">
+  <div [ngClass]="{ 'no-image': !topic.image }">
+    <img *ngIf="topic.image" [src]="getImage(topic.id)" [alt]="topic.name">
   </div>
   <figcaption>
     <span class="name">{{ topic.name }}</span>

@@ -1,13 +1,33 @@
-<section *ngIf="archiveData" class="header">
-  <h2>{{ mainTopicName }}</h2>
-  <ul>
-    <li *ngFor="let topic of mainTopics">
-      <a [ngClass]="{ active: topic.id === activeMainTopicId }" (click)="setActiveTopic(topic.id)">
-        {{ topic.name }}
-      </a>
-    </li>
-  </ul>
-</section>
+<ng-container *ngIf="archiveData">
+  <section *ngIf="activeTopic; else mainTopicsHeader" class="header active-topic">
+    <div class="info">
+      <app-breadcrumb [items]="topicsBreadcrumb"></app-breadcrumb>
+      <h2>{{ activeTopic.type || '\u2014' }}</h2>
+      <div class="topic-name">
+        <button>
+          <aotw-icon name="logo"></aotw-icon>
+        </button>
+        <h3>{{ activeTopic.name }}</h3>
+      </div>
+    </div>
+    <div class="image" [ngClass]="{ 'no-image': !activeTopic.image }">
+      <img *ngIf="activeTopic.image" [src]="getImage(activeTopic.id)" alt="">
+    </div>
+  </section>
+</ng-container>
 <section class="content">
   <router-outlet></router-outlet>
 </section>
+
+<ng-template #mainTopicsHeader>
+  <section class="header">
+    <h2>{{ mainTopicType }}</h2>
+    <ul>
+      <li *ngFor="let topic of mainTopics">
+        <a [ngClass]="{ active: topic.id === activeMainTopicId }" (click)="setActiveTopic(topic.id)">
+          {{ topic.name }}
+        </a>
+      </li>
+    </ul>
+  </section>
+</ng-template>

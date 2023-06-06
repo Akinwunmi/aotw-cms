@@ -14,6 +14,7 @@ export interface ArchiveTopics extends DefaultInfo {
 }
 
 export interface Topic extends DefaultInfo {
-  flag?: boolean;
+  type?: string;
+  image?: boolean;
   parent?: string;
 }

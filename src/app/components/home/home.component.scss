@@ -29,6 +29,10 @@ section {
     gap: var(--aotw-space-l);
     grid-template-columns: repeat(6, 1fr);
 
+    @media only screen and (max-width: 30rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .card {
       cursor: pointer;
 
@@ -44,6 +48,14 @@ section {
           width: 100%;
         }
       }
+    }
+  }
+}
+
+button {
+  @media only screen and (max-width: 30rem) {
+    span {
+      display: none;
     }
   }
 }

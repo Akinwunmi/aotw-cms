@@ -3,1883 +3,1885 @@
   "name": "Flags",
   "topics": [
     {
-      "id": "0",
-      "name": "Continents"
+      "id": "af",
+      "name": "Africa",
+      "type": "Continent"
     },
     {
-      "id": "0-af",
-      "name": "Africa"
-    },
-    {
-      "id": "0-af-dza",
+      "id": "af-dza",
       "name": "Algeria"
     },
     {
-      "id": "0-af-ago",
+      "id": "af-ago",
       "name": "Angola"
     },
     {
-      "id": "0-af-ben",
+      "id": "af-ben",
       "name": "Benin"
     },
     {
-      "id": "0-af-bwa",
+      "id": "af-bwa",
       "name": "Botswana"
     },
     {
-      "id": "0-af-bfa",
+      "id": "af-bfa",
       "name": "Burkina Faso"
     },
     {
-      "id": "0-af-bdi",
+      "id": "af-bdi",
       "name": "Burundi"
     },
     {
-      "id": "0-af-cmr",
+      "id": "af-cmr",
       "name": "Cameroon"
     },
     {
-      "id": "0-af-",
+      "id": "af-",
       "name": "Canary Islands",
-      "flag": true
+      "image": true
     },
     {
-      "id": "0-af-cpv",
+      "id": "af-cpv",
       "name": "Cape Verde"
     },
     {
-      "id": "0-af-caf",
+      "id": "af-caf",
       "name": "Central African Republic"
     },
     {
-      "id": "0-af-ceu",
+      "id": "af-ceu",
       "name": "Ceuta",
-      "flag": true
+      "image": true
     },
     {
-      "id": "0-af-tcd",
+      "id": "af-tcd",
       "name": "Chad"
     },
     {
-      "id": "0-af-com",
+      "id": "af-com",
       "name": "Comoros, the"
     },
     {
-      "id": "0-af-com-anjo",
+      "id": "af-com-anjo",
       "name": "Anjouan"
     },
     {
-      "id": "0-af-com-gran",
+      "id": "af-com-gran",
       "name": "Grande Comore"
     },
     {
-      "id": "0-af-com-mohe",
+      "id": "af-com-mohe",
       "name": "Mohéli"
     },
     {
-      "id": "0-af-cod",
+      "id": "af-cod",
       "name": "Congo, Democratic Republic of the"
     },
     {
-      "id": "0-af-cog",
+      "id": "af-cog",
       "name": "Congo, Republic of the"
     },
     {
-      "id": "0-af-dji",
+      "id": "af-dji",
       "name": "Djibouti"
     },
     {
-      "id": "0-af-egy",
+      "id": "af-egy",
       "name": "Egypt"
     },
     {
-      "id": "0-af-gnq",
+      "id": "af-gnq",
       "name": "Equatorial Guinea"
     },
     {
-      "id": "0-af-eri",
+      "id": "af-eri",
       "name": "Eritrea"
     },
     {
-      "id": "0-af-swz",
+      "id": "af-swz",
       "name": "Eswatini"
     },
     {
-      "id": "0-af-eth",
+      "id": "af-eth",
       "name": "Ethiopia"
     },
     {
-      "id": "0-af-eth-afar",
+      "id": "af-eth-afar",
       "name": "Afar"
     },
     {
-      "id": "0-af-eth-amha",
+      "id": "af-eth-amha",
       "name": "Amhara"
     },
     {
-      "id": "0-af-eth-begu",
+      "id": "af-eth-begu",
       "name": "Benishangul-Gumuz"
     },
     {
-      "id": "0-af-eth-gamb",
+      "id": "af-eth-gamb",
       "name": "Gambella"
     },
     {
-      "id": "0-af-eth-hara",
+      "id": "af-eth-hara",
       "name": "Harari"
     },
     {
-      "id": "0-af-eth-orom",
+      "id": "af-eth-orom",
       "name": "Oromia"
     },
     {
-      "id": "0-af-eth-sida",
+      "id": "af-eth-sida",
       "name": "Sidama"
     },
     {
-      "id": "0-af-eth-soma",
+      "id": "af-eth-soma",
       "name": "Somali"
     },
     {
-      "id": "0-af-eth-snnp",
+      "id": "af-eth-snnp",
       "name": "Southern Nations, Nationalities, and Peoples' Region"
     },
     {
-      "id": "0-af-eth-tigr",
+      "id": "af-eth-tigr",
       "name": "Tigray"
     },
     {
-      "id": "0-af-atf",
+      "id": "af-atf",
       "name": "French Southern and Antarctic Lands"
     },
     {
-      "id": "0-af-gab",
+      "id": "af-gab",
       "name": "Gabon"
     },
     {
-      "id": "0-af-gmb",
+      "id": "af-gmb",
       "name": "Gambia, the"
     },
     {
-      "id": "0-af-gha",
+      "id": "af-gha",
       "name": "Ghana"
     },
     {
-      "id": "0-af-gin",
+      "id": "af-gin",
       "name": "Guinea"
     },
     {
-      "id": "0-af-gnb",
+      "id": "af-gnb",
       "name": "Guinea-Bissau"
     },
     {
-      "id": "0-af-civ",
+      "id": "af-civ",
       "name": "Ivory Coast"
     },
     {
-      "id": "0-af-ken",
+      "id": "af-ken",
       "name": "Kenya"
     },
     {
-      "id": "0-af-lso",
+      "id": "af-lso",
       "name": "Lesotho"
     },
     {
-      "id": "0-af-lbr",
+      "id": "af-lbr",
       "name": "Liberia"
     },
     {
-      "id": "0-af-lby",
+      "id": "af-lby",
       "name": "Libya"
     },
     {
-      "id": "0-af-mdg",
+      "id": "af-mdg",
       "name": "Madagascar"
     },
     {
-      "id": "0-af-mad",
+      "id": "af-mad",
       "name": "Madeira"
     },
     {
-      "id": "0-af-mwi",
+      "id": "af-mwi",
       "name": "Malawi"
     },
     {
-      "id": "0-af-mli",
+      "id": "af-mli",
       "name": "Mali"
     },
     {
-      "id": "0-af-mrt",
+      "id": "af-mrt",
       "name": "Mauritania"
     },
     {
-      "id": "0-af-mus",
+      "id": "af-mus",
       "name": "Mauritius"
     },
     {
-      "id": "0-af-myt",
+      "id": "af-myt",
       "name": "Mayotte"
     },
     {
-      "id": "0-af-mel",
+      "id": "af-mel",
       "name": "Melilla"
     },
     {
-      "id": "0-af-mar",
+      "id": "af-mar",
       "name": "Morocco"
     },
     {
-      "id": "0-af-moz",
+      "id": "af-moz",
       "name": "Mozambique"
     },
     {
-      "id": "0-af-nam",
+      "id": "af-nam",
       "name": "Namibia"
     },
     {
-      "id": "0-af-ner",
+      "id": "af-ner",
       "name": "Niger"
     },
     {
-      "id": "0-af-nga",
+      "id": "af-nga",
       "name": "Nigeria"
     },
     {
-      "id": "0-af-reu",
+      "id": "af-reu",
       "name": "Réunion"
     },
     {
-      "id": "0-af-rwa",
+      "id": "af-rwa",
       "name": "Rwanda"
     },
     {
-      "id": "0-af-sah",
+      "id": "af-sah",
       "name": "Sahrawi Arab Democratic Republic"
     },
     {
-      "id": "0-af-shn",
+      "id": "af-shn",
       "name": "Saint Helena, Ascension and Tristan da Cunha"
     },
     {
-      "id": "0-af-shn-asce",
+      "id": "af-shn-asce",
       "name": "Ascension Island"
     },
     {
-      "id": "0-af-shn-sain",
+      "id": "af-shn-sain",
       "name": "Saint Helena"
     },
     {
-      "id": "0-af-shn-tris",
+      "id": "af-shn-tris",
       "name": "Tristan da Cunha"
     },
     {
-      "id": "0-af-stp",
+      "id": "af-stp",
       "name": "São Tomé and Príncipe"
     },
     {
-      "id": "0-af-sen",
+      "id": "af-sen",
       "name": "Senegal"
     },
     {
-      "id": "0-af-syc",
+      "id": "af-syc",
       "name": "Seychelles"
     },
     {
-      "id": "0-af-sle",
+      "id": "af-sle",
       "name": "Sierra Leone"
     },
     {
-      "id": "0-af-som",
+      "id": "af-som",
       "name": "Somalia"
     },
     {
-      "id": "0-af-sml",
+      "id": "af-sml",
       "name": "Somaliland"
     },
     {
-      "id": "0-af-zaf",
+      "id": "af-zaf",
       "name": "South Africa"
     },
     {
-      "id": "0-af-ssd",
+      "id": "af-ssd",
       "name": "South Sudan"
     },
     {
-      "id": "0-af-sdn",
+      "id": "af-sdn",
       "name": "Sudan"
     },
     {
-      "id": "0-af-tza",
+      "id": "af-tza",
       "name": "Tanzania"
     },
     {
-      "id": "0-af-tgo",
+      "id": "af-tgo",
       "name": "Togo"
     },
     {
-      "id": "0-af-tun",
+      "id": "af-tun",
       "name": "Tunisia"
     },
     {
-      "id": "0-af-uga",
+      "id": "af-uga",
       "name": "Uganda"
     },
     {
-      "id": "0-af-zmb",
+      "id": "af-zmb",
       "name": "Zambia"
     },
     {
-      "id": "0-af-zwe",
+      "id": "af-zwe",
       "name": "Zimbabwe"
     },
     {
-      "id": "0-as",
-      "name": "Asia"
+      "id": "as",
+      "name": "Asia",
+      "type": "Continent"
     },
     {
-      "id": "0-as-afg",
+      "id": "as-afg",
       "name": "Afghanistan"
     },
     {
-      "id": "0-as-arm",
+      "id": "as-arm",
       "name": "Armenia"
     },
     {
-      "id": "0-as-aze",
+      "id": "as-aze",
       "name": "Azerbaijan"
     },
     {
-      "id": "0-as-bhr",
+      "id": "as-bhr",
       "name": "Bahrain"
     },
     {
-      "id": "0-as-bgd",
+      "id": "as-bgd",
       "name": "Bangladesh"
     },
     {
-      "id": "0-as-btn",
+      "id": "as-btn",
       "name": "Bhutan"
     },
     {
-      "id": "0-as-brn",
+      "id": "as-brn",
       "name": "Brunei Darussalam"
     },
     {
-      "id": "0-as-khm",
+      "id": "as-khm",
       "name": "Cambodia"
     },
     {
-      "id": "0-as-chn",
+      "id": "as-chn",
       "name": "China"
     },
     {
-      "id": "0-as-cyp",
+      "id": "as-cyp",
       "name": "Cyprus"
     },
     {
-      "id": "0-as-tls",
+      "id": "as-tls",
       "name": "East Timor"
     },
     {
-      "id": "0-as-geo",
+      "id": "as-geo",
       "name": "Georgia"
     },
     {
-      "id": "0-as-ind",
+      "id": "as-ind",
       "name": "India"
     },
     {
-      "id": "0-as-idn",
+      "id": "as-idn",
       "name": "Indonesia"
     },
     {
-      "id": "0-as-irn",
+      "id": "as-irn",
       "name": "Iran"
     },
     {
-      "id": "0-as-irq",
+      "id": "as-irq",
       "name": "Iraq"
     },
     {
-      "id": "0-as-isr",
+      "id": "as-isr",
       "name": "Israel"
     },
     {
-      "id": "0-as-jap",
+      "id": "as-jap",
       "name": "Japan"
     },
     {
-      "id": "0-as-jor",
+      "id": "as-jor",
       "name": "Jordan"
     },
     {
-      "id": "0-as-kaz",
+      "id": "as-kaz",
       "name": "Kazakhstan"
     },
     {
-      "id": "0-as-kwt",
+      "id": "as-kwt",
       "name": "Kuwait"
     },
     {
-      "id": "0-as-kgz",
+      "id": "as-kgz",
       "name": "Kyrgyzstan"
     },
     {
-      "id": "0-as-lao",
+      "id": "as-lao",
       "name": "Laos"
     },
     {
-      "id": "0-as-lbn",
+      "id": "as-lbn",
       "name": "Lebanon"
     },
     {
-      "id": "0-as-mys",
+      "id": "as-mys",
       "name": "Malaysia"
     },
     {
-      "id": "0-as-mdv",
+      "id": "as-mdv",
       "name": "Maldives"
     },
     {
-      "id": "0-as-mng",
+      "id": "as-mng",
       "name": "Mongolia"
     },
     {
-      "id": "0-as-mmr",
+      "id": "as-mmr",
       "name": "Myanmar"
     },
     {
-      "id": "0-as-npl",
+      "id": "as-npl",
       "name": "Nepal"
     },
     {
-      "id": "0-as-prk",
+      "id": "as-prk",
       "name": "North Korea"
     },
     {
-      "id": "0-as-omn",
+      "id": "as-omn",
       "name": "Oman"
     },
     {
-      "id": "0-as-pak",
+      "id": "as-pak",
       "name": "Pakistan"
     },
     {
-      "id": "0-as-pse",
+      "id": "as-pse",
       "name": "Palestine, State of"
     },
     {
-      "id": "0-as-phl",
+      "id": "as-phl",
       "name": "Philippines, the"
     },
     {
-      "id": "0-as-qat",
+      "id": "as-qat",
       "name": "Qatar"
     },
     {
-      "id": "0-as-rus",
+      "id": "as-rus",
       "name": "Russia"
     },
     {
-      "id": "0-as-sau",
+      "id": "as-sau",
       "name": "Saudi Arabia"
     },
     {
-      "id": "0-as-sgp",
+      "id": "as-sgp",
       "name": "Singapore"
     },
     {
-      "id": "0-as-kor",
+      "id": "as-kor",
       "name": "South Korea"
     },
     {
-      "id": "0-as-lka",
+      "id": "as-lka",
       "name": "Sri Lanka"
     },
     {
-      "id": "0-as-syr",
+      "id": "as-syr",
       "name": "Syria"
     },
     {
-      "id": "0-as-twn",
+      "id": "as-twn",
       "name": "Taiwan"
     },
     {
-      "id": "0-as-tjk",
+      "id": "as-tjk",
       "name": "Tajikistan"
     },
     {
-      "id": "0-as-tha",
+      "id": "as-tha",
       "name": "Thailand"
     },
     {
-      "id": "0-as-tur",
+      "id": "as-tur",
       "name": "Turkey"
     },
     {
-      "id": "0-as-tkm",
+      "id": "as-tkm",
       "name": "Turkmenistan"
     },
     {
-      "id": "0-as-are",
+      "id": "as-are",
       "name": "United Arab Emirates, the"
     },
     {
-      "id": "0-as-uzb",
+      "id": "as-uzb",
       "name": "Uzbekistan"
     },
     {
-      "id": "0-as-vnm",
+      "id": "as-vnm",
       "name": "Vietnam"
     },
     {
-      "id": "0-as-yem",
+      "id": "as-yem",
       "name": "Yemen"
     },
     {
-      "id": "0-au",
-      "name": "Australia/Oceania"
+      "id": "au",
+      "name": "Australia/Oceania",
+      "type": "Continent"
     },
     {
-      "id": "0-au-asm",
+      "id": "au-asm",
       "name": "American Samoa"
     },
     {
-      "id": "0-au-aus",
+      "id": "au-aus",
       "name": "Australia"
     },
     {
-      "id": "0-au-cok",
+      "id": "au-cok",
       "name": "Cook Islands"
     },
     {
-      "id": "0-au-",
+      "id": "au-",
       "name": "Easter Island"
     },
     {
-      "id": "0-au-fsm",
+      "id": "au-fsm",
       "name": "Federated States of Micronesia"
     },
     {
-      "id": "0-au-fji",
+      "id": "au-fji",
       "name": "Fiji"
     },
     {
-      "id": "0-au-pyf",
+      "id": "au-pyf",
       "name": "French Polynesia"
     },
     {
-      "id": "0-au-gal",
+      "id": "au-gal",
       "name": "Galápagos Islands"
     },
     {
-      "id": "0-au-gum",
+      "id": "au-gum",
       "name": "Guam"
     },
     {
-      "id": "0-au-haw",
+      "id": "au-haw",
       "name": "Hawaii"
     },
     {
-      "id": "0-au-kir",
+      "id": "au-kir",
       "name": "Kiribati"
     },
     {
-      "id": "0-au-mhl",
+      "id": "au-mhl",
       "name": "Marshall Islands"
     },
     {
-      "id": "0-au-nru",
+      "id": "au-nru",
       "name": "Nauru"
     },
     {
-      "id": "0-au-ncl",
+      "id": "au-ncl",
       "name": "New Caledonia"
     },
     {
-      "id": "0-au-nzl",
+      "id": "au-nzl",
       "name": "New Zealand"
     },
     {
-      "id": "0-au-niu",
+      "id": "au-niu",
       "name": "Niue"
     },
     {
-      "id": "0-au-mnp",
+      "id": "au-mnp",
       "name": "Northern Mariana Islands"
     },
     {
-      "id": "0-au-plw",
+      "id": "au-plw",
       "name": "Palau"
     },
     {
-      "id": "0-au-png",
+      "id": "au-png",
       "name": "Papua New Guinea"
     },
     {
-      "id": "0-au-pcn",
+      "id": "au-pcn",
       "name": "Pitcairn Islands"
     },
     {
-      "id": "0-au-wsm",
+      "id": "au-wsm",
       "name": "Samoa"
     },
     {
-      "id": "0-au-slb",
+      "id": "au-slb",
       "name": "Solomon Islands"
     },
     {
-      "id": "0-au-tkl",
+      "id": "au-tkl",
       "name": "Tokelau"
     },
     {
-      "id": "0-au-ton",
+      "id": "au-ton",
       "name": "Tonga"
     },
     {
-      "id": "0-au-tuv",
+      "id": "au-tuv",
       "name": "Tuvalu"
     },
     {
-      "id": "0-au-vut",
+      "id": "au-vut",
       "name": "Vanuatu"
     },
     {
-      "id": "0-au-wlf",
+      "id": "au-wlf",
       "name": "Wallis and Futuna"
     },
     {
-      "id": "0-eu",
-      "name": "Europe"
+      "id": "eu",
+      "name": "Europe",
+      "type": "Continent"
     },
     {
-      "id": "0-eu-alb",
+      "id": "eu-alb",
       "name": "Albania",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-and",
+      "id": "eu-and",
       "name": "Andorra",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-arm",
+      "id": "eu-arm",
       "name": "Armenia",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-aut",
+      "id": "eu-aut",
       "name": "Austria",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-blr",
+      "id": "eu-blr",
       "name": "Belarus",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-bel",
+      "id": "eu-bel",
       "name": "Belgium",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-bih",
+      "id": "eu-bih",
       "name": "Bosnia and Herzegovina",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-bgr",
+      "id": "eu-bgr",
       "name": "Bulgaria",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-hrv",
+      "id": "eu-hrv",
       "name": "Croatia",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-cyp",
+      "id": "eu-cyp",
       "name": "Cyprus",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-cze",
+      "id": "eu-cze",
       "name": "Czechia",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-dnk",
+      "id": "eu-dnk",
       "name": "Denmark",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-est",
+      "id": "eu-est",
       "name": "Estonia",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-fin",
+      "id": "eu-fin",
       "name": "Finland",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-fra",
+      "id": "eu-fra",
       "name": "France",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-geo",
+      "id": "eu-geo",
       "name": "Georgia",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-deu",
+      "id": "eu-deu",
       "name": "Germany",
       "nameLocal": "Deutschland",
       "languages": ["German"],
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-deu-bade",
+      "id": "eu-deu-bade",
       "name": "Baden-Württemberg",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-bade-albdo",
+      "id": "eu-deu-bade-albdo",
       "name": "Alb-Donau",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-baden",
+      "id": "eu-deu-bade-baden",
       "name": "Baden-Baden",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Urban district"
+      "image": true,
+      "type": "Urban district"
     },
     {
-      "id": "0-eu-deu-bade-biber",
+      "id": "eu-deu-bade-biber",
       "name": "Biberach",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-boden",
+      "id": "eu-deu-bade-boden",
       "name": "Bodensee",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-bobli",
+      "id": "eu-deu-bade-bobli",
       "name": "Böblingen",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-breis",
+      "id": "eu-deu-bade-breis",
       "name": "Breisgau-Hochschwarzwald",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-calwx",
+      "id": "eu-deu-bade-calwx",
       "name": "Calw",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-emmen",
+      "id": "eu-deu-bade-emmen",
       "name": "Emmendingen",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-enzxx",
+      "id": "eu-deu-bade-enzxx",
       "name": "Enz",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-essli",
+      "id": "eu-deu-bade-essli",
       "name": "Esslingen",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-freib",
+      "id": "eu-deu-bade-freib",
       "name": "Freiburg im Breisgau",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Urban district"
+      "image": true,
+      "type": "Urban district"
     },
     {
-      "id": "0-eu-deu-bade-freud",
+      "id": "eu-deu-bade-freud",
       "name": "Freudenstadt",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-goppi",
+      "id": "eu-deu-bade-goppi",
       "name": "Göppingen",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-heidl",
+      "id": "eu-deu-bade-heidl",
       "name": "Heidelberg",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Urban district"
+      "image": true,
+      "type": "Urban district"
     },
     {
-      "id": "0-eu-deu-bade-heidn",
+      "id": "eu-deu-bade-heidn",
       "name": "Heidenheim",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-heilb",
+      "id": "eu-deu-bade-heilb",
       "name": "Heilbronn",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Urban district"
+      "image": true,
+      "type": "Urban district"
     },
     {
-      "id": "0-eu-deu-bade-heild",
+      "id": "eu-deu-bade-heild",
       "name": "Heilbronn (district)",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-hohen",
+      "id": "eu-deu-bade-hohen",
       "name": "Hohenlohe",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-karls",
+      "id": "eu-deu-bade-karls",
       "name": "Karlsruhe",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Urban district"
+      "image": true,
+      "type": "Urban district"
     },
     {
-      "id": "0-eu-deu-bade-karld",
+      "id": "eu-deu-bade-karld",
       "name": "Karlsruhe (district)",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-konst",
+      "id": "eu-deu-bade-konst",
       "name": "Konstanz"
     },
     {
-      "id": "0-eu-deu-bade-konst-konsta",
+      "id": "eu-deu-bade-konst-konsta",
       "name": "Konstanz"
     },
     {
-      "id": "0-eu-deu-bade-lorra",
+      "id": "eu-deu-bade-lorra",
       "name": "Lörrach",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-ludwi",
+      "id": "eu-deu-bade-ludwi",
       "name": "Ludwigsburg",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-maint",
+      "id": "eu-deu-bade-maint",
       "name": "Main-Tauber",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-mannh",
+      "id": "eu-deu-bade-mannh",
       "name": "Mannheim",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Urban district"
+      "image": true,
+      "type": "Urban district"
     },
     {
-      "id": "0-eu-deu-bade-necka",
+      "id": "eu-deu-bade-necka",
       "name": "Neckar-Odenwald",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-orten",
+      "id": "eu-deu-bade-orten",
       "name": "Ortenau",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-ostal",
+      "id": "eu-deu-bade-ostal",
       "name": "Ostalbkreis",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-pforz",
+      "id": "eu-deu-bade-pforz",
       "name": "Pforzheim",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-rasta",
+      "id": "eu-deu-bade-rasta",
       "name": "Rastatt",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-raven",
+      "id": "eu-deu-bade-raven",
       "name": "Ravensburg",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-remsm",
+      "id": "eu-deu-bade-remsm",
       "name": "Rems-Murr",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-reutl",
+      "id": "eu-deu-bade-reutl",
       "name": "Reutlingen",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-rhein",
+      "id": "eu-deu-bade-rhein",
       "name": "Rhein-Neckar",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-rottw",
+      "id": "eu-deu-bade-rottw",
       "name": "Rottweil",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-schwb",
+      "id": "eu-deu-bade-schwb",
       "name": "Schwarzwald-Baar",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-schwh",
+      "id": "eu-deu-bade-schwh",
       "name": "Schwäbisch Hall",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-sigma",
+      "id": "eu-deu-bade-sigma",
       "name": "Sigmaringen",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-stutt",
+      "id": "eu-deu-bade-stutt",
       "name": "Stuttgart",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Urban district"
+      "image": true,
+      "type": "Urban district"
     },
     {
-      "id": "0-eu-deu-bade-tubin",
+      "id": "eu-deu-bade-tubin",
       "name": "Tübingen",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-tuttl",
+      "id": "eu-deu-bade-tuttl",
       "name": "Tuttlingen",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-ulmxx",
+      "id": "eu-deu-bade-ulmxx",
       "name": "Ulm",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Urban district"
+      "image": true,
+      "type": "Urban district"
     },
     {
-      "id": "0-eu-deu-bade-walds",
+      "id": "eu-deu-bade-walds",
       "name": "Waldshut",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bade-zolle",
+      "id": "eu-deu-bade-zolle",
       "name": "Zollernalb",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Rural district"
+      "image": true,
+      "type": "Rural district"
     },
     {
-      "id": "0-eu-deu-bava",
+      "id": "eu-deu-bava",
       "name": "Bavaria",
       "nameLocal": "Beieren",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-berl",
+      "id": "eu-deu-berl",
       "name": "Berlin",
       "nameLocal": "Berlin",
-      "flag": true,
-      "regionType": "City-state"
+      "image": true,
+      "type": "City-state"
     },
     {
-      "id": "0-eu-deu-bran",
+      "id": "eu-deu-bran",
       "name": "Brandenburg",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-brem",
+      "id": "eu-deu-brem",
       "name": "Bremen",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "City-state"
+      "image": true,
+      "type": "City-state"
     },
     {
-      "id": "0-eu-deu-hamb",
+      "id": "eu-deu-hamb",
       "name": "Hamburg",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "City-state"
+      "image": true,
+      "type": "City-state"
     },
     {
-      "id": "0-eu-deu-hess",
+      "id": "eu-deu-hess",
       "name": "Hesse",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-lowe",
+      "id": "eu-deu-lowe",
       "name": "Lower Saxony",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-meck",
+      "id": "eu-deu-meck",
       "name": "Mecklenburg-Vorpommern",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-nort",
+      "id": "eu-deu-nort",
       "name": "North Rhine-Westphalia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-rhin",
+      "id": "eu-deu-rhin",
       "name": "Rhineland-Palatinate",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-saar",
+      "id": "eu-deu-saar",
       "name": "Saarland",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-saxo",
+      "id": "eu-deu-saxo",
       "name": "Saxony",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-saxa",
+      "id": "eu-deu-saxa",
       "name": "Saxony-Anhalt",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-schl",
+      "id": "eu-deu-schl",
       "name": "Schleswig-Holstein",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-deu-thur",
+      "id": "eu-deu-thur",
       "name": "Thuringia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "State"
+      "image": true,
+      "type": "State"
     },
     {
-      "id": "0-eu-grc",
+      "id": "eu-grc",
       "name": "Greece",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-hun",
+      "id": "eu-hun",
       "name": "Hungary",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-isl",
+      "id": "eu-isl",
       "name": "Iceland",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-irl",
+      "id": "eu-irl",
       "name": "Ireland",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-ita",
+      "id": "eu-ita",
       "name": "Italy",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-kos",
+      "id": "eu-kos",
       "name": "Kosovo",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-lva",
+      "id": "eu-lva",
       "name": "Latvia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-lie",
+      "id": "eu-lie",
       "name": "Liechtenstein",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-ltu",
+      "id": "eu-ltu",
       "name": "Lithuania",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-lux",
+      "id": "eu-lux",
       "name": "Luxembourg",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-mlt",
+      "id": "eu-mlt",
       "name": "Malta",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-mda",
+      "id": "eu-mda",
       "name": "Moldova",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-mco",
+      "id": "eu-mco",
       "name": "Monaco",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-mne",
+      "id": "eu-mne",
       "name": "Montenegro",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-ned",
+      "id": "eu-ned",
       "name": "Netherlands, the",
       "nameLocal": "Nederland",
       "languages": ["Dutch", "English", "Frisian", "Papiamento"],
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-mkd",
+      "id": "eu-mkd",
       "name": "North Macedonia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-nor",
+      "id": "eu-nor",
       "name": "Norway",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-pol",
+      "id": "eu-pol",
       "name": "Poland",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-prt",
+      "id": "eu-prt",
       "name": "Portugal",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-rou",
+      "id": "eu-rou",
       "name": "Romania",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-rus",
+      "id": "eu-rus",
       "name": "Russia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-smr",
+      "id": "eu-smr",
       "name": "San Marino",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-srb",
+      "id": "eu-srb",
       "name": "Serbia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-svk",
+      "id": "eu-svk",
       "name": "Slovakia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-svn",
+      "id": "eu-svn",
       "name": "Slovenia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-esp",
+      "id": "eu-esp",
       "name": "Spain",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-swe",
+      "id": "eu-swe",
       "name": "Sweden",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-che",
+      "id": "eu-che",
       "name": "Switzerland",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-tur",
+      "id": "eu-tur",
       "name": "Turkey",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-ukr",
+      "id": "eu-ukr",
       "name": "Ukraine",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-gbr",
+      "id": "eu-gbr",
       "name": "United Kingdom",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-eu-vat",
+      "id": "eu-vat",
       "name": "Vatican City",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na",
-      "name": "North America"
+      "id": "na",
+      "name": "North America",
+      "type": "Continent"
     },
     {
-      "id": "0-na-aia",
+      "id": "na-aia",
       "name": "Anguilla",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-gbr",
-      "regionType": "Country"
+      "type": "Country"
     },
     {
-      "id": "0-na-atg",
+      "id": "na-atg",
       "name": "Antigua and Barbuda",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-abw",
+      "id": "na-abw",
       "name": "Aruba",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-nld",
-      "regionType": "Country"
+      "type": "Country"
     },
     {
-      "id": "0-na-bhs",
+      "id": "na-bhs",
       "name": "Bahamas, the",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-brb",
+      "id": "na-brb",
       "name": "Barbados",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-blz",
+      "id": "na-blz",
       "name": "Belize",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-bmu",
+      "id": "na-bmu",
       "name": "Bermuda",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-gbr",
-      "regionType": "Overseas Territory"
+      "type": "Overseas Territory"
     },
     {
-      "id": "0-na-bes",
+      "id": "na-bes",
       "name": "Bonaire",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-nld",
-      "regionType": "Special Municipality"
+      "type": "Special Municipality"
     },
     {
-      "id": "0-na-vgb",
+      "id": "na-vgb",
       "name": "British Virgin Islands",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-gbr",
-      "regionType": "Overseas Territory"
+      "type": "Overseas Territory"
     },
     {
-      "id": "0-na-can",
+      "id": "na-can",
       "name": "Canada",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-cym",
+      "id": "na-cym",
       "name": "Cayman Islands",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-gbr",
-      "regionType": "Overseas Territory"
+      "type": "Overseas Territory"
     },
     {
-      "id": "0-na-clip",
+      "id": "na-clip",
       "name": "Clipperton Island",
       "nameLocal": "",
-      "flag": false,
+      "image": false,
       "parent": "00-eu-fra",
-      "regionType": "Overseas State Private Property"
+      "type": "Overseas State Private Property"
     },
     {
-      "id": "0-na-cri",
+      "id": "na-cri",
       "name": "Costa Rica",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-cub",
+      "id": "na-cub",
       "name": "Cuba",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-cuw",
+      "id": "na-cuw",
       "name": "Curaçao",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-nld",
-      "regionType": "Constituent Country"
+      "type": "Constituent Country"
     },
     {
-      "id": "0-na-dma",
+      "id": "na-dma",
       "name": "Dominica",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-dom",
+      "id": "na-dom",
       "name": "Dominican Republic",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-slv",
+      "id": "na-slv",
       "name": "El Salvador",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-fdov",
+      "id": "na-fdov",
       "name": "Federal Dependencies of Venezuela",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "0-sa-ven",
-      "regionType": "Special Administrative Division"
+      "type": "Special Administrative Division"
     },
     {
-      "id": "0-na-grl",
+      "id": "na-grl",
       "name": "Greenland",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "0-eu-dnk",
-      "regionType": "Autonomous Territory"
+      "type": "Autonomous Territory"
     },
     {
-      "id": "0-na-grd",
+      "id": "na-grd",
       "name": "Grenada",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-glp",
+      "id": "na-glp",
       "name": "Guadeloupe",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-fra",
-      "regionType": "Overseas Department"
+      "type": "Overseas Department"
     },
     {
-      "id": "0-na-gtm",
+      "id": "na-gtm",
       "name": "Guatemala",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-hti",
+      "id": "na-hti",
       "name": "Haiti",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-hnd",
+      "id": "na-hnd",
       "name": "Honduras",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-jam",
+      "id": "na-jam",
       "name": "Jamaica",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-mtq",
+      "id": "na-mtq",
       "name": "Martinique",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-fra",
-      "regionType": "Overseas Department"
+      "type": "Overseas Department"
     },
     {
-      "id": "0-na-mex",
+      "id": "na-mex",
       "name": "Mexico",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-msr",
+      "id": "na-msr",
       "name": "Montserrat",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-gbr",
-      "regionType": "Overseas Territory"
+      "type": "Overseas Territory"
     },
     {
-      "id": "0-na-nic",
+      "id": "na-nic",
       "name": "Nicaragua",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-nuev",
+      "id": "na-nuev",
       "name": "Nueva Esparta",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-sa-ven",
-      "regionType": "State"
+      "type": "State"
     },
     {
-      "id": "0-na-pan",
+      "id": "na-pan",
       "name": "Panama",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-pri",
+      "id": "na-pri",
       "name": "Puerto Rico",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-na-usa",
-      "regionType": "Unincorporated Territory"
+      "type": "Unincorporated Territory"
     },
     {
-      "id": "0-na-saba",
+      "id": "na-saba",
       "name": "Saba",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-nld",
-      "regionType": "Special Municipality"
+      "type": "Special Municipality"
     },
     {
-      "id": "0-na-blm",
+      "id": "na-blm",
       "name": "Saint Barthélemy",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-fra",
-      "regionType": "Overseas Collectivity"
+      "type": "Overseas Collectivity"
     },
     {
-      "id": "0-na-kna",
+      "id": "na-kna",
       "name": "Saint Kitts and Nevis",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-lca",
+      "id": "na-lca",
       "name": "Saint Lucia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-maf",
+      "id": "na-maf",
       "name": "Saint Martin",
       "nameLocal": "",
-      "flag": false,
+      "image": false,
       "parent": "00-eu-fra",
-      "regionType": "Overseas Collectivity"
+      "type": "Overseas Collectivity"
     },
     {
-      "id": "0-na-spm",
+      "id": "na-spm",
       "name": "Saint Pierre and Miquelon",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-fra",
-      "regionType": "Overseas Collectivity"
+      "type": "Overseas Collectivity"
     },
     {
-      "id": "0-na-vct",
+      "id": "na-vct",
       "name": "Saint Vincent and the Grenadines",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-sapr",
+      "id": "na-sapr",
       "name": "San Andrés and Providencia",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-sa-col",
-      "regionType": "Department"
+      "type": "Department"
     },
     {
-      "id": "0-na-sxe",
+      "id": "na-sxe",
       "name": "Sint Eustatius",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-nld",
-      "regionType": "Special Municipality"
+      "type": "Special Municipality"
     },
     {
-      "id": "0-na-sxm",
+      "id": "na-sxm",
       "name": "Sint Maarten",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-nld",
-      "regionType": "Constituent Country"
+      "type": "Constituent Country"
     },
     {
-      "id": "0-na-tto",
+      "id": "na-tto",
       "name": "Trinidad and Tobago",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-tca",
+      "id": "na-tca",
       "name": "Turks and Caicos Islands",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-gbr",
-      "regionType": "Overseas Territory"
+      "type": "Overseas Territory"
     },
     {
-      "id": "0-na-usa",
+      "id": "na-usa",
       "name": "United States",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-na-vir",
+      "id": "na-vir",
       "name": "United States Virgin Islands",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-na-usa",
-      "regionType": "Unincorporated Territory"
+      "type": "Unincorporated Territory"
     },
     {
-      "id": "0-sa",
-      "name": "South America"
+      "id": "sa",
+      "name": "South America",
+      "type": "Continent"
     },
     {
-      "id": "0-sa-arg",
+      "id": "sa-arg",
       "name": "Argentina",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-bol",
+      "id": "sa-bol",
       "name": "Bolivia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-bvt",
+      "id": "sa-bvt",
       "name": "Bouvet Island",
       "nameLocal": "",
-      "flag": false,
+      "image": false,
       "parent": "00-eu-nor",
-      "regionType": "Dependent Territory"
+      "type": "Dependent Territory"
     },
     {
-      "id": "0-sa-bra",
+      "id": "sa-bra",
       "name": "Brazil",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-chl",
+      "id": "sa-chl",
       "name": "Chile",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-col",
+      "id": "sa-col",
       "name": "Colombia",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-ecu",
+      "id": "sa-ecu",
       "name": "Ecuador",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-flk",
+      "id": "sa-flk",
       "name": "Falkland Islands",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-gbr",
-      "regionType": "Overseas Territory"
+      "type": "Overseas Territory"
     },
     {
-      "id": "0-sa-guf",
+      "id": "sa-guf",
       "name": "French Guiana",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-fra",
-      "regionType": "Overseas Collectivity"
+      "type": "Overseas Collectivity"
     },
     {
-      "id": "0-sa-guy",
+      "id": "sa-guy",
       "name": "Guyana",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-pry",
+      "id": "sa-pry",
       "name": "Paraguay",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-per",
+      "id": "sa-per",
       "name": "Peru",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-sgs",
+      "id": "sa-sgs",
       "name": "South Georgia and the South Sandwich Islands",
       "nameLocal": "",
-      "flag": true,
+      "image": true,
       "parent": "00-eu-gbr",
-      "regionType": "Overseas Territory"
+      "type": "Overseas Territory"
     },
     {
-      "id": "0-sa-sur",
+      "id": "sa-sur",
       "name": "Suriname",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-ury",
+      "id": "sa-ury",
       "name": "Uruguay",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "0-sa-ven",
+      "id": "sa-ven",
       "name": "Venezuela",
       "nameLocal": "",
-      "flag": true,
-      "regionType": "Country"
+      "image": true,
+      "type": "Country"
     }
   ]
 }

@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, map } from 'rxjs';
 
-import { Topic } from '../../models';
+import { RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
-import { RouteDiscover } from 'src/app/models/routes.model';
 
 @Component({
   selector: 'app-topics',
@@ -33,14 +32,14 @@ export class TopicsComponent implements OnInit {
   }
 
   public getImage(id: string): string {
-    return `assets/mock/images/${this.archiveId}/${id}.svg`;
+    return `assets/mock/images/${this.archiveId}/${id.replace('-', '/')}.svg`;
   }
 
   private getTopics(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
     this.archiveId = url[RouteDiscover.Archive];
     const topicId = url[RouteDiscover.Topic];
-    const parentTopic = topicId.split('-').slice(-1)[0];
+    const parentTopic = topicId?.split('-').slice(-1)[0] || '';
 
     this.archiveService.getArchive(this.archiveId).subscribe(archiveData => {
       this.topics = archiveData.topics.filter(topic =>
