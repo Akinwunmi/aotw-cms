@@ -49,7 +49,7 @@ export class DiscoverComponent implements OnInit {
     if (!id) {
       return '';
     }
-    return `assets/mock/images/${this.archiveId}/${id.replace('-', '/')}.svg`;
+    return `assets/mock/images/${this.archiveId}/${id.replaceAll('-', '/')}.svg`;
   }
 
   public setActiveTopic(id: string, topics?: string[]): void {

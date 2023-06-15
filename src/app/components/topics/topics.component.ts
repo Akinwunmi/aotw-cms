@@ -32,7 +32,7 @@ export class TopicsComponent implements OnInit {
   }
 
   public getImage(id: string): string {
-    return `assets/mock/images/${this.archiveId}/${id.replace('-', '/')}.svg`;
+    return `assets/mock/images/${this.archiveId}/${id.replaceAll('-', '/')}.svg`;
   }
 
   private getTopics(rawUrl: string): void {
