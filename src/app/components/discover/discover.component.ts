@@ -5,13 +5,13 @@ import { filter, map } from 'rxjs';
 
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
-import { BreadcrumbComponent, BreadcrumbItem } from '../breadcrumb';
+import { BreadcrumbItem } from '../breadcrumb';
+import { DiscoverHeaderComponent } from './discover-header';
 
 @Component({
   selector: 'app-discover',
   standalone: true,
-  imports: [CommonModule, RouterModule, BreadcrumbComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [CommonModule, RouterModule, DiscoverHeaderComponent],
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
 })
@@ -42,14 +42,6 @@ export class DiscoverComponent implements OnInit {
     ).subscribe(url => {
       this.getArchiveData(url);
     });
-  }
-
-
-  public getImage(id?: string): string {
-    if (!id) {
-      return '';
-    }
-    return `assets/mock/images/${this.archiveId}/${id.replaceAll('-', '/')}.svg`;
   }
 
   public setActiveTopic(id: string, topics?: string[]): void {

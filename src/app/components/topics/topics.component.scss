@@ -1,11 +1,7 @@
 :host {
   display: grid;
   gap: var(--aotw-space-xl) var(--aotw-space-l);
-  grid-template-columns: repeat(10, 1fr);
-
-  @media only screen and (max-width: 30rem) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-columns: repeat(auto-fill, minmax(min(9.25rem, 100%), 1fr));
 }
 
 .topic {

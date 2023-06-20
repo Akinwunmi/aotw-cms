@@ -27,11 +27,7 @@ section {
   .archives {
     display: grid;
     gap: var(--aotw-space-l);
-    grid-template-columns: repeat(6, 1fr);
-
-    @media only screen and (max-width: 30rem) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(auto-fill, minmax(min(18.5rem, 100%), 1fr));
 
     .card {
       cursor: pointer;

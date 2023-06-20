@@ -5,7 +5,7 @@
   gap: var(--aotw-space-l);
   grid-template-rows: auto 1fr;
   height: calc(var(--aotw-size-xl) * 3);
-  padding: var(--aotw-space-s);
+  padding: var(--aotw-space-l) var(--aotw-space-s);
 }
 
 p {

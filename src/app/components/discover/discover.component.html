@@ -1,19 +1,9 @@
 <ng-container *ngIf="archiveData">
-  <section *ngIf="activeTopic; else mainTopicsHeader" class="header active-topic">
-    <div class="info">
-      <app-breadcrumb [items]="topicsBreadcrumb"></app-breadcrumb>
-      <h2>{{ activeTopic.type || '\u2014' }}</h2>
-      <div class="topic-name">
-        <button>
-          <aotw-icon name="logo"></aotw-icon>
-        </button>
-        <h3>{{ activeTopic.name }}</h3>
-      </div>
-    </div>
-    <div class="image" [ngClass]="{ 'no-image': !activeTopic.image }">
-      <img *ngIf="activeTopic.image" [src]="getImage(activeTopic.id)" alt="">
-    </div>
-  </section>
+  <app-discover-header
+    *ngIf="activeTopic; else mainTopicsHeader"
+    [breadcrumb]="topicsBreadcrumb"
+    [topic]="activeTopic"
+  ></app-discover-header>
 </ng-container>
 <section class="content">
   <router-outlet></router-outlet>
