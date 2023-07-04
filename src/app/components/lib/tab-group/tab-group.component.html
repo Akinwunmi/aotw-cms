@@ -1,0 +1,9 @@
+<aotw-tab-group [activeTab]="activeTab">
+  <aotw-tab
+    *ngFor="let tab of tabs"
+    [disabled]="tab.disabled"
+    (click)="setActiveTab(tab)"
+  >
+    {{ tab.label }}
+  </aotw-tab>
+</aotw-tab-group>

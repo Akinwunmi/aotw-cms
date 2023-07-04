@@ -1,0 +1,23 @@
+<ng-container *ngIf="archiveData">
+  <app-discover-header
+    *ngIf="activeTopic; else mainTopicsHeader"
+    [breadcrumb]="topicsBreadcrumb"
+    [topic]="activeTopic"
+  ></app-discover-header>
+</ng-container>
+<section class="content">
+  <router-outlet></router-outlet>
+</section>
+
+<ng-template #mainTopicsHeader>
+  <section class="header">
+    <h2>{{ mainTopicType }}</h2>
+    <ul>
+      <li *ngFor="let topic of mainTopics">
+        <a [ngClass]="{ active: topic.id === activeMainTopicId }" (click)="setActiveTopic(topic.id)">
+          {{ topic.name }}
+        </a>
+      </li>
+    </ul>
+  </section>
+</ng-template>

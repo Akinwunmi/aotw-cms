@@ -1,0 +1,12 @@
+:host {
+  align-items: center;
+  display: grid;
+  gap: var(--aotw-space-l);
+  padding: var(--aotw-space-l);
+}
+
+header {
+  align-items: center;
+  display: grid;
+  height: var(--aotw-size-l);
+}

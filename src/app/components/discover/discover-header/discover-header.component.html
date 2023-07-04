@@ -1,0 +1,13 @@
+<div class="info">
+  <app-breadcrumb [items]="breadcrumb"></app-breadcrumb>
+  <h2>{{ topic.type || '\u2014' }}</h2>
+  <div class="topic-name">
+    <button>
+      <aotw-lib-icon name="logo"></aotw-lib-icon>
+    </button>
+    <h3>{{ topic.name }}</h3>
+  </div>
+</div>
+<div class="image" [ngClass]="{ 'no-image': !topic.image }">
+  <img *ngIf="topic.image" [src]="getImage(topic.id)" [alt]="topic.name">
+</div>
