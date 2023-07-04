@@ -1,0 +1,18 @@
+<div class="filters">
+  <button [attr.ghost]="!showSearch || null" (click)="toggleSearch()">
+    <span>Search</span>
+    <aotw-lib-icon name="search" size="medium"></aotw-lib-icon>
+  </button>
+  <button ghost>
+    <span>Sort</span>
+    <aotw-lib-icon name="sort" size="medium"></aotw-lib-icon>
+  </button>
+  <button ghost>
+    <span>Filters</span>
+    <aotw-lib-icon name="filter" size="medium"></aotw-lib-icon>
+  </button>
+  <aotw-lib-chip-group [chips]="filterChips"></aotw-lib-chip-group>
+</div>
+<aotw-lib-field *ngIf="showSearch">
+  <input aotw-input placeholder="Search" />
+</aotw-lib-field>

@@ -3,27 +3,10 @@
 </header>
 <button type="button" ghost (click)="goToCreate()">
   <span>New archive</span>
-  <aotw-icon name="add" size="medium"></aotw-icon>
+  <aotw-lib-icon name="add" size="medium"></aotw-lib-icon>
 </button>
 <section>
-  <div class="filters">
-    <button ghost>
-      <span>Search</span>
-      <aotw-icon name="search" size="medium"></aotw-icon>
-    </button>
-    <button ghost>
-      <span>Sort</span>
-      <aotw-icon name="sort" size="medium"></aotw-icon>
-    </button>
-    <button ghost>
-      <span>Filters</span>
-      <aotw-icon name="filter" size="medium"></aotw-icon>
-    </button>
-    <aotw-chip-group>
-      <aotw-chip size="medium" active><aotw-icon name="grid" size="extra-large"></aotw-icon></aotw-chip>
-      <aotw-chip size="medium"><aotw-icon name="list" size="extra-large"></aotw-icon></aotw-chip>
-    </aotw-chip-group>
-  </div>
+  <app-filters></app-filters>
   <div class="archives">
     <div *ngFor="let archive of archives" class="card" (click)="goToArchive(archive.id)">
       <div class="card-header">

@@ -1,15 +1,15 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
 import { RouteDiscover, Topic } from '../../../models';
 import { BreadcrumbComponent, BreadcrumbItem } from '../../breadcrumb';
+import { AotwIconComponent } from '../../lib';
 
 @Component({
   selector: 'app-discover-header',
   standalone: true,
-  imports: [CommonModule, RouterModule, BreadcrumbComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [CommonModule, RouterModule, AotwIconComponent, BreadcrumbComponent],
   templateUrl: './discover-header.component.html',
   styleUrls: ['./discover-header.component.scss']
 })

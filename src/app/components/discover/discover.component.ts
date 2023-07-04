@@ -1,7 +1,7 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
-import { filter, map } from 'rxjs';
+import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
 
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
@@ -15,7 +15,7 @@ import { DiscoverHeaderComponent } from './discover-header';
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
 })
-export class DiscoverComponent implements OnInit {
+export class DiscoverComponent implements OnDestroy, OnInit {
   public archiveData!: ArchiveTopics;
 
   public mainTopicType?: string;
@@ -25,7 +25,12 @@ export class DiscoverComponent implements OnInit {
   public activeTopic?: Topic;
   public topicsBreadcrumb: BreadcrumbItem[] = [];
 
+  private topicId = signal('');
+  private topicNames = computed(() => this.topicId()?.split('-'));
+
   private archiveId!: string;
+
+  private unsubscribe$ = new Subject<void>();
 
   constructor(
     private archiveService: ArchiveService,
@@ -35,19 +40,31 @@ export class DiscoverComponent implements OnInit {
 
   public ngOnInit(): void {
     this.getArchiveData(this.router.url);
+    const getArchive$ = this.archiveService.getArchive(this.archiveId);
+
+    getArchive$.pipe(
+      take(1)
+    ).subscribe(archiveData => {
+      this.setArchiveData(archiveData);
+    });
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
-      map(event => (event as NavigationEnd).url)
-    ).subscribe(url => {
-      this.getArchiveData(url);
+      map(event => (event as NavigationEnd).url),
+      switchMap(url => {
+        this.getArchiveData(url);
+        return getArchive$;
+      }),
+      takeUntil(this.unsubscribe$)
+    ).subscribe(archiveData => {
+      this.setArchiveData(archiveData);
     });
   }
 
-  public setActiveTopic(id: string, topics?: string[]): void {
+  public setActiveTopic(id: string): void {
     this.router.navigate(['topic', id], { relativeTo: this.route });
     this.activeMainTopicId = id;
-    this.activeTopic = topics && topics?.length > 1
+    this.activeTopic = this.topicNames()?.length > 1
       ? this.archiveData.topics.find(topic => topic.id === id)
       : undefined;
   }
@@ -55,21 +72,25 @@ export class DiscoverComponent implements OnInit {
   private getArchiveData(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
     this.archiveId = url[RouteDiscover.Archive];
-    const topicId = url[RouteDiscover.Topic];
-    const topics = topicId?.split('-');
-    if (topics) {
+    this.topicId.set(url[RouteDiscover.Topic]);
+    if (this.topicNames) {
       // set topic id as title and current url until index of parent topic + topic as link
-      this.topicsBreadcrumb = topics.slice(0, -1).map(topic => ({
+      this.topicsBreadcrumb = this.topicNames()?.slice(0, -1).map(topic => ({
         title: topic,
         link: `${rawUrl.slice(0, rawUrl.indexOf(topic))}${topic}`
       } as BreadcrumbItem));
     }
+  }
 
-    this.archiveService.getArchive(this.archiveId).subscribe(archiveData => {
-      this.archiveData = archiveData;
-      this.mainTopicType = this.archiveData.topics.find(topic => topic.id.length === 2)?.type;
-      this.mainTopics = this.archiveData.topics.filter(topic => topic.id.length === 2);
-      this.setActiveTopic(topicId || this.mainTopics[0].id, topics);
-    });
+  private setArchiveData(archiveData: ArchiveTopics): void {
+    this.archiveData = archiveData;
+    this.mainTopicType = this.archiveData.topics.find(topic => topic.id.length === 2)?.type;
+    this.mainTopics = this.archiveData.topics.filter(topic => topic.id.length === 2);
+    this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
+}
+
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

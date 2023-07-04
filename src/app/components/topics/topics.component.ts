@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { filter, map } from 'rxjs';
+import { Subject, filter, map, takeUntil } from 'rxjs';
 
 import { RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
@@ -13,10 +13,12 @@ import { ArchiveService } from '../../services';
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']
 })
-export class TopicsComponent implements OnInit {
+export class TopicsComponent implements OnDestroy, OnInit {
   public topics?: Topic[];
 
   private archiveId!: string;
+
+  private unsubscribe$ = new Subject<void>();
 
   constructor(private archiveService: ArchiveService, private router: Router) {}
 
@@ -25,7 +27,8 @@ export class TopicsComponent implements OnInit {
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
-      map(event => (event as NavigationEnd).url)
+      map(event => (event as NavigationEnd).url),
+      takeUntil(this.unsubscribe$)
     ).subscribe(url => {
       this.getTopics(url);
     });
@@ -41,7 +44,10 @@ export class TopicsComponent implements OnInit {
     const topicId = url[RouteDiscover.Topic];
     const parentTopic = topicId?.split('-').slice(-1)[0] || '';
 
-    this.archiveService.getArchive(this.archiveId).subscribe(archiveData => {
+    // ! Fix nested subscribe
+    this.archiveService.getArchive(this.archiveId).pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(archiveData => {
       this.topics = archiveData.topics.filter(topic =>
         // Define childs of parent topic
         topic.id.startsWith(topicId) &&
@@ -56,5 +62,10 @@ export class TopicsComponent implements OnInit {
         return topic;
       });
     });
+  }
+
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

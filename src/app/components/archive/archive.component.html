@@ -1,16 +1,16 @@
-<aotw-tab-group [activeTab]="activeTab">
-  <aotw-tab
-    *ngFor="let tab of tabs"
-    [attr.disabled]="tab.disabled || undefined"
-    (click)="goToPage(tab.name)"
-  >
-    {{ tab.label }}
-  </aotw-tab>
-</aotw-tab-group>
-<button type="button" ghost (click)="goToPage('create')">
-  <span>Edit archive</span>
-  <aotw-icon name="edit" size="medium"></aotw-icon>
-</button>
+<ng-container *ngIf="showHeader; else backButton">
+  <aotw-lib-tab-group [activeTab]="activeTab" [tabs]="tabs" (selectedTab)="goToPage($event.name)">
+  </aotw-lib-tab-group>
+  <button type="button" ghost (click)="goToPage('edit')">
+    <span>Edit archive</span>
+    <aotw-lib-icon name="edit" size="medium"></aotw-lib-icon>
+  </button>
+</ng-container>
 <div class="main">
   <router-outlet></router-outlet>
 </div>
+
+<ng-template #backButton>
+  <button type="button">Confirm</button>
+  <button type="button" ghost (click)="goToPreviousPage()">Cancel</button>
+</ng-template>

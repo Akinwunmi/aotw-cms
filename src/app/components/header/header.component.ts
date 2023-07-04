@@ -1,13 +1,25 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, HostBinding, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import '@aotw/components';
 import { Router } from '@angular/router';
 
+import {
+  AotwDropdownComponent,
+  AotwDynamicTextComponent,
+  AotwIconComponent,
+  AotwListItemComponent
+} from '../lib';
+
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [
+    CommonModule,
+    AotwDropdownComponent,
+    AotwDynamicTextComponent,
+    AotwIconComponent,
+    AotwListItemComponent
+  ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
