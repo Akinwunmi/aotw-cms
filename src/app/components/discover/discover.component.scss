@@ -5,7 +5,7 @@
   gap: var(--aotw-space-xs);
   height: 8rem;
   padding-bottom: var(--aotw-space-m);
-  padding-inline: var(--aotw-space-s);
+  padding-inline: var(--aotw-space-l);
 
   h2 {
     color: var(--aotw-color-white);
@@ -42,5 +42,5 @@
 }
 
 .content {
-  padding: var(--aotw-space-m) var(--aotw-space-s);
+  padding: var(--aotw-space-xl) var(--aotw-space-l);
 }

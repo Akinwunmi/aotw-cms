@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer';
 import { HeaderComponent } from './components/header';
+import { SidePanelComponent } from './components/side-panel';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeaderComponent } from './components/header';
     BrowserModule,
     FooterComponent,
     HeaderComponent,
+    SidePanelComponent,
     HttpClientModule,
     AppRoutingModule
   ],

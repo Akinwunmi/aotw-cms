@@ -9,6 +9,7 @@ import {
   AotwIconComponent,
   AotwListItemComponent
 } from '../lib';
+import { SidePanelService } from '../side-panel';
 
 @Component({
   selector: 'app-header',
@@ -28,9 +29,13 @@ export class HeaderComponent {
   @Input()
   public createMode = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sidePanelService: SidePanelService) {}
 
   public goToHome(): void {
     this.router.navigate(['']);
+  }
+
+  public openSidePanel(): void {
+    this.sidePanelService.open();
   }
 }

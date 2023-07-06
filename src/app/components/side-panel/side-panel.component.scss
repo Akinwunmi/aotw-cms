@@ -1,0 +1,31 @@
+:host {
+  background-color: var(--aotw-color-white);
+  box-sizing: border-box;
+  inset-block: 0;
+  margin-right: -30rem;
+  padding: var(--aotw-space-s);
+  position: fixed;
+  right: 0;
+  transition: margin-right 400ms ease-in-out, opacity 400ms ease-in-out;
+  max-width: 30rem;
+  width: 100%;
+  z-index: 3;
+}
+
+:host(.show) {
+  box-shadow: var(--aotw-space-l) 0 var(--aotw-space-2xl) var(--aotw-space-l) rgba(0, 0, 0, 0.1);
+  margin-right: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    padding: var(--aotw-space-s);
+
+    span {
+      color: var(--aotw-color-primary-300);
+    }
+  }
+}
