@@ -3,7 +3,7 @@
     <img *ngIf="topic.image" [src]="getImage(topic.id)" [alt]="topic.name">
   </div>
   <figcaption>
-    <span class="name">{{ topic.name }}</span>
+    <span data-cy="topic-name" class="name">{{ topic.name }}</span>
     <span class="parent">{{ topic.parent }}</span>
   </figcaption>
 </figure>

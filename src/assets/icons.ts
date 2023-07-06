@@ -4,7 +4,6 @@ export const icons: Icon[] = [
   {
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
-        <title>Add Icon</title>
         <path
           d="M7.75 1.25L10.25 1.25L10.25 7.75L16.75 7.75L16.75 10.25L10.25 10.25L10.25 16.75L7.75 16.75L7.75 10.25L1.25 10.25L1.25 7.75L7.75 7.75Z"
           fill="currentColor"
@@ -16,7 +15,6 @@ export const icons: Icon[] = [
   {
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
-        <title>Arrow Down Icon</title>
         <path
           d="M1.25 6L3 4.25L9 10.25L15 4.25L16.75 6L9 13.75Z"
           fill="currentColor"
@@ -28,7 +26,6 @@ export const icons: Icon[] = [
   {
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
-        <title>Arrow Up Icon</title>
         <path
           d="M16.75 12L15 13.75L9 7.75L3 13.75L1.25 12L9 4.25Z"
           fill="currentColor"
@@ -40,7 +37,6 @@ export const icons: Icon[] = [
   {
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
-        <title>Check Icon</title>
         <path
           d="M0 8.5L2 6.5L7 11.5L16 2.5L18 4.5L7 15.5Z"
           fill="currentColor"
@@ -52,7 +48,6 @@ export const icons: Icon[] = [
   {
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
-        <title>Close Icon</title>
         <path
           d="M1.25 3L3 1.25L9 7.25L15 1.25L16.75 3L10.75 9L16.75 15L15 16.75L9 10.75L3 16.75L1.25 15L7.25 9Z"
           fill="currentColor"
@@ -64,7 +59,6 @@ export const icons: Icon[] = [
   {
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
-        <title>Dot Icon</title>
         <circle cx="9" cy="9" r="2" fill="currentColor" />
       </svg>
     `,
@@ -73,7 +67,6 @@ export const icons: Icon[] = [
   {
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
-        <title>Edit Icon</title>
         <path d="M8 1L17 1L17 17L1 17L1 8L3 8L3 15L15 15L15 3L8 3Z" fill="currentColor" />
         <path d="M0 3L3 0L11 8L13 13L8 11Z" fill="currentColor" />
       </svg>
@@ -104,7 +97,7 @@ export const icons: Icon[] = [
         <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-      </svg>  
+      </svg>
     `,
     name: 'grid'
   },
@@ -143,7 +136,7 @@ export const icons: Icon[] = [
         <rect x="1" y="3" width="16" height="2" fill="currentColor" />
         <rect x="1" y="8" width="16" height="2" fill="currentColor" />
         <rect x="1" y="13" width="16" height="2" fill="currentColor" />
-      </svg>  
+      </svg>
     `,
     name: 'menu'
   },
@@ -153,7 +146,7 @@ export const icons: Icon[] = [
         <title>Search Icon</title>
         <circle cx="6.75" cy="6.75" r="5" stroke="currentColor" stroke-width="2" />
         <path d="M9 11L11 9L17 15L15 17Z" fill="currentColor" />
-      </svg>  
+      </svg>
     `,
     name: 'search'
   },
