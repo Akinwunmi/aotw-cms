@@ -14,7 +14,7 @@ aotw-tab-group {
   }
 }
 
-button {
+.button-edit {
   margin-right: var(--aotw-space-s);
 
   @media only screen and (max-width: 30rem) {
@@ -22,6 +22,12 @@ button {
       display: none;
     }
   }
+}
+
+.button-back {
+  justify-self: flex-end;
+  margin-right: calc(var(--aotw-space-s) * -1);
+  margin-top: var(--aotw-space-xs);
 }
 
 .main {
