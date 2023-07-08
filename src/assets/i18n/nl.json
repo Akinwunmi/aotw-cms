@@ -1,0 +1,19 @@
+{
+  "PAGES": {
+    "HOME": "Home",
+    "CREATE": "Creëer"
+  },
+  "COMMON": {
+    "APP_NAME": "Archive of the World",
+    "ARCHIVES": "Archieven",
+    "FILTERS": "Filters",
+    "SEARCH": "Zoek",
+    "SORT": "Sorteer"
+  },
+  "FOOTER": {
+    "SITEMAP": "Sitemap"
+  },
+  "HOME": {
+    "NEW_ARCHIVE": "Nieuw archief"
+  }
+}

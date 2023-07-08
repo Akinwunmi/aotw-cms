@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { routes } from '../../app-routing.module';
 
@@ -9,7 +10,11 @@ import { SitemapItem } from './footer.model';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    RouterModule
+  ],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
@@ -24,5 +29,6 @@ export class FooterComponent implements OnInit {
         path: path || '',
         title: title as string
       }));
+    console.log(this.sitemap);
   }
 }

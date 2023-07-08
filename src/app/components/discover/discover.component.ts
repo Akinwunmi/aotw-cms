@@ -95,7 +95,8 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   }
 
   private setArchiveData(archiveData: ArchiveTopics): void {
-    const { topics } = archiveData;
+    this.archiveData = archiveData;
+    const { topics } = this.archiveData;
     this.mainTopicType = topics.find(topic => topic.id.length === 2)?.type;
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);

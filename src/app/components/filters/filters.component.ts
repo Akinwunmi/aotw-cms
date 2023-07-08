@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { Chip } from '../../models';
 import {
@@ -13,6 +14,7 @@ import {
   standalone: true,
   imports: [
     CommonModule,
+    TranslateModule,
     AotwChipGroupComponent,
     AotwFieldComponent,
     AotwIconComponent,

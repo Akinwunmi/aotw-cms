@@ -1,14 +1,14 @@
 <div class="filters">
   <button [attr.ghost]="!showSearch || null" (click)="toggleSearch()">
-    <span>Search</span>
+    <span>{{ 'COMMON.SEARCH' | translate }}</span>
     <aotw-lib-icon name="search" size="medium"></aotw-lib-icon>
   </button>
   <button ghost>
-    <span>Sort</span>
+    <span>{{ 'COMMON.SORT' | translate }}</span>
     <aotw-lib-icon name="sort" size="medium"></aotw-lib-icon>
   </button>
   <button ghost>
-    <span>Filters</span>
+    <span>{{ 'COMMON.FILTERS' | translate }}</span>
     <aotw-lib-icon name="filter" size="medium"></aotw-lib-icon>
   </button>
   <aotw-lib-chip-group [chips]="filterChips"></aotw-lib-chip-group>

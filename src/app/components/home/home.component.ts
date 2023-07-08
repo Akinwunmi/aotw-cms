@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ArchiveService } from '../../services/archive.service';
 import { Archive } from '../../models/archive.model';
@@ -13,6 +14,7 @@ import { AotwIconComponent } from '../lib';
   imports: [
     CommonModule,
     RouterModule,
+    TranslateModule,
     AotwIconComponent,
     FiltersComponent
   ],
