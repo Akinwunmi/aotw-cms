@@ -1,4 +1,10 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Tab } from '../../../models';
@@ -8,7 +14,7 @@ import { Tab } from '../../../models';
   standalone: true,
   imports: [CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './tab-group.component.html'
+  templateUrl: './tab-group.component.html',
 })
 export class AotwTabGroupComponent {
   @Input()

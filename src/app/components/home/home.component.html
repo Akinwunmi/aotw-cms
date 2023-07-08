@@ -8,7 +8,13 @@
 <section>
   <app-filters></app-filters>
   <div class="archives">
-    <div *ngFor="let archive of archives" class="card" (click)="goToArchive(archive.id)">
+    <div
+      *ngFor="let archive of archives"
+      class="card"
+      tabindex="0"
+      (click)="goToArchive(archive.id)"
+      (keydown)="goToArchive(archive.id)"
+    >
       <div class="card-header">
         <img [src]="archive.image.src" [alt]="archive.image.alt">
         {{ archive.name }}

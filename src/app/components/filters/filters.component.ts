@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AotwChipGroupComponent, AotwFieldComponent, AotwIconComponent } from '../lib';
 
 import { Chip } from '../../models';
+import {
+  AotwChipGroupComponent,
+  AotwFieldComponent,
+  AotwIconComponent,
+} from '../lib';
 
 @Component({
   selector: 'app-filters',
@@ -11,16 +15,16 @@ import { Chip } from '../../models';
     CommonModule,
     AotwChipGroupComponent,
     AotwFieldComponent,
-    AotwIconComponent
+    AotwIconComponent,
   ],
   templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.scss']
+  styleUrls: ['./filters.component.scss'],
 })
 export class FiltersComponent {
   public filterChips: Chip[] = [
     { label: '', icon: 'list', size: 'medium', active: false, disabled: false },
-    { label: '', icon: 'grid', size: 'medium', active: true, disabled: false }
-  ]
+    { label: '', icon: 'grid', size: 'medium', active: true, disabled: false },
+  ];
 
   public showSearch = false;
 

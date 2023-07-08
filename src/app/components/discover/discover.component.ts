@@ -1,11 +1,24 @@
-import { Component, OnDestroy, OnInit, computed, inject, signal } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit,
+  computed,
+  inject,
+  signal
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router,
+  RouterModule
+} from '@angular/router';
 import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
 
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { BreadcrumbItem } from '../breadcrumb';
+
 import { DiscoverHeaderComponent } from './discover-header';
 
 @Component({
@@ -72,7 +85,8 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.archiveId = url[RouteDiscover.Archive];
     this.topicId.set(url[RouteDiscover.Topic]);
     if (this.topicNames) {
-      // set topic id as title and current url until index of parent topic + topic as link
+      // set topic id as title and current url,
+      // until index of parent topic + topic as link
       this.topicsBreadcrumb = this.topicNames()?.slice(0, -1).map(topic => ({
         title: topic,
         link: `${rawUrl.slice(0, rawUrl.indexOf(topic))}${topic}`
@@ -81,11 +95,11 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   }
 
   private setArchiveData(archiveData: ArchiveTopics): void {
-    this.archiveData = archiveData;
-    this.mainTopicType = this.archiveData.topics.find(topic => topic.id.length === 2)?.type;
-    this.mainTopics = this.archiveData.topics.filter(topic => topic.id.length === 2);
+    const { topics } = archiveData;
+    this.mainTopicType = topics.find(topic => topic.id.length === 2)?.type;
+    this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
-}
+  }
 
   public ngOnDestroy(): void {
     this.unsubscribe$.next();
