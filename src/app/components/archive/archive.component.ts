@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, map, Subject, takeUntil } from 'rxjs';
@@ -28,9 +28,10 @@ export class ArchiveComponent implements OnDestroy, OnInit {
   ];
   public activeTab = 0;
 
-  private unsubscribe$ = new Subject<void>();
+  private location = inject(Location);
+  private router = inject(Router);
 
-  constructor(private location: Location, private router: Router) {}
+  private unsubscribe$ = new Subject<void>();
 
   public ngOnInit(): void {
     this.archiveId = this.router.url.split('/')[2];

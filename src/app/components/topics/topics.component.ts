@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { Subject, filter, map, takeUntil } from 'rxjs';
@@ -16,11 +16,12 @@ import { ArchiveService } from '../../services';
 export class TopicsComponent implements OnDestroy, OnInit {
   public topics?: Topic[];
 
+  private archiveService = inject(ArchiveService);
+  private router = inject(Router);
+
   private archiveId!: string;
 
   private unsubscribe$ = new Subject<void>();
-
-  constructor(private archiveService: ArchiveService, private router: Router) {}
 
   public ngOnInit(): void {
     this.getTopics(this.router.url);

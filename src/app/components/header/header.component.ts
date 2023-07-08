@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, HostBinding, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import '@aotw/components';
 import { Router } from '@angular/router';
@@ -28,7 +28,7 @@ export class HeaderComponent {
   @Input()
   public createMode = false;
 
-  constructor(private router: Router) {}
+  private router = inject(Router);
 
   public goToHome(): void {
     this.router.navigate(['']);

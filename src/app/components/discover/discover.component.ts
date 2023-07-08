@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, computed, signal } from '@angular/core';
+import { Component, OnDestroy, OnInit, computed, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
@@ -25,18 +25,16 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public activeTopic?: Topic;
   public topicsBreadcrumb: BreadcrumbItem[] = [];
 
+  private archiveService = inject(ArchiveService);
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+
   private topicId = signal('');
   private topicNames = computed(() => this.topicId()?.split('-'));
 
   private archiveId!: string;
 
   private unsubscribe$ = new Subject<void>();
-
-  constructor(
-    private archiveService: ArchiveService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
 
   public ngOnInit(): void {
     this.getArchiveData(this.router.url);
