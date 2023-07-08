@@ -36,7 +36,8 @@ export class TopicsComponent implements OnDestroy, OnInit {
   }
 
   public getImage(id: string): string {
-    return `assets/mock/images/${this.archiveId}/${id.replaceAll('-', '/')}.svg`;
+    const parsedId = id.replaceAll('-', '/');
+    return `assets/mock/images/${this.archiveId}/${parsedId}.svg`;
   }
 
   private getTopics(rawUrl: string): void {
@@ -52,7 +53,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
       this.topics = archiveData.topics.filter(topic =>
         // Define childs of parent topic
         topic.id.startsWith(topicId) &&
-        // Only take direct children by validating the length opposed to the parent
+        // Only take direct children by validating length opposed to parent
         topic.id.length > topicId.length &&
         topic.id.length <= topicId.length + parentTopic.length + 3
       ).map(topic => {

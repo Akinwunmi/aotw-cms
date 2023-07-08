@@ -10,7 +10,9 @@ export const DISCOVER_ROUTES: Route[] = [
     children: [
       {
         path: 'topic',
-        loadChildren: () => import('../topics/topics.routes').then(m => m.TOPIC_ROUTES),
+        loadChildren: () => import('../topics/topics.routes').then(
+          m => m.TOPIC_ROUTES
+        ),
         title: 'Topic'
       }
     ]

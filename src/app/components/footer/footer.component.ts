@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { routes } from '../../app-routing.module';
+
 import { SitemapItem } from './footer.model';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',

@@ -33,6 +33,8 @@ export class DiscoverHeaderComponent implements OnInit {
     if (!id) {
       return '';
     }
-    return `assets/mock/images/${this.archiveId}/${id.replaceAll('-', '/')}.svg`;
+
+    const parsedId = id.replaceAll('-', '/');
+    return `assets/mock/images/${this.archiveId}/${parsedId}.svg`;
   }
 }
