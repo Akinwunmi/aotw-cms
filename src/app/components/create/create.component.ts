@@ -10,6 +10,4 @@ import { AotwFieldComponent, AotwLabelComponent } from '../lib';
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss']
 })
-export class CreateComponent {
-
-}
+export class CreateComponent {}

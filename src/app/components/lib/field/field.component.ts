@@ -8,6 +8,4 @@ import { CommonModule } from '@angular/common';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './field.component.html'
 })
-export class AotwFieldComponent {
-
-}
+export class AotwFieldComponent {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
@@ -22,7 +22,8 @@ import { AotwIconComponent } from '../lib';
 export class HomeComponent implements OnInit {
   public archives!: Archive[];
 
-  constructor(private archiveService: ArchiveService, private router: Router) {}
+  private archiveService = inject(ArchiveService);
+  private router = inject(Router);
 
   public ngOnInit(): void {
     this.archiveService.getArchives().subscribe(archives => {

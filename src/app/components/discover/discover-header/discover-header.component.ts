@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
@@ -20,9 +20,9 @@ export class DiscoverHeaderComponent implements OnInit {
   @Input()
   public topic!: Topic;
 
-  private archiveId!: string;
+  private router = inject(Router);
 
-  constructor(private router: Router) {}
+  private archiveId!: string;
 
   public ngOnInit(): void {
     const url = this.router.url.slice(1).split('/');

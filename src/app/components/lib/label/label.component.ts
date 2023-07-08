@@ -8,6 +8,4 @@ import { CommonModule } from '@angular/common';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './label.component.html'
 })
-export class AotwLabelComponent {
-
-}
+export class AotwLabelComponent {}

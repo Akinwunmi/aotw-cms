@@ -8,6 +8,4 @@ import { CommonModule } from '@angular/common';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './dropdown.component.html'
 })
-export class AotwDropdownComponent {
-
-}
+export class AotwDropdownComponent {}
