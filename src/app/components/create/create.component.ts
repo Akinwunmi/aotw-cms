@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
+import { SharedModule } from '../../shared';
 import { AotwFieldComponent, AotwLabelComponent } from '../lib';
 
 @Component({
   selector: 'app-create',
   standalone: true,
-  imports: [CommonModule, AotwFieldComponent, AotwLabelComponent],
+  imports: [SharedModule, AotwFieldComponent, AotwLabelComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss']
 })

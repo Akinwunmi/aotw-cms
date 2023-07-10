@@ -1,17 +1,29 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+  inject,
+} from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 import { RouteDiscover, Topic } from '../../../models';
+import { SharedModule } from '../../../shared';
 import { BreadcrumbComponent, BreadcrumbItem } from '../../breadcrumb';
 import { AotwIconComponent } from '../../lib';
 
 @Component({
   selector: 'app-discover-header',
   standalone: true,
-  imports: [CommonModule, RouterModule, AotwIconComponent, BreadcrumbComponent],
+  imports: [
+    SharedModule,
+    RouterModule,
+    AotwIconComponent,
+    BreadcrumbComponent
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover-header.component.html',
-  styleUrls: ['./discover-header.component.scss']
+  styleUrls: ['./discover-header.component.scss'],
 })
 export class DiscoverHeaderComponent implements OnInit {
   @Input()

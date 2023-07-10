@@ -1,0 +1,31 @@
+{
+  "PAGES": {
+    "HOME": "Home",
+    "CREATE": "Creëer"
+  },
+  "COMMON": {
+    "APP_NAME": "Archive of the World",
+    "ARCHIVES": "Archieven",
+    "CTA": {
+      "CANCEL": "Annuleer",
+      "CONFIRM": "Bevestig"
+    },
+    "DISCOVER": "Ontdek",
+    "FILTERS": "Filters",
+    "SEARCH": "Zoek",
+    "SORT": "Sorteer"
+  },
+  "FOOTER": {
+    "SITEMAP": "Sitemap"
+  },
+  "HOME": {
+    "NEW_ARCHIVE": "Nieuw archief"
+  },
+  "ARCHIVE": {
+    "EDIT_ARCHIVE": "Bewerk archief"
+  },
+  "CREATE": {
+    "TITLE": "Creëer nieuw archief",
+    "NAME_OF_THE_ARCHIVE": "Naam van archief"
+  }
+}

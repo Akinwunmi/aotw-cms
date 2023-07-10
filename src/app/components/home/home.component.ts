@@ -1,9 +1,17 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+  inject,
+} from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
 
-import { ArchiveService } from '../../services/archive.service';
 import { Archive } from '../../models/archive.model';
+import { ArchiveService } from '../../services/archive.service';
+import { SharedModule } from '../../shared';
 import { FiltersComponent } from '../filters';
 import { AotwIconComponent } from '../lib';
 
@@ -11,23 +19,30 @@ import { AotwIconComponent } from '../lib';
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule,
+    SharedModule,
     RouterModule,
     AotwIconComponent,
-    FiltersComponent
+    FiltersComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnDestroy, OnInit {
   public archives!: Archive[];
 
   private archiveService = inject(ArchiveService);
+  private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
 
+  private unsubscribe$ = new Subject<void>();
+
   public ngOnInit(): void {
-    this.archiveService.getArchives().subscribe(archives => {
+    this.archiveService.getArchives().pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe((archives) => {
       this.archives = archives;
+      this.cdr.detectChanges();
     });
   }
 
@@ -37,5 +52,10 @@ export class HomeComponent implements OnInit {
 
   public goToCreate(): void {
     this.router.navigate(['create']);
+  }
+
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

@@ -1,12 +1,19 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  Input,
+} from '@angular/core';
+
+import { SharedModule } from '../../../shared';
 
 @Component({
   selector: 'aotw-lib-chip',
   standalone: true,
-  imports: [CommonModule],
+  imports: [SharedModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './chip.component.html'
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './chip.component.html',
 })
 export class AotwChipComponent {
   @Input()

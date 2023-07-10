@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { routes } from '../../app-routing.module';
+import { SharedModule } from '../../shared';
 
 import { SitemapItem } from './footer.model';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [SharedModule, RouterModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
   public currentYear = new Date().getFullYear();
@@ -19,10 +20,10 @@ export class FooterComponent implements OnInit {
 
   public ngOnInit(): void {
     this.sitemap = routes
-      .filter(route => route.path?.length && route.path !== 'archive')
+      .filter((route) => route.path?.length && route.path !== 'archive')
       .map(({ path, title }) => ({
         path: path || '',
-        title: title as string
+        title: title as string,
       }));
   }
 }

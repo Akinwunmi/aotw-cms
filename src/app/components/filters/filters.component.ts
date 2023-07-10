@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { Chip } from '../../models';
+import { SharedModule } from '../../shared';
 import {
   AotwChipGroupComponent,
   AotwFieldComponent,
@@ -12,11 +12,12 @@ import {
   selector: 'app-filters',
   standalone: true,
   imports: [
-    CommonModule,
+    SharedModule,
     AotwChipGroupComponent,
     AotwFieldComponent,
     AotwIconComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './filters.component.html',
   styleUrls: ['./filters.component.scss'],
 })

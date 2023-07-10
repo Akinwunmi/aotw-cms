@@ -1,0 +1,31 @@
+{
+  "PAGES": {
+    "HOME": "Home",
+    "CREATE": "Create"
+  },
+  "COMMON": {
+    "APP_NAME": "Archive of the World",
+    "ARCHIVES": "Archives",
+    "CTA": {
+      "CANCEL": "Cancel",
+      "CONFIRM": "Confirm"
+    },
+    "DISCOVER": "Discover",
+    "FILTERS": "Filters",
+    "SEARCH": "Search",
+    "SORT": "Sort"
+  },
+  "FOOTER": {
+    "SITEMAP": "Sitemap"
+  },
+  "HOME": {
+    "NEW_ARCHIVE": "New archive"
+  },
+  "ARCHIVE": {
+    "EDIT_ARCHIVE": "Edit archive"
+  },
+  "CREATE": {
+    "TITLE": "Create new archive",
+    "NAME_OF_THE_ARCHIVE": "Name of the archive"
+  }
+}

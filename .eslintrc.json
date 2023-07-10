@@ -5,6 +5,9 @@
       "files": [
         "*.ts"
       ],
+      "parserOptions": {
+        "project": ["tsconfig.(eslint|spec).json"]
+      },
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
@@ -12,7 +15,9 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "plugins": [
-        "import"
+        "change-detection-strategy",
+        "import",
+        "rxjs"
       ],
       "rules": {
         "@angular-eslint/component-class-suffix": [
@@ -55,6 +60,7 @@
             "variables": true
           }
         ],
+        "change-detection-strategy/on-push": "error",
         "import/no-extraneous-dependencies": "warn",
         "import/order": [
           "warn",
@@ -100,6 +106,7 @@
           "error",
           "single"
         ],
+        "rxjs/no-nested-subscribe": "error",
         "semi": [
           "error",
           "always"

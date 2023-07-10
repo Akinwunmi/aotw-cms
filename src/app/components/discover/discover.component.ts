@@ -1,4 +1,6 @@
 import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   OnDestroy,
   OnInit,
@@ -6,7 +8,6 @@ import {
   inject,
   signal
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -17,6 +18,7 @@ import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
 
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
+import { SharedModule } from '../../shared';
 import { BreadcrumbItem } from '../breadcrumb';
 
 import { DiscoverHeaderComponent } from './discover-header';
@@ -24,7 +26,8 @@ import { DiscoverHeaderComponent } from './discover-header';
 @Component({
   selector: 'app-discover',
   standalone: true,
-  imports: [CommonModule, RouterModule, DiscoverHeaderComponent],
+  imports: [SharedModule, RouterModule, DiscoverHeaderComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
 })
@@ -39,6 +42,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public topicsBreadcrumb: BreadcrumbItem[] = [];
 
   private archiveService = inject(ArchiveService);
+  private cdr = inject(ChangeDetectorRef);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
 
@@ -92,13 +96,16 @@ export class DiscoverComponent implements OnDestroy, OnInit {
         link: `${rawUrl.slice(0, rawUrl.indexOf(topic))}${topic}`
       } as BreadcrumbItem));
     }
+    this.cdr.detectChanges();
   }
 
   private setArchiveData(archiveData: ArchiveTopics): void {
-    const { topics } = archiveData;
+    this.archiveData = archiveData;
+    const { topics } = this.archiveData;
     this.mainTopicType = topics.find(topic => topic.id.length === 2)?.type;
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
+    this.cdr.detectChanges();
   }
 
   public ngOnDestroy(): void {

@@ -104,9 +104,37 @@ export const icons: Icon[] = [
         <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-      </svg>  
+      </svg>
     `,
     name: 'grid'
+  },
+  {
+    data: `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
+        <path d="M17 17L13 7H11.5L7.5 17H9L12.25 9L15.5 17Z" fill="currentColor"/>
+        <rect x="9.5" y="13" width="5.5" height="1.5" fill="currentColor"/>
+        <path
+          d="M1 11C4.5 11 8 7.5 8 4H9.5C9.5 7.5 6.25 12.5 1 12.5Z"
+          fill="currentColor"
+        />
+        <defs>
+          <clipPath id="cut-edges">
+            <path d="M1 6H12L12 12L3 17Z" />
+          </clipPath>
+        </defs>
+
+        <rect x="1" y="3" width="10" height="1.5" fill="currentColor"/>
+        <rect x="5.25" y="1" width="1.5" height="2.5" fill="currentColor"/>
+        <path
+          d="M1 11C4.5 11 8 7.5 8 4H9.5C9.5 7.5 6.25 12.5 1 12.5Z"
+          clip-path="url(#cut-edges)"
+          transform="scale(-1, 1)"
+          transform-origin="6 0"
+          fill="currentColor"
+        />
+      </svg>
+    `,
+    name: 'language'
   },
   {
     data: `
@@ -143,7 +171,7 @@ export const icons: Icon[] = [
         <rect x="1" y="3" width="16" height="2" fill="currentColor" />
         <rect x="1" y="8" width="16" height="2" fill="currentColor" />
         <rect x="1" y="13" width="16" height="2" fill="currentColor" />
-      </svg>  
+      </svg>
     `,
     name: 'menu'
   },
@@ -153,7 +181,7 @@ export const icons: Icon[] = [
         <title>Search Icon</title>
         <circle cx="6.75" cy="6.75" r="5" stroke="currentColor" stroke-width="2" />
         <path d="M9 11L11 9L17 15L15 17Z" fill="currentColor" />
-      </svg>  
+      </svg>
     `,
     name: 'search'
   },

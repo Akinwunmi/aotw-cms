@@ -1,20 +1,23 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { Location } from '@angular/common';
+import { ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, map, Subject, takeUntil } from 'rxjs';
 
 import { Tab } from '../../models';
+import { SharedModule } from '../../shared';
 import { AotwIconComponent, AotwTabGroupComponent } from '../lib';
 
 @Component({
   selector: 'app-archive',
   standalone: true,
   imports: [
-    CommonModule,
+    SharedModule,
     AotwIconComponent,
     AotwTabGroupComponent,
     RouterModule
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './archive.component.html',
   styleUrls: ['./archive.component.scss']
 })
@@ -23,8 +26,18 @@ export class ArchiveComponent implements OnDestroy, OnInit {
 
   public showHeader = true;
   public tabs: Tab[] = [
-    { id: 0, name: 'search', label: 'Search', disabled: false },
-    { id: 1, name: 'discover', label: 'Discover', disabled: false }
+    {
+      id: 0,
+      name: 'search',
+      label: 'COMMON.SEARCH',
+      disabled: false
+    },
+    {
+      id: 1,
+      name: 'discover',
+      label: 'COMMON.DISCOVER',
+      disabled: false
+    }
   ];
   public activeTab = 0;
 

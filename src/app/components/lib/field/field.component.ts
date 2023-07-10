@@ -1,11 +1,17 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+} from '@angular/core';
+
+import { SharedModule } from '../../../shared';
 
 @Component({
   selector: 'aotw-lib-field',
   standalone: true,
-  imports: [CommonModule],
+  imports: [SharedModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './field.component.html'
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './field.component.html',
 })
 export class AotwFieldComponent {}
