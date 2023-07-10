@@ -1,11 +1,8 @@
 :host {
-  border-bottom: 2px solid var(--aotw-color-white);
   display: grid;
   font-weight: var(--aotw-font-weight-regular);
   gap: var(--aotw-space-xs);
-  height: 8rem;
   padding-bottom: var(--aotw-space-m);
-  padding-inline: var(--aotw-space-s);
   grid-template-columns: 1fr 7.5rem;
 }
 

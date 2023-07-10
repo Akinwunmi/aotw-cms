@@ -3,11 +3,11 @@
   justify-content: space-between;
 }
 
+// ! Check if ::before can be removed
 :host(::before) {
   background-color: var(--aotw-color-grey-200);
   content: '';
   inset: 0;
-  opacity: 0.75;
   position: absolute;
   transition: background-color 300ms ease-in-out;
   z-index: -1;

@@ -1,7 +1,7 @@
 :host {
   align-items: center;
   display: grid;
-  gap: var(--aotw-space-l);
+  gap: 0 var(--aotw-space-l);
   grid-template-columns: 1fr auto;
   padding-block: var(--aotw-space-l);
 }
