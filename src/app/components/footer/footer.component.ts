@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -15,6 +15,7 @@ import { SitemapItem } from './footer.model';
     TranslateModule,
     RouterModule
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
@@ -29,6 +30,5 @@ export class FooterComponent implements OnInit {
         path: path || '',
         title: title as string
       }));
-    console.log(this.sitemap);
   }
 }

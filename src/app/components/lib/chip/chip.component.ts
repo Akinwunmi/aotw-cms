@@ -1,4 +1,9 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  Input,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,7 +11,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './chip.component.html'
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './chip.component.html',
 })
 export class AotwChipComponent {
   @Input()

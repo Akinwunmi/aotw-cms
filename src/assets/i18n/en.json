@@ -6,6 +6,11 @@
   "COMMON": {
     "APP_NAME": "Archive of the World",
     "ARCHIVES": "Archives",
+    "CTA": {
+      "CANCEL": "Cancel",
+      "CONFIRM": "Confirm"
+    },
+    "DISCOVER": "Discover",
     "FILTERS": "Filters",
     "SEARCH": "Search",
     "SORT": "Sort"
@@ -15,5 +20,8 @@
   },
   "HOME": {
     "NEW_ARCHIVE": "New archive"
+  },
+  "ARCHIVE": {
+    "EDIT_ARCHIVE": "Edit archive"
   }
 }

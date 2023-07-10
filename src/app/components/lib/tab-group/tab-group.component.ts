@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   EventEmitter,
@@ -14,6 +15,7 @@ import { Tab } from '../../../models';
   standalone: true,
   imports: [CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './tab-group.component.html',
 })
 export class AotwTabGroupComponent {

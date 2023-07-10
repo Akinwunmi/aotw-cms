@@ -1,4 +1,11 @@
-import { Component, HostBinding, Input, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostBinding,
+  Input,
+  OnInit,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import '@aotw/components';
 import { Router } from '@angular/router';
@@ -8,7 +15,7 @@ import {
   AotwDropdownComponent,
   AotwDynamicTextComponent,
   AotwIconComponent,
-  AotwListItemComponent
+  AotwListItemComponent,
 } from '../lib';
 
 @Component({
@@ -20,18 +27,25 @@ import {
     AotwDropdownComponent,
     AotwDynamicTextComponent,
     AotwIconComponent,
-    AotwListItemComponent
+    AotwListItemComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   @HostBinding('class.create')
   @Input()
   public createMode = false;
 
+  public currentLang!: string;
+
   private router = inject(Router);
   private translate = inject(TranslateService);
+
+  public ngOnInit(): void {
+    this.currentLang = this.translate.currentLang;
+  }
 
   public goToHome(): void {
     this.router.navigate(['']);
@@ -39,6 +53,7 @@ export class HeaderComponent {
 
   // ! Update once menu with "Translation" item is implemented
   public setTranslation(): void {
-    this.translate.use(this.translate.currentLang === 'en' ? 'nl' : 'en');
+    this.currentLang = this.translate.currentLang === 'en' ? 'nl' : 'en';
+    this.translate.use(this.currentLang);
   }
 }

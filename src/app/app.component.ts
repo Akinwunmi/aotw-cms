@@ -1,12 +1,20 @@
-import { Component, OnDestroy, OnInit, Renderer2, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+  inject,
+} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-root',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnDestroy, OnInit {
   public createMode!: boolean;
@@ -25,10 +33,10 @@ export class AppComponent implements OnDestroy, OnInit {
 
   public ngOnInit(): void {
     this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-      map(event => (event as NavigationEnd).urlAfterRedirects),
+      filter((event) => event instanceof NavigationEnd),
+      map((event) => (event as NavigationEnd).urlAfterRedirects),
       takeUntil(this.unsubscribe$)
-    ).subscribe(urlAfterRedirects => {
+    ).subscribe((urlAfterRedirects) => {
       const path = urlAfterRedirects.split('/');
       this.createMode = path[1] === 'create';
       this.createMode

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -19,6 +19,7 @@ import {
     AotwFieldComponent,
     AotwIconComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './filters.component.html',
   styleUrls: ['./filters.component.scss'],
 })

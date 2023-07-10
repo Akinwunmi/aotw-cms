@@ -6,6 +6,11 @@
   "COMMON": {
     "APP_NAME": "Archive of the World",
     "ARCHIVES": "Archieven",
+    "CTA": {
+      "CANCEL": "Annuleer",
+      "CONFIRM": "Bevestig"
+    },
+    "DISCOVER": "Ontdek",
     "FILTERS": "Filters",
     "SEARCH": "Zoek",
     "SORT": "Sorteer"
@@ -15,5 +20,8 @@
   },
   "HOME": {
     "NEW_ARCHIVE": "Nieuw archief"
+  },
+  "ARCHIVE": {
+    "EDIT_ARCHIVE": "Bewerk archief"
   }
 }

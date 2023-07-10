@@ -1,4 +1,10 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
@@ -9,9 +15,15 @@ import { AotwIconComponent } from '../../lib';
 @Component({
   selector: 'app-discover-header',
   standalone: true,
-  imports: [CommonModule, RouterModule, AotwIconComponent, BreadcrumbComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    AotwIconComponent,
+    BreadcrumbComponent
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover-header.component.html',
-  styleUrls: ['./discover-header.component.scss']
+  styleUrls: ['./discover-header.component.scss'],
 })
 export class DiscoverHeaderComponent implements OnInit {
   @Input()

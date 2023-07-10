@@ -6,4 +6,9 @@
 <!-- <button type="button" ghost>
   <aotw-lib-icon name="menu" size="medium"></aotw-lib-icon>
 </button> -->
-<button ghost (click)="setTranslation()">Translate</button>
+<div>
+  {{ currentLang | uppercase }}
+  <button ghost (click)="setTranslation()">
+    <aotw-lib-icon name="language" size="medium"></aotw-lib-icon>
+  </button>
+</div>

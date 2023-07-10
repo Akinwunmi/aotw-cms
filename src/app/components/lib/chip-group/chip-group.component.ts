@@ -1,4 +1,9 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  Input,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Chip } from '../../../models';
@@ -8,7 +13,8 @@ import { Chip } from '../../../models';
   standalone: true,
   imports: [CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './chip-group.component.html'
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './chip-group.component.html',
 })
 export class AotwChipGroupComponent {
   @Input()

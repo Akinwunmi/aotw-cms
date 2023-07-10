@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FiltersComponent } from '../filters';
@@ -10,6 +10,7 @@ import { FiltersComponent } from '../filters';
     CommonModule,
     FiltersComponent
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })

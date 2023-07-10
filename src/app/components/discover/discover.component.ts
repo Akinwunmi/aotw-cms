@@ -1,4 +1,6 @@
 import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   OnDestroy,
   OnInit,
@@ -25,6 +27,7 @@ import { DiscoverHeaderComponent } from './discover-header';
   selector: 'app-discover',
   standalone: true,
   imports: [CommonModule, RouterModule, DiscoverHeaderComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
 })
@@ -39,6 +42,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public topicsBreadcrumb: BreadcrumbItem[] = [];
 
   private archiveService = inject(ArchiveService);
+  private cdr = inject(ChangeDetectorRef);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
 
@@ -92,6 +96,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
         link: `${rawUrl.slice(0, rawUrl.indexOf(topic))}${topic}`
       } as BreadcrumbItem));
     }
+    this.cdr.detectChanges();
   }
 
   private setArchiveData(archiveData: ArchiveTopics): void {
@@ -100,6 +105,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.mainTopicType = topics.find(topic => topic.id.length === 2)?.type;
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
+    this.cdr.detectChanges();
   }
 
   public ngOnDestroy(): void {

@@ -1,4 +1,11 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+  inject
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { Subject, filter, map, takeUntil } from 'rxjs';
@@ -10,6 +17,7 @@ import { ArchiveService } from '../../services';
   selector: 'app-topics',
   standalone: true,
   imports: [CommonModule, RouterModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']
 })
@@ -17,6 +25,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
   public topics?: Topic[];
 
   private archiveService = inject(ArchiveService);
+  private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
 
   private archiveId!: string;
@@ -63,6 +72,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
         }
         return topic;
       });
+      this.cdr.detectChanges();
     });
   }
 
