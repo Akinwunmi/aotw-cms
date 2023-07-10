@@ -6,13 +6,12 @@ import {
   OnInit,
   inject,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
 import { Subject, takeUntil } from 'rxjs';
 
-import { ArchiveService } from '../../services/archive.service';
 import { Archive } from '../../models/archive.model';
+import { ArchiveService } from '../../services/archive.service';
+import { SharedModule } from '../../shared';
 import { FiltersComponent } from '../filters';
 import { AotwIconComponent } from '../lib';
 
@@ -20,9 +19,8 @@ import { AotwIconComponent } from '../lib';
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule,
+    SharedModule,
     RouterModule,
-    TranslateModule,
     AotwIconComponent,
     FiltersComponent,
   ],

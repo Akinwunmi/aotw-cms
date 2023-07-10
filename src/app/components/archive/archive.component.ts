@@ -1,21 +1,20 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { Location } from '@angular/common';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, takeUntil } from 'rxjs';
 
 import { Tab } from '../../models';
+import { SharedModule } from '../../shared';
 import { AotwIconComponent, AotwTabGroupComponent } from '../lib';
 
 @Component({
   selector: 'app-archive',
   standalone: true,
   imports: [
-    CommonModule,
+    SharedModule,
     AotwIconComponent,
     AotwTabGroupComponent,
-    TranslateModule,
     RouterModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -26,31 +25,28 @@ export class ArchiveComponent implements OnDestroy, OnInit {
   public archiveId!: string;
 
   public showHeader = true;
-  public tabs: Tab[] = [];
+  public tabs: Tab[] = [
+    {
+      id: 0,
+      name: 'search',
+      label: 'COMMON.SEARCH',
+      disabled: false
+    },
+    {
+      id: 1,
+      name: 'discover',
+      label: 'COMMON.DISCOVER',
+      disabled: false
+    }
+  ];
   public activeTab = 0;
 
   private location = inject(Location);
   private router = inject(Router);
-  private translate = inject(TranslateService);
 
   private unsubscribe$ = new Subject<void>();
 
   public ngOnInit(): void {
-    this.tabs = [
-      {
-        id: 0,
-        name: 'search',
-        label: this.translate.instant('COMMON.SEARCH') as string,
-        disabled: false
-      },
-      {
-        id: 1,
-        name: 'discover',
-        label: this.translate.instant('COMMON.DISCOVER') as string,
-        disabled: false
-      }
-    ];
-
     this.archiveId = this.router.url.split('/')[2];
     this.setActiveTab(this.router.url);
     this.showHeader = !this.router.url.includes('edit');

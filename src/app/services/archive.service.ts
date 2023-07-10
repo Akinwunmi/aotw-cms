@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Archive, ArchiveTopics } from '../models/archive.model';
@@ -8,8 +8,7 @@ import { Archive, ArchiveTopics } from '../models/archive.model';
   providedIn: 'root'
 })
 export class ArchiveService {
-
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient);
 
   public getArchives(): Observable<Archive[]> {
     return this.http.get<Archive[]>('assets/mock/archives.json');

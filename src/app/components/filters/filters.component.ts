@@ -1,8 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
 
 import { Chip } from '../../models';
+import { SharedModule } from '../../shared';
 import {
   AotwChipGroupComponent,
   AotwFieldComponent,
@@ -13,8 +12,7 @@ import {
   selector: 'app-filters',
   standalone: true,
   imports: [
-    CommonModule,
-    TranslateModule,
+    SharedModule,
     AotwChipGroupComponent,
     AotwFieldComponent,
     AotwIconComponent,

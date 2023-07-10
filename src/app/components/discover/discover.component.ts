@@ -8,7 +8,6 @@ import {
   inject,
   signal
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -19,6 +18,7 @@ import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
 
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
+import { SharedModule } from '../../shared';
 import { BreadcrumbItem } from '../breadcrumb';
 
 import { DiscoverHeaderComponent } from './discover-header';
@@ -26,7 +26,7 @@ import { DiscoverHeaderComponent } from './discover-header';
 @Component({
   selector: 'app-discover',
   standalone: true,
-  imports: [CommonModule, RouterModule, DiscoverHeaderComponent],
+  imports: [SharedModule, RouterModule, DiscoverHeaderComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']

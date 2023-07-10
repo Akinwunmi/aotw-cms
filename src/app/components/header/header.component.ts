@@ -6,11 +6,11 @@ import {
   OnInit,
   inject,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import '@aotw/components';
 import { Router } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
+import { SharedModule } from '../../shared';
 import {
   AotwDropdownComponent,
   AotwDynamicTextComponent,
@@ -22,8 +22,7 @@ import {
   selector: 'app-header',
   standalone: true,
   imports: [
-    CommonModule,
-    TranslateModule,
+    SharedModule,
     AotwDropdownComponent,
     AotwDynamicTextComponent,
     AotwIconComponent,

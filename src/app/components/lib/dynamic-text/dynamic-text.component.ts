@@ -4,12 +4,13 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
   Input,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { SharedModule } from '../../../shared';
 
 @Component({
   selector: 'aotw-lib-dynamic-text',
   standalone: true,
-  imports: [CommonModule],
+  imports: [SharedModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './dynamic-text.component.html',

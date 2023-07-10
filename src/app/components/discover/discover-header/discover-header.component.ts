@@ -5,10 +5,10 @@ import {
   OnInit,
   inject,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
 import { RouteDiscover, Topic } from '../../../models';
+import { SharedModule } from '../../../shared';
 import { BreadcrumbComponent, BreadcrumbItem } from '../../breadcrumb';
 import { AotwIconComponent } from '../../lib';
 
@@ -16,7 +16,7 @@ import { AotwIconComponent } from '../../lib';
   selector: 'app-discover-header',
   standalone: true,
   imports: [
-    CommonModule,
+    SharedModule,
     RouterModule,
     AotwIconComponent,
     BreadcrumbComponent
