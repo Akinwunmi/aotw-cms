@@ -23,5 +23,9 @@
   },
   "ARCHIVE": {
     "EDIT_ARCHIVE": "Bewerk archief"
+  },
+  "CREATE": {
+    "TITLE": "Creëer nieuw archief",
+    "NAME_OF_THE_ARCHIVE": "Naam van archief"
   }
 }

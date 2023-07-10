@@ -23,5 +23,9 @@
   },
   "ARCHIVE": {
     "EDIT_ARCHIVE": "Edit archive"
+  },
+  "CREATE": {
+    "TITLE": "Create new archive",
+    "NAME_OF_THE_ARCHIVE": "Name of the archive"
   }
 }
