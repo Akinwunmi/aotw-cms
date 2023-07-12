@@ -10,6 +10,7 @@
   position: sticky;
   top: var(--aotw-size-m);
   transition: height 150ms ease-in-out;
+  z-index: 1;
 
   &::before {
     background-color: var(--aotw-color-grey-200);
