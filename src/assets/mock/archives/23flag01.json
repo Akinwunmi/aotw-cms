@@ -9,325 +9,490 @@
     },
     {
       "id": "af-dza",
-      "name": "Algeria"
+      "name": "Algeria",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-ago",
-      "name": "Angola"
+      "name": "Angola",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-ben",
-      "name": "Benin"
+      "name": "Benin",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-bwa",
-      "name": "Botswana"
+      "name": "Botswana",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-bfa",
-      "name": "Burkina Faso"
+      "name": "Burkina Faso",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-bdi",
-      "name": "Burundi"
+      "name": "Burundi",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-cmr",
-      "name": "Cameroon"
+      "name": "Cameroon",
+      "image": true,
+      "type": "Country"
     },
     {
-      "id": "af-",
+      "id": "af-icx",
       "name": "Canary Islands",
-      "image": true
+      "image": true,
+      "parent": "eu-esp",
+      "type": "Autonomous Community"
     },
     {
       "id": "af-cpv",
-      "name": "Cape Verde"
+      "name": "Cape Verde",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-caf",
-      "name": "Central African Republic"
+      "name": "Central African Republic",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-ceu",
       "name": "Ceuta",
-      "image": true
+      "image": true,
+      "parent": "eu-esp",
+      "type": "Autonomous City"
     },
     {
       "id": "af-tcd",
-      "name": "Chad"
+      "name": "Chad",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-com",
-      "name": "Comoros, the"
+      "name": "Comoros, the",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-com-anjo",
-      "name": "Anjouan"
+      "name": "Anjouan",
+      "image": true,
+      "type": "Autonomous Island"
     },
     {
       "id": "af-com-gran",
-      "name": "Grande Comore"
+      "name": "Grande Comore",
+      "image": true,
+      "type": "Autonomous Island"
     },
     {
       "id": "af-com-mohe",
-      "name": "Mohéli"
+      "name": "Mohéli",
+      "image": true,
+      "type": "Autonomous Island"
     },
     {
       "id": "af-cod",
-      "name": "Congo, Democratic Republic of the"
+      "name": "Congo, Democratic Republic of the",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-cog",
-      "name": "Congo, Republic of the"
+      "name": "Congo, Republic of the",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-dji",
-      "name": "Djibouti"
+      "name": "Djibouti",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-egy",
-      "name": "Egypt"
+      "name": "Egypt",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-gnq",
-      "name": "Equatorial Guinea"
+      "name": "Equatorial Guinea",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-eri",
-      "name": "Eritrea"
+      "name": "Eritrea",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-swz",
-      "name": "Eswatini"
+      "name": "Eswatini",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-eth",
-      "name": "Ethiopia"
+      "name": "Ethiopia",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-eth-afar",
-      "name": "Afar"
+      "name": "Afar",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-eth-amha",
-      "name": "Amhara"
+      "name": "Amhara",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-eth-begu",
-      "name": "Benishangul-Gumuz"
+      "name": "Benishangul-Gumuz",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-eth-gamb",
-      "name": "Gambella"
+      "name": "Gambella",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-eth-hara",
-      "name": "Harari"
+      "name": "Harari",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-eth-orom",
-      "name": "Oromia"
+      "name": "Oromia",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-eth-sida",
-      "name": "Sidama"
+      "name": "Sidama",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-eth-soma",
-      "name": "Somali"
+      "name": "Somali",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-eth-snnp",
-      "name": "Southern Nations, Nationalities, and Peoples' Region"
+      "name": "Southern Nations, Nationalities, and Peoples' Region",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-eth-tigr",
-      "name": "Tigray"
+      "name": "Tigray",
+      "image": true,
+      "type": "Regional State"
     },
     {
       "id": "af-atf",
-      "name": "French Southern and Antarctic Lands"
+      "name": "French Southern and Antarctic Lands",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Territory"
     },
     {
       "id": "af-gab",
-      "name": "Gabon"
+      "name": "Gabon",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-gmb",
-      "name": "Gambia, the"
+      "name": "Gambia, the",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-gha",
-      "name": "Ghana"
+      "name": "Ghana",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-gin",
-      "name": "Guinea"
+      "name": "Guinea",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-gnb",
-      "name": "Guinea-Bissau"
+      "name": "Guinea-Bissau",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-civ",
-      "name": "Ivory Coast"
+      "name": "Ivory Coast",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-ken",
-      "name": "Kenya"
+      "name": "Kenya",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-lso",
-      "name": "Lesotho"
+      "name": "Lesotho",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-lbr",
-      "name": "Liberia"
+      "name": "Liberia",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-lby",
-      "name": "Libya"
+      "name": "Libya",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-mdg",
-      "name": "Madagascar"
+      "name": "Madagascar",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-mad",
-      "name": "Madeira"
+      "name": "Madeira",
+      "image": true,
+      "parent": "eu-prt",
+      "type": "Autonomous Region"
     },
     {
       "id": "af-mwi",
-      "name": "Malawi"
+      "name": "Malawi",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-mli",
-      "name": "Mali"
+      "name": "Mali",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-mrt",
-      "name": "Mauritania"
+      "name": "Mauritania",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-mus",
-      "name": "Mauritius"
+      "name": "Mauritius",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-myt",
-      "name": "Mayotte"
+      "name": "Mayotte",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Department"
     },
     {
       "id": "af-mel",
-      "name": "Melilla"
+      "name": "Melilla",
+      "image": true,
+      "parent": "eu-esp",
+      "type": "Autonomous City"
     },
     {
       "id": "af-mar",
-      "name": "Morocco"
+      "name": "Morocco",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-moz",
-      "name": "Mozambique"
+      "name": "Mozambique",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-nam",
-      "name": "Namibia"
+      "name": "Namibia",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-ner",
-      "name": "Niger"
+      "name": "Niger",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-nga",
-      "name": "Nigeria"
+      "name": "Nigeria",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-reu",
-      "name": "Réunion"
+      "name": "Réunion",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Department"
     },
     {
       "id": "af-rwa",
-      "name": "Rwanda"
+      "name": "Rwanda",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-sah",
-      "name": "Sahrawi Arab Democratic Republic"
+      "name": "Sahrawi Arab Democratic Republic",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-shn",
-      "name": "Saint Helena, Ascension and Tristan da Cunha"
+      "name": "Saint Helena, Ascension and Tristan da Cunha",
+      "image": false,
+      "type": "Overseas Territory"
     },
     {
       "id": "af-shn-asce",
-      "name": "Ascension Island"
+      "name": "Ascension Island",
+      "image": true,
+      "type": "Constituent Part"
     },
     {
       "id": "af-shn-sain",
-      "name": "Saint Helena"
+      "name": "Saint Helena",
+      "image": true,
+      "type": "Constituent Part"
     },
     {
       "id": "af-shn-tris",
-      "name": "Tristan da Cunha"
+      "name": "Tristan da Cunha",
+      "image": true,
+      "type": "Constituent Part"
     },
     {
       "id": "af-stp",
-      "name": "São Tomé and Príncipe"
+      "name": "São Tomé and Príncipe",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-sen",
-      "name": "Senegal"
+      "name": "Senegal",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-syc",
-      "name": "Seychelles"
+      "name": "Seychelles",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-sle",
-      "name": "Sierra Leone"
+      "name": "Sierra Leone",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-som",
-      "name": "Somalia"
+      "name": "Somalia",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-sml",
-      "name": "Somaliland"
+      "name": "Somaliland",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-zaf",
-      "name": "South Africa"
+      "name": "South Africa",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-ssd",
-      "name": "South Sudan"
+      "name": "South Sudan",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-sdn",
-      "name": "Sudan"
+      "name": "Sudan",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-tza",
-      "name": "Tanzania"
+      "name": "Tanzania",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-tgo",
-      "name": "Togo"
+      "name": "Togo",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-tun",
-      "name": "Tunisia"
+      "name": "Tunisia",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-uga",
-      "name": "Uganda"
+      "name": "Uganda",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-zmb",
-      "name": "Zambia"
+      "name": "Zambia",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "af-zwe",
-      "name": "Zimbabwe"
+      "name": "Zimbabwe",
+      "image": true,
+      "type": "Country"
     },
     {
       "id": "as",
@@ -3457,7 +3622,7 @@
       "name": "Anguilla",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-gbr",
+      "parent": "eu-gbr",
       "type": "Country"
     },
     {
@@ -3472,7 +3637,7 @@
       "name": "Aruba",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-nld",
+      "parent": "eu-nld",
       "type": "Country"
     },
     {
@@ -3501,7 +3666,7 @@
       "name": "Bermuda",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-gbr",
+      "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
     {
@@ -3509,7 +3674,7 @@
       "name": "Bonaire",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-nld",
+      "parent": "eu-nld",
       "type": "Special Municipality"
     },
     {
@@ -3517,7 +3682,7 @@
       "name": "British Virgin Islands",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-gbr",
+      "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
     {
@@ -3532,7 +3697,7 @@
       "name": "Cayman Islands",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-gbr",
+      "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
     {
@@ -3540,7 +3705,7 @@
       "name": "Clipperton Island",
       "nameLocal": "",
       "image": false,
-      "parent": "00-eu-fra",
+      "parent": "eu-fra",
       "type": "Overseas State Private Property"
     },
     {
@@ -3562,7 +3727,7 @@
       "name": "Curaçao",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-nld",
+      "parent": "eu-nld",
       "type": "Constituent Country"
     },
     {
@@ -3591,7 +3756,7 @@
       "name": "Federal Dependencies of Venezuela",
       "nameLocal": "",
       "image": true,
-      "parent": "0-sa-ven",
+      "parent": "sa-ven",
       "type": "Special Administrative Division"
     },
     {
@@ -3599,7 +3764,7 @@
       "name": "Greenland",
       "nameLocal": "",
       "image": true,
-      "parent": "0-eu-dnk",
+      "parent": "eu-dnk",
       "type": "Autonomous Territory"
     },
     {
@@ -3614,7 +3779,7 @@
       "name": "Guadeloupe",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-fra",
+      "parent": "eu-fra",
       "type": "Overseas Department"
     },
     {
@@ -3650,7 +3815,7 @@
       "name": "Martinique",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-fra",
+      "parent": "eu-fra",
       "type": "Overseas Department"
     },
     {
@@ -3665,7 +3830,7 @@
       "name": "Montserrat",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-gbr",
+      "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
     {
@@ -3680,7 +3845,7 @@
       "name": "Nueva Esparta",
       "nameLocal": "",
       "image": true,
-      "parent": "00-sa-ven",
+      "parent": "sa-ven",
       "type": "State"
     },
     {
@@ -3695,7 +3860,7 @@
       "name": "Puerto Rico",
       "nameLocal": "",
       "image": true,
-      "parent": "00-na-usa",
+      "parent": "na-usa",
       "type": "Unincorporated Territory"
     },
     {
@@ -3703,7 +3868,7 @@
       "name": "Saba",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-nld",
+      "parent": "eu-nld",
       "type": "Special Municipality"
     },
     {
@@ -3711,7 +3876,7 @@
       "name": "Saint Barthélemy",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-fra",
+      "parent": "eu-fra",
       "type": "Overseas Collectivity"
     },
     {
@@ -3733,7 +3898,7 @@
       "name": "Saint Martin",
       "nameLocal": "",
       "image": false,
-      "parent": "00-eu-fra",
+      "parent": "eu-fra",
       "type": "Overseas Collectivity"
     },
     {
@@ -3741,7 +3906,7 @@
       "name": "Saint Pierre and Miquelon",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-fra",
+      "parent": "eu-fra",
       "type": "Overseas Collectivity"
     },
     {
@@ -3756,7 +3921,7 @@
       "name": "San Andrés and Providencia",
       "nameLocal": "",
       "image": true,
-      "parent": "00-sa-col",
+      "parent": "sa-col",
       "type": "Department"
     },
     {
@@ -3764,7 +3929,7 @@
       "name": "Sint Eustatius",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-nld",
+      "parent": "eu-nld",
       "type": "Special Municipality"
     },
     {
@@ -3772,7 +3937,7 @@
       "name": "Sint Maarten",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-nld",
+      "parent": "eu-nld",
       "type": "Constituent Country"
     },
     {
@@ -3787,7 +3952,7 @@
       "name": "Turks and Caicos Islands",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-gbr",
+      "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
     {
@@ -3802,7 +3967,7 @@
       "name": "United States Virgin Islands",
       "nameLocal": "",
       "image": true,
-      "parent": "00-na-usa",
+      "parent": "na-usa",
       "type": "Unincorporated Territory"
     },
     {
@@ -3829,7 +3994,7 @@
       "name": "Bouvet Island",
       "nameLocal": "",
       "image": false,
-      "parent": "00-eu-nor",
+      "parent": "eu-nor",
       "type": "Dependent Territory"
     },
     {
@@ -3865,7 +4030,7 @@
       "name": "Falkland Islands",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-gbr",
+      "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
     {
@@ -3873,7 +4038,7 @@
       "name": "French Guiana",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-fra",
+      "parent": "eu-fra",
       "type": "Overseas Collectivity"
     },
     {
@@ -3902,7 +4067,7 @@
       "name": "South Georgia and the South Sandwich Islands",
       "nameLocal": "",
       "image": true,
-      "parent": "00-eu-gbr",
+      "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
     {
