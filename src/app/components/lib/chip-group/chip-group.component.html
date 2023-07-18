@@ -1,12 +1,17 @@
 <aotw-chip-group>
-  <aotw-chip *ngFor="let chip of chips" [active]="chip.active" size="medium">
+  <aotw-chip
+    *ngFor="let chip of chips"
+    [size]="size"
+    [active]="chip.active"
+    [disabled]="chip.disabled"
+  >
     <ng-container *ngIf="chip.label">
       {{ chip.label | translate }}
     </ng-container>
     <aotw-icon
       *ngIf="chip.icon"
       [name]="chip.icon"
-      [size]="chip.size ? 'extra-large' : 'medium'"
+      [size]="size === 'medium' ? 'extra-large' : 'medium'"
     ></aotw-icon>
   </aotw-chip>
 </aotw-chip-group>

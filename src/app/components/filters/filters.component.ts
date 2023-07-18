@@ -23,8 +23,8 @@ import {
 })
 export class FiltersComponent {
   public filterChips: Chip[] = [
-    { label: '', icon: 'list', size: 'medium', active: false, disabled: false },
-    { label: '', icon: 'grid', size: 'medium', active: true, disabled: false },
+    { label: '', icon: 'list', active: false, disabled: false },
+    { label: '', icon: 'grid', active: true, disabled: false },
   ];
 
   public showSearch = false;

@@ -19,4 +19,7 @@ import { SharedModule } from '../../../shared';
 export class AotwChipGroupComponent {
   @Input()
   public chips: Chip[] = [];
+
+  @Input()
+  public size: 'small' | 'medium' = 'medium';
 }
