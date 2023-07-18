@@ -1,28 +1,24 @@
 :host {
+  background-color: var(--aotw-color-grey-200);
   display: flex;
   justify-content: space-between;
 }
 
-// ! Check if ::before can be removed
-:host(::before) {
-  background-color: var(--aotw-color-grey-200);
-  content: '';
-  inset: 0;
-  position: absolute;
-  transition: background-color 300ms ease-in-out;
-  z-index: -1;
-}
-
-:host([class='create']::before) {
-  background-color: transparent;
-  transition: none;
-}
-
 :host([class='create']) {
-  button {
-    aotw-icon {
+  background-color: transparent;
+
+  [aotw-button] {
+    aotw-lib-icon {
       color: var(--aotw-color-white);
       transition: color 150ms ease-in-out;
+    }
+
+    &:hover {
+      background-color: var(--aotw-color-primary-400);
+    }
+
+    &:active {
+      background-color: var(--aotw-color-primary-600);
     }
   }
 }
@@ -35,4 +31,10 @@
   max-width: 100%;
   min-width: 15rem;
   padding-inline: var(--aotw-space-s);
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  gap: var(--aotw-space-s)
 }

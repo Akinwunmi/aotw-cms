@@ -3,12 +3,12 @@
   <aotw-lib-dynamic-text>{{ 'COMMON.APP_NAME' | translate }}</aotw-lib-dynamic-text>
 </div>
 <!-- ! Replace below with menu containing "Translation" item -->
-<!-- <button type="button" ghost>
+<!-- <button aotw-button type="button" ghost>
   <aotw-lib-icon name="menu" size="medium"></aotw-lib-icon>
 </button> -->
-<div>
+<div class="menu">
   {{ currentLang | uppercase }}
-  <button ghost (click)="setTranslation()">
+  <button aotw-button type="button" ghost (click)="setTranslation()">
     <aotw-lib-icon name="language" size="medium"></aotw-lib-icon>
   </button>
 </div>

@@ -1,13 +1,18 @@
 <div class="filters">
-  <button [attr.ghost]="!showSearch || null" (click)="toggleSearch()">
+  <button
+    aotw-button
+    type="button"
+    [attr.ghost]="!showSearch || null"
+    (click)="toggleSearch()"
+  >
     <span>{{ 'COMMON.SEARCH' | translate }}</span>
     <aotw-lib-icon name="search" size="medium"></aotw-lib-icon>
   </button>
-  <button ghost>
+  <button aotw-button type="button" ghost>
     <span>{{ 'COMMON.SORT' | translate }}</span>
     <aotw-lib-icon name="sort" size="medium"></aotw-lib-icon>
   </button>
-  <button ghost>
+  <button aotw-button type="button" ghost>
     <span>{{ 'COMMON.FILTERS' | translate }}</span>
     <aotw-lib-icon name="filter" size="medium"></aotw-lib-icon>
   </button>

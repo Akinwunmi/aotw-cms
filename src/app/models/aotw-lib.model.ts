@@ -1,7 +1,6 @@
 export interface Chip {
   label: string;
   icon?: string;
-  size?: 'small' | 'medium';
   active: boolean;
   disabled: boolean;
 }

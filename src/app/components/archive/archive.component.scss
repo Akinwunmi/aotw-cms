@@ -14,7 +14,7 @@ aotw-tab-group {
   }
 }
 
-button {
+[aotw-button] {
   margin-right: var(--aotw-space-s);
 
   @media only screen and (max-width: 30rem) {
