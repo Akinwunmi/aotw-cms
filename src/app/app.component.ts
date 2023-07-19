@@ -36,7 +36,7 @@ export class AppComponent implements OnDestroy, OnInit {
       filter((event) => event instanceof NavigationEnd),
       map((event) => (event as NavigationEnd).urlAfterRedirects),
       takeUntil(this.unsubscribe$)
-    ).subscribe((urlAfterRedirects) => {
+    ).subscribe(urlAfterRedirects => {
       const path = urlAfterRedirects.split('/');
       this.createMode = path[1] === 'create';
       this.createMode

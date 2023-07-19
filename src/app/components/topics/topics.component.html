@@ -4,6 +4,8 @@
   </div>
   <figcaption>
     <span class="name">{{ topic.name }}</span>
-    <span *ngIf="topic.parent" class="parent">{{ setParentLabel(topic.parent) }}</span>
+    <span *ngIf="topic.parent" class="parent">
+      {{ setParentLabel(topic.parent) }}
+    </span>
   </figcaption>
 </figure>

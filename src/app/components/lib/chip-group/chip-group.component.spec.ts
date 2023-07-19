@@ -16,6 +16,8 @@ describe('AotwChipGroupComponent', () => {
   });
 
   it('should create', () => {
+    fixture.detectChanges();
+
     expect(component).toBeTruthy();
   });
 });

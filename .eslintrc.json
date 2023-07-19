@@ -65,7 +65,11 @@
         "import/order": [
           "warn",
           {
-            "newlines-between": "always"
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
           }
         ],
         "indent": [
