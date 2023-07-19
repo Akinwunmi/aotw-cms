@@ -16,7 +16,7 @@
     <span>{{ 'COMMON.FILTERS' | translate }}</span>
     <aotw-lib-icon name="filter" size="medium"></aotw-lib-icon>
   </button>
-  <aotw-lib-chip-group [chips]="filterChips"></aotw-lib-chip-group>
+  <aotw-lib-chip-group [chips]="filterChips" (activeChip)="setLayout($event)"></aotw-lib-chip-group>
 </div>
 <aotw-lib-field *ngIf="showSearch">
   <input aotw-input placeholder="Search" />

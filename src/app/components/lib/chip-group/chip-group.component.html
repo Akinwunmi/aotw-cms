@@ -1,9 +1,11 @@
 <aotw-chip-group>
   <aotw-chip
     *ngFor="let chip of chips"
+    #chip
     [size]="size"
     [active]="chip.active"
     [disabled]="chip.disabled"
+    (click)="emitActiveChip(chip)"
   >
     <ng-container *ngIf="chip.label">
       {{ chip.label | translate }}
