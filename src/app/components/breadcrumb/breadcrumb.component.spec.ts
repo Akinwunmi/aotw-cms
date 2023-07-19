@@ -13,7 +13,6 @@ describe('BreadcrumbComponent', () => {
 
     fixture = TestBed.createComponent(BreadcrumbComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,4 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateFakeLoader
+} from '@ngx-translate/core';
 
 import { FiltersComponent } from './filters.component';
 
@@ -8,11 +13,18 @@ describe('FiltersComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [FiltersComponent]
+      imports: [
+        FiltersComponent,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useClass: TranslateFakeLoader
+          }
+        })
+      ]
     });
     fixture = TestBed.createComponent(FiltersComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

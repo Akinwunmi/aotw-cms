@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChipGroupComponent } from './chip-group.component';
+import { AotwChipGroupComponent } from './chip-group.component';
 
-describe('ChipGroupComponent', () => {
-  let component: ChipGroupComponent;
-  let fixture: ComponentFixture<ChipGroupComponent>;
+describe('AotwChipGroupComponent', () => {
+  let component: AotwChipGroupComponent;
+  let fixture: ComponentFixture<AotwChipGroupComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ChipGroupComponent]
+      imports: [AotwChipGroupComponent]
     });
-    fixture = TestBed.createComponent(ChipGroupComponent);
+    fixture = TestBed.createComponent(AotwChipGroupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

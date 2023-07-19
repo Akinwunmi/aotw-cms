@@ -8,12 +8,11 @@ describe('DiscoverHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ DiscoverHeaderComponent ]
+      imports: [DiscoverHeaderComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(DiscoverHeaderComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

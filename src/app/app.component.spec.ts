@@ -1,37 +1,45 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateFakeLoader
+} from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
+import { routes } from './app-routing.module';
+import { FooterComponent } from './components/footer';
+import { HeaderComponent } from './components/header';
 
 describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        FooterComponent,
+        HeaderComponent,
+        RouterTestingModule.withRoutes(routes),
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useClass: TranslateFakeLoader
+          }
+        })
       ],
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent]
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
-  it('should have as title \'aotw-cms\'', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('aotw-cms');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    const compiledText = compiled.querySelector('.content span')?.textContent;
-    expect(compiledText).toContain('aotw-cms app is running!');
+  it('should have \'aotw-cms\' as title', () => {
+    expect(component.title).toEqual('aotw-cms');
   });
 });

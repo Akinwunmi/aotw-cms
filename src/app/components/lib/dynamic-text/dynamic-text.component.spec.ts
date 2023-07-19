@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DynamicTextComponent } from './dynamic-text.component';
+import { AotwDynamicTextComponent } from './dynamic-text.component';
 
-describe('DynamicTextComponent', () => {
-  let component: DynamicTextComponent;
-  let fixture: ComponentFixture<DynamicTextComponent>;
+describe('AotwDynamicTextComponent', () => {
+  let component: AotwDynamicTextComponent;
+  let fixture: ComponentFixture<AotwDynamicTextComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [DynamicTextComponent]
+      imports: [AotwDynamicTextComponent]
     });
-    fixture = TestBed.createComponent(DynamicTextComponent);
+    fixture = TestBed.createComponent(AotwDynamicTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LabelComponent } from './label.component';
+import { AotwLabelComponent } from './label.component';
 
-describe('LabelComponent', () => {
-  let component: LabelComponent;
-  let fixture: ComponentFixture<LabelComponent>;
+describe('AotwLabelComponent', () => {
+  let component: AotwLabelComponent;
+  let fixture: ComponentFixture<AotwLabelComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [LabelComponent]
+      imports: [AotwLabelComponent]
     });
-    fixture = TestBed.createComponent(LabelComponent);
+    fixture = TestBed.createComponent(AotwLabelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

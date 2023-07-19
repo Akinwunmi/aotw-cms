@@ -30,7 +30,7 @@ export class DiscoverHeaderComponent implements OnInit {
   public breadcrumb: BreadcrumbItem[] = [];
 
   @Input()
-  public topic!: Topic;
+  public topic?: Topic;
 
   private router = inject(Router);
 

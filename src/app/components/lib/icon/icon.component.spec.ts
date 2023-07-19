@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IconComponent } from './icon.component';
+import { AotwIconComponent } from './icon.component';
 
-describe('IconComponent', () => {
-  let component: IconComponent;
-  let fixture: ComponentFixture<IconComponent>;
+describe('AotwIconComponent', () => {
+  let component: AotwIconComponent;
+  let fixture: ComponentFixture<AotwIconComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [IconComponent]
+      imports: [AotwIconComponent]
     });
-    fixture = TestBed.createComponent(IconComponent);
+    fixture = TestBed.createComponent(AotwIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

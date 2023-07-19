@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FieldComponent } from './field.component';
+import { AotwFieldComponent } from './field.component';
 
-describe('FieldComponent', () => {
-  let component: FieldComponent;
-  let fixture: ComponentFixture<FieldComponent>;
+describe('AotwFieldComponent', () => {
+  let component: AotwFieldComponent;
+  let fixture: ComponentFixture<AotwFieldComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [FieldComponent]
+      imports: [AotwFieldComponent]
     });
-    fixture = TestBed.createComponent(FieldComponent);
+    fixture = TestBed.createComponent(AotwFieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
