@@ -6,4 +6,5 @@ export * from './field';
 export * from './icon';
 export * from './label';
 export * from './list-item';
+export * from './stepper';
 export * from './tab-group';

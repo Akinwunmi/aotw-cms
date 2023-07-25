@@ -2,9 +2,26 @@
   <h2>{{ 'CREATE.TITLE' | translate }}</h2>
 </header>
 
-<aotw-lib-field>
-  <aotw-lib-label>
-    {{ 'CREATE.NAME_OF_THE_ARCHIVE' | translate }}
-  </aotw-lib-label>
-  <input aotw-input />
-</aotw-lib-field>
+<aotw-lib-stepper [steps]="steps"></aotw-lib-stepper>
+<form>
+  <aotw-lib-field>
+    <aotw-lib-label>
+      {{ 'CREATE.NAME_OF_THE_ARCHIVE' | translate }}
+    </aotw-lib-label>
+    <input aotw-input />
+  </aotw-lib-field>
+  <div class="actions">
+    <button type="button" aotw-button ghost secondary>
+      {{ 'COMMON.CTA.CANCEL' | translate }}
+    </button>
+    <button *ngIf="!completed; else createButton" type="button" aotw-button secondary>
+      {{ 'COMMON.CTA.NEXT' | translate }}
+    </button>
+  </div>
+</form>
+
+<ng-template #createButton>
+  <button type="submit" aotw-button secondary>
+    {{ 'COMMON.CTA.CREATE' | translate }}
+  </button>
+</ng-template>

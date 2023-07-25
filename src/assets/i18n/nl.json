@@ -8,7 +8,9 @@
     "ARCHIVES": "Archieven",
     "CTA": {
       "CANCEL": "Annuleer",
-      "CONFIRM": "Bevestig"
+      "CONFIRM": "Bevestig",
+      "CREATE": "Creëer",
+      "NEXT": "Volgende"
     },
     "DISCOVER": "Ontdek",
     "FILTERS": "Filters",
@@ -26,6 +28,12 @@
   },
   "CREATE": {
     "TITLE": "Creëer nieuw archief",
-    "NAME_OF_THE_ARCHIVE": "Naam van archief"
+    "NAME_OF_THE_ARCHIVE": "Naam van archief",
+    "STEPS": {
+      "LAYOUT": "Layout",
+      "MAIN_CATEGORY": "Hoofdcategorie",
+      "MAIN_TOPICS": "Primaire topics",
+      "NAME": "Naam"
+    }
   }
 }

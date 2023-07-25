@@ -2,11 +2,37 @@
   align-items: center;
   display: grid;
   gap: var(--aotw-space-l);
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
   padding: var(--aotw-space-l);
+  width: 100%;
 }
 
 header {
   align-items: center;
   display: grid;
+  grid-column: 1 / -1;
   height: var(--aotw-size-l);
+}
+
+form {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+
+  aotw-lib-field {
+    place-self: center;
+    display: block;
+    max-width: 20rem;
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

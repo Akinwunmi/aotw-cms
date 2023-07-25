@@ -8,7 +8,9 @@
     "ARCHIVES": "Archives",
     "CTA": {
       "CANCEL": "Cancel",
-      "CONFIRM": "Confirm"
+      "CONFIRM": "Confirm",
+      "CREATE": "Create",
+      "NEXT": "Next"
     },
     "DISCOVER": "Discover",
     "FILTERS": "Filters",
@@ -26,6 +28,12 @@
   },
   "CREATE": {
     "TITLE": "Create new archive",
-    "NAME_OF_THE_ARCHIVE": "Name of the archive"
+    "NAME_OF_THE_ARCHIVE": "Name of the archive",
+    "STEPS": {
+      "LAYOUT": "Layout",
+      "MAIN_CATEGORY": "Main category",
+      "MAIN_TOPICS": "Main topics",
+      "NAME": "Name"
+    }
   }
 }

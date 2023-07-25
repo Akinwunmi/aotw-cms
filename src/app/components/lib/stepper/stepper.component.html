@@ -1,0 +1,5 @@
+<aotw-stepper>
+  <aotw-step *ngFor="let step of steps; let i = index" [active]="activeStep === i">
+    {{ step | translate }}
+  </aotw-step>
+</aotw-stepper>
