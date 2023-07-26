@@ -1,0 +1,18 @@
+:host {
+  display: grid;
+  gap: var(--aotw-space-m);
+}
+
+.topic {
+  position: relative;
+
+  input {
+    width: 100%;
+  }
+
+  [aotw-button] {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

@@ -1,8 +1,6 @@
 :host {
   align-items: center;
   display: grid;
-  gap: var(--aotw-space-l);
-  grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   padding: var(--aotw-space-l);
   width: 100%;
@@ -11,8 +9,20 @@
 header {
   align-items: center;
   display: grid;
-  grid-column: 1 / -1;
   height: var(--aotw-size-l);
+}
+
+aotw-lib-stepper {
+  --aotw-stepper-progress-background-color: var(--aotw-color-white);
+  --aotw-stepper-progress-bar-background-color: var(--aotw-color-primary-400);
+  --aotw-step-handle-background-color: var(--aotw-color-primary-400);
+  --aotw-step-handle-background-color-active: var(--aotw-color-white);
+  --aotw-step-handle-background-color-completed: var(--aotw-color-white);
+  --aotw-step-handle-border-color-active: var(--aotw-color-primary-500);
+  --aotw-step-color: var(--aotw-color-primary-400);
+  --aotw-step-color-active: var(--aotw-color-white);
+
+  position: fixed;
 }
 
 form {
@@ -20,15 +30,11 @@ form {
   grid-template-rows: 1fr auto;
   height: 100%;
 
-  aotw-lib-field {
+  .subforms {
     place-self: center;
     display: block;
     max-width: 20rem;
     width: 100%;
-
-    input {
-      width: 100%;
-    }
   }
 
   .actions {

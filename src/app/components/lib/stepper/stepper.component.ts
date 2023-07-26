@@ -2,7 +2,9 @@ import {
   ChangeDetectionStrategy,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
-  Input
+  EventEmitter,
+  Input,
+  Output
 } from '@angular/core';
 
 import { SharedModule } from '../../../shared';
@@ -22,4 +24,12 @@ export class AotwStepperComponent {
 
   @Input()
   public steps: string[] = [];
+
+  @Output()
+  public activeStepChange = new EventEmitter<number>();
+  
+  public setActiveStep(index: number): void {
+    this.activeStep = index;
+    this.activeStepChange.emit(this.activeStep);
+  }
 }

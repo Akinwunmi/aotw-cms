@@ -2,19 +2,24 @@
   <h2>{{ 'CREATE.TITLE' | translate }}</h2>
 </header>
 
-<aotw-lib-stepper [steps]="steps"></aotw-lib-stepper>
-<form>
-  <aotw-lib-field>
-    <aotw-lib-label>
-      {{ 'CREATE.NAME_OF_THE_ARCHIVE' | translate }}
-    </aotw-lib-label>
-    <input aotw-input />
-  </aotw-lib-field>
+<aotw-lib-stepper [(activeStep)]="activeStep" [steps]="steps"></aotw-lib-stepper>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="subforms">
+    <app-general-info *ngIf="activeStep === 0" [formGroupName]="generalInfo"></app-general-info>
+    <app-layout *ngIf="activeStep === 1" [formGroupName]="layout"></app-layout>
+  </div>
   <div class="actions">
-    <button type="button" aotw-button ghost secondary>
+    <button type="button" aotw-button ghost secondary (click)="cancel()">
       {{ 'COMMON.CTA.CANCEL' | translate }}
     </button>
-    <button *ngIf="!completed; else createButton" type="button" aotw-button secondary>
+    <button
+      *ngIf="activeStep < steps.length - 1; else createButton"
+      type="button"
+      aotw-button
+      secondary
+      [disabled]="!isCurrentFormValidated"
+      (click)="goToNextStep()"
+    >
       {{ 'COMMON.CTA.NEXT' | translate }}
     </button>
   </div>
