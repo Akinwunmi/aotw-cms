@@ -5,7 +5,11 @@
 <aotw-lib-stepper [(activeStep)]="activeStep" [steps]="steps"></aotw-lib-stepper>
 <form [formGroup]="form" (ngSubmit)="submit()">
   <div class="subforms">
-    <app-general-info *ngIf="activeStep === 0" [formGroupName]="generalInfo"></app-general-info>
+    <app-general-info
+      *ngIf="activeStep === 0"
+      [formGroupName]="generalInfo"
+      (validated)="validateGeneralInfo($event)"
+    ></app-general-info>
     <app-layout *ngIf="activeStep === 1" [formGroupName]="layout"></app-layout>
   </div>
   <div class="actions">
@@ -17,7 +21,7 @@
       type="button"
       aotw-button
       secondary
-      [disabled]="!isCurrentFormValidated"
+      [disabled]="!isGeneralInfoValidated"
       (click)="goToNextStep()"
     >
       {{ 'COMMON.CTA.NEXT' | translate }}
@@ -26,7 +30,7 @@
 </form>
 
 <ng-template #createButton>
-  <button type="submit" aotw-button secondary>
+  <button type="submit" aotw-button secondary [disabled]="!form.valid">
     {{ 'COMMON.CTA.CREATE' | translate }}
   </button>
 </ng-template>

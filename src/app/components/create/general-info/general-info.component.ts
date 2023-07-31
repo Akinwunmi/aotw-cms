@@ -1,8 +1,11 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  EventEmitter,
   inject,
-  OnInit
+  OnDestroy,
+  OnInit,
+  Output
 } from '@angular/core';
 import {
   ControlContainer,
@@ -11,6 +14,7 @@ import {
   FormControl,
   FormGroup
 } from '@angular/forms';
+import { Subject, takeUntil } from 'rxjs';
 
 import { SharedModule } from '../../../shared';
 import {
@@ -33,11 +37,18 @@ import { CreateFormControls } from '../create.model';
   styleUrls: ['./general-info.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GeneralInfoComponent implements OnInit {
+export class GeneralInfoComponent implements OnDestroy, OnInit {
+  @Output()
+  public validated = new EventEmitter<boolean>();
+
   public form!: FormGroup;
+
+  public createFormControlsEnum = CreateFormControls;
 
   private controlContainer = inject(ControlContainer);
   private fb = inject(FormBuilder);
+
+  private unsubscribe$ = new Subject<void>();
 
   public get topics(): FormControl[] {
     return (
@@ -47,6 +58,11 @@ export class GeneralInfoComponent implements OnInit {
 
   public ngOnInit(): void {
     this.form = this.controlContainer.control as FormGroup;
+    this.form.statusChanges.pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(status => {
+      this.validated.emit(status === 'VALID');
+    });
   }
 
   public addTopic(): void {
@@ -55,5 +71,10 @@ export class GeneralInfoComponent implements OnInit {
 
   public removeTopic(index: number): void {
     this.topics.splice(index, 1);
+  }
+
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

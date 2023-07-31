@@ -8,11 +8,13 @@ import {
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { Step } from '../../models';
 import { SharedModule } from '../../shared';
 import {
   AotwFieldComponent,
   AotwLabelComponent,
-  AotwStepperComponent
+  AotwStepperComponent,
+  AotwStepperService
 } from '../lib';
 
 import {
@@ -39,15 +41,16 @@ import { LayoutComponent } from './layout';
   styleUrls: ['./create.component.scss']
 })
 export class CreateComponent implements OnInit {
-  public steps!: string[];
+  public steps!: Step[];
   public activeStep = 0;
 
   public form!: FormGroup;
-  public isCurrentFormValidated = false;
+  public isGeneralInfoValidated = false;
 
   private fb = inject(FormBuilder);
   private location = inject(Location);
   private router = inject(Router);
+  private stepperService = inject(AotwStepperService);
 
   public get generalInfo(): string {
     return CreateFormStep.GeneralInfo;
@@ -75,9 +78,24 @@ export class CreateComponent implements OnInit {
       })
     });
 
-    this.steps = Object.keys(this.form.controls).map(control =>
-      `CREATE.STEPS.${control}`
-    );
+    const layoutControl = this.form.get([
+      CreateFormStep.Layout,
+      CreateFormControls.Layout
+    ]);
+    if (layoutControl) {
+      layoutControl.setValue(ArchiveLayout.Main);
+    }
+
+    this.steps = Object.keys(this.form.controls).map((control, index) => ({
+      label: `CREATE.STEPS.${control}`,
+      disabled: index !== 0
+    }));
+  }
+
+  public validateGeneralInfo(validated: boolean): void {
+    this.isGeneralInfoValidated = validated;
+    this.steps[1].disabled = !validated;
+    this.stepperService.setSteps(this.steps);
   }
 
   public goToNextStep(): void {

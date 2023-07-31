@@ -12,7 +12,7 @@ import {
 
 import { SharedModule } from '../../../shared';
 import { AotwFieldComponent, AotwLabelComponent } from '../../lib';
-import { CreateFormControls } from '../create.model';
+import { ArchiveLayout, CreateFormControls } from '../create.model';
 
 @Component({
   selector: 'app-layout',
@@ -24,6 +24,9 @@ import { CreateFormControls } from '../create.model';
 })
 export class LayoutComponent implements OnInit {
   public form!: FormGroup;
+
+  public archiveLayoutEnum = ArchiveLayout;
+  public createFormControlsEnum = CreateFormControls;
 
   private controlContainer = inject(ControlContainer);
 

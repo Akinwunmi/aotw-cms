@@ -1,24 +1,24 @@
 <ng-container [formGroup]="form">
-    <input
-      aotw-radio-button
-      type="radio"
-      formControlName="LAYOUT"
-      id="main"
-      name="LAYOUT"
-      value="MAIN"
-    />
-    <label for="main">
-      {{ 'CREATE.LAYOUTS.MAIN' | translate }}
-    </label>
-    <input
-      aotw-radio-button
-      type="radio"
-      formControlName="LAYOUT"
-      id="main-without-images"
-      name="LAYOUT"
-      value="MAIN_WITHOUT_IMAGES"
-    />
-    <label for="main-without-images">
-      {{ 'CREATE.LAYOUTS.MAIN_WITHOUT_IMAGES' | translate }}
-    </label>
+  <input
+    aotw-radio-button
+    type="radio"
+    [formControlName]="createFormControlsEnum.Layout"
+    [id]="archiveLayoutEnum.Main"
+    [name]="createFormControlsEnum.Layout"
+    [value]="archiveLayoutEnum.Main"
+  />
+  <label [for]="archiveLayoutEnum.Main">
+    {{ 'CREATE.LAYOUTS.MAIN' | translate }}
+  </label>
+  <input
+    aotw-radio-button
+    type="radio"
+    [formControlName]="createFormControlsEnum.Layout"
+    [id]="archiveLayoutEnum.MainWithoutImages"
+    [name]="createFormControlsEnum.Layout"
+    [value]="archiveLayoutEnum.MainWithoutImages"
+  />
+  <label [for]="archiveLayoutEnum.MainWithoutImages">
+    {{ 'CREATE.LAYOUTS.MAIN_WITHOUT_IMAGES' | translate }}
+  </label>
 </ng-container>

@@ -18,9 +18,11 @@ aotw-lib-stepper {
   --aotw-step-handle-background-color: var(--aotw-color-primary-400);
   --aotw-step-handle-background-color-active: var(--aotw-color-white);
   --aotw-step-handle-background-color-completed: var(--aotw-color-white);
+  --aotw-step-handle-background-color-disabled: var(--aotw-color-primary-400);
   --aotw-step-handle-border-color-active: var(--aotw-color-primary-500);
   --aotw-step-color: var(--aotw-color-primary-400);
   --aotw-step-color-active: var(--aotw-color-white);
+  --aotw-step-color-disabled: var(--aotw-color-primary-400);
 
   position: fixed;
 }
