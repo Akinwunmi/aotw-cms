@@ -7,7 +7,7 @@
 :host([class='create']) {
   background-color: transparent;
 
-  [aotw-button] {
+  button {
     aotw-lib-icon {
       color: var(--aotw-color-white);
       transition: color 150ms ease-in-out;

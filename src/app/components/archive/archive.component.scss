@@ -5,6 +5,7 @@
   grid-template-columns: 1fr auto;
   padding-block: var(--aotw-space-l);
   width: 100%;
+  height: 100%;
 }
 
 aotw-tab-group {
@@ -15,7 +16,7 @@ aotw-tab-group {
   }
 }
 
-[aotw-button] {
+button {
   margin-right: var(--aotw-space-s);
 
   @media only screen and (max-width: 30rem) {

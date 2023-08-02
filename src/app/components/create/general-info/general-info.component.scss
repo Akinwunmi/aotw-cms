@@ -4,23 +4,37 @@
 }
 
 aotw-lib-field {
-  label {
-    aotw-lib-icon {
-      color: var(--aotw-color-error-500);
-    }
-  }
-
   .topic {
     position: relative;
-  
+
     input {
       width: 100%;
     }
-  
-    [aotw-button] {
+
+    button {
       position: absolute;
       top: 0;
       right: 0;
+    }
+  }
+}
+
+.status-icon {
+  padding: 0.125rem;
+  position: relative;
+
+  aotw-lib-icon {
+    position: relative;
+    z-index: 1;
+  }
+
+  svg {
+    fill: var(--aotw-color-success-500);
+    inset: 0;
+    position: absolute;
+
+    &.error {
+      fill: var(--aotw-color-error-500);
     }
   }
 }

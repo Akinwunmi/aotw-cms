@@ -13,13 +13,12 @@
     <app-layout *ngIf="activeStep === 1" [formGroupName]="layout"></app-layout>
   </div>
   <div class="actions">
-    <button type="button" aotw-button ghost secondary (click)="cancel()">
+    <button type="button" ghost secondary (click)="cancel()">
       {{ 'COMMON.CTA.CANCEL' | translate }}
     </button>
     <button
       *ngIf="activeStep < steps.length - 1; else createButton"
       type="button"
-      aotw-button
       secondary
       [disabled]="!isGeneralInfoValidated"
       (click)="goToNextStep()"
@@ -30,7 +29,7 @@
 </form>
 
 <ng-template #createButton>
-  <button type="submit" aotw-button secondary [disabled]="!form.valid">
+  <button type="submit" secondary [disabled]="!form.valid">
     {{ 'COMMON.CTA.CREATE' | translate }}
   </button>
 </ng-template>

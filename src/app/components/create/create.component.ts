@@ -67,10 +67,19 @@ export class CreateComponent implements OnInit {
           Validators.required,
           Validators.minLength(2)
         ]],
-        [CreateFormControls.MainCategory]: ['', Validators.required],
+        [CreateFormControls.MainCategory]: ['', [
+          Validators.required,
+          Validators.minLength(2)
+        ]],
         [CreateFormControls.MainTopics]: this.fb.array([
-          this.fb.control('', Validators.required),
-          this.fb.control('', Validators.required)
+          this.fb.control('', [
+            Validators.required,
+            Validators.minLength(2)
+          ]),
+          this.fb.control('', [
+            Validators.required,
+            Validators.minLength(2)
+          ])
         ])
       }),
       [CreateFormStep.Layout]: this.fb.group({

@@ -55,6 +55,14 @@ export class GeneralInfoComponent implements OnDestroy, OnInit {
     return this.form.get(CreateFormControls.Name) as AbstractControl;
   }
 
+  public get mainCategoryControl(): AbstractControl {
+    return this.form.get(CreateFormControls.MainCategory) as AbstractControl;
+  }
+
+  public get mainTopicsControl(): AbstractControl {
+    return this.form.get(CreateFormControls.MainTopics) as AbstractControl;
+  }
+
   public get topics(): FormControl[] {
     return (
       this.form.get(CreateFormControls.MainTopics) as FormArray

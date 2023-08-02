@@ -1,7 +1,7 @@
 <ng-container *ngIf="showHeader; else backButton">
   <aotw-lib-tab-group [activeTab]="activeTab" [tabs]="tabs" (selectedTab)="goToPage($event.name)">
   </aotw-lib-tab-group>
-  <button aotw-button type="button" ghost (click)="goToPage('edit')">
+  <button type="button" ghost (click)="goToPage('edit')">
     <span>{{ 'ARCHIVE.EDIT_ARCHIVE' | translate }}</span>
     <aotw-lib-icon name="edit" size="medium"></aotw-lib-icon>
   </button>
@@ -11,10 +11,10 @@
 </div>
 
 <ng-template #backButton>
-  <button aotw-button type="button">
+  <button type="button">
     {{ 'COMMON.CTA.CONFIRM' | translate }}
   </button>
-  <button aotw-button type="button" ghost (click)="goToPreviousPage()">
+  <button type="button" ghost (click)="goToPreviousPage()">
     {{ 'COMMON.CTA.CANCEL' | translate }}
   </button>
 </ng-template>
