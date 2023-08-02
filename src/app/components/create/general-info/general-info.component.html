@@ -1,6 +1,10 @@
 <ng-container [formGroup]="form">
   <aotw-lib-field>
     <label [for]="createFormControlsEnum.Name">
+      <aotw-lib-icon
+        *ngIf="nameControl.touched && !nameControl.valid"
+        name="error"
+      ></aotw-lib-icon>
       {{ 'CREATE.STEPS.NAME' | translate }}
     </label>
     <input

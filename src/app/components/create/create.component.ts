@@ -63,7 +63,10 @@ export class CreateComponent implements OnInit {
   public ngOnInit(): void {
     this.form = this.fb.group({
       [CreateFormStep.GeneralInfo]: this.fb.group({
-        [CreateFormControls.Name]: ['', Validators.required],
+        [CreateFormControls.Name]: ['', [
+          Validators.required,
+          Validators.minLength(2)
+        ]],
         [CreateFormControls.MainCategory]: ['', Validators.required],
         [CreateFormControls.MainTopics]: this.fb.array([
           this.fb.control('', Validators.required),

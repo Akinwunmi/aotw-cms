@@ -8,6 +8,7 @@ import {
   Output
 } from '@angular/core';
 import {
+  AbstractControl,
   ControlContainer,
   FormArray,
   FormBuilder,
@@ -49,6 +50,10 @@ export class GeneralInfoComponent implements OnDestroy, OnInit {
   private fb = inject(FormBuilder);
 
   private unsubscribe$ = new Subject<void>();
+
+  public get nameControl(): AbstractControl {
+    return this.form.get(CreateFormControls.Name) as AbstractControl;
+  }
 
   public get topics(): FormControl[] {
     return (

@@ -3,16 +3,24 @@
   gap: var(--aotw-space-m);
 }
 
-.topic {
-  position: relative;
-
-  input {
-    width: 100%;
+aotw-lib-field {
+  label {
+    aotw-lib-icon {
+      color: var(--aotw-color-error-500);
+    }
   }
 
-  [aotw-button] {
-    position: absolute;
-    top: 0;
-    right: 0;
+  .topic {
+    position: relative;
+  
+    input {
+      width: 100%;
+    }
+  
+    [aotw-button] {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 }

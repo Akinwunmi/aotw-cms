@@ -3,10 +3,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import '@aotw/components';
 import { AotwIconRegistry } from '@aotw/components';
+import icons from '@aotw/core/dist/icons/icons.json';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
-import { icons } from '../assets/icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
