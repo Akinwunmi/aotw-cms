@@ -1,0 +1,40 @@
+:host {
+  display: grid;
+  gap: var(--aotw-space-m);
+}
+
+aotw-lib-field {
+  .topic {
+    position: relative;
+
+    input {
+      width: 100%;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.status-icon {
+  padding: 0.125rem;
+  position: relative;
+
+  aotw-lib-icon {
+    position: relative;
+    z-index: 1;
+  }
+
+  svg {
+    fill: var(--aotw-color-success-500);
+    inset: 0;
+    position: absolute;
+
+    &.error {
+      fill: var(--aotw-color-error-500);
+    }
+  }
+}

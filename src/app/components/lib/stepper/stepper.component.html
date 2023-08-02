@@ -1,0 +1,10 @@
+<aotw-stepper>
+  <aotw-step
+    *ngFor="let step of steps; let i = index"
+    [active]="activeStep === i"
+    [disabled]="step.disabled"
+    (click)="setActiveStep(i)"
+  >
+    {{ step.label | translate }}
+  </aotw-step>
+</aotw-stepper>

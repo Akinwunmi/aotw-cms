@@ -4,11 +4,14 @@
     "CREATE": "Creëer"
   },
   "COMMON": {
+    "ADD": "Voeg toe",
     "APP_NAME": "Archive of the World",
     "ARCHIVES": "Archieven",
     "CTA": {
       "CANCEL": "Annuleer",
-      "CONFIRM": "Bevestig"
+      "CONFIRM": "Bevestig",
+      "CREATE": "Creëer",
+      "NEXT": "Volgende"
     },
     "DISCOVER": "Ontdek",
     "FILTERS": "Filters",
@@ -26,6 +29,16 @@
   },
   "CREATE": {
     "TITLE": "Creëer nieuw archief",
-    "NAME_OF_THE_ARCHIVE": "Naam van archief"
+    "STEPS": {
+      "GENERAL_INFO": "Algemene informatie",
+      "LAYOUT": "Layout",
+      "MAIN_CATEGORY": "Hoofdcategorie",
+      "MAIN_TOPICS": "Primaire topics",
+      "NAME": "Naam"
+    },
+    "LAYOUTS": {
+      "MAIN": "Primaire layout",
+      "MAIN_WITHOUT_IMAGES": "Primaire layout zonder afbeeldingen"
+    }
   }
 }

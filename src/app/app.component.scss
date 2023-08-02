@@ -13,6 +13,7 @@ app-header {
 }
 
 main {
+  display: flex;
   min-height: calc(100% - var(--aotw-size-xl) * 3);
   z-index: 1;
 }

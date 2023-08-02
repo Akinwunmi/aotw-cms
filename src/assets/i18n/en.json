@@ -4,11 +4,14 @@
     "CREATE": "Create"
   },
   "COMMON": {
+    "ADD": "Add",
     "APP_NAME": "Archive of the World",
     "ARCHIVES": "Archives",
     "CTA": {
       "CANCEL": "Cancel",
-      "CONFIRM": "Confirm"
+      "CONFIRM": "Confirm",
+      "CREATE": "Create",
+      "NEXT": "Next"
     },
     "DISCOVER": "Discover",
     "FILTERS": "Filters",
@@ -26,6 +29,16 @@
   },
   "CREATE": {
     "TITLE": "Create new archive",
-    "NAME_OF_THE_ARCHIVE": "Name of the archive"
+    "STEPS": {
+      "GENERAL_INFO": "General info",
+      "LAYOUT": "Layout",
+      "MAIN_CATEGORY": "Main category",
+      "MAIN_TOPICS": "Main topics",
+      "NAME": "Name"
+    },
+    "LAYOUTS": {
+      "MAIN": "Main layout",
+      "MAIN_WITHOUT_IMAGES": "Main layout without images"
+    }
   }
 }

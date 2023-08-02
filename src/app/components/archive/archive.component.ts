@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Location } from '@angular/common';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, map, Subject, takeUntil } from 'rxjs';

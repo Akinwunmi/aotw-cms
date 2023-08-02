@@ -5,6 +5,11 @@ export interface Chip {
   disabled: boolean;
 }
 
+export interface Step {
+  label: string;
+  disabled: boolean;
+}
+
 export interface Tab {
   id: number;
   name: string;
