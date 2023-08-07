@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer';
 import { HeaderComponent } from './components/header';
 
-export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }
 
@@ -29,7 +29,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
       defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: httpLoaderFactory,
         deps: [HttpClient]
       }
     }),

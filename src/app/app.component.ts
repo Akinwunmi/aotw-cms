@@ -26,12 +26,9 @@ export class AppComponent implements OnDestroy, OnInit {
 
   private unsubscribe$ = new Subject<void>();
 
-  constructor() {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-  }
-
   public ngOnInit(): void {
+    this.setDefaultLanguage();
+
     this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd),
       map((event) => (event as NavigationEnd).urlAfterRedirects),
@@ -48,5 +45,10 @@ export class AppComponent implements OnDestroy, OnInit {
   public ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
+  }
+
+  private setDefaultLanguage(): void {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
   }
 }
