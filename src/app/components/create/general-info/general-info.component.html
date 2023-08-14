@@ -4,7 +4,7 @@
       <ng-container
         *ngTemplateOutlet="statusIcon; context: { control: nameControl }"
       ></ng-container>
-      {{ 'CREATE.STEPS.NAME' | translate }}
+      {{ 'CREATE.STEPS.' + createFormControlsEnum.Name | translate }}
     </label>
     <input
       [formControlName]="createFormControlsEnum.Name"
@@ -16,7 +16,7 @@
       <ng-container
         *ngTemplateOutlet="statusIcon; context: { control: mainCategoryControl }"
       ></ng-container>
-      {{ 'CREATE.STEPS.MAIN_CATEGORY' | translate }}
+      {{ 'CREATE.STEPS.' + createFormControlsEnum.MainCategory | translate }}
     </label>
     <input
       [formControlName]="createFormControlsEnum.MainCategory"
@@ -28,7 +28,7 @@
         <ng-container
           *ngTemplateOutlet="statusIcon; context: { control: mainTopicsControl }"
         ></ng-container>
-        {{ 'CREATE.STEPS.MAIN_TOPICS' | translate }}
+        {{ 'CREATE.STEPS.' + createFormControlsEnum.MainTopics | translate }}
       </label>
       <div *ngFor="let topic of topics; let i = index" class="topic">
         <input

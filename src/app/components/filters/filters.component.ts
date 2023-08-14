@@ -1,7 +1,19 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  inject
+} from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Subject, takeUntil } from 'rxjs';
 
 import { Chip, Layout } from '../../models';
 import { SharedModule } from '../../shared';
+import { setLayout } from '../../state/actions';
+import { selectActiveLayout } from '../../state/selectors';
 import {
   AotwChipGroupComponent,
   AotwFieldComponent,
@@ -21,7 +33,7 @@ import {
   templateUrl: './filters.component.html',
   styleUrls: ['./filters.component.scss'],
 })
-export class FiltersComponent {
+export class FiltersComponent implements OnChanges, OnDestroy {
   public filterChips: Chip[] = [
     { label: '', icon: Layout.List, active: false, disabled: false },
     { label: '', icon: Layout.Grid, active: true, disabled: false },
@@ -29,14 +41,37 @@ export class FiltersComponent {
 
   public showSearch = false;
 
-  // TODO Add state management for active layout
-  private activeLayout!: Layout;
+  private cdr = inject(ChangeDetectorRef);
+  private store = inject(Store);
+
+  private unsubscribe$ = new Subject<void>();
+  private selectLayout$ = this.store.select(selectActiveLayout);
+
+  public ngOnChanges(): void {
+    this.selectLayout$.pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(layout => {
+      this.filterChips = this.filterChips.map(chip => ({
+        ...chip,
+        active: chip.icon === layout
+      }));
+      this.cdr.detectChanges();
+      console.log(layout);
+    });
+    this.cdr.detectChanges();
+  }
 
   public setLayout(chip: Chip): void {
-    this.activeLayout = chip.icon as Layout;
+    console.log(chip.icon);
+    this.store.dispatch(setLayout({ layout: chip.icon as Layout }));
   }
 
   public toggleSearch(): void {
     this.showSearch = !this.showSearch;
+  }
+
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

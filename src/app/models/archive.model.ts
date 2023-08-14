@@ -1,8 +1,20 @@
+import { ArchiveLayout } from '../components/create/create.model';
+
 import { Image } from './image.model';
 
 interface DefaultInfo {
   id: string;
   name: string;
+}
+
+interface ArchiveGeneralInfo extends DefaultInfo {
+  mainCategory: string;
+  topics: Topic[];
+}
+
+export interface ArchiveData {
+  generalInfo: ArchiveGeneralInfo;
+  layout: ArchiveLayout;
 }
 
 export interface Archive extends DefaultInfo {

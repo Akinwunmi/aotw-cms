@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import '@aotw/components';
 import { AotwIconRegistry } from '@aotw/components';
 import icons from '@aotw/core/dist/icons/icons.json';
+import { StoreModule } from '@ngrx/store';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -11,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer';
 import { HeaderComponent } from './components/header';
+import { appReducer, layoutReducer } from './state/reducers';
 
 export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -25,6 +27,10 @@ export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     FooterComponent,
     HeaderComponent,
     HttpClientModule,
+    StoreModule.forRoot({
+      app: appReducer,
+      layout: layoutReducer
+    }),
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
