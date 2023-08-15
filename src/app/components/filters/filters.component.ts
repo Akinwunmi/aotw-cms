@@ -2,7 +2,6 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  OnChanges,
   OnDestroy,
   OnInit,
   inject
@@ -33,7 +32,7 @@ import {
   templateUrl: './filters.component.html',
   styleUrls: ['./filters.component.scss'],
 })
-export class FiltersComponent implements OnChanges, OnDestroy {
+export class FiltersComponent implements OnDestroy, OnInit {
   public filterChips: Chip[] = [
     { label: '', icon: Layout.List, active: false, disabled: false },
     { label: '', icon: Layout.Grid, active: true, disabled: false },
@@ -45,20 +44,19 @@ export class FiltersComponent implements OnChanges, OnDestroy {
   private store = inject(Store);
 
   private unsubscribe$ = new Subject<void>();
-  private selectLayout$ = this.store.select(selectActiveLayout);
+  public selectLayout$ = this.store.select(selectActiveLayout);
 
-  public ngOnChanges(): void {
-    this.selectLayout$.pipe(
-      takeUntil(this.unsubscribe$)
-    ).subscribe(layout => {
-      this.filterChips = this.filterChips.map(chip => ({
-        ...chip,
-        active: chip.icon === layout
-      }));
-      this.cdr.detectChanges();
-      console.log(layout);
-    });
-    this.cdr.detectChanges();
+  public ngOnInit(): void {
+    // this.selectLayout$.pipe(
+    //   takeUntil(this.unsubscribe$)
+    // ).subscribe(layout => {
+    //   console.log(layout);
+    //   this.filterChips = this.filterChips.map(chip => ({
+    //     ...chip,
+    //     active: chip.icon === layout
+    //   }));
+    //   this.cdr.detectChanges();
+    // });
   }
 
   public setLayout(chip: Chip): void {

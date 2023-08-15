@@ -6,12 +6,23 @@ import {
   Renderer2,
   inject,
 } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { AotwIconRegistry } from '@aotw/components';
+import icons from '@aotw/core/dist/icons/icons.json';
 import { TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, takeUntil } from 'rxjs';
 
+import { FooterComponent } from './components/footer';
+import { HeaderComponent } from './components/header';
+
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [
+    FooterComponent,
+    HeaderComponent,
+    RouterModule
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -25,6 +36,10 @@ export class AppComponent implements OnDestroy, OnInit {
   private translate = inject(TranslateService);
 
   private unsubscribe$ = new Subject<void>();
+
+  public constructor() {
+    AotwIconRegistry.register(icons);
+  }
 
   public ngOnInit(): void {
     this.setDefaultLanguage();

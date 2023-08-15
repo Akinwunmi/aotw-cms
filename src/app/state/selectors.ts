@@ -6,8 +6,8 @@ import { AppState } from './reducers.model';
 
 const selectAppState = createFeatureSelector<AppState>('app');
 
-const selectLayout = (state: AppState) => state.layout;
-const selectTheme = (state: AppState) => state.theme;
+const selectLayout = (state: AppState): Layout => state.layout;
+const selectTheme = (state: AppState): Theme => state.theme;
 
 export const selectActiveLayout = createSelector(
   selectAppState,

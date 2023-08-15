@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { routes } from '../../app-routing.module';
+import { APP_ROUTES } from '../../app.routes';
 import { SharedModule } from '../../shared';
 
 import { SitemapItem } from './footer.model';
@@ -19,7 +19,7 @@ export class FooterComponent implements OnInit {
   public sitemap!: SitemapItem[];
 
   public ngOnInit(): void {
-    this.sitemap = routes
+    this.sitemap = APP_ROUTES
       .filter((route) => route.path?.length && route.path !== 'archive')
       .map(({ path, title }) => ({
         path: path || '',
