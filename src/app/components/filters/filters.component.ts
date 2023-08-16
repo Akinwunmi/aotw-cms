@@ -1,8 +1,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  EventEmitter,
   OnDestroy,
   OnInit,
+  Output,
   inject
 } from '@angular/core';
 import { Store } from '@ngrx/store';
@@ -32,6 +34,9 @@ import {
   styleUrls: ['./filters.component.scss'],
 })
 export class FiltersComponent implements OnDestroy, OnInit {
+  @Output()
+  public activeLayout = new EventEmitter<Layout>();
+
   public filterChips: Chip[] = [
     { label: '', icon: Layout.List, active: false, disabled: false },
     { label: '', icon: Layout.Grid, active: false, disabled: false },
@@ -52,6 +57,7 @@ export class FiltersComponent implements OnDestroy, OnInit {
       if (chip) {
         chip.active = true;
       }
+      this.activeLayout.emit(layout);
     });
   }
 

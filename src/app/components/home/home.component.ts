@@ -14,6 +14,7 @@ import { ArchiveService } from '../../services/archive.service';
 import { SharedModule } from '../../shared';
 import { FiltersComponent } from '../filters';
 import { AotwIconComponent } from '../lib';
+import { Layout } from 'src/app/models';
 
 @Component({
   selector: 'app-home',
@@ -30,6 +31,8 @@ import { AotwIconComponent } from '../lib';
 })
 export class HomeComponent implements OnDestroy, OnInit {
   public archives!: Archive[];
+
+  public gridLayout = true;
 
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
@@ -52,6 +55,10 @@ export class HomeComponent implements OnDestroy, OnInit {
 
   public goToCreate(): void {
     this.router.navigate(['create']);
+  }
+
+  public setLayout(layout: Layout) {
+    this.gridLayout = layout === Layout.Grid;
   }
 
   public ngOnDestroy(): void {
