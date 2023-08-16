@@ -47,6 +47,18 @@ section {
         }
       }
     }
+
+    &.list {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+      .card {
+        &-header {
+          align-items: center;
+          gap: var(--aotw-space-s);
+          grid-template-columns: var(--aotw-size-l) 1fr;
+        }
+      }
+    }
   }
 }
 

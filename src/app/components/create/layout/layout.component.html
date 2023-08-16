@@ -8,7 +8,7 @@
     [value]="archiveLayoutEnum.Main"
   />
   <label [for]="archiveLayoutEnum.Main">
-    {{ 'CREATE.LAYOUTS.MAIN' | translate }}
+    {{ 'CREATE.LAYOUTS.' + archiveLayoutEnum.Main | translate }}
   </label>
   <input
     aotw-radio-button
@@ -19,6 +19,6 @@
     [value]="archiveLayoutEnum.MainWithoutImages"
   />
   <label [for]="archiveLayoutEnum.MainWithoutImages">
-    {{ 'CREATE.LAYOUTS.MAIN_WITHOUT_IMAGES' | translate }}
+    {{ 'CREATE.LAYOUTS.' + archiveLayoutEnum.MainWithoutImages | translate }}
   </label>
 </ng-container>

@@ -8,7 +8,7 @@ import {
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { Step } from '../../models';
+import { ArchiveData, Step } from '../../models';
 import { SharedModule } from '../../shared';
 import {
   AotwFieldComponent,
@@ -19,6 +19,7 @@ import {
 
 import {
   ArchiveLayout,
+  CreateForm,
   CreateFormControls,
   CreateFormStep
 } from './create.model';
@@ -44,7 +45,7 @@ export class CreateComponent implements OnInit {
   public steps!: Step[];
   public activeStep = 0;
 
-  public form!: FormGroup;
+  public form!: FormGroup<CreateForm>;
   public isGeneralInfoValidated = false;
 
   private fb = inject(FormBuilder);
@@ -88,7 +89,7 @@ export class CreateComponent implements OnInit {
           Validators.required
         ]
       })
-    });
+    } as CreateForm);
 
     const layoutControl = this.form.get([
       CreateFormStep.Layout,
@@ -120,6 +121,23 @@ export class CreateComponent implements OnInit {
 
   public submit(): void {
     // TODO Add BE and connect
+    const parsedCreateForm = this.parseFormData(this.form.value) as ArchiveData;
+    console.log(parsedCreateForm);
     this.router.navigate(['/home']);
+  }
+
+  private parseFormData(object: Object) {
+    const parsedForm = {};
+    Object.entries(object).forEach(([key, value]) => {
+      const parsedKey = key.toLowerCase().replace(/([-_][a-z])/g, substring => this.parseKey(substring)) as keyof Object;
+      parsedForm[parsedKey] = typeof value === 'object'
+        ? this.parseFormData(value)
+        : value;
+    });
+    return parsedForm;
+  }
+
+  private parseKey(key: string) {
+    return key.slice(-1).toUpperCase();
   }
 }
