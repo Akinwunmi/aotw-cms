@@ -8,23 +8,22 @@ export const APP_ROUTES: Routes = [
   },
   {
     path: 'home',
-    title: 'Home',
-    loadComponent: () => import('./components/home/home.component').then(
-      m => m.HomeComponent
-    ),
+    title: 'home',
+    loadChildren: () => import('./components/home/home.routes').then(
+      m => m.HOME_ROUTES
+    )
   },
   {
     path: 'archive',
-    title: 'Archive',
     loadChildren: () => import('./components/archive/archive.routes').then(
       m => m.ARCHIVE_ROUTES
     ),
   },
   {
     path: 'create',
-    title: 'Create',
-    loadComponent: () => import('./components/create/create.component').then(
-      m => m.CreateComponent
+    title: 'create',
+    loadChildren: () => import('./components/create/create.routes').then(
+      m => m.CREATE_ROUTES
     ),
   },
 ];
