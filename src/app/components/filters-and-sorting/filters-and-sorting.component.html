@@ -3,10 +3,7 @@
     <span>{{ 'COMMON.SEARCH' | translate }}</span>
     <aotw-lib-icon name="search" size="medium"></aotw-lib-icon>
   </button>
-  <button type="button" ghost (click)="setSort()">
-    <span>{{ activeSort() }}</span>
-    <aotw-lib-icon name="sort" size="medium"></aotw-lib-icon>
-  </button>
+  <app-sorting [(options)]="sorting"></app-sorting>
   <button type="button" ghost (click)="openOption(filtersAndSortingEnum.Filters)">
     <span>{{ 'COMMON.FILTERS' | translate }}</span>
     <aotw-lib-icon name="filter" size="medium"></aotw-lib-icon>

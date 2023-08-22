@@ -7,11 +7,13 @@ import {
   inject,
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 
 import { Archive, Layout } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
+import { selectLayout } from '../../state/selectors';
 import { FiltersAndSortingComponent } from '../filters-and-sorting';
 import { AotwIconComponent } from '../lib';
 
@@ -36,15 +38,23 @@ export class HomeComponent implements OnDestroy, OnInit {
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
+  private store = inject(Store);
 
   private unsubscribe$ = new Subject<void>();
+  private selectLayout$ = this.store.select(selectLayout);
 
   public ngOnInit(): void {
     this.archiveService.getArchives().pipe(
       takeUntil(this.unsubscribe$)
-    ).subscribe((archives) => {
+    ).subscribe(archives => {
       this.archives = archives;
       this.cdr.detectChanges();
+    });
+
+    this.selectLayout$.pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(layout => {
+      this.gridLayout = layout === Layout.Grid;
     });
   }
 
@@ -54,10 +64,6 @@ export class HomeComponent implements OnDestroy, OnInit {
 
   public goToCreate(): void {
     this.router.navigate(['create']);
-  }
-
-  public setLayout(layout: Layout) {
-    this.gridLayout = layout === Layout.Grid;
   }
 
   public ngOnDestroy(): void {

@@ -24,6 +24,8 @@ import { BreadcrumbItem } from '../breadcrumb';
 import { FilterOption, FiltersAndSortingComponent, SortDirection, SortOption } from '../filters-and-sorting';
 
 import { DiscoverHeaderComponent } from './discover-header';
+import { Store } from '@ngrx/store';
+import { setDiscoverState } from 'src/app/state/actions';
 
 @Component({
   selector: 'app-discover',
@@ -49,12 +51,25 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public topicsBreadcrumb: BreadcrumbItem[] = [];
 
   public filters: FilterOption[] = [];
-  public sorting: SortOption[] = [];
+
+  private _sorting: SortOption[] = [];
+  public get sorting(): SortOption[] {
+    return this._sorting;
+  }
+  public set sorting(sorting: SortOption[]) {
+    // structuredClone instead of a spread operator is needed to create a deep copy
+    this.store.dispatch(setDiscoverState({
+      filters: this.filters,
+      sorting: structuredClone(sorting)
+    }));
+    this._sorting = sorting;
+  }
 
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private store = inject(Store);
   private translate = inject(TranslateService);
 
   private topicId = signal('');

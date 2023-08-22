@@ -11,12 +11,13 @@ import {
 } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Subject, filter, map, switchMap, take, takeUntil } from 'rxjs';
+import { Subject, combineLatest, filter, map, switchMap, take, takeUntil } from 'rxjs';
 
 import { ArchiveTopics, Layout, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
-import { selectLayout } from '../../state/selectors';
+import { selectDiscover, selectLayout } from '../../state/selectors';
+import { FilterOption, SortDirection, SortOption } from '../filters-and-sorting';
 
 @Component({
   selector: 'app-topics',
@@ -44,7 +45,11 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
   private archiveId!: string;
 
+  private activeFilters: FilterOption[] = [];
+  private activeSorting?: SortOption;
+
   private unsubscribe$ = new Subject<void>();
+  private selectDiscover$ = this.store.select(selectDiscover);
   private selectLayout$ = this.store.select(selectLayout);
 
   public ngOnInit(): void {
@@ -69,10 +74,18 @@ export class TopicsComponent implements OnDestroy, OnInit {
       this.setTopics(archiveData);
     });
 
-    this.selectLayout$.pipe(
+    combineLatest([this.selectDiscover$, this.selectLayout$]).pipe(
       takeUntil(this.unsubscribe$)
-    ).subscribe(layout => {
+    ).subscribe(([discover, layout]) => {
+      this.activeFilters = discover.filters;
+      this.activeSorting = discover.sorting.find(option => option.active);
       this.gridLayout = layout === Layout.Grid;
+
+      // * WIP - Add sorting for the label that matches the topic key
+      if (this.activeSorting?.label === 'Name') {
+        this.topics?.reverse();
+      }
+      this.cdr.detectChanges();
     });
   }
 
