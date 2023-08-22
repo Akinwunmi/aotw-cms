@@ -1,14 +1,40 @@
 :host {
   display: grid;
   gap: var(--aotw-space-xl) var(--aotw-space-l);
+  grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
+}
+
+:host([class='grid']) {
   grid-template-columns: repeat(auto-fill, minmax(min(9.25rem, 100%), 1fr));
+
+  .topic {
+    gap: var(--aotw-space-xs);
+    grid-template-columns: auto;
+    grid-template-rows: auto var(--aotw-size-s);
+
+    figcaption {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      height: 1.5rem;
+      overflow: hidden;
+
+      .name {
+        display: -webkit-box;
+        word-break: break-all;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
 }
 
 .topic {
+  align-items: center;
   cursor: pointer;
   display: grid;
-  gap: var(--aotw-space-xs);
-  grid-template-rows: auto var(--aotw-size-s);
+  gap: var(--aotw-space-s);
+  grid-template-columns: var(--aotw-size-l) 1fr;
+  grid-template-rows: auto;
   margin: 0;
   width: 100%;
 
@@ -28,17 +54,8 @@
   }
 
   figcaption {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    height: 1.5rem;
-    overflow: hidden;
-
-    .name {
-      display: -webkit-box;
-      word-break: break-all;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-    }
+    display: flex;
+    gap: var(--aotw-space-s);
 
     .parent {
       color: var(--aotw-color-white);

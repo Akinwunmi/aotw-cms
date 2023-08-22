@@ -9,12 +9,11 @@ import {
 import { Router, RouterModule } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 
-import { Archive } from '../../models/archive.model';
-import { ArchiveService } from '../../services/archive.service';
+import { Archive, Layout } from '../../models';
+import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
-import { FiltersComponent } from '../filters';
+import { FiltersAndSortingComponent } from '../filters-and-sorting';
 import { AotwIconComponent } from '../lib';
-import { Layout } from 'src/app/models';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +22,7 @@ import { Layout } from 'src/app/models';
     SharedModule,
     RouterModule,
     AotwIconComponent,
-    FiltersComponent,
+    FiltersAndSortingComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',

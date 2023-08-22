@@ -14,19 +14,26 @@ import {
   Router,
   RouterModule
 } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
 
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
 import { BreadcrumbItem } from '../breadcrumb';
+import { FilterOption, FiltersAndSortingComponent, SortDirection, SortOption } from '../filters-and-sorting';
 
 import { DiscoverHeaderComponent } from './discover-header';
 
 @Component({
   selector: 'app-discover',
   standalone: true,
-  imports: [SharedModule, RouterModule, DiscoverHeaderComponent],
+  imports: [
+    SharedModule,
+    RouterModule,
+    DiscoverHeaderComponent,
+    FiltersAndSortingComponent
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
@@ -41,10 +48,14 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public activeTopic?: Topic;
   public topicsBreadcrumb: BreadcrumbItem[] = [];
 
+  public filters: FilterOption[] = [];
+  public sorting: SortOption[] = [];
+
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private translate = inject(TranslateService);
 
   private topicId = signal('');
   private topicNames = computed(() => this.topicId()?.split('-'));
@@ -101,7 +112,37 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   private setArchiveData(archiveData: ArchiveTopics): void {
     this.archiveData = archiveData;
-    const { topics } = this.archiveData;
+    const { topics, parentType } = this.archiveData;
+
+    this.filters = [
+      {
+        // TODO: Fix string not updating on language change
+        label: this.translate.instant('DISCOVER.HAS_PARENT', {
+          type: parentType?.toLowerCase()
+        }),
+        active: false,
+        disabled: false
+      }
+    ];
+    this.sorting = [
+      {
+        label: `${this.translate.instant('COMMON.NAME')}`,
+        firstValue: 'A',
+        secondValue: 'Z',
+        active: true,
+        direction: SortDirection.Asc,
+        disabled: false
+      },
+      {
+        label: `${this.translate.instant('DISCOVER.PARENT')}`,
+        firstValue: 'A',
+        secondValue: 'Z',
+        active: false,
+        direction: SortDirection.Asc,
+        disabled: false
+      }
+    ];
+
     this.mainTopicType = topics.find(topic => topic.id.length === 2)?.type;
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);

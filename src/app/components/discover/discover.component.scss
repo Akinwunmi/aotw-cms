@@ -61,5 +61,32 @@
 }
 
 .content {
+  display: grid;
+  gap: var(--aotw-space-s);
   padding: var(--aotw-space-m) var(--aotw-space-s);
+
+  app-filters-and-sorting {
+    justify-self: flex-end;
+    margin: calc(var(--aotw-space-m) * -1);
+    padding: var(--aotw-space-m);
+    position: sticky;
+    top: 9.125rem;
+
+    &::before {
+      background-color: var(--aotw-color-grey-200);
+      content: '';
+      inset: 0;
+      opacity: 0.95;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &.main-topic {
+      top: 11.5rem;
+    }
+
+    @media only screen and (max-width: 30rem) {
+      width: 100%;
+    }
+  }
 }

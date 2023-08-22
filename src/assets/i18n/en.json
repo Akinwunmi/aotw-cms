@@ -15,6 +15,7 @@
     },
     "DISCOVER": "Discover",
     "FILTERS": "Filters",
+    "NAME": "Name",
     "SEARCH": "Search",
     "SORT": "Sort"
   },
@@ -40,5 +41,12 @@
       "MAIN": "Main layout",
       "MAIN_WITHOUT_IMAGES": "Main layout without images"
     }
+  },
+  "FILTERS_AND_SORTING": {
+    "FILTER_BY": "Filter by:"
+  },
+  "DISCOVER": {
+    "HAS_PARENT": "Has parent {{ type }}",
+    "PARENT": "Parent"
   }
 }

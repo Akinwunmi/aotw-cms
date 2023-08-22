@@ -1,6 +1,7 @@
 {
   "id": "23flag01",
   "name": "Flags",
+  "parentType": "Country",
   "topics": [
     {
       "id": "af",

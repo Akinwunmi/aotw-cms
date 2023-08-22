@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  HostBinding,
   OnDestroy,
   OnInit,
   computed,
@@ -9,11 +10,13 @@ import {
   signal
 } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { Subject, filter, map, switchMap, take, takeUntil } from 'rxjs';
 
-import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
+import { ArchiveTopics, Layout, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
+import { selectLayout } from '../../state/selectors';
 
 @Component({
   selector: 'app-topics',
@@ -26,9 +29,13 @@ import { SharedModule } from '../../shared';
 export class TopicsComponent implements OnDestroy, OnInit {
   public topics?: Topic[];
 
+  @HostBinding('class.grid')
+  public gridLayout = true;
+
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
+  private store = inject(Store);
 
   private topicId = signal('');
   private parentTopic = computed(
@@ -38,6 +45,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
   private archiveId!: string;
 
   private unsubscribe$ = new Subject<void>();
+  private selectLayout$ = this.store.select(selectLayout);
 
   public ngOnInit(): void {
     this.getTopics(this.router.url);
@@ -59,6 +67,12 @@ export class TopicsComponent implements OnDestroy, OnInit {
       takeUntil(this.unsubscribe$)
     ).subscribe(archiveData => {
       this.setTopics(archiveData);
+    });
+
+    this.selectLayout$.pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(layout => {
+      this.gridLayout = layout === Layout.Grid;
     });
   }
 

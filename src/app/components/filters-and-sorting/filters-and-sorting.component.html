@@ -1,0 +1,34 @@
+<div class="filters" *ngIf="showAllOptions; else activeFilterTemplate">
+  <button type="button" ghost (click)="openOption(filtersAndSortingEnum.Search)">
+    <span>{{ 'COMMON.SEARCH' | translate }}</span>
+    <aotw-lib-icon name="search" size="medium"></aotw-lib-icon>
+  </button>
+  <button type="button" ghost (click)="setSort()">
+    <span>{{ activeSort() }}</span>
+    <aotw-lib-icon name="sort" size="medium"></aotw-lib-icon>
+  </button>
+  <button type="button" ghost (click)="openOption(filtersAndSortingEnum.Filters)">
+    <span>{{ 'COMMON.FILTERS' | translate }}</span>
+    <aotw-lib-icon name="filter" size="medium"></aotw-lib-icon>
+  </button>
+  <aotw-lib-chip-group
+    [chips]="layoutChips"
+    (activeChip)="setLayout($event)"
+  ></aotw-lib-chip-group>
+</div>
+<ng-template #activeFilterTemplate>
+  <div class="active-filter">
+    <button ghost (click)="closeOption()">
+      <aotw-lib-icon name="arrow-up" size="medium"></aotw-lib-icon>
+    </button>
+    <aotw-lib-field *ngIf="activeOption === filtersAndSortingEnum.Search" class="search">
+      <input [placeholder]="'COMMON.SEARCH' | translate" />
+    </aotw-lib-field>
+    <div *ngIf="activeOption === filtersAndSortingEnum.Filters" class="filters">
+      {{ 'FILTERS_AND_SORTING.FILTER_BY' | translate }}
+      <button *ngFor="let filter of filters" [attr.ghost]="!filter.active || null" (click)="toggleFilter(filter.label)">
+        {{ filter.label }}
+      </button>
+    </div>
+  </div>
+</ng-template>
