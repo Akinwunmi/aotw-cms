@@ -50,6 +50,10 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['']);
   }
 
+  public goToLogin(): void {
+    this.router.navigate(['login']);
+  }
+
   // ! Update once menu with "Translation" item is implemented
   public setTranslation(): void {
     this.currentLang = this.translate.currentLang === 'en' ? 'nl' : 'en';

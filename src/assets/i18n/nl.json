@@ -15,8 +15,12 @@
     },
     "DISCOVER": "Ontdek",
     "FILTERS": "Filters",
+    "LOG_IN": "Inloggen",
+    "LOGIN": "Login",
+    "PASSWORD": "Wachtwoord",
     "SEARCH": "Zoek",
-    "SORT": "Sorteer"
+    "SORT": "Sorteer",
+    "USERNAME": "Gebruikersnaam"
   },
   "FOOTER": {
     "SITEMAP": "Sitemap"

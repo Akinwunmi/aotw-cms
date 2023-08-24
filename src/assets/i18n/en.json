@@ -15,8 +15,12 @@
     },
     "DISCOVER": "Discover",
     "FILTERS": "Filters",
+    "LOG_IN": "Log in",
+    "LOGIN": "Login",
+    "PASSWORD": "Password",
     "SEARCH": "Search",
-    "SORT": "Sort"
+    "SORT": "Sort",
+    "USERNAME": "Username"
   },
   "FOOTER": {
     "SITEMAP": "Sitemap"

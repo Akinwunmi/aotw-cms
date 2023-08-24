@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 
+import { LoginComponent } from './components/login';
+
 export const APP_ROUTES: Routes = [
   {
     path: '',
@@ -7,8 +9,12 @@ export const APP_ROUTES: Routes = [
     redirectTo: 'home',
   },
   {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
     path: 'home',
-    title: 'home',
+    title: 'Home',
     loadChildren: () => import('./components/home/home.routes').then(
       m => m.HOME_ROUTES
     )
@@ -21,9 +27,13 @@ export const APP_ROUTES: Routes = [
   },
   {
     path: 'create',
-    title: 'create',
+    title: 'Create',
     loadChildren: () => import('./components/create/create.routes').then(
       m => m.CREATE_ROUTES
     ),
   },
+  {
+    path: '**',
+    redirectTo: 'home'
+  }
 ];

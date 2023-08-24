@@ -19,8 +19,8 @@ export class FooterComponent implements OnInit {
   public sitemap!: SitemapItem[];
 
   public ngOnInit(): void {
-    this.sitemap = APP_ROUTES
-      .filter((route) => route.path?.length && route.path !== 'archive')
+    this.sitemap = APP_ROUTES.slice(1, -1)
+      .filter(route => route.path !== 'archive' && route.path !== 'login')
       .map(({ path, title }) => ({
         path: path || '',
         title: title as string,
