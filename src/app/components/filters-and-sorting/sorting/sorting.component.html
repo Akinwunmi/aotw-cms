@@ -1,4 +1,13 @@
-<button type="button" ghost (click)="setSort()">
-  <span>{{ activeOption() }}</span>
-  <aotw-lib-icon name="sort" size="medium"></aotw-lib-icon>
-</button>
+<ng-container *ngIf="options.length">
+  <aotw-lib-chip-group
+    size="small"
+    [chips]="optionChips"
+    (activeChip)="updateOptions($event)"
+  ></aotw-lib-chip-group>
+  <aotw-lib-chip size="small" (click)="setSortDirection()">
+    <aotw-lib-icon
+      size="medium"
+      [name]="direction === sortDirectionEnum.Asc ? 'arrow-down' : 'arrow-up'"
+    ></aotw-lib-icon>
+  </aotw-lib-chip>
+</ng-container>

@@ -1,6 +1,7 @@
 export enum FiltersAndSorting {
   Filters = 'filters',
-  Search = 'search'
+  Search = 'search',
+  Sort = 'sort'
 }
 
 export enum SortDirection {
@@ -17,5 +18,4 @@ export interface FilterOption {
 export interface SortOption extends FilterOption {
   firstValue: string;
   secondValue: string;
-  direction: SortDirection;
 }

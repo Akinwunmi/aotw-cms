@@ -1,5 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 
+import { SortDirection } from '../components/filters-and-sorting';
 import { Layout, Theme } from '../models';
 
 import { setDiscoverState, setLayout, setTheme } from './actions';
@@ -8,7 +9,8 @@ import { AppState } from './reducers.model';
 export const initialState: AppState = {
   discover: {
     filters: [],
-    sorting: []
+    sorting: [],
+    sortDirection: SortDirection.Asc
   },
   layout: Layout.Grid,
   theme: Theme.Light
@@ -16,9 +18,9 @@ export const initialState: AppState = {
 
 export const reducer = createReducer(
   initialState,
-  on(setDiscoverState, (state, { filters, sorting }) => ({
+  on(setDiscoverState, (state, { filters, sorting, sortDirection }) => ({
     ...state,
-    discover: { filters, sorting }
+    discover: { filters, sorting, sortDirection }
   })),
   on(setLayout, (state, { layout }) => ({ ...state, layout })),
   on(setTheme, (state, { theme }) => ({ ...state, theme }))

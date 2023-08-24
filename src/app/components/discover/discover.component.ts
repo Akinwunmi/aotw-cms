@@ -16,16 +16,21 @@ import {
 } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
+import { Store } from '@ngrx/store';
 
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
+import { setDiscoverState } from '../../state/actions';
 import { BreadcrumbItem } from '../breadcrumb';
-import { FilterOption, FiltersAndSortingComponent, SortDirection, SortOption } from '../filters-and-sorting';
+import {
+  FilterOption,
+  FiltersAndSortingComponent,
+  SortDirection,
+  SortOption
+} from '../filters-and-sorting';
 
 import { DiscoverHeaderComponent } from './discover-header';
-import { Store } from '@ngrx/store';
-import { setDiscoverState } from 'src/app/state/actions';
 
 @Component({
   selector: 'app-discover',
@@ -52,19 +57,6 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   public filters: FilterOption[] = [];
 
-  private _sorting: SortOption[] = [];
-  public get sorting(): SortOption[] {
-    return this._sorting;
-  }
-  public set sorting(sorting: SortOption[]) {
-    // structuredClone instead of a spread operator is needed to create a deep copy
-    this.store.dispatch(setDiscoverState({
-      filters: this.filters,
-      sorting: structuredClone(sorting)
-    }));
-    this._sorting = sorting;
-  }
-
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private route = inject(ActivatedRoute);
@@ -78,6 +70,25 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   private archiveId!: string;
 
   private unsubscribe$ = new Subject<void>();
+
+  private _sorting: SortOption[] = [];
+  public get sorting(): SortOption[] {
+    return this._sorting;
+  }
+  public set sorting(sorting: SortOption[]) {
+    this._sorting = sorting;
+    this.setState();
+  }
+
+  private _sortDirection = SortDirection.Asc;
+  public get sortDirection(): SortDirection {
+    return this._sortDirection;
+  }
+  public set sortDirection(sortDirection: SortDirection) {
+    this._sortDirection = sortDirection;
+    this.setState();
+    console.log(sortDirection);
+  }
 
   public ngOnInit(): void {
     this.getArchiveData(this.router.url);
@@ -108,6 +119,15 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.activeTopic = this.topicNames()?.length > 1
       ? this.archiveData.topics.find(topic => topic.id === id)
       : undefined;
+  }
+
+  public setState(): void {
+    // structuredClone instead of a spread operator is needed to create a deep copy
+    this.store.dispatch(setDiscoverState({
+      filters: this.filters,
+      sorting: structuredClone(this.sorting),
+      sortDirection: this.sortDirection
+    }));
   }
 
   private getArchiveData(rawUrl: string): void {
@@ -145,7 +165,6 @@ export class DiscoverComponent implements OnDestroy, OnInit {
         firstValue: 'A',
         secondValue: 'Z',
         active: true,
-        direction: SortDirection.Asc,
         disabled: false
       },
       {
@@ -153,7 +172,6 @@ export class DiscoverComponent implements OnDestroy, OnInit {
         firstValue: 'A',
         secondValue: 'Z',
         active: false,
-        direction: SortDirection.Asc,
         disabled: false
       }
     ];

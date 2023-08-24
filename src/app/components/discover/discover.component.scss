@@ -68,9 +68,11 @@
   app-filters-and-sorting {
     justify-self: flex-end;
     margin: calc(var(--aotw-space-m) * -1);
+    max-width: 27rem;
     padding: var(--aotw-space-m);
     position: sticky;
     top: 9.125rem;
+    width: 100%;
 
     &::before {
       background-color: var(--aotw-color-grey-200);

@@ -28,7 +28,8 @@ import { FilterOption, SortDirection, SortOption } from '../filters-and-sorting'
   styleUrls: ['./topics.component.scss']
 })
 export class TopicsComponent implements OnDestroy, OnInit {
-  public topics?: Topic[];
+  // TODO - Implement applyFilters method
+  public filteredTopics = computed(() => this.topics());
 
   @HostBinding('class.grid')
   public gridLayout = true;
@@ -38,6 +39,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
   private router = inject(Router);
   private store = inject(Store);
 
+  private topics = signal<Topic[]>([]);
   private topicId = signal('');
   private parentTopic = computed(
     () => this.topicId()?.split('-').slice(-1)[0] || ''
@@ -76,15 +78,27 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
     combineLatest([this.selectDiscover$, this.selectLayout$]).pipe(
       takeUntil(this.unsubscribe$)
-    ).subscribe(([discover, layout]) => {
-      this.activeFilters = discover.filters;
-      this.activeSorting = discover.sorting.find(option => option.active);
+    ).subscribe(([{ filters, sorting, sortDirection }, layout]) => {
+      this.activeFilters = filters;
+      this.activeSorting = sorting.find(option => option.active);
       this.gridLayout = layout === Layout.Grid;
 
-      // * WIP - Add sorting for the label that matches the topic key
-      if (this.activeSorting?.label === 'Name') {
-        this.topics?.reverse();
-      }
+      // TODO - Fix parent sorting
+      this.topics.update(topics => topics.sort((a, b) => {
+        const key = this.activeSorting?.label.toLowerCase();
+        const nameA = a[key as keyof Topic];
+        const nameB = b[key as keyof Topic];
+        
+        if (!(nameA && nameB) || nameA === nameB) {
+          return 0;
+        }
+
+        const comparison = sortDirection === SortDirection.Asc
+          ? nameA > nameB
+          : nameA < nameB;
+
+        return comparison ? 1 : -1;
+      }));
       this.cdr.detectChanges();
     });
   }
@@ -105,13 +119,13 @@ export class TopicsComponent implements OnDestroy, OnInit {
   }
 
   private setTopics(archiveData: ArchiveTopics): void {
-    this.topics = archiveData.topics.filter(topic =>
+    this.topics.set(archiveData.topics.filter(topic =>
       // Define childs of parent topic
       topic.id.startsWith(this.topicId()) &&
       // Only take direct children by validating length opposed to parent
       topic.id.length > this.topicId().length &&
       topic.id.length <= this.topicId().length + this.parentTopic().length + 3
-    );
+    ));
     this.cdr.detectChanges();
   }
 

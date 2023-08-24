@@ -21,7 +21,12 @@ import {
   AotwIconComponent,
 } from '../lib';
 
-import { FilterOption, FiltersAndSorting, SortOption } from './filters-and-sorting.model';
+import {
+  FilterOption,
+  FiltersAndSorting,
+  SortDirection,
+  SortOption
+} from './filters-and-sorting.model';
 import { SortingComponent } from './sorting';
 
 @Component({
@@ -42,21 +47,14 @@ export class FiltersAndSortingComponent implements OnDestroy, OnInit {
   @Input()
   public filters: FilterOption[] = [];
 
-  private _sorting: SortOption[] = [];
-  public get sorting(): SortOption[] {
-    return this._sorting;
-  }
-  @Input()
-  public set sorting(sorting: SortOption[]) {
-    this.sortingChange.emit(sorting);
-    this._sorting = sorting;
-  }
-
   @Output()
   public filtersChange = new EventEmitter<FilterOption[]>();
 
   @Output()
   public sortingChange = new EventEmitter<SortOption[]>();
+
+  @Output()
+  public sortDirectionChange = new EventEmitter<SortDirection>();
 
   public filtersAndSortingEnum = FiltersAndSorting;
 
@@ -72,6 +70,28 @@ export class FiltersAndSortingComponent implements OnDestroy, OnInit {
 
   private unsubscribe$ = new Subject<void>();
   private selectLayout$ = this.store.select(selectLayout);
+
+  // TODO - Extract emit from setter to avoid double call
+  private _sorting: SortOption[] = [];
+  public get sorting(): SortOption[] {
+    return this._sorting;
+  }
+  @Input()
+  public set sorting(sorting: SortOption[]) {
+    this.sortingChange.emit(sorting);
+    this._sorting = sorting;
+  }
+
+  // TODO - Extract emit from setter to avoid double call
+  private _sortDirection = SortDirection.Asc;
+  public get sortDirection(): SortDirection {
+    return this._sortDirection;
+  }
+  @Input()
+  public set sortDirection(sortDirection: SortDirection) {
+    this._sortDirection = sortDirection;
+    this.sortDirectionChange.emit(this.sortDirection);
+  }
 
   public ngOnInit(): void {
     this.selectLayout$.pipe(

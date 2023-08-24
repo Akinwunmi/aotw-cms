@@ -1,4 +1,8 @@
-import { FilterOption, SortOption } from '../components/filters-and-sorting';
+import {
+  FilterOption,
+  SortDirection,
+  SortOption
+} from '../components/filters-and-sorting';
 import { Layout, Theme } from '../models';
 
 export interface AppState {
@@ -10,4 +14,5 @@ export interface AppState {
 interface DiscoverState {
   filters: FilterOption[];
   sorting: SortOption[];
+  sortDirection: SortDirection;
 }
