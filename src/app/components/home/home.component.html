@@ -6,7 +6,7 @@
   <aotw-lib-icon name="add" size="medium"></aotw-lib-icon>
 </button>
 <section>
-  <app-filters (activeLayout)="setLayout($event)"></app-filters>
+  <app-filters-and-sorting></app-filters-and-sorting>
   <div class="archives" [ngClass]="{ 'list': !gridLayout }">
     <div
       *ngFor="let archive of archives"

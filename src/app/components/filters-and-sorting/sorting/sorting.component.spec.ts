@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FiltersComponent } from './filters.component';
+import { SortingComponent } from './sorting.component';
 
-describe('FiltersComponent', () => {
-  let component: FiltersComponent;
-  let fixture: ComponentFixture<FiltersComponent>;
+describe('SortingComponent', () => {
+  let component: SortingComponent;
+  let fixture: ComponentFixture<SortingComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [FiltersComponent]
+      imports: [SortingComponent]
     });
-    fixture = TestBed.createComponent(FiltersComponent);
+    fixture = TestBed.createComponent(SortingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

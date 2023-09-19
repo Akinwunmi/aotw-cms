@@ -14,19 +14,33 @@ import {
   Router,
   RouterModule
 } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
+import { Store } from '@ngrx/store';
 
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
+import { setDiscoverState } from '../../state/actions';
 import { BreadcrumbItem } from '../breadcrumb';
+import {
+  FilterOption,
+  FiltersAndSortingComponent,
+  SortDirection,
+  SortOption
+} from '../filters-and-sorting';
 
 import { DiscoverHeaderComponent } from './discover-header';
 
 @Component({
   selector: 'app-discover',
   standalone: true,
-  imports: [SharedModule, RouterModule, DiscoverHeaderComponent],
+  imports: [
+    SharedModule,
+    RouterModule,
+    DiscoverHeaderComponent,
+    FiltersAndSortingComponent
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
@@ -41,10 +55,14 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public activeTopic?: Topic;
   public topicsBreadcrumb: BreadcrumbItem[] = [];
 
+  public filters: FilterOption[] = [];
+
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private store = inject(Store);
+  private translate = inject(TranslateService);
 
   private topicId = signal('');
   private topicNames = computed(() => this.topicId()?.split('-'));
@@ -52,6 +70,25 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   private archiveId!: string;
 
   private unsubscribe$ = new Subject<void>();
+
+  private _sorting: SortOption[] = [];
+  public get sorting(): SortOption[] {
+    return this._sorting;
+  }
+  public set sorting(sorting: SortOption[]) {
+    this._sorting = sorting;
+    this.setState();
+  }
+
+  private _sortDirection = SortDirection.Asc;
+  public get sortDirection(): SortDirection {
+    return this._sortDirection;
+  }
+  public set sortDirection(sortDirection: SortDirection) {
+    this._sortDirection = sortDirection;
+    this.setState();
+    console.log(sortDirection);
+  }
 
   public ngOnInit(): void {
     this.getArchiveData(this.router.url);
@@ -84,6 +121,15 @@ export class DiscoverComponent implements OnDestroy, OnInit {
       : undefined;
   }
 
+  public setState(): void {
+    // structuredClone instead of a spread operator is needed to create a deep copy
+    this.store.dispatch(setDiscoverState({
+      filters: this.filters,
+      sorting: structuredClone(this.sorting),
+      sortDirection: this.sortDirection
+    }));
+  }
+
   private getArchiveData(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
     this.archiveId = url[RouteDiscover.Archive];
@@ -101,7 +147,35 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   private setArchiveData(archiveData: ArchiveTopics): void {
     this.archiveData = archiveData;
-    const { topics } = this.archiveData;
+    const { topics, parentType } = this.archiveData;
+
+    this.filters = [
+      {
+        // TODO: Fix string not updating on language change
+        label: this.translate.instant('DISCOVER.HAS_PARENT', {
+          type: parentType?.toLowerCase()
+        }),
+        active: false,
+        disabled: false
+      }
+    ];
+    this.sorting = [
+      {
+        label: `${this.translate.instant('COMMON.NAME')}`,
+        firstValue: 'A',
+        secondValue: 'Z',
+        active: true,
+        disabled: false
+      },
+      {
+        label: `${this.translate.instant('DISCOVER.PARENT')}`,
+        firstValue: 'A',
+        secondValue: 'Z',
+        active: false,
+        disabled: false
+      }
+    ];
+
     this.mainTopicType = topics.find(topic => topic.id.length === 2)?.type;
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);

@@ -3,6 +3,7 @@ import {
   Component,
   HostBinding,
   Input,
+  OnDestroy,
   OnInit,
   inject,
 } from '@angular/core';
@@ -17,6 +18,7 @@ import {
   AotwIconComponent,
   AotwListItemComponent,
 } from '../lib';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -32,7 +34,7 @@ import {
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnDestroy, OnInit {
   @HostBinding('class.create')
   @Input()
   public createMode = false;
@@ -42,8 +44,16 @@ export class HeaderComponent implements OnInit {
   private router = inject(Router);
   private translate = inject(TranslateService);
 
+  private unsubscribe$ = new Subject<void>();
+
   public ngOnInit(): void {
     this.currentLang = this.translate.currentLang;
+
+    this.translate.onLangChange.pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(event => {
+      this.currentLang = event.lang;
+    });
   }
 
   public goToHome(): void {
@@ -52,7 +62,11 @@ export class HeaderComponent implements OnInit {
 
   // ! Update once menu with "Translation" item is implemented
   public setTranslation(): void {
-    this.currentLang = this.translate.currentLang === 'en' ? 'nl' : 'en';
-    this.translate.use(this.currentLang);
+    this.translate.use(this.translate.currentLang === 'en' ? 'nl' : 'en');
+  }
+
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  HostBinding,
   OnDestroy,
   OnInit,
   computed,
@@ -9,11 +10,14 @@ import {
   signal
 } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { Subject, filter, map, switchMap, take, takeUntil } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { Subject, combineLatest, filter, map, switchMap, take, takeUntil } from 'rxjs';
 
-import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
+import { ArchiveTopics, Layout, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
+import { selectDiscover, selectLayout } from '../../state/selectors';
+import { FilterOption, SortDirection, SortOption } from '../filters-and-sorting';
 
 @Component({
   selector: 'app-topics',
@@ -24,12 +28,18 @@ import { SharedModule } from '../../shared';
   styleUrls: ['./topics.component.scss']
 })
 export class TopicsComponent implements OnDestroy, OnInit {
-  public topics?: Topic[];
+  // TODO - Implement applyFilters method
+  public filteredTopics = computed(() => this.topics());
+
+  @HostBinding('class.grid')
+  public gridLayout = true;
 
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
+  private store = inject(Store);
 
+  private topics = signal<Topic[]>([]);
   private topicId = signal('');
   private parentTopic = computed(
     () => this.topicId()?.split('-').slice(-1)[0] || ''
@@ -37,7 +47,12 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
   private archiveId!: string;
 
+  private activeFilters: FilterOption[] = [];
+  private activeSorting?: SortOption;
+
   private unsubscribe$ = new Subject<void>();
+  private selectDiscover$ = this.store.select(selectDiscover);
+  private selectLayout$ = this.store.select(selectLayout);
 
   public ngOnInit(): void {
     this.getTopics(this.router.url);
@@ -60,6 +75,32 @@ export class TopicsComponent implements OnDestroy, OnInit {
     ).subscribe(archiveData => {
       this.setTopics(archiveData);
     });
+
+    combineLatest([this.selectDiscover$, this.selectLayout$]).pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(([{ filters, sorting, sortDirection }, layout]) => {
+      this.activeFilters = filters;
+      this.activeSorting = sorting.find(option => option.active);
+      this.gridLayout = layout === Layout.Grid;
+
+      // TODO - Fix parent sorting
+      this.topics.update(topics => topics.sort((a, b) => {
+        const key = this.activeSorting?.label.toLowerCase();
+        const nameA = a[key as keyof Topic];
+        const nameB = b[key as keyof Topic];
+        
+        if (!(nameA && nameB) || nameA === nameB) {
+          return 0;
+        }
+
+        const comparison = sortDirection === SortDirection.Asc
+          ? nameA > nameB
+          : nameA < nameB;
+
+        return comparison ? 1 : -1;
+      }));
+      this.cdr.detectChanges();
+    });
   }
 
   public getImage(id: string): string {
@@ -78,13 +119,13 @@ export class TopicsComponent implements OnDestroy, OnInit {
   }
 
   private setTopics(archiveData: ArchiveTopics): void {
-    this.topics = archiveData.topics.filter(topic =>
+    this.topics.set(archiveData.topics.filter(topic =>
       // Define childs of parent topic
       topic.id.startsWith(this.topicId()) &&
       // Only take direct children by validating length opposed to parent
       topic.id.length > this.topicId().length &&
       topic.id.length <= this.topicId().length + this.parentTopic().length + 3
-    );
+    ));
     this.cdr.detectChanges();
   }
 

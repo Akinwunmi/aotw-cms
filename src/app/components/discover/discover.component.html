@@ -6,6 +6,12 @@
   ></app-discover-header>
 </section>
 <section class="content">
+  <app-filters-and-sorting
+    [ngClass]="{ 'main-topic': !activeTopic }"
+    [(filters)]="filters"
+    [(sorting)]="sorting"
+    [(sortDirection)]="sortDirection"
+  ></app-filters-and-sorting>
   <router-outlet></router-outlet>
 </section>
 

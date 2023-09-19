@@ -7,14 +7,15 @@ import {
   inject,
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 
-import { Archive } from '../../models/archive.model';
-import { ArchiveService } from '../../services/archive.service';
+import { Archive, Layout } from '../../models';
+import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
-import { FiltersComponent } from '../filters';
+import { selectLayout } from '../../state/selectors';
+import { FiltersAndSortingComponent } from '../filters-and-sorting';
 import { AotwIconComponent } from '../lib';
-import { Layout } from 'src/app/models';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,7 @@ import { Layout } from 'src/app/models';
     SharedModule,
     RouterModule,
     AotwIconComponent,
-    FiltersComponent,
+    FiltersAndSortingComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
@@ -37,15 +38,23 @@ export class HomeComponent implements OnDestroy, OnInit {
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
+  private store = inject(Store);
 
   private unsubscribe$ = new Subject<void>();
+  private selectLayout$ = this.store.select(selectLayout);
 
   public ngOnInit(): void {
     this.archiveService.getArchives().pipe(
       takeUntil(this.unsubscribe$)
-    ).subscribe((archives) => {
+    ).subscribe(archives => {
       this.archives = archives;
       this.cdr.detectChanges();
+    });
+
+    this.selectLayout$.pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(layout => {
+      this.gridLayout = layout === Layout.Grid;
     });
   }
 
@@ -55,10 +64,6 @@ export class HomeComponent implements OnDestroy, OnInit {
 
   public goToCreate(): void {
     this.router.navigate(['create']);
-  }
-
-  public setLayout(layout: Layout) {
-    this.gridLayout = layout === Layout.Grid;
   }
 
   public ngOnDestroy(): void {

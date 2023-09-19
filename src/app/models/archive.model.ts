@@ -22,6 +22,7 @@ export interface Archive extends DefaultInfo {
 }
 
 export interface ArchiveTopics extends DefaultInfo {
+  parentType?: string;
   topics: Topic[];
 }
 

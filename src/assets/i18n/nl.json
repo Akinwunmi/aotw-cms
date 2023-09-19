@@ -15,6 +15,7 @@
     },
     "DISCOVER": "Ontdek",
     "FILTERS": "Filters",
+    "NAME": "Naam",
     "SEARCH": "Zoek",
     "SORT": "Sorteer"
   },
@@ -40,5 +41,12 @@
       "MAIN": "Primaire layout",
       "MAIN_WITHOUT_IMAGES": "Primaire layout zonder afbeeldingen"
     }
+  },
+  "FILTERS_AND_SORTING": {
+    "FILTER_BY": "Filteren met:"
+  },
+  "DISCOVER": {
+    "HAS_PARENT": "Is onderdeel van {type}",
+    "PARENT": "Moeder"
   }
 }
