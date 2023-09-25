@@ -14,6 +14,7 @@ import { SharedModule } from '../../../shared';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './chip.component.html',
+  styleUrls: ['./chip.component.scss']
 })
 export class AotwChipComponent {
   @Input()

@@ -31,6 +31,7 @@ import {
 } from '../filters-and-sorting';
 
 import { DiscoverHeaderComponent } from './discover-header';
+import { DatetimeNavigatorComponent } from '../datetime-navigator/datetime-navigator.component';
 
 @Component({
   selector: 'app-discover',
@@ -38,6 +39,7 @@ import { DiscoverHeaderComponent } from './discover-header';
   imports: [
     SharedModule,
     RouterModule,
+    DatetimeNavigatorComponent,
     DiscoverHeaderComponent,
     FiltersAndSortingComponent
   ],
@@ -87,7 +89,6 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public set sortDirection(sortDirection: SortDirection) {
     this._sortDirection = sortDirection;
     this.setState();
-    console.log(sortDirection);
   }
 
   public ngOnInit(): void {

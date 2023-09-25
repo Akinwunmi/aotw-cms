@@ -1,0 +1,9 @@
+<aotw-lib-chip (click)="previous()">
+  <aotw-lib-icon name="chevron-left" size="medium"></aotw-lib-icon>
+</aotw-lib-chip>
+<aotw-lib-chip class="year" (click)="openMenu()">
+  {{ selectedYear }}
+</aotw-lib-chip>
+<aotw-lib-chip [disabled]="currentYear() === selectedYear" (click)="next()">
+  <aotw-lib-icon name="chevron-right" size="medium"></aotw-lib-icon>
+</aotw-lib-chip>

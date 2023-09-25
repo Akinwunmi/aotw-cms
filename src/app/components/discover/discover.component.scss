@@ -65,13 +65,14 @@
   gap: var(--aotw-space-s);
   padding: var(--aotw-space-m) var(--aotw-space-s);
 
-  app-filters-and-sorting {
-    justify-self: flex-end;
-    margin: calc(var(--aotw-space-m) * -1);
-    max-width: 27rem;
-    padding: var(--aotw-space-m);
+  &_header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin-top: calc(var(--aotw-space-m) * -1);
+    padding-block: var(--aotw-space-m);
     position: sticky;
-    top: 9.125rem;
+    top: 11.5rem;
     width: 100%;
 
     &::before {
@@ -89,6 +90,10 @@
 
     @media only screen and (max-width: 30rem) {
       width: 100%;
+    }
+
+    app-filters-and-sorting {
+      max-width: 27rem;
     }
   }
 }

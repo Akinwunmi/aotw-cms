@@ -13,7 +13,6 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { SharedModule } from '../../shared';
 import {
-  AotwDropdownComponent,
   AotwDynamicTextComponent,
   AotwIconComponent,
   AotwListItemComponent,
@@ -25,7 +24,6 @@ import { Subject, takeUntil } from 'rxjs';
   standalone: true,
   imports: [
     SharedModule,
-    AotwDropdownComponent,
     AotwDynamicTextComponent,
     AotwIconComponent,
     AotwListItemComponent,

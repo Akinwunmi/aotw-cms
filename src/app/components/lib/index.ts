@@ -1,6 +1,5 @@
 export * from './chip';
 export * from './chip-group';
-export * from './dropdown';
 export * from './dynamic-text';
 export * from './field';
 export * from './icon';

@@ -6,12 +6,14 @@
   ></app-discover-header>
 </section>
 <section class="content">
-  <app-filters-and-sorting
-    [ngClass]="{ 'main-topic': !activeTopic }"
-    [(filters)]="filters"
-    [(sorting)]="sorting"
-    [(sortDirection)]="sortDirection"
-  ></app-filters-and-sorting>
+  <div class="content_header" [ngClass]="{ 'main-topic': !activeTopic }">
+    <app-datetime-navigator></app-datetime-navigator>
+    <app-filters-and-sorting
+      [(filters)]="filters"
+      [(sorting)]="sorting"
+      [(sortDirection)]="sortDirection"
+    ></app-filters-and-sorting>
+  </div>
   <router-outlet></router-outlet>
 </section>
 
