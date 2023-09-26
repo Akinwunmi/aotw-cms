@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
+  HostBinding,
   Input,
 } from '@angular/core';
 
@@ -20,6 +21,7 @@ export class AotwChipComponent {
   @Input()
   public active = false;
 
+  @HostBinding('class.disabled')
   @Input()
   public disabled = false;
 

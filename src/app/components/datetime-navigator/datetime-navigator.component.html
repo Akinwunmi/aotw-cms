@@ -1,9 +1,19 @@
-<aotw-lib-chip (click)="previous()">
+<aotw-lib-chip [disabled]="yearRange[0] === selectedYear" (click)="previous()" size="medium">
   <aotw-lib-icon name="chevron-left" size="medium"></aotw-lib-icon>
 </aotw-lib-chip>
-<aotw-lib-chip class="year" (click)="openMenu()">
-  {{ selectedYear }}
-</aotw-lib-chip>
-<aotw-lib-chip [disabled]="currentYear() === selectedYear" (click)="next()">
+<div #year class="year" [aotwDropdownTrigger]="dropdown">
+  <aotw-lib-chip size="medium">
+    {{ selectedYear }}
+  </aotw-lib-chip>
+</div>
+<aotw-lib-chip size="medium" [disabled]="yearRange[1] === selectedYear" (click)="next()">
   <aotw-lib-icon name="chevron-right" size="medium"></aotw-lib-icon>
 </aotw-lib-chip>
+
+<ng-template #dropdown>
+  <aotw-lib-year-picker
+    [min]="yearRange[0]"
+    [max]="yearRange[1]"
+    [(selected)]="selectedYear"
+  ></aotw-lib-year-picker>
+</ng-template>

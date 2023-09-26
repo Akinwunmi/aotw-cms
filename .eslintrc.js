@@ -31,7 +31,7 @@ module.exports = {
           'error',
           {
             'type': 'attribute',
-            'prefix': 'app',
+            'prefix': 'aotw',
             'style': 'camelCase'
           }
         ],

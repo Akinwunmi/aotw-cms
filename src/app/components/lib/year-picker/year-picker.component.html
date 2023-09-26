@@ -1,0 +1,13 @@
+<aotw-lib-chip [disabled]="min === activeRange[0]" (click)="previous()">
+  <aotw-lib-icon name="chevron-up" size="medium"></aotw-lib-icon>
+</aotw-lib-chip>
+<ul>
+  <li *ngFor="let year of activeRange | range">
+    <aotw-lib-chip size="medium" [active]="year === selected" (click)="setYear(year)">
+      {{ year }}
+    </aotw-lib-chip>
+  </li>
+</ul>
+<aotw-lib-chip [disabled]="max === activeRange[1]" (click)="next()">
+  <aotw-lib-icon name="chevron-down" size="medium"></aotw-lib-icon>
+</aotw-lib-chip>

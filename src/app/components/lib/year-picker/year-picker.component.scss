@@ -1,0 +1,27 @@
+:host {
+  background-color: var(--aotw-color-grey-100);
+  border-radius: var(--aotw-radius-s);
+  box-shadow: var(--aotw-elevation-xs);
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--aotw-space-xs);
+  grid-template-rows: auto 1fr auto;
+  min-width: 6rem;
+  padding: var(--aotw-space-s);
+}
+
+ul {
+  display: grid;
+  gap: var(--aotw-space-xs);
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    aotw-lib-chip {
+      display: block;
+      width: var(--aotw-size-xl);
+    }
+  }
+}

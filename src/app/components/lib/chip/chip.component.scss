@@ -1,4 +1,7 @@
+:host(.disabled) {
+  pointer-events: none;
+}
+
 aotw-chip {
-  height: 100%;
   width: 100%;
 }
