@@ -1,7 +1,13 @@
-<aotw-lib-chip [disabled]="yearRange[0] === selectedYear" (click)="previous()" size="medium">
+<aotw-lib-chip size="medium" [disabled]="yearRange[0] === selectedYear" (click)="previous()">
   <aotw-lib-icon name="chevron-left" size="medium"></aotw-lib-icon>
 </aotw-lib-chip>
-<div #year class="year" [aotwDropdownTrigger]="dropdown">
+<div
+  #year
+  class="year"
+  [aotwDropdownTrigger]="dropdown"
+  [isOpen]="dropdownIsOpen"
+  (click)="setDropdownState()"
+>
   <aotw-lib-chip size="medium">
     {{ selectedYear }}
   </aotw-lib-chip>
@@ -15,5 +21,6 @@
     [min]="yearRange[0]"
     [max]="yearRange[1]"
     [(selected)]="selectedYear"
+    (selectedChange)="closeDropdown()"
   ></aotw-lib-year-picker>
 </ng-template>

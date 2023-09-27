@@ -44,21 +44,21 @@ export class AotwYearPickerComponent implements OnInit {
   public activeRange!: [number, number];
 
   public ngOnInit(): void {
-    this.activeRange = [this.max + 1 - this.rangeSize, this.max];
+    const difference = this.max - this.selected;
+    const multiplier = Math.floor(difference / this.rangeSize);
+    const range = this.rangeSize * multiplier;
+    const minValue = this.max + 1 - this.rangeSize - range;
+    this.activeRange = [minValue < this.min ? this.min : minValue, this.max - range];
   }
 
   public previous(): void {
     const minValue = this.activeRange[0] - this.rangeSize;
-    this.activeRange = minValue < this.min
-      ? [this.min, this.min - 1 + this.rangeSize]
-      : [minValue, this.activeRange[1] - this.rangeSize];
+    this.activeRange = [minValue < this.min ? this.min : minValue, this.activeRange[0] - 1];
   }
 
   public next(): void {
     const maxValue = this.activeRange[1] + this.rangeSize;
-    this.activeRange = maxValue > this.max
-      ? [this.max + 1 - this.rangeSize, this.max]
-      : [this.activeRange[0] + this.rangeSize, maxValue];
+    this.activeRange = [this.activeRange[1] + 1, maxValue > this.max ? this.max : maxValue];
   }
 
   public setYear(year: number): void {

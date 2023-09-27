@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  signal
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 
 import { DropdownDirective } from '../../directives';
 import { RangePipe } from '../../pipes';
@@ -30,6 +25,8 @@ export class DatetimeNavigatorComponent implements OnInit {
   public currentYear = signal<number>(new Date().getFullYear());
   public yearRange: [number, number] = [1900, this.currentYear()];
 
+  public dropdownIsOpen = false;
+
   public ngOnInit(): void {
     this.selectedYear = this.currentYear();
   }
@@ -44,5 +41,13 @@ export class DatetimeNavigatorComponent implements OnInit {
 
   public setYear(year: number): void {
     this.selectedYear = year;
+  }
+
+  public closeDropdown(): void {
+    this.dropdownIsOpen = false;
+  }
+
+  public setDropdownState(): void {
+    this.dropdownIsOpen = true;
   }
 }

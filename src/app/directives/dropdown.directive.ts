@@ -6,6 +6,7 @@ import {
   HostListener,
   inject,
   Input,
+  OnChanges,
   OnDestroy,
   TemplateRef,
   ViewContainerRef
@@ -16,9 +17,12 @@ import { merge, Observable, of, Subject, takeUntil } from 'rxjs';
   selector: '[aotwDropdownTrigger]',
   standalone: true
 })
-export class DropdownDirective implements OnDestroy {
+export class DropdownDirective implements OnChanges, OnDestroy {
   @Input('aotwDropdownTrigger')
   public contentRef!: TemplateRef<unknown>;
+
+  @Input()
+  public isOpen = false;
 
   @HostListener('click')
   public toggle(): void {
@@ -33,7 +37,11 @@ export class DropdownDirective implements OnDestroy {
 
   private destroy$ = new Subject<void>();
 
-  private isOpen = false;
+  public ngOnChanges(): void {
+    if (!this.isOpen) {
+      this.detach();
+    }
+  }
 
   public ngOnDestroy(): void {
     this.overlayRef?.dispose();
