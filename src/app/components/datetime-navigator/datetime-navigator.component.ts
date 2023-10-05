@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, signal } from '@angular/core';
 
 import { DropdownDirective } from '../../directives';
 import { RangePipe } from '../../pipes';
@@ -21,9 +21,14 @@ import { AotwChipComponent, AotwIconComponent, AotwYearPickerComponent } from '.
   styleUrls: ['./datetime-navigator.component.scss']
 })
 export class DatetimeNavigatorComponent implements OnInit {
+  @Input()
+  public min = 0;
+
+  private currentYear = signal<number>(new Date().getFullYear());
+  @Input()
+  public max = this.currentYear();
+
   public selectedYear!: number;
-  public currentYear = signal<number>(new Date().getFullYear());
-  public yearRange: [number, number] = [1900, this.currentYear()];
 
   public dropdownIsOpen = false;
 

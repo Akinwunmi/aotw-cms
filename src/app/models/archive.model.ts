@@ -1,4 +1,4 @@
-import { ArchiveLayout } from '../components/create/create.model';
+import { ArchiveLayout } from '../pages/create/create.model';
 
 import { Image } from './image.model';
 

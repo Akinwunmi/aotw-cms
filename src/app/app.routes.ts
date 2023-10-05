@@ -9,20 +9,20 @@ export const APP_ROUTES: Routes = [
   {
     path: 'home',
     title: 'home',
-    loadChildren: () => import('./components/home/home.routes').then(
+    loadChildren: () => import('./pages/home/home.routes').then(
       m => m.HOME_ROUTES
     )
   },
   {
     path: 'archive',
-    loadChildren: () => import('./components/archive/archive.routes').then(
+    loadChildren: () => import('./pages/archive/archive.routes').then(
       m => m.ARCHIVE_ROUTES
     ),
   },
   {
     path: 'create',
     title: 'create',
-    loadChildren: () => import('./components/create/create.routes').then(
+    loadChildren: () => import('./pages/create/create.routes').then(
       m => m.CREATE_ROUTES
     ),
   },
