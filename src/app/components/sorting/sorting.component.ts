@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -6,11 +7,14 @@ import {
   OnInit,
   Output
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { Chip } from '../../models';
 import { SortDirection, SortOption } from '../advanced-search';
-import { AotwChipComponent, AotwChipGroupComponent, AotwIconComponent } from '../lib';
+import {
+  AotwChipComponent,
+  AotwChipGroupComponent,
+  AotwIconComponent,
+  Chip
+} from '../lib';
 
 @Component({
   selector: 'app-sorting',

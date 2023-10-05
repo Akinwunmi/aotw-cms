@@ -4,9 +4,8 @@ import { ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, map, Subject, takeUntil } from 'rxjs';
 
-import { Tab } from '../../models';
+import { AotwIconComponent, AotwTabGroupComponent, Tab } from '../../components/lib';
 import { SharedModule } from '../../shared';
-import { AotwIconComponent, AotwTabGroupComponent } from '../../components/lib';
 
 @Component({
   selector: 'app-archive',

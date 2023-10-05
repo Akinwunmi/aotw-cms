@@ -12,9 +12,9 @@ import {
 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 
-import { Step } from '../../../models';
 import { SharedModule } from '../../../shared';
 
+import { Step } from './stepper.model';
 import { AotwStepperService } from './stepper.service';
 
 @Component({

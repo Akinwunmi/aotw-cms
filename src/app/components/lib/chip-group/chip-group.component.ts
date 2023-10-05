@@ -8,8 +8,8 @@ import {
   Output
 } from '@angular/core';
 
-import { Chip } from '../../../models';
 import { SharedModule } from '../../../shared';
+import { Chip } from '../chip';
 
 @Component({
   selector: 'aotw-lib-chip-group',

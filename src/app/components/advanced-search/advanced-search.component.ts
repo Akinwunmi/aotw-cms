@@ -11,7 +11,7 @@ import {
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 
-import { Chip, Layout } from '../../models';
+import { Layout } from '../../models';
 import { SharedModule } from '../../shared';
 import { setLayout } from '../../state/actions';
 import { selectLayout } from '../../state/selectors';
@@ -19,6 +19,7 @@ import {
   AotwChipGroupComponent,
   AotwFieldComponent,
   AotwIconComponent,
+  Chip
 } from '../lib';
 import { SortingComponent } from '../sorting';
 

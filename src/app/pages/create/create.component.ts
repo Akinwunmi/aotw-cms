@@ -8,7 +8,7 @@ import {
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { ArchiveData, Step } from '../../models';
+import { ArchiveData } from '../../models';
 import { SharedModule } from '../../shared';
 import {
   CreateFormGeneralInfoComponent
@@ -18,7 +18,8 @@ import {
   AotwFieldComponent,
   AotwLabelComponent,
   AotwStepperComponent,
-  AotwStepperService
+  AotwStepperService,
+  Step
 } from '../../components/lib';
 
 import {

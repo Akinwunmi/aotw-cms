@@ -7,8 +7,9 @@ import {
   Output,
 } from '@angular/core';
 
-import { Tab } from '../../../models';
 import { SharedModule } from '../../../shared';
+
+import { Tab } from './tab-group.model';
 
 @Component({
   selector: 'aotw-lib-tab-group',

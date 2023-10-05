@@ -1,4 +1,3 @@
-export * from './aotw-lib.model';
 export * from './archive.model';
 export * from './image.model';
 export * from './layout.model';
