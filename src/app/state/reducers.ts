@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 
-import { SortDirection } from '../components/filters-and-sorting';
+import { SortDirection } from '../components/advanced-search';
 import { Layout, Theme } from '../models';
 
 import { setDiscoverState, setLayout, setTheme } from './actions';

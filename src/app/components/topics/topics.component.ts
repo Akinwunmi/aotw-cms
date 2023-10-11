@@ -17,7 +17,7 @@ import { ArchiveTopics, Layout, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
 import { selectDiscover, selectLayout } from '../../state/selectors';
-import { FilterOption, SortDirection, SortOption } from '../filters-and-sorting';
+import { FilterOption, SortDirection, SortOption } from '../advanced-search';
 
 @Component({
   selector: 'app-topics',

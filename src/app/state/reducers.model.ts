@@ -2,7 +2,7 @@ import {
   FilterOption,
   SortDirection,
   SortOption
-} from '../components/filters-and-sorting';
+} from '../components/advanced-search';
 import { Layout, Theme } from '../models';
 
 export interface AppState {
