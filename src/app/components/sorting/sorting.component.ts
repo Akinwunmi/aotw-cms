@@ -7,14 +7,14 @@ import {
   OnInit,
   Output
 } from '@angular/core';
-
-import { SortDirection, SortOption } from '../advanced-search';
 import {
   AotwChipComponent,
   AotwChipGroupComponent,
   AotwIconComponent,
   Chip
-} from '../lib';
+} from '@aotw/lib-ng';
+
+import { SortDirection, SortOption } from '../advanced-search';
 
 @Component({
   selector: 'app-sorting',

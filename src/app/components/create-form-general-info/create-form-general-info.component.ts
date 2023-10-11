@@ -15,15 +15,11 @@ import {
   FormControl,
   FormGroup
 } from '@angular/forms';
+import { AotwFieldComponent, AotwIconComponent, AotwLabelComponent } from '@aotw/lib-ng';
 import { Subject, takeUntil } from 'rxjs';
 
-import { SharedModule } from '../../shared';
-import {
-  AotwFieldComponent,
-  AotwIconComponent,
-  AotwLabelComponent
-} from '../lib';
 import { CreateFormControls } from '../../pages/create/create.model';
+import { SharedModule } from '../../shared';
 
 @Component({
   selector: 'app-general-info',

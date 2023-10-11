@@ -7,15 +7,15 @@ import {
   inject,
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { AotwIconComponent } from '@aotw/lib-ng';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 
+import { AdvancedSearchComponent } from '../../components/advanced-search';
 import { Archive, Layout } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
 import { selectLayout } from '../../state/selectors';
-import { AdvancedSearchComponent } from '../../components/advanced-search';
-import { AotwIconComponent } from '../../components/lib';
 
 @Component({
   selector: 'app-home',

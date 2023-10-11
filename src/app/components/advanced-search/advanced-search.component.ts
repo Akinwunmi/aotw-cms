@@ -8,6 +8,12 @@ import {
   Output,
   inject
 } from '@angular/core';
+import {
+  AotwChipGroupComponent,
+  AotwFieldComponent,
+  AotwIconComponent,
+  Chip
+} from '@aotw/lib-ng';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 
@@ -15,12 +21,6 @@ import { Layout } from '../../models';
 import { SharedModule } from '../../shared';
 import { setLayout } from '../../state/actions';
 import { selectLayout } from '../../state/selectors';
-import {
-  AotwChipGroupComponent,
-  AotwFieldComponent,
-  AotwIconComponent,
-  Chip
-} from '../lib';
 import { SortingComponent } from '../sorting';
 
 import {

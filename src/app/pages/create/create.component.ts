@@ -3,10 +3,20 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
+  OnDestroy,
   OnInit
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import {
+  AotwFieldComponent,
+  AotwLabelComponent,
+  AotwStepperComponent,
+  AotwStepperService,
+  Step
+} from '@aotw/lib-ng';
+import { TranslateService } from '@ngx-translate/core';
+import { Subject, takeUntil } from 'rxjs';
 
 import { ArchiveData } from '../../models';
 import { SharedModule } from '../../shared';
@@ -14,13 +24,6 @@ import {
   CreateFormGeneralInfoComponent
 } from '../../components/create-form-general-info';
 import { CreateFormLayoutComponent } from '../../components/create-form-layout';
-import {
-  AotwFieldComponent,
-  AotwLabelComponent,
-  AotwStepperComponent,
-  AotwStepperService,
-  Step
-} from '../../components/lib';
 
 import {
   ArchiveLayout,
@@ -44,7 +47,7 @@ import {
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss']
 })
-export class CreateComponent implements OnInit {
+export class CreateComponent implements OnDestroy, OnInit {
   public steps!: Step[];
   public activeStep = 0;
 
@@ -55,6 +58,9 @@ export class CreateComponent implements OnInit {
   private location = inject(Location);
   private router = inject(Router);
   private stepperService = inject(AotwStepperService);
+  private translate = inject(TranslateService);
+
+  private unsubscribe$ = new Subject<void>();
 
   public get generalInfo(): string {
     return CreateFormStep.GeneralInfo;
@@ -106,6 +112,13 @@ export class CreateComponent implements OnInit {
       label: `CREATE.STEPS.${control}`,
       disabled: index !== 0
     }));
+    Object.keys(this.form.controls).forEach((control, index) => {
+      this.translate.stream(`CREATE.STEPS.${control}`).pipe(
+        takeUntil(this.unsubscribe$)
+      ).subscribe(translation => {
+        this.steps[index].label = translation;
+      });
+    });
   }
 
   public validateGeneralInfo(validated: boolean): void {
@@ -127,6 +140,11 @@ export class CreateComponent implements OnInit {
     const parsedCreateForm = this.parseFormData(this.form.value) as ArchiveData;
     console.log(parsedCreateForm);
     this.router.navigate(['/home']);
+  }
+
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 
   private parseFormData(object: Object): Object {

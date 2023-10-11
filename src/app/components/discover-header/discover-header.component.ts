@@ -6,11 +6,11 @@ import {
   inject,
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { AotwIconComponent } from '@aotw/lib-ng';
 
 import { RouteDiscover, Topic } from '../../models';
 import { SharedModule } from '../../shared';
 import { BreadcrumbComponent, BreadcrumbItem } from '../breadcrumb';
-import { AotwIconComponent } from '../lib';
 
 @Component({
   selector: 'app-discover-header',

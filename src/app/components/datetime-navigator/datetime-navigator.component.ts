@@ -1,9 +1,13 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit, signal } from '@angular/core';
+import {
+  AotwChipComponent,
+  AotwDropdownDirective,
+  AotwIconComponent,
+  AotwYearPickerComponent,
+  RangePipe
+} from '@aotw/lib-ng';
 
-import { DropdownDirective } from '../../directives';
-import { RangePipe } from '../../pipes';
 import { SharedModule } from '../../shared';
-import { AotwChipComponent, AotwIconComponent, AotwYearPickerComponent } from '../lib';
 
 @Component({
   selector: 'app-datetime-navigator',
@@ -11,9 +15,9 @@ import { AotwChipComponent, AotwIconComponent, AotwYearPickerComponent } from '.
   imports: [
     SharedModule,
     AotwChipComponent,
+    AotwDropdownDirective,
     AotwIconComponent,
     AotwYearPickerComponent,
-    DropdownDirective,
     RangePipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,

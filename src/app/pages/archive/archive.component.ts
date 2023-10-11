@@ -1,10 +1,15 @@
 import { Location } from '@angular/common';
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { ChangeDetectionStrategy } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  OnInit,
+  inject
+} from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { AotwIconComponent, AotwTabGroupComponent, Tab } from '@aotw/lib-ng';
 import { filter, map, Subject, takeUntil } from 'rxjs';
 
-import { AotwIconComponent, AotwTabGroupComponent, Tab } from '../../components/lib';
 import { SharedModule } from '../../shared';
 
 @Component({

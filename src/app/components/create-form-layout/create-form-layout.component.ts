@@ -9,9 +9,9 @@ import {
   FormControl,
   FormGroup
 } from '@angular/forms';
+import { AotwFieldComponent, AotwLabelComponent } from '@aotw/lib-ng';
 
 import { SharedModule } from '../../shared';
-import { AotwFieldComponent, AotwLabelComponent } from '../lib';
 import { ArchiveLayout, CreateFormControls } from '../../pages/create/create.model';
 
 @Component({

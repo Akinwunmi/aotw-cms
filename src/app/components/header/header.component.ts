@@ -9,15 +9,15 @@ import {
 } from '@angular/core';
 import '@aotw/components';
 import { Router } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
-
-import { SharedModule } from '../../shared';
 import {
   AotwDynamicTextComponent,
   AotwIconComponent,
-  AotwListItemComponent,
-} from '../lib';
+  AotwListItemComponent
+} from '@aotw/lib-ng';
+import { TranslateService } from '@ngx-translate/core';
 import { Subject, takeUntil } from 'rxjs';
+
+import { SharedModule } from '../../shared';
 
 @Component({
   selector: 'app-header',
