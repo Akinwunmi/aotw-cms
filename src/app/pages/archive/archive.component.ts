@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { AotwIconComponent, AotwTabGroupComponent, Tab } from '@aotw/lib-ng';
+import { TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, takeUntil } from 'rxjs';
 
 import { SharedModule } from '../../shared';
@@ -29,28 +30,28 @@ export class ArchiveComponent implements OnDestroy, OnInit {
   public archiveId!: string;
 
   public showHeader = true;
-  public tabs: Tab[] = [
-    {
-      id: 0,
-      name: 'search',
-      label: 'COMMON.SEARCH',
-      disabled: false
-    },
-    {
-      id: 1,
-      name: 'discover',
-      label: 'COMMON.DISCOVER',
-      disabled: false
-    }
-  ];
+  public tabs!: Tab[];
   public activeTab = 0;
 
   private location = inject(Location);
   private router = inject(Router);
+  private translate = inject(TranslateService);
 
   private unsubscribe$ = new Subject<void>();
 
   public ngOnInit(): void {
+    this.translate.stream(['COMMON.SEARCH', 'COMMON.DISCOVER']).pipe(
+      map(translations => Object.values(translations) as string[]),
+      takeUntil(this.unsubscribe$)
+    ).subscribe(labels => {
+      this.tabs = labels.map((label, index) => ({
+        id: index,
+        name: index === 0 ? 'search' : 'discover',
+        label,
+        disabled: false
+      }));
+    });
+
     this.archiveId = this.router.url.split('/')[2];
     this.setActiveTab(this.router.url);
     this.showHeader = !this.router.url.includes('edit');

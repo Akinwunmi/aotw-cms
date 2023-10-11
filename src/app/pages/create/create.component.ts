@@ -16,7 +16,7 @@ import {
   Step
 } from '@aotw/lib-ng';
 import { TranslateService } from '@ngx-translate/core';
-import { Subject, takeUntil } from 'rxjs';
+import { map, Subject, takeUntil } from 'rxjs';
 
 import { ArchiveData } from '../../models';
 import { SharedModule } from '../../shared';
@@ -108,17 +108,7 @@ export class CreateComponent implements OnDestroy, OnInit {
       layoutControl.setValue(ArchiveLayout.Main);
     }
 
-    this.steps = Object.keys(this.form.controls).map((control, index) => ({
-      label: `CREATE.STEPS.${control}`,
-      disabled: index !== 0
-    }));
-    Object.keys(this.form.controls).forEach((control, index) => {
-      this.translate.stream(`CREATE.STEPS.${control}`).pipe(
-        takeUntil(this.unsubscribe$)
-      ).subscribe(translation => {
-        this.steps[index].label = translation;
-      });
-    });
+    this.setSteps();
   }
 
   public validateGeneralInfo(validated: boolean): void {
@@ -161,5 +151,20 @@ export class CreateComponent implements OnDestroy, OnInit {
 
   private parseKey(key: string): string {
     return key.slice(-1).toUpperCase();
+  }
+
+  private setSteps(): void {
+    const stepLabels = Object.keys(this.form.controls).map(control =>
+      `CREATE.STEPS.${control}`
+    );
+    this.translate.stream(stepLabels).pipe(
+      map(translations => Object.values(translations) as string[]),
+      takeUntil(this.unsubscribe$)
+    ).subscribe(labels => {
+      this.steps = labels.map((label, index) => ({
+        label,
+        disabled: index !== 0
+      }));
+    });
   }
 }
