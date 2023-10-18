@@ -9,5 +9,9 @@
   </div>
 </div>
 <div class="image" [ngClass]="{ 'no-image': !topic.image }">
-  <img *ngIf="topic.image" [src]="getImage(topic.id)" [alt]="topic.name">
+  <img
+    *ngIf="topic.image"
+    [src]="topic.id | image: 'assets/mock/images/' + archiveId"
+    [alt]="topic.name"
+  >
 </div>

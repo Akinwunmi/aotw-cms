@@ -13,7 +13,14 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subject, combineLatest, filter, map, switchMap, take, takeUntil } from 'rxjs';
 
-import { ArchiveTopics, Layout, RouteDiscover, Topic } from '../../models';
+import {
+  ArchiveTopics,
+  Layout,
+  RouteDiscover,
+  Topic,
+  TopicWithRange
+} from '../../models';
+import { ImagePipe } from '../../pipes';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
 import { selectDiscover, selectLayout } from '../../state/selectors';
@@ -22,7 +29,7 @@ import { FilterOption, SortDirection, SortOption } from '../advanced-search';
 @Component({
   selector: 'app-topics',
   standalone: true,
-  imports: [SharedModule, RouterModule],
+  imports: [SharedModule, RouterModule, ImagePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']
@@ -34,18 +41,18 @@ export class TopicsComponent implements OnDestroy, OnInit {
   @HostBinding('class.grid')
   public gridLayout = true;
 
+  public archiveId!: string;
+
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
   private store = inject(Store);
 
-  private topics = signal<Topic[]>([]);
+  private topics = signal<TopicWithRange[]>([]);
   private topicId = signal('');
   private parentTopic = computed(
     () => this.topicId()?.split('-').slice(-1)[0] || ''
   );
-
-  private archiveId!: string;
 
   private activeFilters: FilterOption[] = [];
   private activeSorting?: SortOption;
@@ -78,9 +85,10 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
     combineLatest([this.selectDiscover$, this.selectLayout$]).pipe(
       takeUntil(this.unsubscribe$)
-    ).subscribe(([{ filters, sorting, sortDirection }, layout]) => {
+    ).subscribe(([{ filters, sorting, sortDirection, selectedYear }, layout]) => {
       this.activeFilters = filters;
       this.activeSorting = sorting.find(option => option.active);
+      this.setRangeImage(selectedYear);
       this.gridLayout = layout === Layout.Grid;
 
       // TODO - Fix parent sorting
@@ -103,9 +111,39 @@ export class TopicsComponent implements OnDestroy, OnInit {
     });
   }
 
-  public getImage(id: string): string {
-    const parsedId = id.replaceAll('-', '/');
-    return `assets/mock/images/${this.archiveId}/${parsedId}.svg`;
+  private setRangeImage(selectedYear: number): void {
+    this.topics.set(this.filteredTopics().map(topic => {
+      topic.rangeImage = topic.image;
+
+      if (!topic.ranges) {
+        return topic;
+      }
+
+      if (topic.ranges.length === 1) {
+        const { start, end } = topic.ranges.slice(-1)[0];
+        return {
+          ...topic,
+          rangeSuffix: `_${start}-${end || ''}`
+        };
+      }
+
+      const range = topic.ranges.reduce((prev, curr) => {
+        if (curr.start && selectedYear - curr.start >= 0) {
+          return curr;
+        }
+        if (prev.start && selectedYear - prev.start >= 0) {
+          return prev;
+        }
+        return {};
+      });
+
+      const { start, end } = range;
+      return {
+        ...topic,
+        rangeImage: !!start,
+        rangeSuffix: start ? `_${start}-${end || ''}` : undefined
+      };
+    }));
   }
 
   public setParentLabel(parent: string): string {

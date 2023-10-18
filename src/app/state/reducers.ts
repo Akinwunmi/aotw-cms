@@ -10,7 +10,8 @@ export const initialState: AppState = {
   discover: {
     filters: [],
     sorting: [],
-    sortDirection: SortDirection.Asc
+    sortDirection: SortDirection.Asc,
+    selectedYear: new Date().getFullYear()
   },
   layout: Layout.Grid,
   theme: Theme.Light
@@ -18,9 +19,9 @@ export const initialState: AppState = {
 
 export const reducer = createReducer(
   initialState,
-  on(setDiscoverState, (state, { filters, sorting, sortDirection }) => ({
+  on(setDiscoverState, (state, { filters, sorting, sortDirection, selectedYear }) => ({
     ...state,
-    discover: { filters, sorting, sortDirection }
+    discover: { filters, sorting, sortDirection, selectedYear }
   })),
   on(setLayout, (state, { layout }) => ({ ...state, layout })),
   on(setTheme, (state, { theme }) => ({ ...state, theme }))

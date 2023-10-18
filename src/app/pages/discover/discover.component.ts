@@ -18,10 +18,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
 import { Store } from '@ngrx/store';
 
-import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
-import { ArchiveService } from '../../services';
-import { SharedModule } from '../../shared';
-import { setDiscoverState } from '../../state/actions';
 import { BreadcrumbItem } from '../../components/breadcrumb';
 import { DatetimeNavigatorComponent } from '../../components/datetime-navigator';
 import { DiscoverHeaderComponent } from '../../components/discover-header';
@@ -31,6 +27,11 @@ import {
   SortDirection,
   SortOption
 } from '../../components/advanced-search';
+import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
+import { ArchiveService } from '../../services';
+import { SharedModule } from '../../shared';
+import { setDiscoverState } from '../../state/actions';
+import { initialState } from '../../state/reducers';
 
 
 @Component({
@@ -59,7 +60,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   public filters: FilterOption[] = [];
 
-  public minYear = 1900;
+  public minYear = 1790;
   public currentYear = new Date().getFullYear();
 
   private archiveService = inject(ArchiveService);
@@ -128,6 +129,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public setState(): void {
     // structuredClone instead of a spread operator is needed to create a deep copy
     this.store.dispatch(setDiscoverState({
+      ...initialState.discover,
       filters: this.filters,
       sorting: structuredClone(this.sorting),
       sortDirection: this.sortDirection

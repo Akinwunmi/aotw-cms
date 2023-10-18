@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+  inject,
+  signal
+} from '@angular/core';
 import {
   AotwChipComponent,
   AotwDropdownDirective,
@@ -6,8 +13,11 @@ import {
   AotwYearPickerComponent,
   RangePipe
 } from '@aotw/lib-ng';
+import { Store } from '@ngrx/store';
 
 import { SharedModule } from '../../shared';
+import { setDiscoverState } from '../../state/actions';
+import { initialState } from '../../state/reducers';
 
 @Component({
   selector: 'app-datetime-navigator',
@@ -32,7 +42,19 @@ export class DatetimeNavigatorComponent implements OnInit {
   @Input()
   public max = this.currentYear();
 
-  public selectedYear!: number;
+  private store = inject(Store);
+
+  private _selectedYear!: number;
+  public get selectedYear(): number {
+    return this._selectedYear;
+  }
+  public set selectedYear(selectedYear: number) {
+    this._selectedYear = selectedYear;
+    this.store.dispatch(setDiscoverState({
+      ...initialState.discover,
+      selectedYear: this.selectedYear
+    }));
+  }
 
   public dropdownIsOpen = false;
 
@@ -46,10 +68,6 @@ export class DatetimeNavigatorComponent implements OnInit {
 
   public next(): void {
     this.selectedYear = this.selectedYear + 1;
-  }
-
-  public setYear(year: number): void {
-    this.selectedYear = year;
   }
 
   public closeDropdown(): void {

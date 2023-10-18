@@ -15,4 +15,5 @@ interface DiscoverState {
   filters: FilterOption[];
   sorting: SortOption[];
   sortDirection: SortDirection;
+  selectedYear: number;
 }

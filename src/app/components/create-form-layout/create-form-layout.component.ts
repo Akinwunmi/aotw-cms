@@ -11,8 +11,8 @@ import {
 } from '@angular/forms';
 import { AotwFieldComponent, AotwLabelComponent } from '@aotw/lib-ng';
 
+import { ArchiveLayout, CreateFormControls } from '../../models';
 import { SharedModule } from '../../shared';
-import { ArchiveLayout, CreateFormControls } from '../../pages/create/create.model';
 
 @Component({
   selector: 'app-layout',

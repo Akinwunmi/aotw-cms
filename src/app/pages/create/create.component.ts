@@ -18,19 +18,18 @@ import {
 import { TranslateService } from '@ngx-translate/core';
 import { map, Subject, takeUntil } from 'rxjs';
 
-import { ArchiveData } from '../../models';
-import { SharedModule } from '../../shared';
 import {
   CreateFormGeneralInfoComponent
 } from '../../components/create-form-general-info';
 import { CreateFormLayoutComponent } from '../../components/create-form-layout';
-
 import {
+  ArchiveData,
   ArchiveLayout,
   CreateForm,
   CreateFormControls,
   CreateFormStep
-} from './create.model';
+} from '../../models';
+import { SharedModule } from '../../shared';
 
 @Component({
   selector: 'app-create',

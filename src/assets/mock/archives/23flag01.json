@@ -908,7 +908,28 @@
       "id": "eu-fra",
       "name": "France",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1794,
+          "end": 1814
+        },
+        {
+          "start": 1814,
+          "end": 1830
+        },
+        {
+          "start": 1830,
+          "end": 1976
+        },
+        {
+          "start": 1976,
+          "end": 2020
+        },
+        {
+          "start": 2020
+        }
+      ]
     },
     {
       "id": "eu-geo",

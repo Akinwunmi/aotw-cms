@@ -14,7 +14,8 @@ export const setDiscoverState = createAction(
   props<{
     filters: FilterOption[],
     sorting: SortOption[],
-    sortDirection: SortDirection
+    sortDirection: SortDirection,
+    selectedYear: number
   }>()
 );
 
