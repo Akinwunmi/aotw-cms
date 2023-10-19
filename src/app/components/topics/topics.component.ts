@@ -36,7 +36,7 @@ import { FilterOption, SortDirection, SortOption } from '../advanced-search';
 })
 export class TopicsComponent implements OnDestroy, OnInit {
   // TODO - Implement applyFilters method
-  public filteredTopics = computed(() => this.topics());
+  public filteredTopics: TopicWithRange[] = [];
 
   @HostBinding('class.grid')
   public gridLayout = true;
@@ -56,6 +56,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
   private activeFilters: FilterOption[] = [];
   private activeSorting?: SortOption;
+  private selectedYear = new Date().getFullYear();
 
   private unsubscribe$ = new Subject<void>();
   private selectDiscover$ = this.store.select(selectDiscover);
@@ -88,7 +89,8 @@ export class TopicsComponent implements OnDestroy, OnInit {
     ).subscribe(([{ filters, sorting, sortDirection, selectedYear }, layout]) => {
       this.activeFilters = filters;
       this.activeSorting = sorting.find(option => option.active);
-      this.setRangeImage(selectedYear);
+      this.selectedYear = selectedYear;
+      this.setRangeImage();
       this.gridLayout = layout === Layout.Grid;
 
       // TODO - Fix parent sorting
@@ -111,8 +113,8 @@ export class TopicsComponent implements OnDestroy, OnInit {
     });
   }
 
-  private setRangeImage(selectedYear: number): void {
-    this.topics.set(this.filteredTopics().map(topic => {
+  private setRangeImage(): void {
+    this.filteredTopics = (this.filterTopics(this.topics()).map(topic => {
       topic.rangeImage = topic.image;
 
       if (!topic.ranges) {
@@ -128,10 +130,10 @@ export class TopicsComponent implements OnDestroy, OnInit {
       }
 
       const range = topic.ranges.reduce((prev, curr) => {
-        if (curr.start && selectedYear - curr.start >= 0) {
+        if (curr.start && this.selectedYear - curr.start >= 0) {
           return curr;
         }
-        if (prev.start && selectedYear - prev.start >= 0) {
+        if (prev.start && this.selectedYear - prev.start >= 0) {
           return prev;
         }
         return {};
@@ -157,14 +159,39 @@ export class TopicsComponent implements OnDestroy, OnInit {
   }
 
   private setTopics(archiveData: ArchiveTopics): void {
-    this.topics.set(archiveData.topics.filter(topic =>
-      // Define childs of parent topic
-      topic.id.startsWith(this.topicId()) &&
-      // Only take direct children by validating length opposed to parent
-      topic.id.length > this.topicId().length &&
-      topic.id.length <= this.topicId().length + this.parentTopic().length + 3
-    ));
+    this.topics.set(archiveData.topics);
+    this.filteredTopics = this.filterTopics(this.topics());
     this.cdr.detectChanges();
+  }
+
+  private filterTopics(topics: TopicWithRange[]): TopicWithRange[] {
+    return topics.filter(topic => {
+      const query =
+        // Define childs of parent topic
+        topic.id.startsWith(this.topicId()) &&
+        // If the first character after the topic id is an underscore,
+        // it is part of the parent screen and is filtered out
+        topic.id[this.topicId().length] !== '_' &&
+        topic.id.length > this.topicId().length &&
+        (
+          // Only take direct children by validating length opposed to parent
+          topic.id.length <= this.topicId().length + this.parentTopic().length + 3 ||
+          // Also check if the next character is an underscore so it is included
+          topic.id[this.topicId().length + this.parentTopic().length + 2] === '_'
+        );
+
+      const { ranges } = topic;
+
+      if (!ranges || !ranges[0].start) {
+        return query;
+      }
+
+      // Check if selected year is within range
+      return query &&
+        ranges.find(({ start, end }) =>
+          start && start <= this.selectedYear && (!end || end > this.selectedYear)
+        );
+    });
   }
 
   public ngOnDestroy(): void {

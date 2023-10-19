@@ -1,4 +1,4 @@
-<figure *ngFor="let topic of filteredTopics()" class="topic" [routerLink]="'../' + topic.id">
+<figure *ngFor="let topic of filteredTopics" class="topic" [routerLink]="'../' + topic.id">
   <div [ngClass]="{ 'no-image': !topic.rangeImage }">
     <img
       *ngIf="topic.rangeImage"

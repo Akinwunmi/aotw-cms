@@ -34,7 +34,7 @@ export interface Topic extends DefaultInfo {
   type?: string;
   image?: boolean;
   parent?: string;
-  ranges?: Range[]
+  ranges?: Range[];
 }
 
 export interface TopicWithRange extends Topic {

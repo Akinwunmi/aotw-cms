@@ -60,7 +60,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   public filters: FilterOption[] = [];
 
-  public minYear = 1790;
+  public minYear = 0;
   public currentYear = new Date().getFullYear();
 
   private archiveService = inject(ArchiveService);
@@ -103,6 +103,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
       take(1)
     ).subscribe(archiveData => {
       this.setArchiveData(archiveData);
+      this.setMinYear(archiveData.topics);
     });
 
     this.router.events.pipe(
@@ -186,6 +187,11 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
     this.cdr.detectChanges();
+  }
+
+  private setMinYear(topics: Topic[]): void {
+    const ranges = topics.filter(topic => topic.ranges).flatMap(topic => topic.ranges);
+    this.minYear = Math.min(...ranges.map(range => range?.start || this.currentYear));
   }
 
   public ngOnDestroy(): void {
