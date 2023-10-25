@@ -1,4 +1,7 @@
 <div class="filters" *ngIf="showAllOptions; else activeFilterTemplate">
+  <button type="button" ghost class="mobile">
+    <aotw-lib-icon name="filter-list" size="medium"></aotw-lib-icon>
+  </button>
   <button type="button" ghost (click)="openOption(advancedSearchEnum.Search)">
     <span>{{ 'COMMON.SEARCH' | translate }}</span>
     <aotw-lib-icon name="search" size="medium"></aotw-lib-icon>
@@ -16,6 +19,7 @@
     (activeChip)="setLayout($event)"
   ></aotw-lib-chip-group>
 </div>
+
 <ng-template #activeFilterTemplate>
   <div class="active-filter">
     <button ghost (click)="closeOption()">
