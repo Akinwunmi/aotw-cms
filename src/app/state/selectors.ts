@@ -9,6 +9,11 @@ export const selectDiscover = createSelector(
   state => state.discover
 );
 
+export const selectSelectedYear = createSelector(
+  state,
+  state => state.selectedYear
+);
+
 export const selectLayout = createSelector(
   state,
   state => state.layout

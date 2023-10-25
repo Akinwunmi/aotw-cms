@@ -28,6 +28,7 @@ export interface ArchiveTopics extends DefaultInfo {
 export interface Range {
   start?: number;
   end?: number;
+  image?: boolean;
 }
 
 export interface Topic extends DefaultInfo {
@@ -38,6 +39,5 @@ export interface Topic extends DefaultInfo {
 }
 
 export interface TopicWithRange extends Topic {
-  rangeImage?: boolean;
   rangeSuffix?: string;
 }

@@ -1,7 +1,7 @@
 <figure *ngFor="let topic of filteredTopics" class="topic" [routerLink]="'../' + topic.id">
-  <div [ngClass]="{ 'no-image': !topic.rangeImage }">
+  <div [ngClass]="{ 'no-image': !topic.image }">
     <img
-      *ngIf="topic.rangeImage"
+      *ngIf="topic.image"
       [src]="topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix"
       [alt]="topic.name"
     >

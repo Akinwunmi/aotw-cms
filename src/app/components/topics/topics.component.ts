@@ -23,7 +23,7 @@ import {
 import { ImagePipe } from '../../pipes';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
-import { selectDiscover, selectLayout } from '../../state/selectors';
+import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
 
 @Component({
@@ -56,11 +56,12 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
   private activeFilters: FilterOption[] = [];
   private activeSorting?: SortOption;
-  private selectedYear = new Date().getFullYear();
+  private selectedYear!: number;
 
   private unsubscribe$ = new Subject<void>();
   private selectDiscover$ = this.store.select(selectDiscover);
   private selectLayout$ = this.store.select(selectLayout);
+  private selectSelectedYear$ = this.store.select(selectSelectedYear);
 
   public ngOnInit(): void {
     this.getTopics(this.router.url);
@@ -84,13 +85,17 @@ export class TopicsComponent implements OnDestroy, OnInit {
       this.setTopics(archiveData);
     });
 
-    combineLatest([this.selectDiscover$, this.selectLayout$]).pipe(
+    combineLatest([
+      this.selectDiscover$,
+      this.selectLayout$,
+      this.selectSelectedYear$
+    ]).pipe(
       takeUntil(this.unsubscribe$)
-    ).subscribe(([{ filters, sorting, sortDirection, selectedYear }, layout]) => {
+    ).subscribe(([{ filters, sorting, sortDirection }, layout, selectedYear]) => {
       this.activeFilters = filters;
       this.activeSorting = sorting.find(option => option.active);
       this.selectedYear = selectedYear;
-      this.setRangeImage();
+      this.setImageRange();
       this.gridLayout = layout === Layout.Grid;
 
       // TODO - Fix parent sorting
@@ -113,18 +118,17 @@ export class TopicsComponent implements OnDestroy, OnInit {
     });
   }
 
-  private setRangeImage(): void {
+  private setImageRange(): void {
     this.filteredTopics = (this.filterTopics(this.topics()).map(topic => {
-      topic.rangeImage = topic.image;
-
       if (!topic.ranges) {
         return topic;
       }
 
       if (topic.ranges.length === 1) {
-        const { start, end } = topic.ranges.slice(-1)[0];
+        const { start, end, image } = topic.ranges.slice(-1)[0];
         return {
           ...topic,
+          image: image ?? topic.image,
           rangeSuffix: `_${start}-${end || ''}`
         };
       }
@@ -139,10 +143,10 @@ export class TopicsComponent implements OnDestroy, OnInit {
         return {};
       });
 
-      const { start, end } = range;
+      const { start, end, image } = range;
       return {
         ...topic,
-        rangeImage: !!start,
+        image: image ?? topic.image,
         rangeSuffix: start ? `_${start}-${end || ''}` : undefined
       };
     }));

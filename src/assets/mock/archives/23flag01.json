@@ -988,7 +988,12 @@
       "id": "eu-hrv",
       "name": "Croatia",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1991
+        }
+      ]
     },
     {
       "id": "eu-cyp",
@@ -1009,7 +1014,12 @@
       "id": "eu-cze",
       "name": "Czechia",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1993
+        }
+      ]
     },
     {
       "id": "eu-dnk",
@@ -1021,13 +1031,31 @@
       "id": "eu-est",
       "name": "Estonia",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1940
+        },
+        {
+          "start": 1991
+        }
+      ]
     },
     {
       "id": "eu-fin",
       "name": "Finland",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1917,
+          "end": 1918
+        },
+        {
+          "start": 1918
+        }
+      ]
     },
     {
       "id": "eu-fra",
@@ -1077,7 +1105,12 @@
       "nameLocal": "Deutschland",
       "languages": ["German"],
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1990
+        }
+      ]
     },
     {
       "id": "eu-deu-bade",
@@ -1518,14 +1551,44 @@
       "name": "Hungary",
       "nameLocal": "",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1919
+        },
+        {
+          "start": 1919,
+          "end": 1946
+        },
+        {
+          "start": 1946,
+          "end": 1949
+        },
+        {
+          "start": 1949,
+          "end": 1956
+        },
+        {
+          "start": 1956,
+          "end": 1957
+        },
+        {
+          "start": 1957
+        }
+      ]
     },
     {
       "id": "eu-isl",
       "name": "Iceland",
       "nameLocal": "",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918
+        }
+      ]
     },
     {
       "id": "eu-irl",
