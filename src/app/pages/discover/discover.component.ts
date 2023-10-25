@@ -18,10 +18,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
 import { Store } from '@ngrx/store';
 
-import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
-import { ArchiveService } from '../../services';
-import { SharedModule } from '../../shared';
-import { setDiscoverState } from '../../state/actions';
 import { BreadcrumbItem } from '../../components/breadcrumb';
 import { DatetimeNavigatorComponent } from '../../components/datetime-navigator';
 import { DiscoverHeaderComponent } from '../../components/discover-header';
@@ -31,6 +27,11 @@ import {
   SortDirection,
   SortOption
 } from '../../components/advanced-search';
+import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
+import { ArchiveService } from '../../services';
+import { SharedModule } from '../../shared';
+import { setDiscoverState } from '../../state/actions';
+import { initialState } from '../../state/reducers';
 
 
 @Component({
@@ -59,7 +60,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   public filters: FilterOption[] = [];
 
-  public minYear = 1900;
+  public minYear = 0;
   public currentYear = new Date().getFullYear();
 
   private archiveService = inject(ArchiveService);
@@ -102,6 +103,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
       take(1)
     ).subscribe(archiveData => {
       this.setArchiveData(archiveData);
+      this.setMinYear(archiveData.topics);
     });
 
     this.router.events.pipe(
@@ -128,6 +130,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public setState(): void {
     // structuredClone instead of a spread operator is needed to create a deep copy
     this.store.dispatch(setDiscoverState({
+      ...initialState.discover,
       filters: this.filters,
       sorting: structuredClone(this.sorting),
       sortDirection: this.sortDirection
@@ -184,6 +187,11 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
     this.cdr.detectChanges();
+  }
+
+  private setMinYear(topics: Topic[]): void {
+    const ranges = topics.filter(topic => topic.ranges).flatMap(topic => topic.ranges);
+    this.minYear = Math.min(...ranges.map(range => range?.start || this.currentYear));
   }
 
   public ngOnDestroy(): void {

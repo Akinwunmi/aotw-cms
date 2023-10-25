@@ -59,6 +59,12 @@ module.exports = {
           }
         ],
         'change-detection-strategy/on-push': 'error',
+        'max-lines': [
+          'error',
+          {
+            'max': 210
+          }
+        ],
         'rxjs/no-nested-subscribe': 'error'
       }
     },

@@ -18,7 +18,7 @@ import {
 import { AotwFieldComponent, AotwIconComponent, AotwLabelComponent } from '@aotw/lib-ng';
 import { Subject, takeUntil } from 'rxjs';
 
-import { CreateFormControls } from '../../pages/create/create.model';
+import { CreateFormControls } from '../../models';
 import { SharedModule } from '../../shared';
 
 @Component({

@@ -8,6 +8,7 @@ import { Layout, Theme } from '../models';
 export interface AppState {
   discover: DiscoverState,
   layout: Layout;
+  selectedYear: number;
   theme: Theme;
 }
 

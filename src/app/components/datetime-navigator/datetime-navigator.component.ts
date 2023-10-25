@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+  inject
+} from '@angular/core';
 import {
   AotwChipComponent,
   AotwDropdownDirective,
@@ -6,8 +13,12 @@ import {
   AotwYearPickerComponent,
   RangePipe
 } from '@aotw/lib-ng';
+import { Store } from '@ngrx/store';
+import { Subject, map, takeUntil } from 'rxjs';
 
 import { SharedModule } from '../../shared';
+import { setSelectedYear } from '../../state/actions';
+import { selectSelectedYear } from '../../state/selectors';
 
 @Component({
   selector: 'app-datetime-navigator',
@@ -24,39 +35,49 @@ import { SharedModule } from '../../shared';
   templateUrl: './datetime-navigator.component.html',
   styleUrls: ['./datetime-navigator.component.scss']
 })
-export class DatetimeNavigatorComponent implements OnInit {
+export class DatetimeNavigatorComponent implements OnDestroy, OnInit {
   @Input()
   public min = 0;
 
-  private currentYear = signal<number>(new Date().getFullYear());
   @Input()
-  public max = this.currentYear();
+  public max = new Date().getFullYear();
+
+  private store = inject(Store);
 
   public selectedYear!: number;
 
   public dropdownIsOpen = false;
 
+  private unsubscribe$ = new Subject<void>();
+
   public ngOnInit(): void {
-    this.selectedYear = this.currentYear();
+    this.store.select(selectSelectedYear).pipe(
+      map(selectedYear => selectedYear),
+      takeUntil(this.unsubscribe$)
+    ).subscribe(selectedYear => {
+      this.selectedYear = selectedYear;
+    });
   }
 
   public previous(): void {
-    this.selectedYear = this.selectedYear - 1;
+    this.setSelectedYear(this.selectedYear - 1);
   }
 
   public next(): void {
-    this.selectedYear = this.selectedYear + 1;
-  }
-
-  public setYear(year: number): void {
-    this.selectedYear = year;
-  }
-
-  public closeDropdown(): void {
-    this.dropdownIsOpen = false;
+    this.setSelectedYear(this.selectedYear + 1);
   }
 
   public setDropdownState(): void {
     this.dropdownIsOpen = true;
+  }
+
+  public setSelectedYear(selectedYear: number): void {
+    this.store.dispatch(setSelectedYear({ selectedYear }));
+    this.dropdownIsOpen = false;
+  }
+
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

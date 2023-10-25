@@ -9,6 +9,7 @@ import { Router, RouterModule } from '@angular/router';
 import { AotwIconComponent } from '@aotw/lib-ng';
 
 import { RouteDiscover, Topic } from '../../models';
+import { ImagePipe } from '../../pipes';
 import { SharedModule } from '../../shared';
 import { BreadcrumbComponent, BreadcrumbItem } from '../breadcrumb';
 
@@ -19,7 +20,8 @@ import { BreadcrumbComponent, BreadcrumbItem } from '../breadcrumb';
     SharedModule,
     RouterModule,
     AotwIconComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    ImagePipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover-header.component.html',
@@ -32,21 +34,12 @@ export class DiscoverHeaderComponent implements OnInit {
   @Input()
   public topic!: Topic;
 
-  private router = inject(Router);
+  public archiveId!: string;
 
-  private archiveId!: string;
+  private router = inject(Router);
 
   public ngOnInit(): void {
     const url = this.router.url.slice(1).split('/');
     this.archiveId = url[RouteDiscover.Archive];
-  }
-
-  public getImage(id?: string): string {
-    if (!id) {
-      return '';
-    }
-
-    const parsedId = id.replaceAll('-', '/');
-    return `assets/mock/images/${this.archiveId}/${parsedId}.svg`;
   }
 }

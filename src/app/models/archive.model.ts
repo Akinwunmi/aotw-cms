@@ -1,5 +1,4 @@
-import { ArchiveLayout } from '../pages/create/create.model';
-
+import { ArchiveLayout } from './forms.model';
 import { Image } from './image.model';
 
 interface DefaultInfo {
@@ -26,8 +25,19 @@ export interface ArchiveTopics extends DefaultInfo {
   topics: Topic[];
 }
 
+export interface Range {
+  start?: number;
+  end?: number;
+  image?: boolean;
+}
+
 export interface Topic extends DefaultInfo {
   type?: string;
   image?: boolean;
   parent?: string;
+  ranges?: Range[];
+}
+
+export interface TopicWithRange extends Topic {
+  rangeSuffix?: string;
 }

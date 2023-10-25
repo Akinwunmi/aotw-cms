@@ -18,6 +18,11 @@ export const setDiscoverState = createAction(
   }>()
 );
 
+export const setSelectedYear = createAction(
+  ActionTypes.SetSelectedYear,
+  props<{ selectedYear: number }>()
+);
+
 export const setLayout = createAction(
   ActionTypes.SetLayout,
   props<{ layout: Layout }>()

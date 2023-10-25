@@ -22,7 +22,7 @@
   <aotw-lib-year-picker
     [min]="min"
     [max]="max"
-    [(selected)]="selectedYear"
-    (selectedChange)="closeDropdown()"
+    [selected]="selectedYear"
+    (selectedChange)="setSelectedYear($event)"
   ></aotw-lib-year-picker>
 </ng-template>
