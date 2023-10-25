@@ -1,0 +1,31 @@
+:host {
+  align-items: center;
+  display: grid;
+  gap: 0 var(--aotw-space-l);
+  grid-template-columns: 1fr auto;
+  padding-block: var(--aotw-space-l);
+  width: 100%;
+  height: 100%;
+}
+
+aotw-tab-group {
+  padding-top: var(--aotw-space-s);
+
+  aotw-tab {
+    box-sizing: content-box;
+  }
+}
+
+button {
+  margin-right: var(--aotw-space-s);
+
+  @media only screen and (max-width: 30rem) {
+    span {
+      display: none;
+    }
+  }
+}
+
+.main {
+  grid-column: 1 / -1;
+}

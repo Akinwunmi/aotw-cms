@@ -1,0 +1,13 @@
+<div class="sitemap">
+  <p>{{ 'FOOTER.SITEMAP' | translate }}</p>
+  <ul>
+    <li *ngFor="let item of sitemap">
+      <a [routerLink]="[item.path]">
+        {{ ('PAGES.' + item.title) | uppercase | translate }}
+      </a>
+    </li>
+  </ul>
+</div>
+<p class="copyright">
+  &copy; {{ 'COMMON.APP_NAME' | translate }} / Jurrit van der Ploeg {{ currentYear }}
+</p>

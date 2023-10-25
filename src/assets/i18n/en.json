@@ -1,0 +1,52 @@
+{
+  "PAGES": {
+    "HOME": "Home",
+    "CREATE": "Create"
+  },
+  "COMMON": {
+    "ADD": "Add",
+    "APP_NAME": "Archive of the World",
+    "ARCHIVES": "Archives",
+    "CTA": {
+      "CANCEL": "Cancel",
+      "CONFIRM": "Confirm",
+      "CREATE": "Create",
+      "NEXT": "Next"
+    },
+    "DISCOVER": "Discover",
+    "FILTERS": "Filters",
+    "NAME": "Name",
+    "SEARCH": "Search",
+    "SORT": "Sort"
+  },
+  "FOOTER": {
+    "SITEMAP": "Sitemap"
+  },
+  "HOME": {
+    "NEW_ARCHIVE": "New archive"
+  },
+  "ARCHIVE": {
+    "EDIT_ARCHIVE": "Edit archive"
+  },
+  "CREATE": {
+    "TITLE": "Create new archive",
+    "STEPS": {
+      "GENERAL_INFO": "General info",
+      "LAYOUT": "Layout",
+      "MAIN_CATEGORY": "Main category",
+      "MAIN_TOPICS": "Main topics",
+      "NAME": "Name"
+    },
+    "LAYOUTS": {
+      "MAIN": "Main layout",
+      "MAIN_WITHOUT_IMAGES": "Main layout without images"
+    }
+  },
+  "FILTERS_AND_SORTING": {
+    "FILTER_BY": "Filter by:"
+  },
+  "DISCOVER": {
+    "HAS_PARENT": "Has parent {{ type }}",
+    "PARENT": "Parent"
+  }
+}

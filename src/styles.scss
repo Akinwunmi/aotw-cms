@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+@import '@angular/cdk/overlay-prebuilt.css';
 
 html,
 body {
@@ -12,12 +10,12 @@ body {
 
 body {
   background-color: var(--aotw-color-grey-200);
-  color: var(--aotw-color-primary-400);
+  color: var(--aotw-color-primary-500);
   font-family: var(--aotw-font-family-primary);
   transition: background-color 150ms ease-in-out;
 
   &.create {
-    background-color: var(--aotw-color-primary-400);
+    background-color: var(--aotw-color-primary-500);
     color: var(--aotw-color-white);
   }
 }

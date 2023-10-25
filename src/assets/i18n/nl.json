@@ -1,0 +1,52 @@
+{
+  "PAGES": {
+    "HOME": "Home",
+    "CREATE": "Creëer"
+  },
+  "COMMON": {
+    "ADD": "Voeg toe",
+    "APP_NAME": "Archive of the World",
+    "ARCHIVES": "Archieven",
+    "CTA": {
+      "CANCEL": "Annuleer",
+      "CONFIRM": "Bevestig",
+      "CREATE": "Creëer",
+      "NEXT": "Volgende"
+    },
+    "DISCOVER": "Ontdek",
+    "FILTERS": "Filters",
+    "NAME": "Naam",
+    "SEARCH": "Zoek",
+    "SORT": "Sorteer"
+  },
+  "FOOTER": {
+    "SITEMAP": "Sitemap"
+  },
+  "HOME": {
+    "NEW_ARCHIVE": "Nieuw archief"
+  },
+  "ARCHIVE": {
+    "EDIT_ARCHIVE": "Bewerk archief"
+  },
+  "CREATE": {
+    "TITLE": "Creëer nieuw archief",
+    "STEPS": {
+      "GENERAL_INFO": "Algemene informatie",
+      "LAYOUT": "Layout",
+      "MAIN_CATEGORY": "Hoofdcategorie",
+      "MAIN_TOPICS": "Primaire topics",
+      "NAME": "Naam"
+    },
+    "LAYOUTS": {
+      "MAIN": "Primaire layout",
+      "MAIN_WITHOUT_IMAGES": "Primaire layout zonder afbeeldingen"
+    }
+  },
+  "FILTERS_AND_SORTING": {
+    "FILTER_BY": "Filteren met:"
+  },
+  "DISCOVER": {
+    "HAS_PARENT": "Is onderdeel van {type}",
+    "PARENT": "Moeder"
+  }
+}

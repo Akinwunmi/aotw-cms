@@ -1,0 +1,31 @@
+import { createReducer, on } from '@ngrx/store';
+
+import { SortDirection } from '../components/advanced-search';
+import { Layout, Theme } from '../models';
+
+import { setDiscoverState, setLayout, setSelectedYear, setTheme } from './actions';
+import { AppState } from './reducers.model';
+
+export const initialState: AppState = {
+  discover: {
+    filters: [],
+    sorting: [],
+    sortDirection: SortDirection.Asc
+  },
+  layout: Layout.Grid,
+  selectedYear: new Date().getFullYear(),
+  theme: Theme.Light
+};
+
+export const reducer = createReducer(
+  initialState,
+  on(setDiscoverState, (state, { filters, sorting, sortDirection }) => {
+    return {
+      ...state,
+      discover: { filters, sorting, sortDirection }
+    };
+  }),
+  on(setLayout, (state, { layout }) => ({ ...state, layout })),
+  on(setSelectedYear, (state, { selectedYear }) => ({ ...state, selectedYear })),
+  on(setTheme, (state, { theme }) => ({ ...state, theme }))
+);

@@ -1,0 +1,46 @@
+:host {
+  align-items: center;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: var(--aotw-space-l);
+  width: 100%;
+}
+
+header {
+  align-items: center;
+  display: grid;
+  height: var(--aotw-size-l);
+}
+
+aotw-lib-stepper {
+  --aotw-stepper-progress-background-color: var(--aotw-color-white);
+  --aotw-stepper-progress-bar-background-color: var(--aotw-color-primary-400);
+  --aotw-step-handle-background-color: var(--aotw-color-primary-400);
+  --aotw-step-handle-background-color-active: var(--aotw-color-white);
+  --aotw-step-handle-background-color-completed: var(--aotw-color-white);
+  --aotw-step-handle-background-color-disabled: var(--aotw-color-primary-400);
+  --aotw-step-handle-border-color-active: var(--aotw-color-primary-500);
+  --aotw-step-color: var(--aotw-color-primary-400);
+  --aotw-step-color-active: var(--aotw-color-white);
+  --aotw-step-color-disabled: var(--aotw-color-primary-400);
+
+  position: fixed;
+}
+
+form {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+
+  .subforms {
+    place-self: center;
+    display: block;
+    max-width: 20rem;
+    width: 100%;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

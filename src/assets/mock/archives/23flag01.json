@@ -1,0 +1,4471 @@
+{
+  "id": "23flag01",
+  "name": "Flags",
+  "parentType": "Country",
+  "topics": [
+    {
+      "id": "af",
+      "name": "Africa",
+      "type": "Continent"
+    },
+    {
+      "id": "af-dza",
+      "name": "Algeria",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-ago",
+      "name": "Angola",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-ben",
+      "name": "Benin",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-bwa",
+      "name": "Botswana",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-bfa",
+      "name": "Burkina Faso",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-bdi",
+      "name": "Burundi",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-cmr",
+      "name": "Cameroon",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-icx",
+      "name": "Canary Islands",
+      "image": true,
+      "parent": "eu-esp",
+      "type": "Autonomous Community"
+    },
+    {
+      "id": "af-cpv",
+      "name": "Cape Verde",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-caf",
+      "name": "Central African Republic",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-ceu",
+      "name": "Ceuta",
+      "image": true,
+      "parent": "eu-esp",
+      "type": "Autonomous City"
+    },
+    {
+      "id": "af-tcd",
+      "name": "Chad",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-com",
+      "name": "Comoros, the",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-com-anjo",
+      "name": "Anjouan",
+      "image": true,
+      "type": "Autonomous Island"
+    },
+    {
+      "id": "af-com-gran",
+      "name": "Grande Comore",
+      "image": true,
+      "type": "Autonomous Island"
+    },
+    {
+      "id": "af-com-mohe",
+      "name": "Mohéli",
+      "image": true,
+      "type": "Autonomous Island"
+    },
+    {
+      "id": "af-cod",
+      "name": "Congo, Democratic Republic of the",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-cog",
+      "name": "Congo, Republic of the",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-dji",
+      "name": "Djibouti",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-egy",
+      "name": "Egypt",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-gnq",
+      "name": "Equatorial Guinea",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-eri",
+      "name": "Eritrea",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-swz",
+      "name": "Eswatini",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-eth",
+      "name": "Ethiopia",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-eth-afar",
+      "name": "Afar",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-eth-amha",
+      "name": "Amhara",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-eth-begu",
+      "name": "Benishangul-Gumuz",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-eth-gamb",
+      "name": "Gambella",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-eth-hara",
+      "name": "Harari",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-eth-orom",
+      "name": "Oromia",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-eth-sida",
+      "name": "Sidama",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-eth-soma",
+      "name": "Somali",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-eth-snnp",
+      "name": "Southern Nations, Nationalities, and Peoples' Region",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-eth-tigr",
+      "name": "Tigray",
+      "image": true,
+      "type": "Regional State"
+    },
+    {
+      "id": "af-atf",
+      "name": "French Southern and Antarctic Lands",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Territory"
+    },
+    {
+      "id": "af-gab",
+      "name": "Gabon",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-gmb",
+      "name": "Gambia, the",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-gha",
+      "name": "Ghana",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-gin",
+      "name": "Guinea",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-gnb",
+      "name": "Guinea-Bissau",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-civ",
+      "name": "Ivory Coast",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-ken",
+      "name": "Kenya",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-lso",
+      "name": "Lesotho",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-lbr",
+      "name": "Liberia",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-lby",
+      "name": "Libya",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-mdg",
+      "name": "Madagascar",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-mad",
+      "name": "Madeira",
+      "image": true,
+      "parent": "eu-prt",
+      "type": "Autonomous Region"
+    },
+    {
+      "id": "af-mwi",
+      "name": "Malawi",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-mli",
+      "name": "Mali",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-mrt",
+      "name": "Mauritania",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-mus",
+      "name": "Mauritius",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-myt",
+      "name": "Mayotte",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Department"
+    },
+    {
+      "id": "af-mel",
+      "name": "Melilla",
+      "image": true,
+      "parent": "eu-esp",
+      "type": "Autonomous City"
+    },
+    {
+      "id": "af-mar",
+      "name": "Morocco",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-moz",
+      "name": "Mozambique",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-nam",
+      "name": "Namibia",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-ner",
+      "name": "Niger",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-nga",
+      "name": "Nigeria",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-reu",
+      "name": "Réunion",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Department"
+    },
+    {
+      "id": "af-rwa",
+      "name": "Rwanda",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-sah",
+      "name": "Sahrawi Arab Democratic Republic",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-shn",
+      "name": "Saint Helena, Ascension and Tristan da Cunha",
+      "image": false,
+      "type": "Overseas Territory"
+    },
+    {
+      "id": "af-shn-asce",
+      "name": "Ascension Island",
+      "image": true,
+      "type": "Constituent Part"
+    },
+    {
+      "id": "af-shn-sain",
+      "name": "Saint Helena",
+      "image": true,
+      "type": "Constituent Part"
+    },
+    {
+      "id": "af-shn-tris",
+      "name": "Tristan da Cunha",
+      "image": true,
+      "type": "Constituent Part"
+    },
+    {
+      "id": "af-stp",
+      "name": "São Tomé and Príncipe",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-sen",
+      "name": "Senegal",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-syc",
+      "name": "Seychelles",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-sle",
+      "name": "Sierra Leone",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-som",
+      "name": "Somalia",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-sml",
+      "name": "Somaliland",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-zaf",
+      "name": "South Africa",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-ssd",
+      "name": "South Sudan",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-sdn",
+      "name": "Sudan",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-tza",
+      "name": "Tanzania",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-tgo",
+      "name": "Togo",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-tun",
+      "name": "Tunisia",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-uga",
+      "name": "Uganda",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-zmb",
+      "name": "Zambia",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "af-zwe",
+      "name": "Zimbabwe",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "as",
+      "name": "Asia",
+      "type": "Continent"
+    },
+    {
+      "id": "as-afg",
+      "name": "Afghanistan"
+    },
+    {
+      "id": "as-arm",
+      "name": "Armenia"
+    },
+    {
+      "id": "as-aze",
+      "name": "Azerbaijan"
+    },
+    {
+      "id": "as-bhr",
+      "name": "Bahrain"
+    },
+    {
+      "id": "as-bgd",
+      "name": "Bangladesh"
+    },
+    {
+      "id": "as-btn",
+      "name": "Bhutan"
+    },
+    {
+      "id": "as-brn",
+      "name": "Brunei Darussalam"
+    },
+    {
+      "id": "as-khm",
+      "name": "Cambodia"
+    },
+    {
+      "id": "as-chn",
+      "name": "China"
+    },
+    {
+      "id": "as-cyp",
+      "name": "Cyprus"
+    },
+    {
+      "id": "as-tls",
+      "name": "East Timor"
+    },
+    {
+      "id": "as-geo",
+      "name": "Georgia"
+    },
+    {
+      "id": "as-ind",
+      "name": "India"
+    },
+    {
+      "id": "as-idn",
+      "name": "Indonesia"
+    },
+    {
+      "id": "as-irn",
+      "name": "Iran"
+    },
+    {
+      "id": "as-irq",
+      "name": "Iraq"
+    },
+    {
+      "id": "as-isr",
+      "name": "Israel"
+    },
+    {
+      "id": "as-jap",
+      "name": "Japan"
+    },
+    {
+      "id": "as-jor",
+      "name": "Jordan"
+    },
+    {
+      "id": "as-kaz",
+      "name": "Kazakhstan"
+    },
+    {
+      "id": "as-kwt",
+      "name": "Kuwait"
+    },
+    {
+      "id": "as-kgz",
+      "name": "Kyrgyzstan"
+    },
+    {
+      "id": "as-lao",
+      "name": "Laos"
+    },
+    {
+      "id": "as-lbn",
+      "name": "Lebanon"
+    },
+    {
+      "id": "as-mys",
+      "name": "Malaysia"
+    },
+    {
+      "id": "as-mdv",
+      "name": "Maldives"
+    },
+    {
+      "id": "as-mng",
+      "name": "Mongolia"
+    },
+    {
+      "id": "as-mmr",
+      "name": "Myanmar"
+    },
+    {
+      "id": "as-npl",
+      "name": "Nepal"
+    },
+    {
+      "id": "as-prk",
+      "name": "North Korea"
+    },
+    {
+      "id": "as-omn",
+      "name": "Oman"
+    },
+    {
+      "id": "as-pak",
+      "name": "Pakistan"
+    },
+    {
+      "id": "as-pse",
+      "name": "Palestine, State of"
+    },
+    {
+      "id": "as-phl",
+      "name": "Philippines, the"
+    },
+    {
+      "id": "as-qat",
+      "name": "Qatar"
+    },
+    {
+      "id": "as-rus",
+      "name": "Russia"
+    },
+    {
+      "id": "as-sau",
+      "name": "Saudi Arabia"
+    },
+    {
+      "id": "as-sgp",
+      "name": "Singapore"
+    },
+    {
+      "id": "as-kor",
+      "name": "South Korea"
+    },
+    {
+      "id": "as-lka",
+      "name": "Sri Lanka"
+    },
+    {
+      "id": "as-syr",
+      "name": "Syria"
+    },
+    {
+      "id": "as-twn",
+      "name": "Taiwan"
+    },
+    {
+      "id": "as-tjk",
+      "name": "Tajikistan"
+    },
+    {
+      "id": "as-tha",
+      "name": "Thailand"
+    },
+    {
+      "id": "as-tur",
+      "name": "Turkey"
+    },
+    {
+      "id": "as-tkm",
+      "name": "Turkmenistan"
+    },
+    {
+      "id": "as-are",
+      "name": "United Arab Emirates, the"
+    },
+    {
+      "id": "as-uzb",
+      "name": "Uzbekistan"
+    },
+    {
+      "id": "as-vnm",
+      "name": "Vietnam"
+    },
+    {
+      "id": "as-yem",
+      "name": "Yemen"
+    },
+    {
+      "id": "au",
+      "name": "Australia/Oceania",
+      "type": "Continent"
+    },
+    {
+      "id": "au-asm",
+      "name": "American Samoa"
+    },
+    {
+      "id": "au-aus",
+      "name": "Australia"
+    },
+    {
+      "id": "au-cok",
+      "name": "Cook Islands"
+    },
+    {
+      "id": "au-",
+      "name": "Easter Island"
+    },
+    {
+      "id": "au-fsm",
+      "name": "Federated States of Micronesia"
+    },
+    {
+      "id": "au-fji",
+      "name": "Fiji"
+    },
+    {
+      "id": "au-pyf",
+      "name": "French Polynesia"
+    },
+    {
+      "id": "au-gal",
+      "name": "Galápagos Islands"
+    },
+    {
+      "id": "au-gum",
+      "name": "Guam"
+    },
+    {
+      "id": "au-haw",
+      "name": "Hawaii"
+    },
+    {
+      "id": "au-kir",
+      "name": "Kiribati"
+    },
+    {
+      "id": "au-mhl",
+      "name": "Marshall Islands"
+    },
+    {
+      "id": "au-nru",
+      "name": "Nauru"
+    },
+    {
+      "id": "au-ncl",
+      "name": "New Caledonia"
+    },
+    {
+      "id": "au-nzl",
+      "name": "New Zealand"
+    },
+    {
+      "id": "au-niu",
+      "name": "Niue"
+    },
+    {
+      "id": "au-mnp",
+      "name": "Northern Mariana Islands"
+    },
+    {
+      "id": "au-plw",
+      "name": "Palau"
+    },
+    {
+      "id": "au-png",
+      "name": "Papua New Guinea"
+    },
+    {
+      "id": "au-pcn",
+      "name": "Pitcairn Islands"
+    },
+    {
+      "id": "au-wsm",
+      "name": "Samoa"
+    },
+    {
+      "id": "au-slb",
+      "name": "Solomon Islands"
+    },
+    {
+      "id": "au-tkl",
+      "name": "Tokelau"
+    },
+    {
+      "id": "au-ton",
+      "name": "Tonga"
+    },
+    {
+      "id": "au-tuv",
+      "name": "Tuvalu"
+    },
+    {
+      "id": "au-vut",
+      "name": "Vanuatu"
+    },
+    {
+      "id": "au-wlf",
+      "name": "Wallis and Futuna"
+    },
+    {
+      "id": "eu",
+      "name": "Europe",
+      "type": "Continent"
+    },
+    {
+      "id": "eu-alb",
+      "name": "Albania",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1443
+        }
+      ]
+    },
+    {
+      "id": "eu-and",
+      "name": "Andorra",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1806,
+          "end": 1866
+        },
+        {
+          "start": 1866,
+          "end": 1939
+        },
+        {
+          "start": 1939,
+          "end": 1949
+        },
+        {
+          "start": 1949,
+          "end": 1959
+        },
+        {
+          "start": 1959,
+          "end": 1971
+        },
+        {
+          "start": 1971
+        }
+      ]
+    },
+    {
+      "id": "eu-arm",
+      "name": "Armenia",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1920
+        },
+        {
+          "start": 1991
+        }
+      ]
+    },
+    {
+      "id": "eu-aut",
+      "name": "Austria",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1230,
+          "end": 1806
+        },
+        {
+          "start": 1918,
+          "end": 1934
+        },
+        {
+          "start": 1945
+        }
+      ]
+    },
+    {
+      "id": "eu-aut_empire",
+      "name": "Austrian Empire",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1806,
+          "end": 1867
+        }
+      ]
+    },
+    {
+      "id": "eu-blr",
+      "name": "Belarus",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1991,
+          "end": 1995
+        },
+        {
+          "start": 1995,
+          "end": 2012
+        },
+        {
+          "start": 2012
+        }
+      ]
+    },
+    {
+      "id": "eu-bel",
+      "name": "Belgium",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1839
+        }
+      ]
+    },
+    {
+      "id": "eu-bih",
+      "name": "Bosnia and Herzegovina",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1992,
+          "end": 1998
+        },
+        {
+          "start": 1998
+        }
+      ]
+    },
+    {
+      "id": "eu-bgr",
+      "name": "Bulgaria",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1879,
+          "end": 1946
+        },
+        {
+          "start": 1946,
+          "end": 1948
+        },
+        {
+          "start": 1948,
+          "end": 1967
+        },
+        {
+          "start": 1967,
+          "end": 1971
+        },
+        {
+          "start": 1971,
+          "end": 1990
+        },
+        {
+          "start": 1990
+        }
+      ]
+    },
+    {
+      "id": "eu-hrv",
+      "name": "Croatia",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1991
+        }
+      ]
+    },
+    {
+      "id": "eu-cyp",
+      "name": "Cyprus",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1960,
+          "end": 2006
+        },
+        {
+          "start": 2006
+        }
+      ]
+    },
+    {
+      "id": "eu-cze",
+      "name": "Czechia",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1993
+        }
+      ]
+    },
+    {
+      "id": "eu-dnk",
+      "name": "Denmark",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-est",
+      "name": "Estonia",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1940
+        },
+        {
+          "start": 1991
+        }
+      ]
+    },
+    {
+      "id": "eu-fin",
+      "name": "Finland",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1917,
+          "end": 1918
+        },
+        {
+          "start": 1918
+        }
+      ]
+    },
+    {
+      "id": "eu-fra",
+      "name": "France",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1794,
+          "end": 1814
+        },
+        {
+          "start": 1814,
+          "end": 1830
+        },
+        {
+          "start": 1830,
+          "end": 1976
+        },
+        {
+          "start": 1976,
+          "end": 2020
+        },
+        {
+          "start": 2020
+        }
+      ]
+    },
+    {
+      "id": "eu-geo",
+      "name": "Georgia",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1990,
+          "end": 2004
+        },
+        {
+          "start": 2004
+        }
+      ]
+    },
+    {
+      "id": "eu-deu",
+      "name": "Germany",
+      "nameLocal": "Deutschland",
+      "languages": ["German"],
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1990
+        }
+      ]
+    },
+    {
+      "id": "eu-deu-bade",
+      "name": "Baden-Württemberg",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-bade-albdo",
+      "name": "Alb-Donau",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-baden",
+      "name": "Baden-Baden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Urban district"
+    },
+    {
+      "id": "eu-deu-bade-biber",
+      "name": "Biberach",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-boden",
+      "name": "Bodensee",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-bobli",
+      "name": "Böblingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-breis",
+      "name": "Breisgau-Hochschwarzwald",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-calwx",
+      "name": "Calw",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-emmen",
+      "name": "Emmendingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-enzxx",
+      "name": "Enz",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-essli",
+      "name": "Esslingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-freib",
+      "name": "Freiburg im Breisgau",
+      "nameLocal": "",
+      "image": true,
+      "type": "Urban district"
+    },
+    {
+      "id": "eu-deu-bade-freud",
+      "name": "Freudenstadt",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-goppi",
+      "name": "Göppingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-heidl",
+      "name": "Heidelberg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Urban district"
+    },
+    {
+      "id": "eu-deu-bade-heidn",
+      "name": "Heidenheim",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-heilb",
+      "name": "Heilbronn",
+      "nameLocal": "",
+      "image": true,
+      "type": "Urban district"
+    },
+    {
+      "id": "eu-deu-bade-heild",
+      "name": "Heilbronn (district)",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-hohen",
+      "name": "Hohenlohe",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-karls",
+      "name": "Karlsruhe",
+      "nameLocal": "",
+      "image": true,
+      "type": "Urban district"
+    },
+    {
+      "id": "eu-deu-bade-karld",
+      "name": "Karlsruhe (district)",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-konst",
+      "name": "Konstanz",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-konst-konsta",
+      "name": "Konstanz",
+      "nameLocal": "",
+      "image": true,
+      "type": "City"
+    },
+    {
+      "id": "eu-deu-bade-lorra",
+      "name": "Lörrach",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-ludwi",
+      "name": "Ludwigsburg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-maint",
+      "name": "Main-Tauber",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-mannh",
+      "name": "Mannheim",
+      "nameLocal": "",
+      "image": true,
+      "type": "Urban district"
+    },
+    {
+      "id": "eu-deu-bade-necka",
+      "name": "Neckar-Odenwald",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-orten",
+      "name": "Ortenau",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-ostal",
+      "name": "Ostalbkreis",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-pforz",
+      "name": "Pforzheim",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-rasta",
+      "name": "Rastatt",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-raven",
+      "name": "Ravensburg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-remsm",
+      "name": "Rems-Murr",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-reutl",
+      "name": "Reutlingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-rhein",
+      "name": "Rhein-Neckar",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-rottw",
+      "name": "Rottweil",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-schwb",
+      "name": "Schwarzwald-Baar",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-schwh",
+      "name": "Schwäbisch Hall",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-sigma",
+      "name": "Sigmaringen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-stutt",
+      "name": "Stuttgart",
+      "nameLocal": "",
+      "image": true,
+      "type": "Urban district"
+    },
+    {
+      "id": "eu-deu-bade-tubin",
+      "name": "Tübingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-tuttl",
+      "name": "Tuttlingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-ulmxx",
+      "name": "Ulm",
+      "nameLocal": "",
+      "image": true,
+      "type": "Urban district"
+    },
+    {
+      "id": "eu-deu-bade-walds",
+      "name": "Waldshut",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bade-zolle",
+      "name": "Zollernalb",
+      "nameLocal": "",
+      "image": true,
+      "type": "Rural district"
+    },
+    {
+      "id": "eu-deu-bava",
+      "name": "Bavaria",
+      "nameLocal": "Beieren",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-berl",
+      "name": "Berlin",
+      "nameLocal": "Berlin",
+      "image": true,
+      "type": "City-state"
+    },
+    {
+      "id": "eu-deu-bran",
+      "name": "Brandenburg",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-brem",
+      "name": "Bremen",
+      "nameLocal": "",
+      "image": true,
+      "type": "City-state"
+    },
+    {
+      "id": "eu-deu-hamb",
+      "name": "Hamburg",
+      "nameLocal": "",
+      "image": true,
+      "type": "City-state"
+    },
+    {
+      "id": "eu-deu-hess",
+      "name": "Hesse",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-lowe",
+      "name": "Lower Saxony",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-meck",
+      "name": "Mecklenburg-Vorpommern",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-nort",
+      "name": "North Rhine-Westphalia",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-rhin",
+      "name": "Rhineland-Palatinate",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-saar",
+      "name": "Saarland",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-saxo",
+      "name": "Saxony",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-saxa",
+      "name": "Saxony-Anhalt",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-schl",
+      "name": "Schleswig-Holstein",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-deu-thur",
+      "name": "Thuringia",
+      "nameLocal": "",
+      "image": true,
+      "type": "State"
+    },
+    {
+      "id": "eu-grc",
+      "name": "Greece",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1822,
+          "end": 1969
+        },
+        {
+          "start": 1969,
+          "end": 1975
+        },
+        {
+          "start": 1975,
+          "end": 1978
+        },
+        {
+          "start": 1978
+        }
+      ]
+    },
+    {
+      "id": "eu-hun",
+      "name": "Hungary",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1919
+        },
+        {
+          "start": 1919,
+          "end": 1946
+        },
+        {
+          "start": 1946,
+          "end": 1949
+        },
+        {
+          "start": 1949,
+          "end": 1956
+        },
+        {
+          "start": 1956,
+          "end": 1957
+        },
+        {
+          "start": 1957
+        }
+      ]
+    },
+    {
+      "id": "eu-isl",
+      "name": "Iceland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918
+        }
+      ]
+    },
+    {
+      "id": "eu-irl",
+      "name": "Ireland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1922
+        }
+      ]
+    },
+    {
+      "id": "eu-ita_kingdom",
+      "name": "Italy, Kingdom of",
+      "nameLocal": "",
+      "image": true,
+      "type": "Constitutional Monarchy",
+      "ranges": [
+        {
+          "start": 1861,
+          "end": 1946
+        }
+      ]
+    },
+    {
+      "id": "eu-ita",
+      "name": "Italy",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1946,
+          "end": 2003
+        },
+        {
+          "start": 2003,
+          "end": 2006
+        },
+        {
+          "start": 2006
+        }
+      ]
+    },
+    {
+      "id": "eu-kos",
+      "name": "Kosovo",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 2008
+        }
+      ]
+    },
+    {
+      "id": "eu-lva",
+      "name": "Latvia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1940
+        },
+        {
+          "start": 1991
+        }
+      ]
+    },
+    {
+      "id": "eu-lie",
+      "name": "Liechtenstein",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1719,
+          "end": 1852
+        },
+        {
+          "start": 1852,
+          "end": 1921
+        },
+        {
+          "start": 1921,
+          "end": 1937
+        },
+        {
+          "start": 1937,
+          "end": 1982
+        },
+        {
+          "start": 1982
+        }
+      ]
+    },
+    {
+      "id": "eu-ltu",
+      "name": "Lithuania",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-lux",
+      "name": "Luxembourg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-mlt",
+      "name": "Malta",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-mda",
+      "name": "Moldova",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-mco",
+      "name": "Monaco",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-mne",
+      "name": "Montenegro",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 2006
+        }
+      ]
+    },
+    {
+      "id": "eu-ned_kingdom",
+      "name": "Netherlands, United Kingdom of the",
+      "nameLocal": "Nederlanden, Verenigd Koninkrijk der",
+      "image": true,
+      "type": "Constitutional Monarchy",
+      "ranges": [
+        {
+          "start": 1815,
+          "end": 1839
+        }
+      ]
+    },
+    {
+      "id": "eu-ned",
+      "name": "Netherlands, the",
+      "nameLocal": "Nederland",
+      "languages": ["Dutch", "English", "Frisian", "Papiamento"],
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1839
+        }
+      ]
+    },
+    {
+      "id": "eu-ned-dren",
+      "name": "Drenthe",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-dren-aahun",
+      "name": "Aa en Hunze",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-assen",
+      "name": "Assen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-borge",
+      "name": "Borger-Odoorn",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-coevo",
+      "name": "Coevorden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-dewol",
+      "name": "De Wolden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-emmen",
+      "name": "Emmen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-hooge",
+      "name": "Hoogeveen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-meppe",
+      "name": "Meppel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-midde",
+      "name": "Midden-Drenthe",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-noord",
+      "name": "Noordenveld",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-tynaa",
+      "name": "Tynaarlo",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-dren-weste",
+      "name": "Westerveld",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-flev",
+      "name": "Flevoland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-flev-almer",
+      "name": "Almere",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-flev-dront",
+      "name": "Dronten",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-flev-lelys",
+      "name": "Lelystad",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-flev-nopol",
+      "name": "Noordoostpolder",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-flev-urkxx",
+      "name": "Urk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-flev-zeewo",
+      "name": "Zeewolde",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys",
+      "name": "Friesland",
+      "nameLocal": "Fryslân",
+      "image": true,
+      "ratio": "13 : 9",
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-frys-achtk",
+      "name": "Achtkarspelen",
+      "nameLocal": "Achtkarspelen",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-amela",
+      "name": "Ameland",
+      "nameLocal": "It Amelân",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-dantu",
+      "name": "Dantumadiel",
+      "nameLocal": "Dantumadiel",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-dantu-dewest",
+      "name": "Zwaagwesteinde",
+      "nameLocal": "De Westereen",
+      "image": true,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry",
+      "name": "De Fryske Marren",
+      "nameLocal": "De Fryske Marren",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-defry-akmarp",
+      "name": "Akmarijp",
+      "nameLocal": "Eagmaryp",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-bakhuz",
+      "name": "Bakhuizen",
+      "nameLocal": "Bakhuzen",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-balkxx",
+      "name": "Balk",
+      "nameLocal": "Balk",
+      "image": true,
+      "type": "Town"
+    },
+    {
+      "id": "eu-ned-frys-defry-banteg",
+      "name": "Bantega",
+      "nameLocal": "Bantegea",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-boornz",
+      "name": "Boornzwaag",
+      "nameLocal": "Boarnsweach",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-dbroek",
+      "name": "Broek",
+      "nameLocal": "De Broek",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-delfst",
+      "name": "Delfstrahuizen",
+      "nameLocal": "Dolsterhuzen",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-dijken",
+      "name": "Dijken",
+      "nameLocal": "Diken",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-doniag",
+      "name": "Doniaga",
+      "nameLocal": "Dunegea",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-echten",
+      "name": "Echten",
+      "nameLocal": "Ychten",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-echtbr",
+      "name": "Echtenerbrug",
+      "nameLocal": "Ychtenbrêge",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-eester",
+      "name": "Eesterga",
+      "nameLocal": "Jistergea",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-elahui",
+      "name": "Elahuizen",
+      "nameLocal": "Ealahuzen",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-folleg",
+      "name": "Follega",
+      "nameLocal": "Follegea",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-goinga",
+      "name": "Goingarijp",
+      "nameLocal": "Goaiïngaryp",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-harich",
+      "name": "Harich",
+      "nameLocal": "Harich",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-hasker",
+      "name": "Haskerhorne",
+      "nameLocal": "Haskerhoarne",
+      "image": true,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-idsken",
+      "name": "Idskenhuizen",
+      "nameLocal": "Jiskenhuzen",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-defry-jourex",
+      "name": "Joure",
+      "nameLocal": "De Jouwer",
+      "image": true,
+      "type": "Town"
+    },
+    {
+      "id": "eu-ned-frys-defry-kolder",
+      "name": "Kolderwolde",
+      "nameLocal": "Kolderwâlde",
+      "image": false,
+      "type": "Village"
+    },
+    {
+      "id": "eu-ned-frys-harli",
+      "name": "Harlingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-heere",
+      "name": "Heerenveen",
+      "nameLocal": "It Hearrenfean",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-leeuw",
+      "name": "Leeuwarden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-noard",
+      "name": "Noardeast-Fryslân",
+      "nameLocal": "Noardeast-Fryslân",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-oosts",
+      "name": "Ooststellingwerf",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-opste",
+      "name": "Opsterland",
+      "nameLocal": "Opsterlân",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-schie",
+      "name": "Schiermonnikoog",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-small",
+      "name": "Smallingerland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-sudwe",
+      "name": "Súdwest-Fryslân",
+      "nameLocal": "Súdwest-Fryslân",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-tersc",
+      "name": "Terschelling",
+      "nameLocal": "Schylge",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-tytsj",
+      "name": "Tytsjerksteradiel",
+      "nameLocal": "Tytsjerksteradiel",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-vliel",
+      "name": "Vlieland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-waadh",
+      "name": "Waadhoeke",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-frys-wests",
+      "name": "Weststellingwerf",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld",
+      "name": "Gelderland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-geld-aalte",
+      "name": "Aalten",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-apeld",
+      "name": "Apeldoorn",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-arnhe",
+      "name": "Arnhem",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-barne",
+      "name": "Barneveld",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-bergd",
+      "name": "Berg en Dal",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-berke",
+      "name": "Berkelland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-beuni",
+      "name": "Beuningen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-bronc",
+      "name": "Bronckhorst",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-brumm",
+      "name": "Brummen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-buren",
+      "name": "Buren",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-culem",
+      "name": "Culemborg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-doesb",
+      "name": "Doesburg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-doeti",
+      "name": "Doetinchem",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-drute",
+      "name": "Druten",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-duive",
+      "name": "Duiven",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-edexx",
+      "name": "Ede",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-elbur",
+      "name": "Elburg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-epexx",
+      "name": "Epe",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-ermel",
+      "name": "Ermelo",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-harde",
+      "name": "Harderwijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-hatte",
+      "name": "Hattem",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-heerd",
+      "name": "Heerde",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-heume",
+      "name": "Heumen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-linge",
+      "name": "Lingewaard",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-loche",
+      "name": "Lochem",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-maasd",
+      "name": "Maasdriel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-montf",
+      "name": "Montferland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-neder",
+      "name": "Neder-Betuwe",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-nijke",
+      "name": "Nijkerk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-nijme",
+      "name": "Nijmegen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-nunsp",
+      "name": "Nunspeet",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-oldeb",
+      "name": "Oldebroek",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-oostg",
+      "name": "Oost Gelre",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-oijss",
+      "name": "Oude IJsselstreek",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-overb",
+      "name": "Overbetuwe",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-putte",
+      "name": "Putten",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-renku",
+      "name": "Renkum",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-rhede",
+      "name": "Rheden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-rozen",
+      "name": "Rozendaal",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-scher",
+      "name": "Scherpenzeel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-tielx",
+      "name": "Tiel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-voors",
+      "name": "Voorst",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-wagen",
+      "name": "Wageningen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-westb",
+      "name": "West Betuwe",
+      "nameLocal": "",
+      "image": false,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-westm",
+      "name": "West Maas en Waal",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-weste",
+      "name": "Westervoort",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-wijch",
+      "name": "Wijchen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-winte",
+      "name": "Winterswijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-zaltb",
+      "name": "Zaltbommel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-zeven",
+      "name": "Zevenaar",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-geld-zutph",
+      "name": "Zutphen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron",
+      "name": "Groningen",
+      "nameLocal": "Grunn",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-gron-eemsd",
+      "name": "Eemsdelta",
+      "nameLocal": "",
+      "image": false,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron-groni",
+      "name": "Groningen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron-hogel",
+      "name": "Het Hogeland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron-midde",
+      "name": "Midden-Groningen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron-oldam",
+      "name": "Oldambt",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron-pekel",
+      "name": "Pekela",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron-stads",
+      "name": "Stadskanaal",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron-veend",
+      "name": "Veendam",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron-weste",
+      "name": "Westerkwartier",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-gron-wwold",
+      "name": "Westerwolde",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-limb",
+      "name": "Limburg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-nbra",
+      "name": "Noord-Brabant",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-nbra-alphe",
+      "name": "Alphen-Chaam",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-alten",
+      "name": "Altena",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-asten",
+      "name": "Asten",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-baarl",
+      "name": "Baarle-Nassau",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-berge",
+      "name": "Bergeijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-beroz",
+      "name": "Bergen op Zoom",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-bernh",
+      "name": "Bernheze",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-bestx",
+      "name": "Best",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-blade",
+      "name": "Bladel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-boeke",
+      "name": "Boekel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-boxme",
+      "name": "Boxmeer",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-boxte",
+      "name": "Boxtel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-breda",
+      "name": "Breda",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-crane",
+      "name": "Cranendonck",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-cuijk",
+      "name": "Cuijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-deurn",
+      "name": "Deurne",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-donge",
+      "name": "Dongen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-drimm",
+      "name": "Drimmelen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-eerse",
+      "name": "Eersel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-eindh",
+      "name": "Eindhoven",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-etten",
+      "name": "Etten-Leur",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-geert",
+      "name": "Geertruidenberg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-geldr",
+      "name": "Geldrop-Mierlo",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-gemer",
+      "name": "Gemert-Bakel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-gilze",
+      "name": "Gilze en Rijen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-goirl",
+      "name": "Goirle",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-grave",
+      "name": "Grave",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-halde",
+      "name": "Halderberge",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-heeze",
+      "name": "Heeze-Leende",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-helmo",
+      "name": "Helmond",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-denbo",
+      "name": "'s-Hertogenbosch",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-heusd",
+      "name": "Heusden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-hilva",
+      "name": "Hilvarenbeek",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-laarb",
+      "name": "Laarbeek",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-lande",
+      "name": "Landerd",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-loonz",
+      "name": "Loon op Zand",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-meier",
+      "name": "Meierijstad",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-mills",
+      "name": "Mill en Sint Hubert",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-moerd",
+      "name": "Moerdijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-nuene",
+      "name": "Nuenen, Gerwen en Nederwetten",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-oirsc",
+      "name": "Oirschot",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-oiste",
+      "name": "Oisterwijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-ooste",
+      "name": "Oosterhout",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-ossxx",
+      "name": "Oss",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-reuse",
+      "name": "Reusel-De Mierden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-roose",
+      "name": "Roosendaal",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-rucph",
+      "name": "Rucphen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-sinta",
+      "name": "Sint Anthonis",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-sintm",
+      "name": "Sint-Michielsgestel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-somer",
+      "name": "Someren",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-sonbr",
+      "name": "Son en Breugel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-steen",
+      "name": "Steenbergen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-tilbu",
+      "name": "Tilburg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-udenx",
+      "name": "Uden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-valke",
+      "name": "Valkenswaard",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-veldh",
+      "name": "Veldhoven",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-vught",
+      "name": "Vught",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-waalr",
+      "name": "Waalre",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-waalw",
+      "name": "Waalwijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-woens",
+      "name": "Woensdrecht",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nbra-zunde",
+      "name": "Zundert",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol",
+      "name": "Noord-Holland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-nhol-aalsm",
+      "name": "Aalsmeer",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-alkma",
+      "name": "Alkmaar",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-amstv",
+      "name": "Amstelveen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-amste",
+      "name": "Amsterdam",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-beems",
+      "name": "Beemster",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-berge",
+      "name": "Bergen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-bever",
+      "name": "Beverwijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-blari",
+      "name": "Blaricum",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-bloem",
+      "name": "Bloemendaal",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-castr",
+      "name": "Castricum",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-denhe",
+      "name": "Den Helder",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-dieme",
+      "name": "Diemen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-drech",
+      "name": "Drechterland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-evdam",
+      "name": "Edam-Volendam",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-enkhu",
+      "name": "Enkhuizen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-goois",
+      "name": "Gooise Meren",
+      "nameLocal": "",
+      "image": false,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-haarl",
+      "name": "Haarlem",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-haarm",
+      "name": "Haarlemmermeer",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-heems",
+      "name": "Heemskerk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-heeme",
+      "name": "Heemstede",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-heerh",
+      "name": "Heerhugowaard",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-heilo",
+      "name": "Heiloo",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-hilve",
+      "name": "Hilversum",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-hkroo",
+      "name": "Hollands Kroon",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-hoorn",
+      "name": "Hoorn",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-huize",
+      "name": "Huizen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-kogge",
+      "name": "Koggenland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-lands",
+      "name": "Landsmeer",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-lange",
+      "name": "Langedijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-laren",
+      "name": "Laren",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-medem",
+      "name": "Medemblik",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-oostz",
+      "name": "Oostzaan",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-opmee",
+      "name": "Opmeer",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-oamst",
+      "name": "Ouder-Amstel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-purme",
+      "name": "Purmerend",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-schag",
+      "name": "Schagen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-stbro",
+      "name": "Stede Broec",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-texel",
+      "name": "Texel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-uitge",
+      "name": "Uitgeest",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-uitho",
+      "name": "Uithoorn",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-velse",
+      "name": "Velsen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-water",
+      "name": "Waterland",
+      "nameLocal": "",
+      "image": false,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-weesp",
+      "name": "Weesp",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-wijde",
+      "name": "Wijdemeren",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-worme",
+      "name": "Wormerland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-zaans",
+      "name": "Zaanstad",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-nhol-zaans-assend",
+      "name": "Assendelft",
+      "nameLocal": "",
+      "type": "Town"
+    },
+    {
+      "id": "eu-ned-nhol-zandv",
+      "name": "Zandvoort",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-over",
+      "name": "Overijssel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-utre",
+      "name": "Utrecht",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-zeel",
+      "name": "Zeeland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-zhol",
+      "name": "Zuid-Holland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Province"
+    },
+    {
+      "id": "eu-ned-zhol-albla",
+      "name": "Alblasserdam",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-albra",
+      "name": "Albrandswaard",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-alphe",
+      "name": "Alphen aan den Rijn",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-baren",
+      "name": "Barendrecht",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-bodeg",
+      "name": "Bodegraven-Reeuwijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-briel",
+      "name": "Brielle",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-capel",
+      "name": "Capelle aan den IJssel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-delft",
+      "name": "Delft",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-dordt",
+      "name": "Dordrecht",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-goere",
+      "name": "Goeree-Overflakkee",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-gorin",
+      "name": "Gorinchem",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-gouda",
+      "name": "Gouda",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-denha",
+      "name": "'s-Gravenhage",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-hardi",
+      "name": "Hardinxveld-Giessendam",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-helle",
+      "name": "Hellevoetsluis",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-hendr",
+      "name": "Hendrik-Ido-Ambacht",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-hille",
+      "name": "Hillegom",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-hoeks",
+      "name": "Hoeksche Waard",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-kaagb",
+      "name": "Kaag en Braassem",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-katwk",
+      "name": "Katwijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-krimp",
+      "name": "Krimpen aan den IJssel",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-krimw",
+      "name": "Krimpenerwaard",
+      "nameLocal": "",
+      "image": false,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-lansi",
+      "name": "Lansingerland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-leide",
+      "name": "Leiden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-leidd",
+      "name": "Leiderdorp",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-leids",
+      "name": "Leidschendam-Voorburg",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-lisse",
+      "name": "Lisse",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-maass",
+      "name": "Maassluis",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-midde",
+      "name": "Midden-Delfland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-molen",
+      "name": "Molenlanden",
+      "nameLocal": "",
+      "image": false,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-nieuw",
+      "name": "Nieuwkoop",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-nisse",
+      "name": "Nissewaard",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-noord",
+      "name": "Noordwijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-oegst",
+      "name": "Oegstgeest",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-papen",
+      "name": "Papendrecht",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-pijna",
+      "name": "Pijnacker-Nootdorp",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-ridde",
+      "name": "Ridderkerk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-rijsw",
+      "name": "Rijswijk",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-rotte",
+      "name": "Rotterdam",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-schie",
+      "name": "Schiedam",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-slied",
+      "name": "Sliedrecht",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-teyli",
+      "name": "Teylingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-vlaar",
+      "name": "Vlaardingen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-voors",
+      "name": "Voorschoten",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-waddi",
+      "name": "Waddinxveen",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-wasse",
+      "name": "Wassenaar",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-westl",
+      "name": "Westland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-westv",
+      "name": "Westvoorne",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-zoete",
+      "name": "Zoetermeer",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-zoetw",
+      "name": "Zoeterwoude",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-zuidp",
+      "name": "Zuidplas",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-ned-zhol-zwijn",
+      "name": "Zwijndrecht",
+      "nameLocal": "",
+      "image": true,
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-mkd",
+      "name": "North Macedonia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-nor",
+      "name": "Norway",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-pol",
+      "name": "Poland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-prt",
+      "name": "Portugal",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-rou",
+      "name": "Romania",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-rus",
+      "name": "Russia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-smr",
+      "name": "San Marino",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-srb",
+      "name": "Serbia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-svk",
+      "name": "Slovakia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-svn",
+      "name": "Slovenia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-esp",
+      "name": "Spain",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-sov",
+      "name": "Soviet Union",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1922,
+          "end": 1923
+        },
+        {
+          "start": 1923,
+          "end": 1924
+        },
+        {
+          "start": 1924,
+          "end": 1936
+        },
+        {
+          "start": 1936,
+          "end": 1955
+        },
+        {
+          "start": 1955,
+          "end": 1991
+        }
+      ]
+    },
+    {
+      "id": "eu-swe",
+      "name": "Sweden",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-che",
+      "name": "Switzerland",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1841
+        }
+      ]
+    },
+    {
+      "id": "eu-tur",
+      "name": "Turkey",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-ukr",
+      "name": "Ukraine",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-gbr",
+      "name": "United Kingdom",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-vat",
+      "name": "Vatican City",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "eu-yug",
+      "name": "Yugoslavia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1941
+        },
+        {
+          "start": 1946,
+          "end": 1992
+        }
+      ]
+    },
+    {
+      "id": "na",
+      "name": "North America",
+      "type": "Continent"
+    },
+    {
+      "id": "na-aia",
+      "name": "Anguilla",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-gbr",
+      "type": "Country"
+    },
+    {
+      "id": "na-atg",
+      "name": "Antigua and Barbuda",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-abw",
+      "name": "Aruba",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-nld",
+      "type": "Country"
+    },
+    {
+      "id": "na-bhs",
+      "name": "Bahamas, the",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-brb",
+      "name": "Barbados",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-blz",
+      "name": "Belize",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-bmu",
+      "name": "Bermuda",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-gbr",
+      "type": "Overseas Territory"
+    },
+    {
+      "id": "na-bes",
+      "name": "Bonaire",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-nld",
+      "type": "Special Municipality"
+    },
+    {
+      "id": "na-vgb",
+      "name": "British Virgin Islands",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-gbr",
+      "type": "Overseas Territory"
+    },
+    {
+      "id": "na-can",
+      "name": "Canada",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-cym",
+      "name": "Cayman Islands",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-gbr",
+      "type": "Overseas Territory"
+    },
+    {
+      "id": "na-clip",
+      "name": "Clipperton Island",
+      "nameLocal": "",
+      "image": false,
+      "parent": "eu-fra",
+      "type": "Overseas State Private Property"
+    },
+    {
+      "id": "na-cri",
+      "name": "Costa Rica",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-cub",
+      "name": "Cuba",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-cuw",
+      "name": "Curaçao",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-nld",
+      "type": "Constituent Country"
+    },
+    {
+      "id": "na-dma",
+      "name": "Dominica",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-dom",
+      "name": "Dominican Republic",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-slv",
+      "name": "El Salvador",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-fdov",
+      "name": "Federal Dependencies of Venezuela",
+      "nameLocal": "",
+      "image": true,
+      "parent": "sa-ven",
+      "type": "Special Administrative Division"
+    },
+    {
+      "id": "na-grl",
+      "name": "Greenland",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-dnk",
+      "type": "Autonomous Territory"
+    },
+    {
+      "id": "na-grd",
+      "name": "Grenada",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-glp",
+      "name": "Guadeloupe",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Department"
+    },
+    {
+      "id": "na-gtm",
+      "name": "Guatemala",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-hti",
+      "name": "Haiti",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-hnd",
+      "name": "Honduras",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-jam",
+      "name": "Jamaica",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-mtq",
+      "name": "Martinique",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Department"
+    },
+    {
+      "id": "na-mex",
+      "name": "Mexico",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-msr",
+      "name": "Montserrat",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-gbr",
+      "type": "Overseas Territory"
+    },
+    {
+      "id": "na-nic",
+      "name": "Nicaragua",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-nuev",
+      "name": "Nueva Esparta",
+      "nameLocal": "",
+      "image": true,
+      "parent": "sa-ven",
+      "type": "State"
+    },
+    {
+      "id": "na-pan",
+      "name": "Panama",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-pri",
+      "name": "Puerto Rico",
+      "nameLocal": "",
+      "image": true,
+      "parent": "na-usa",
+      "type": "Unincorporated Territory"
+    },
+    {
+      "id": "na-saba",
+      "name": "Saba",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-nld",
+      "type": "Special Municipality"
+    },
+    {
+      "id": "na-blm",
+      "name": "Saint Barthélemy",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Collectivity"
+    },
+    {
+      "id": "na-kna",
+      "name": "Saint Kitts and Nevis",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-lca",
+      "name": "Saint Lucia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-maf",
+      "name": "Saint Martin",
+      "nameLocal": "",
+      "image": false,
+      "parent": "eu-fra",
+      "type": "Overseas Collectivity"
+    },
+    {
+      "id": "na-spm",
+      "name": "Saint Pierre and Miquelon",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Collectivity"
+    },
+    {
+      "id": "na-vct",
+      "name": "Saint Vincent and the Grenadines",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-sapr",
+      "name": "San Andrés and Providencia",
+      "nameLocal": "",
+      "image": true,
+      "parent": "sa-col",
+      "type": "Department"
+    },
+    {
+      "id": "na-sxe",
+      "name": "Sint Eustatius",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-nld",
+      "type": "Special Municipality"
+    },
+    {
+      "id": "na-sxm",
+      "name": "Sint Maarten",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-nld",
+      "type": "Constituent Country"
+    },
+    {
+      "id": "na-tto",
+      "name": "Trinidad and Tobago",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-tca",
+      "name": "Turks and Caicos Islands",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-gbr",
+      "type": "Overseas Territory"
+    },
+    {
+      "id": "na-usa",
+      "name": "United States",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "na-vir",
+      "name": "United States Virgin Islands",
+      "nameLocal": "",
+      "image": true,
+      "parent": "na-usa",
+      "type": "Unincorporated Territory"
+    },
+    {
+      "id": "sa",
+      "name": "South America",
+      "type": "Continent"
+    },
+    {
+      "id": "sa-arg",
+      "name": "Argentina",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-bol",
+      "name": "Bolivia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-bvt",
+      "name": "Bouvet Island",
+      "nameLocal": "",
+      "image": false,
+      "parent": "eu-nor",
+      "type": "Dependent Territory"
+    },
+    {
+      "id": "sa-bra",
+      "name": "Brazil",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-chl",
+      "name": "Chile",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-col",
+      "name": "Colombia",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-ecu",
+      "name": "Ecuador",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-flk",
+      "name": "Falkland Islands",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-gbr",
+      "type": "Overseas Territory"
+    },
+    {
+      "id": "sa-guf",
+      "name": "French Guiana",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-fra",
+      "type": "Overseas Collectivity"
+    },
+    {
+      "id": "sa-guy",
+      "name": "Guyana",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-pry",
+      "name": "Paraguay",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-per",
+      "name": "Peru",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-sgs",
+      "name": "South Georgia and the South Sandwich Islands",
+      "nameLocal": "",
+      "image": true,
+      "parent": "eu-gbr",
+      "type": "Overseas Territory"
+    },
+    {
+      "id": "sa-sur",
+      "name": "Suriname",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-ury",
+      "name": "Uruguay",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    },
+    {
+      "id": "sa-ven",
+      "name": "Venezuela",
+      "nameLocal": "",
+      "image": true,
+      "type": "Country"
+    }
+  ]
+}
