@@ -1544,7 +1544,24 @@
       "name": "Greece",
       "nameLocal": "",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1822,
+          "end": 1969
+        },
+        {
+          "start": 1969,
+          "end": 1975
+        },
+        {
+          "start": 1975,
+          "end": 1978
+        },
+        {
+          "start": 1978
+        }
+      ]
     },
     {
       "id": "eu-hun",
@@ -1595,14 +1612,45 @@
       "name": "Ireland",
       "nameLocal": "",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1922
+        }
+      ]
+    },
+    {
+      "id": "eu-ita_kingdom",
+      "name": "Italy, Kingdom of",
+      "nameLocal": "",
+      "image": true,
+      "type": "Constitutional Monarchy",
+      "ranges": [
+        {
+          "start": 1861,
+          "end": 1946
+        }
+      ]
     },
     {
       "id": "eu-ita",
       "name": "Italy",
       "nameLocal": "",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1946,
+          "end": 2003
+        },
+        {
+          "start": 2003,
+          "end": 2006
+        },
+        {
+          "start": 2006
+        }
+      ]
     },
     {
       "id": "eu-kos",
@@ -1621,14 +1669,44 @@
       "name": "Latvia",
       "nameLocal": "",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1940
+        },
+        {
+          "start": 1991
+        }
+      ]
     },
     {
       "id": "eu-lie",
       "name": "Liechtenstein",
       "nameLocal": "",
       "image": true,
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1719,
+          "end": 1852
+        },
+        {
+          "start": 1852,
+          "end": 1921
+        },
+        {
+          "start": 1921,
+          "end": 1937
+        },
+        {
+          "start": 1937,
+          "end": 1982
+        },
+        {
+          "start": 1982
+        }
+      ]
     },
     {
       "id": "eu-ltu",
@@ -1678,7 +1756,7 @@
       ]
     },
     {
-      "id": "eu-ned_old",
+      "id": "eu-ned_kingdom",
       "name": "Netherlands, United Kingdom of the",
       "nameLocal": "Nederlanden, Verenigd Koninkrijk der",
       "image": true,
