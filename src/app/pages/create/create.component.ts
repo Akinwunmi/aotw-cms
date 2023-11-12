@@ -14,7 +14,7 @@ import {
   AotwStepperComponent,
   AotwStepperService,
   Step
-} from '@aotw/lib-ng';
+} from '@aotw/ng-components';
 import { TranslateService } from '@ngx-translate/core';
 import { map, Subject, takeUntil } from 'rxjs';
 
