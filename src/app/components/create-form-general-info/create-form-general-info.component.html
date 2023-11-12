@@ -3,7 +3,7 @@
     <label [for]="createFormControlsEnum.Name">
       <ng-container
         *ngTemplateOutlet="statusIcon; context: { control: nameControl }"
-      ></ng-container>
+      />
       {{ 'CREATE.STEPS.' + createFormControlsEnum.Name | translate }}
     </label>
     <input
@@ -15,7 +15,7 @@
     <label [for]="createFormControlsEnum.MainCategory">
       <ng-container
         *ngTemplateOutlet="statusIcon; context: { control: mainCategoryControl }"
-      ></ng-container>
+      />
       {{ 'CREATE.STEPS.' + createFormControlsEnum.MainCategory | translate }}
     </label>
     <input
@@ -27,39 +27,40 @@
       <label [for]="createFormControlsEnum.MainTopics">
         <ng-container
           *ngTemplateOutlet="statusIcon; context: { control: mainTopicsControl }"
-        ></ng-container>
+        />
         {{ 'CREATE.STEPS.' + createFormControlsEnum.MainTopics | translate }}
       </label>
-      <div *ngFor="let topic of topics; let i = index" class="topic">
-        <input
-          [formControlName]="i"
-          [id]="i === 0 ? createFormControlsEnum.MainTopics : undefined"
-        />
-        <button
-          *ngIf="i > 1"
-          type="button"
-          ghost
-          (click)="removeTopic(i)"
-        >
-          <aotw-ng-icon name="close" size="medium"></aotw-ng-icon>
-        </button>
-      </div>
+      @for (topic of topics; track i; let i = $index) {
+        <div class="topic">
+          <input
+            [formControlName]="i"
+            [id]="i === 0 ? createFormControlsEnum.MainTopics : undefined"
+          />
+          @if (i > 1) {
+            <button type="button" ghost (click)="removeTopic(i)">
+              <aotw-ng-icon name="close" size="medium" />
+            </button>
+          }
+        </div>
+      }
     </aotw-ng-form-field>
     <button type="button" secondary (click)="addTopic()">
-      <aotw-ng-icon name="add" size="medium"></aotw-ng-icon>
+      <aotw-ng-icon name="add" size="medium" />
       {{ 'COMMON.ADD' | translate }}
     </button>
 </ng-container>
 
 <!-- Status icon for validation of the input fields -->
 <ng-template #statusIcon let-control="control">
-  <div *ngIf="control?.touched" class="status-icon">
-    <aotw-ng-icon
-      size="medium"
-      [name]="control.valid ? 'check' : 'error'"
-    ></aotw-ng-icon>
-    <svg viewBox="0 0 24 24" [ngClass]="{ error: !control.valid }">
-      <circle cx="12" cy="12" r="12"></circle>
-    </svg>
-  </div>
+  @if (control?.touched) {
+    <div class="status-icon">
+      <aotw-ng-icon
+        size="medium"
+        [name]="control.valid ? 'check' : 'error'"
+      />
+      <svg viewBox="0 0 24 24" [ngClass]="{ error: !control.valid }">
+        <circle cx="12" cy="12" r="12" />
+      </svg>
+    </div>
+  }
 </ng-template>

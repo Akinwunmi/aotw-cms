@@ -4,7 +4,7 @@
   grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
 }
 
-:host([class='grid']) {
+:host(.grid) {
   grid-template-columns: repeat(auto-fill, minmax(min(9.25rem, 100%), 1fr));
 
   .topic {

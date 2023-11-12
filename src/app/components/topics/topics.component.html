@@ -1,13 +1,18 @@
-<figure *ngFor="let topic of filteredTopics" class="topic" [routerLink]="'../' + topic.id">
-  <div [ngClass]="{ 'no-image': !topic.image }">
-    <img
-      *ngIf="topic.image"
-      [src]="topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix"
-      [alt]="topic.name"
-    >
-  </div>
-  <figcaption>
-    <span class="name">{{ topic.name }}</span>
-    <span *ngIf="topic.parent" class="parent">{{ setParentLabel(topic.parent) }}</span>
-  </figcaption>
-</figure>
+@for (topic of filteredTopics; track topic.id) {
+  <figure class="topic" [routerLink]="'../' + topic.id">
+    <div [ngClass]="{ 'no-image': !topic.image }">
+      @if (topic.image) {
+        <img
+          [src]="topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix"
+          [alt]="topic.name"
+        >
+      }
+    </div>
+    <figcaption>
+      <span class="name">{{ topic.name }}</span>
+      @if (topic.parent) {
+        <span class="parent">{{ setParentLabel(topic.parent) }}</span>
+      }
+    </figcaption>
+  </figure>
+}

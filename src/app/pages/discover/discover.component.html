@@ -1,34 +1,34 @@
-<section *ngIf="archiveData" class="header" [ngClass]="{ 'main-topic': !activeTopic }">
-  <app-discover-header
-    *ngIf="activeTopic; else mainTopicsHeader"
-    [breadcrumb]="topicsBreadcrumb"
-    [topic]="activeTopic"
-  ></app-discover-header>
-</section>
+@if (archiveData) {
+  <section class="header" [ngClass]="{ 'main-topic': !activeTopic }">
+    @if (activeTopic) {
+      <app-discover-header [breadcrumb]="topicsBreadcrumb" [topic]="activeTopic" />
+    } @else {
+      <h2>{{ mainTopicType }}</h2>
+      <ul>
+        @for (topic of mainTopics; track topic.id) {
+          <li>
+            <a
+              tabindex="0"
+              [ngClass]="{ active: topic.id === activeMainTopicId }"
+              (click)="setActiveTopic(topic.id)"
+              (keydown)="setActiveTopic(topic.id)"
+            >
+              {{ topic.name }}
+            </a>
+          </li>
+        }
+      </ul>
+    }
+  </section>
+}
 <section class="content">
   <div class="content_header" [ngClass]="{ 'main-topic': !activeTopic }">
-    <app-datetime-navigator [min]="minYear" [max]="currentYear"></app-datetime-navigator>
+    <app-datetime-navigator [min]="minYear" [max]="currentYear" />
     <app-advanced-search
       [(filters)]="filters"
       [(sorting)]="sorting"
       [(sortDirection)]="sortDirection"
-    ></app-advanced-search>
+    />
   </div>
-  <router-outlet></router-outlet>
+  <router-outlet />
 </section>
-
-<ng-template #mainTopicsHeader>
-  <h2>{{ mainTopicType }}</h2>
-  <ul>
-    <li *ngFor="let topic of mainTopics">
-      <a
-        tabindex="0"
-        [ngClass]="{ active: topic.id === activeMainTopicId }"
-        (click)="setActiveTopic(topic.id)"
-        (keydown)="setActiveTopic(topic.id)"
-      >
-        {{ topic.name }}
-      </a>
-    </li>
-  </ul>
-</ng-template>

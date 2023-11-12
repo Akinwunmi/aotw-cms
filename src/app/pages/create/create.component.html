@@ -2,34 +2,33 @@
   <h2>{{ 'CREATE.TITLE' | translate }}</h2>
 </header>
 
-<aotw-ng-stepper [(activeStep)]="activeStep" [steps]="steps"></aotw-ng-stepper>
+<aotw-ng-stepper [(activeStep)]="activeStep" [steps]="steps" />
 <form [formGroup]="form" (ngSubmit)="submit()">
   <div class="subforms">
-    <app-general-info
-      *ngIf="activeStep === 0"
-      [formGroupName]="generalInfo"
-      (validated)="validateGeneralInfo($event)"
-    ></app-general-info>
-    <app-layout *ngIf="activeStep === 1" [formGroupName]="layout"></app-layout>
+    @if (activeStep === 0) {
+      <app-general-info [formGroupName]="generalInfo" (validated)="validateGeneralInfo($event)" />
+    }
+    @if (activeStep === 1) {
+      <app-layout [formGroupName]="layout" />
+    }
   </div>
   <div class="actions">
     <button type="button" ghost secondary (click)="cancel()">
       {{ 'COMMON.CTA.CANCEL' | translate }}
     </button>
-    <button
-      *ngIf="activeStep < steps.length - 1; else createButton"
-      type="button"
-      secondary
-      [disabled]="!isGeneralInfoValidated"
-      (click)="goToNextStep()"
-    >
-      {{ 'COMMON.CTA.NEXT' | translate }}
-    </button>
+    @if (activeStep < steps.length - 1) {
+      <button
+        type="button"
+        secondary
+        [disabled]="!isGeneralInfoValidated"
+        (click)="goToNextStep()"
+      >
+        {{ 'COMMON.CTA.NEXT' | translate }}
+      </button>
+    } @else {
+      <button type="submit" secondary [disabled]="!form.valid">
+        {{ 'COMMON.CTA.CREATE' | translate }}
+      </button>
+    }
   </div>
 </form>
-
-<ng-template #createButton>
-  <button type="submit" secondary [disabled]="!form.valid">
-    {{ 'COMMON.CTA.CREATE' | translate }}
-  </button>
-</ng-template>
