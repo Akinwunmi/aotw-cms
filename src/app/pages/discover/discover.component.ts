@@ -139,7 +139,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   private getArchiveData(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
-    this.archiveId = url[RouteDiscover.Archive];
+    this.archiveId = '23flag01';
     this.topicId.set(url[RouteDiscover.Topic]);
     if (this.topicNames) {
       // set topic id as title and current url,

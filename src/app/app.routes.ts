@@ -4,7 +4,7 @@ export const APP_ROUTES: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home',
+    redirectTo: 'archive',
   },
   {
     path: 'home',
@@ -18,12 +18,5 @@ export const APP_ROUTES: Routes = [
     loadChildren: () => import('./pages/archive/archive.routes').then(
       m => m.ARCHIVE_ROUTES
     ),
-  },
-  {
-    path: 'create',
-    title: 'create',
-    loadChildren: () => import('./pages/create/create.routes').then(
-      m => m.CREATE_ROUTES
-    ),
-  },
+  }
 ];

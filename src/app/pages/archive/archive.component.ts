@@ -52,7 +52,7 @@ export class ArchiveComponent implements OnDestroy, OnInit {
       }));
     });
 
-    this.archiveId = this.router.url.split('/')[2];
+    this.archiveId = '23flag01';
     this.setActiveTab(this.router.url);
     this.showHeader = !this.router.url.includes('edit');
     this.router.events.pipe(
@@ -77,7 +77,7 @@ export class ArchiveComponent implements OnDestroy, OnInit {
   }
 
   private setActiveTab(url: string): void {
-    const tabFound = this.tabs.find(tab => tab.name === url.split('/')[3]);
+    const tabFound = this.tabs.find(tab => tab.name === url.split('/')[2]);
     if (!tabFound) {
       return;
     }

@@ -1,10 +1,6 @@
 <header>
   <h2>{{ 'COMMON.ARCHIVES' | translate }}</h2>
 </header>
-<button type="button" ghost (click)="goToCreate()">
-  <span>{{ 'HOME.NEW_ARCHIVE' | translate }}</span>
-  <aotw-lib-icon name="add" size="medium"></aotw-lib-icon>
-</button>
 <section>
   <app-advanced-search></app-advanced-search>
   <div class="archives" [ngClass]="{ 'list': !gridLayout }">

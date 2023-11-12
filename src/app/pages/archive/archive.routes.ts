@@ -1,13 +1,12 @@
 import { Route } from '@angular/router';
 
-import { CreateComponent } from '../create';
 import { SearchComponent } from '../search';
 
 import { ArchiveComponent } from './archive.component';
 
 export const ARCHIVE_ROUTES: Route[] = [
   {
-    path: ':id',
+    path: '',
     component: ArchiveComponent,
     title: 'Archive',
     children: [
@@ -27,11 +26,6 @@ export const ARCHIVE_ROUTES: Route[] = [
           m => m.DISCOVER_ROUTES
         ),
         title: 'Discover'
-      },
-      {
-        path: 'edit',
-        component: CreateComponent,
-        title: 'Edit'
       }
     ]
   }

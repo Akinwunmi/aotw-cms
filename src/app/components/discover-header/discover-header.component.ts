@@ -2,13 +2,12 @@ import {
   ChangeDetectionStrategy,
   Component,
   Input,
-  OnInit,
-  inject,
+  OnInit
 } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AotwIconComponent } from '@aotw/lib-ng';
 
-import { RouteDiscover, Topic } from '../../models';
+import { Topic } from '../../models';
 import { ImagePipe } from '../../pipes';
 import { SharedModule } from '../../shared';
 import { BreadcrumbComponent, BreadcrumbItem } from '../breadcrumb';
@@ -36,10 +35,7 @@ export class DiscoverHeaderComponent implements OnInit {
 
   public archiveId!: string;
 
-  private router = inject(Router);
-
   public ngOnInit(): void {
-    const url = this.router.url.slice(1).split('/');
-    this.archiveId = url[RouteDiscover.Archive];
+    this.archiveId = '23flag01';
   }
 }

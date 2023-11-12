@@ -62,10 +62,6 @@ export class HomeComponent implements OnDestroy, OnInit {
     this.router.navigate(['archive', id]);
   }
 
-  public goToCreate(): void {
-    this.router.navigate(['create']);
-  }
-
   public ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
