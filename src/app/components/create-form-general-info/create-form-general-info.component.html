@@ -1,5 +1,5 @@
 <ng-container [formGroup]="form">
-  <aotw-lib-field>
+  <aotw-ng-form-field>
     <label [for]="createFormControlsEnum.Name">
       <ng-container
         *ngTemplateOutlet="statusIcon; context: { control: nameControl }"
@@ -10,8 +10,8 @@
       [formControlName]="createFormControlsEnum.Name"
       [id]="createFormControlsEnum.Name"
     />
-  </aotw-lib-field>
-  <aotw-lib-field>
+  </aotw-ng-form-field>
+  <aotw-ng-form-field>
     <label [for]="createFormControlsEnum.MainCategory">
       <ng-container
         *ngTemplateOutlet="statusIcon; context: { control: mainCategoryControl }"
@@ -22,8 +22,8 @@
       [formControlName]="createFormControlsEnum.MainCategory"
       [id]="createFormControlsEnum.MainCategory"
     />
-  </aotw-lib-field>
-    <aotw-lib-field [formArrayName]="createFormControlsEnum.MainTopics">
+  </aotw-ng-form-field>
+    <aotw-ng-form-field [formArrayName]="createFormControlsEnum.MainTopics">
       <label [for]="createFormControlsEnum.MainTopics">
         <ng-container
           *ngTemplateOutlet="statusIcon; context: { control: mainTopicsControl }"
@@ -41,12 +41,12 @@
           ghost
           (click)="removeTopic(i)"
         >
-          <aotw-lib-icon name="close" size="medium"></aotw-lib-icon>
+          <aotw-ng-icon name="close" size="medium"></aotw-ng-icon>
         </button>
       </div>
-    </aotw-lib-field>
+    </aotw-ng-form-field>
     <button type="button" secondary (click)="addTopic()">
-      <aotw-lib-icon name="add" size="medium"></aotw-lib-icon>
+      <aotw-ng-icon name="add" size="medium"></aotw-ng-icon>
       {{ 'COMMON.ADD' | translate }}
     </button>
 </ng-container>
@@ -54,10 +54,10 @@
 <!-- Status icon for validation of the input fields -->
 <ng-template #statusIcon let-control="control">
   <div *ngIf="control?.touched" class="status-icon">
-    <aotw-lib-icon
+    <aotw-ng-icon
       size="medium"
       [name]="control.valid ? 'check' : 'error'"
-    ></aotw-lib-icon>
+    ></aotw-ng-icon>
     <svg viewBox="0 0 24 24" [ngClass]="{ error: !control.valid }">
       <circle cx="12" cy="12" r="12"></circle>
     </svg>

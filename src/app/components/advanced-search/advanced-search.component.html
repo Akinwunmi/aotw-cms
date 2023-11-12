@@ -1,30 +1,30 @@
 <div class="filters" *ngIf="showAllOptions; else activeFilterTemplate">
   <button type="button" ghost (click)="openOption(advancedSearchEnum.Search)">
     <span>{{ 'COMMON.SEARCH' | translate }}</span>
-    <aotw-lib-icon name="search" size="medium"></aotw-lib-icon>
+    <aotw-ng-icon name="search" size="medium"></aotw-ng-icon>
   </button>
   <button type="button" ghost (click)="openOption(advancedSearchEnum.Sort)">
     <span>{{ 'COMMON.SORT' | translate }}</span>
-    <aotw-lib-icon name="sort" size="medium"></aotw-lib-icon>
+    <aotw-ng-icon name="sort" size="medium"></aotw-ng-icon>
   </button>
   <button type="button" ghost (click)="openOption(advancedSearchEnum.Filters)">
     <span>{{ 'COMMON.FILTERS' | translate }}</span>
-    <aotw-lib-icon name="filter" size="medium"></aotw-lib-icon>
+    <aotw-ng-icon name="filter" size="medium"></aotw-ng-icon>
   </button>
-  <aotw-lib-chip-group
+  <aotw-ng-chip-group
     [chips]="layoutChips"
     (activeChip)="setLayout($event)"
-  ></aotw-lib-chip-group>
+  ></aotw-ng-chip-group>
 </div>
 <ng-template #activeFilterTemplate>
   <div class="active-filter">
     <button ghost (click)="closeOption()">
-      <aotw-lib-icon name="chevron-up" size="medium"></aotw-lib-icon>
+      <aotw-ng-icon name="chevron-up" size="medium"></aotw-ng-icon>
     </button>
     <ng-container [ngSwitch]="activeOption">
-      <aotw-lib-field *ngSwitchCase="advancedSearchEnum.Search" class="search">
+      <aotw-ng-form-field *ngSwitchCase="advancedSearchEnum.Search" class="search">
         <input [placeholder]="'COMMON.SEARCH' | translate" />
-      </aotw-lib-field>
+      </aotw-ng-form-field>
       <div *ngSwitchCase="advancedSearchEnum.Filters" class="filters">
         {{ 'FILTERS_AND_SORTING.FILTER_BY' | translate }}
         <button *ngFor="let filter of filters" [attr.ghost]="!filter.active || null" (click)="toggleFilter(filter.label)">

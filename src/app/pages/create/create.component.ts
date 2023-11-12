@@ -9,7 +9,7 @@ import {
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
-  AotwFieldComponent,
+  AotwFormFieldComponent,
   AotwLabelComponent,
   AotwStepperComponent,
   AotwStepperService,
@@ -36,7 +36,7 @@ import { SharedModule } from '../../shared';
   standalone: true,
   imports: [
     SharedModule,
-    AotwFieldComponent,
+    AotwFormFieldComponent,
     AotwLabelComponent,
     AotwStepperComponent,
     CreateFormGeneralInfoComponent,

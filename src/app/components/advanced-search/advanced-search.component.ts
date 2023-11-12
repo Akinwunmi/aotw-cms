@@ -10,10 +10,10 @@ import {
 } from '@angular/core';
 import {
   AotwChipGroupComponent,
-  AotwFieldComponent,
+  AotwFormFieldComponent,
   AotwIconComponent,
   Chip
-} from '@aotw/lib-ng';
+} from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 
@@ -36,7 +36,7 @@ import {
   imports: [
     SharedModule,
     AotwChipGroupComponent,
-    AotwFieldComponent,
+    AotwFormFieldComponent,
     AotwIconComponent,
     SortingComponent
   ],

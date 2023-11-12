@@ -1,6 +1,6 @@
 <ng-container *ngIf="showHeader; else backButton">
-  <aotw-lib-tab-group [activeTab]="activeTab" [tabs]="tabs" (selectedTab)="goToPage($event.name)">
-  </aotw-lib-tab-group>
+  <aotw-ng-tab-group [activeTab]="activeTab" [tabs]="tabs" (selectedTab)="goToPage($event.name)">
+  </aotw-ng-tab-group>
   <!-- TODO Add edit page -->
   <!-- <button type="button" ghost (click)="goToPage('edit')">
     <span>{{ 'ARCHIVE.EDIT_ARCHIVE' | translate }}</span>

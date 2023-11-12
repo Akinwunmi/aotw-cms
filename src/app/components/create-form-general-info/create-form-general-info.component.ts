@@ -15,7 +15,11 @@ import {
   FormControl,
   FormGroup
 } from '@angular/forms';
-import { AotwFieldComponent, AotwIconComponent, AotwLabelComponent } from '@aotw/lib-ng';
+import {
+  AotwFormFieldComponent,
+  AotwIconComponent,
+  AotwLabelComponent
+} from '@aotw/ng-components';
 import { Subject, takeUntil } from 'rxjs';
 
 import { CreateFormControls } from '../../models';
@@ -26,7 +30,7 @@ import { SharedModule } from '../../shared';
   standalone: true,
   imports: [
     SharedModule,
-    AotwFieldComponent,
+    AotwFormFieldComponent,
     AotwIconComponent,
     AotwLabelComponent
   ],

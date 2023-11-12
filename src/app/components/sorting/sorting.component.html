@@ -1,13 +1,13 @@
 <ng-container *ngIf="options.length">
-  <aotw-lib-chip-group
+  <aotw-ng-chip-group
     size="small"
     [chips]="optionChips"
     (activeChip)="updateOptions($event)"
-  ></aotw-lib-chip-group>
-  <aotw-lib-chip size="small" (click)="setSortDirection()">
-    <aotw-lib-icon
+  ></aotw-ng-chip-group>
+  <aotw-ng-chip size="small" (click)="setSortDirection()">
+    <aotw-ng-icon
       size="medium"
       [name]="direction === sortDirectionEnum.Asc ? 'arrow-down' : 'arrow-up'"
-    ></aotw-lib-icon>
-  </aotw-lib-chip>
+    ></aotw-ng-icon>
+  </aotw-ng-chip>
 </ng-container>

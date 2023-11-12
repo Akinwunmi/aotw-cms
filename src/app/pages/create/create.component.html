@@ -2,7 +2,7 @@
   <h2>{{ 'CREATE.TITLE' | translate }}</h2>
 </header>
 
-<aotw-lib-stepper [(activeStep)]="activeStep" [steps]="steps"></aotw-lib-stepper>
+<aotw-ng-stepper [(activeStep)]="activeStep" [steps]="steps"></aotw-ng-stepper>
 <form [formGroup]="form" (ngSubmit)="submit()">
   <div class="subforms">
     <app-general-info
