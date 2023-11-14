@@ -1,18 +1,26 @@
 @for (topic of filteredTopics; track topic.id) {
   <figure class="topic" [routerLink]="'../' + topic.id">
-    <div [ngClass]="{ 'no-image': !topic.image }">
+    <div class="image" [ngClass]="{ 'no-image': !topic.image }">
       @if (topic.image) {
-        <img
-          [src]="topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix"
-          [alt]="topic.name"
-        >
+        @defer {
+          <img
+            [src]="topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix"
+            [alt]="topic.name"
+          >
+        } @placeholder {
+          <app-skeleton />
+        }
       }
     </div>
-    <figcaption>
-      <span class="name">{{ topic.name }}</span>
-      @if (topic.parent) {
-        <span class="parent">{{ setParentLabel(topic.parent) }}</span>
-      }
-    </figcaption>
+    @defer {
+      <figcaption class="caption">
+        <span class="name">{{ topic.name }}</span>
+        @if (topic.parent) {
+          <span class="parent">{{ setParentLabel(topic.parent) }}</span>
+        }
+      </figcaption>
+    } @placeholder {
+      <app-skeleton />
+    }
   </figure>
 }
