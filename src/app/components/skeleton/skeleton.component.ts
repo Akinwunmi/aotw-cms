@@ -13,4 +13,8 @@ export class SkeletonComponent {
   @HostBinding('class.soft')
   @Input()
   public soft = false;
+
+  @HostBinding('class.loading')
+  @Input()
+  public loading = false;
 }

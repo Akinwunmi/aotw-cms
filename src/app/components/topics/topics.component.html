@@ -6,9 +6,9 @@
           <img
             [src]="topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix"
             [alt]="topic.name"
-          >
+          />
         } @placeholder {
-          <app-skeleton />
+          <app-skeleton [loading]="true" />
         }
       }
     </div>
@@ -20,7 +20,7 @@
         }
       </figcaption>
     } @placeholder {
-      <app-skeleton />
+      <app-skeleton [loading]="true" />
     }
   </figure>
 }

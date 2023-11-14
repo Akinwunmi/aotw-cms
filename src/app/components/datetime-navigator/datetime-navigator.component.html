@@ -1,5 +1,5 @@
 <aotw-ng-chip size="medium" [disabled]="min === selectedYear" (click)="previous()">
-  <aotw-ng-icon name="chevron-left" size="medium"></aotw-ng-icon>
+  <aotw-ng-icon name="chevron-left" size="medium" />
 </aotw-ng-chip>
 <div
   #year
@@ -15,7 +15,7 @@
   </aotw-ng-chip>
 </div>
 <aotw-ng-chip size="medium" [disabled]="max === selectedYear" (click)="next()">
-  <aotw-ng-icon name="chevron-right" size="medium"></aotw-ng-icon>
+  <aotw-ng-icon name="chevron-right" size="medium" />
 </aotw-ng-chip>
 
 <ng-template #dropdown>
@@ -24,5 +24,5 @@
     [max]="max"
     [selected]="selectedYear"
     (selectedChange)="setSelectedYear($event)"
-  ></aotw-ng-year-picker>
+  />
 </ng-template>

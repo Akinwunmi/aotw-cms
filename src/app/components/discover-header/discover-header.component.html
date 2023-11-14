@@ -10,6 +10,6 @@
 </div>
 <div class="image" [ngClass]="{ 'no-image': !topic.image }">
   @if (topic.image) {
-    <img [src]="topic.id | image: 'assets/mock/images/' + archiveId" [alt]="topic.name">
+    <img [src]="topic.id | image: 'assets/mock/images/' + archiveId" [alt]="topic.name" />
   }
 </div>
