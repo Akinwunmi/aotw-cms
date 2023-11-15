@@ -1,0 +1,23 @@
+:host {
+  background-color: var(--aotw-color-grey-300);
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+:host(.soft) {
+  border-radius: var(--aotw-radius-s);
+}
+
+:host(.loading) {
+  animation: 2s ease-in-out pulsate;
+}
+
+@keyframes pulsate {
+  from {
+    background-color: var(--aotw-color-grey-200);
+  }
+  to {
+    background-color: var(--aotw-color-grey-300);
+  }
+}

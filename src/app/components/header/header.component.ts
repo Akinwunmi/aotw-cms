@@ -13,7 +13,7 @@ import {
   AotwDynamicTextComponent,
   AotwIconComponent,
   AotwListItemComponent
-} from '@aotw/lib-ng';
+} from '@aotw/ng-components';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject, takeUntil } from 'rxjs';
 

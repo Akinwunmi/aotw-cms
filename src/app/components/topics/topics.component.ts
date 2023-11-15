@@ -25,11 +25,12 @@ import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
+import { SkeletonComponent } from '../skeleton';
 
 @Component({
   selector: 'app-topics',
   standalone: true,
-  imports: [SharedModule, RouterModule, ImagePipe],
+  imports: [SharedModule, RouterModule, SkeletonComponent, ImagePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']

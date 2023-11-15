@@ -1,16 +1,13 @@
-<ng-container *ngIf="showHeader; else backButton">
-  <aotw-lib-tab-group [activeTab]="activeTab" [tabs]="tabs" (selectedTab)="goToPage($event.name)">
-  </aotw-lib-tab-group>
-</ng-container>
-<div class="main">
-  <router-outlet></router-outlet>
-</div>
-
-<ng-template #backButton>
+@if (showHeader) {
+  <aotw-ng-tab-group [activeTab]="activeTab" [tabs]="tabs" (selectedTab)="goToPage($event.name)" />
+} @else {
   <button type="button">
     {{ 'COMMON.CTA.CONFIRM' | translate }}
   </button>
   <button type="button" ghost (click)="goToPreviousPage()">
     {{ 'COMMON.CTA.CANCEL' | translate }}
   </button>
-</ng-template>
+}
+<div class="main">
+  <router-outlet />
+</div>

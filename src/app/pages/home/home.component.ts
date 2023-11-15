@@ -7,7 +7,7 @@ import {
   inject,
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { AotwIconComponent } from '@aotw/lib-ng';
+import { AotwIconComponent } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 

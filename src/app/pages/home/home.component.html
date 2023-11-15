@@ -2,19 +2,20 @@
   <h2>{{ 'COMMON.ARCHIVES' | translate }}</h2>
 </header>
 <section>
-  <app-advanced-search></app-advanced-search>
+  <app-advanced-search />
   <div class="archives" [ngClass]="{ 'list': !gridLayout }">
-    <div
-      *ngFor="let archive of archives"
-      class="card"
-      tabindex="0"
-      (click)="goToArchive(archive.id)"
-      (keydown)="goToArchive(archive.id)"
-    >
-      <div class="card-header">
-        <img [src]="archive.image.src" [alt]="archive.image.alt">
-        {{ archive.name }}
+    @for (archive of archives; track archive.id) {
+      <div
+        class="card"
+        tabindex="0"
+        (click)="goToArchive(archive.id)"
+        (keydown)="goToArchive(archive.id)"
+      >
+        <div class="card-header">
+          <img [src]="archive.image.src" [alt]="archive.image.alt" />
+          {{ archive.name }}
+        </div>
       </div>
-    </div>
+    }
   </div>
 </section>

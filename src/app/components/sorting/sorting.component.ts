@@ -12,7 +12,7 @@ import {
   AotwChipGroupComponent,
   AotwIconComponent,
   Chip
-} from '@aotw/lib-ng';
+} from '@aotw/ng-components';
 
 import { SortDirection, SortOption } from '../advanced-search';
 

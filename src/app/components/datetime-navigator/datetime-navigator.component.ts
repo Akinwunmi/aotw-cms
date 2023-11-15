@@ -12,7 +12,7 @@ import {
   AotwIconComponent,
   AotwYearPickerComponent,
   RangePipe
-} from '@aotw/lib-ng';
+} from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
 import { Subject, map, takeUntil } from 'rxjs';
 

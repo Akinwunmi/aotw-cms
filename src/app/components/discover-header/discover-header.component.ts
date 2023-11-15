@@ -5,7 +5,7 @@ import {
   OnInit
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AotwIconComponent } from '@aotw/lib-ng';
+import { AotwIconComponent } from '@aotw/ng-components';
 
 import { Topic } from '../../models';
 import { ImagePipe } from '../../pipes';
