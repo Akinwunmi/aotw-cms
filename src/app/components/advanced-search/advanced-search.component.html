@@ -1,6 +1,9 @@
 @if (showAllOptions) {
   <div class="filters">
-    <button type="button" ghost (click)="openOption(advancedSearchEnum.Search)">
+    <button type="button" ghost class="mobile">
+      <aotw-ng-icon name="filter-list" size="medium" />
+    </button>
+      <button type="button" ghost (click)="openOption(advancedSearchEnum.Search)">
       <span>{{ 'COMMON.SEARCH' | translate }}</span>
       <aotw-ng-icon name="search" size="medium" />
     </button>

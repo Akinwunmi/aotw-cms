@@ -10,6 +10,20 @@
   display: flex;
   gap: var(--aotw-space-xl);
   justify-content: flex-end;
+
+  .mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 30rem) {
+    button {
+      display: none;
+  
+      &.mobile {
+        display: block;
+      }
+    }
+  }
 }
 
 .active-filter {

@@ -1,8 +1,6 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  HostBinding,
-  Input,
   OnDestroy,
   OnInit,
   inject,
@@ -33,10 +31,6 @@ import { SharedModule } from '../../shared';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnDestroy, OnInit {
-  @HostBinding('class.create')
-  @Input()
-  public createMode = false;
-
   public currentLang!: string;
 
   private router = inject(Router);

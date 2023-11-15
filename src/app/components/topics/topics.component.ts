@@ -159,7 +159,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
   private getTopics(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
-    this.archiveId = url[RouteDiscover.Archive];
+    this.archiveId = '23flag01';
     this.topicId.set(url[RouteDiscover.Topic]);
   }
 

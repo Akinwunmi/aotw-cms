@@ -1,13 +1,10 @@
 import { Route } from '@angular/router';
 
-import { CreateComponent } from '../create';
-import { SearchComponent } from '../search';
-
 import { ArchiveComponent } from './archive.component';
 
 export const ARCHIVE_ROUTES: Route[] = [
   {
-    path: ':id',
+    path: '',
     component: ArchiveComponent,
     title: 'Archive',
     children: [
@@ -18,20 +15,15 @@ export const ARCHIVE_ROUTES: Route[] = [
       },
       {
         path: 'search',
-        component: SearchComponent,
-        title: 'Search'
+        loadChildren: () => import('../search/search.routes').then(
+          m => m.SEARCH_ROUTES
+        )
       },
       {
         path: 'discover',
         loadChildren: () => import('../discover/discover.routes').then(
           m => m.DISCOVER_ROUTES
-        ),
-        title: 'Discover'
-      },
-      {
-        path: 'edit',
-        component: CreateComponent,
-        title: 'Edit'
+        )
       }
     ]
   }

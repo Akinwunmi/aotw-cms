@@ -4,32 +4,13 @@
   justify-content: space-between;
 }
 
-:host([class='create']) {
-  background-color: transparent;
-
-  button {
-    aotw-lib-icon {
-      color: var(--aotw-color-white);
-      transition: color 150ms ease-in-out;
-    }
-
-    &:hover {
-      background-color: var(--aotw-color-primary-400);
-    }
-
-    &:active {
-      background-color: var(--aotw-color-primary-600);
-    }
-  }
-}
-
 .title {
   align-items: center;
   cursor: pointer;
   display: flex;
   gap: var(--aotw-space-s);
   max-width: 100%;
-  min-width: 15rem;
+  min-width: 18rem;
   padding-inline: var(--aotw-space-s);
 }
 
