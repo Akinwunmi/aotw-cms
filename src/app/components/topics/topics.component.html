@@ -7,7 +7,7 @@
             [src]="topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix"
             [alt]="topic.name"
           />
-        } @placeholder {
+        } @placeholder (minimum 500ms) {
           <app-skeleton [loading]="true" />
         }
       }
@@ -19,7 +19,7 @@
           <span class="parent">{{ setParentLabel(topic.parent) }}</span>
         }
       </figcaption>
-    } @placeholder {
+    } @placeholder (minimum 500ms) {
       <app-skeleton [loading]="true" />
     }
   </figure>

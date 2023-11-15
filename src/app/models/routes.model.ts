@@ -1,11 +1,9 @@
 export enum RouteDiscover {
-  ArchiveIdentifier = 0,
-  DiscoverIdentifier = 1,
-  TopicIdentifier = 2,
-  Topic = 3
+  DiscoverIdentifier = 0,
+  TopicIdentifier = 1,
+  Topic = 2
 }
 
 export enum RouteSearch {
-  Archive = 0,
-  Search = 2
+  Search = 0
 }

@@ -10,7 +10,7 @@
 }
 
 :host(.loading) {
-  animation: 2s ease-in-out pulsate;
+  animation: 1200ms ease-in-out pulsate;
 }
 
 @keyframes pulsate {

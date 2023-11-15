@@ -1,7 +1,6 @@
 {
   "PAGES": {
-    "HOME": "Home",
-    "CREATE": "Create"
+    "HOME": "Home"
   },
   "COMMON": {
     "ADD": "Add",
@@ -10,37 +9,17 @@
     "CTA": {
       "CANCEL": "Cancel",
       "CONFIRM": "Confirm",
-      "CREATE": "Create",
       "NEXT": "Next"
     },
     "DISCOVER": "Discover",
     "FILTERS": "Filters",
     "NAME": "Name",
+    "PAGE_NOT_FOUND": "Page Not Found",
     "SEARCH": "Search",
     "SORT": "Sort"
   },
   "FOOTER": {
     "SITEMAP": "Sitemap"
-  },
-  "HOME": {
-    "NEW_ARCHIVE": "New archive"
-  },
-  "ARCHIVE": {
-    "EDIT_ARCHIVE": "Edit archive"
-  },
-  "CREATE": {
-    "TITLE": "Create new archive",
-    "STEPS": {
-      "GENERAL_INFO": "General info",
-      "LAYOUT": "Layout",
-      "MAIN_CATEGORY": "Main category",
-      "MAIN_TOPICS": "Main topics",
-      "NAME": "Name"
-    },
-    "LAYOUTS": {
-      "MAIN": "Main layout",
-      "MAIN_WITHOUT_IMAGES": "Main layout without images"
-    }
   },
   "FILTERS_AND_SORTING": {
     "FILTER_BY": "Filter by:"

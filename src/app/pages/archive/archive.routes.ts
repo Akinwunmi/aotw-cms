@@ -1,7 +1,5 @@
 import { Route } from '@angular/router';
 
-import { SearchComponent } from '../search';
-
 import { ArchiveComponent } from './archive.component';
 
 export const ARCHIVE_ROUTES: Route[] = [
@@ -17,15 +15,15 @@ export const ARCHIVE_ROUTES: Route[] = [
       },
       {
         path: 'search',
-        component: SearchComponent,
-        title: 'Search'
+        loadChildren: () => import('../search/search.routes').then(
+          m => m.SEARCH_ROUTES
+        )
       },
       {
         path: 'discover',
         loadChildren: () => import('../discover/discover.routes').then(
           m => m.DISCOVER_ROUTES
-        ),
-        title: 'Discover'
+        )
       }
     ]
   }
