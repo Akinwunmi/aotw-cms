@@ -7,7 +7,7 @@ import {
   inject
 } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { AotwIconComponent, AotwTabGroupComponent, Tab } from '@aotw/lib-ng';
+import { AotwIconComponent, AotwTabGroupComponent, Tab } from '@aotw/ng-components';
 import { TranslateService } from '@ngx-translate/core';
 import { filter, map, Subject, takeUntil } from 'rxjs';
 

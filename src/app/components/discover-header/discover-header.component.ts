@@ -6,7 +6,7 @@ import {
   inject,
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { AotwIconComponent } from '@aotw/lib-ng';
+import { AotwIconComponent } from '@aotw/ng-components';
 
 import { RouteDiscover, Topic } from '../../models';
 import { ImagePipe } from '../../pipes';

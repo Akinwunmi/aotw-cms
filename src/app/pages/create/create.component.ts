@@ -9,12 +9,12 @@ import {
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
-  AotwFieldComponent,
+  AotwFormFieldComponent,
   AotwLabelComponent,
   AotwStepperComponent,
   AotwStepperService,
   Step
-} from '@aotw/lib-ng';
+} from '@aotw/ng-components';
 import { TranslateService } from '@ngx-translate/core';
 import { map, Subject, takeUntil } from 'rxjs';
 
@@ -36,7 +36,7 @@ import { SharedModule } from '../../shared';
   standalone: true,
   imports: [
     SharedModule,
-    AotwFieldComponent,
+    AotwFormFieldComponent,
     AotwLabelComponent,
     AotwStepperComponent,
     CreateFormGeneralInfoComponent,
