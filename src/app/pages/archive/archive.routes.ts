@@ -6,7 +6,7 @@ export const ARCHIVE_ROUTES: Route[] = [
   {
     path: '',
     component: ArchiveComponent,
-    title: 'Archive',
+    title: 'Home',
     children: [
       {
         path: '',

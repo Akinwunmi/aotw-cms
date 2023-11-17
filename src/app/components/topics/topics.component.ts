@@ -10,6 +10,7 @@ import {
   signal
 } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { AotwSkeletonComponent } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
 import { Subject, combineLatest, filter, map, switchMap, take, takeUntil } from 'rxjs';
 
@@ -25,12 +26,11 @@ import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
-import { SkeletonComponent } from '../skeleton';
 
 @Component({
   selector: 'app-topics',
   standalone: true,
-  imports: [SharedModule, RouterModule, SkeletonComponent, ImagePipe],
+  imports: [SharedModule, RouterModule, AotwSkeletonComponent, ImagePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']

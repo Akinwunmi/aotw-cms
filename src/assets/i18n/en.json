@@ -7,6 +7,7 @@
     "APP_NAME": "The Flag Archive",
     "ARCHIVES": "Archives",
     "CTA": {
+      "BACK": "Back",
       "CANCEL": "Cancel",
       "CONFIRM": "Confirm",
       "NEXT": "Next"

@@ -42,11 +42,9 @@ export class SortingComponent implements OnInit {
   public sortDirectionEnum = SortDirection;
 
   public ngOnInit(): void {
-    this.optionChips = this.options.map(
-      ({ label, active, disabled }) => ({
-        label, active, disabled
-      } as Chip)
-    );
+    this.optionChips = this.options.map(({ id, label, active, disabled }) => ({
+      id, label, active, disabled
+    })) as Chip[];
   }
 
   public setSortDirection(): void {
@@ -59,7 +57,7 @@ export class SortingComponent implements OnInit {
   public updateOptions(chip: Chip): void {
     this.options = this.options.map(option => ({
       ...option,
-      active: option.label === chip.label
+      active: option.id === chip.id
     }));
     this.optionsChange.emit(this.options);
   }
