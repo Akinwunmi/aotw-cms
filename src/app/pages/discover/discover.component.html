@@ -5,7 +5,7 @@
     } @else {
       <h2>{{ mainTopicType }}</h2>
       <ul>
-        @for (topic of mainTopics; track topic.id) {
+        @for (topic of mainTopics; track $index) {
           <li>
             <a
               tabindex="0"

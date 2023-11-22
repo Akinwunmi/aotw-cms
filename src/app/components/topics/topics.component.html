@@ -1,4 +1,4 @@
-@for (topic of filteredTopics; track topic.id) {
+@for (topic of filteredTopics; track $index) {
   <figure class="topic" [routerLink]="'../' + topic.id">
     <div class="image" [ngClass]="{ 'no-image': !topic.image }">
       @if (topic.image) {
@@ -8,7 +8,7 @@
             [alt]="topic.name"
           />
         } @placeholder (minimum 500ms) {
-          <app-skeleton [loading]="true" />
+          <aotw-ng-skeleton [loading]="true" />
         }
       }
     </div>
@@ -20,7 +20,7 @@
         }
       </figcaption>
     } @placeholder (minimum 500ms) {
-      <app-skeleton [loading]="true" />
+      <aotw-ng-skeleton [loading]="true" />
     }
   </figure>
 }

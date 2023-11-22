@@ -12,8 +12,15 @@ export interface AppState {
   theme: Theme;
 }
 
-interface DiscoverState {
+export interface DiscoverState {
+  activeTopicId: string;
   filters: FilterOption[];
   sorting: SortOption[];
   sortDirection: SortDirection;
 }
+
+export type LayoutState = Pick<AppState, 'layout'>;
+
+export type SelectedYearState = Pick<AppState, 'selectedYear'>;
+
+export type ThemeState = Pick<AppState, 'theme'>;

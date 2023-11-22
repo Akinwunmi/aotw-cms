@@ -10,6 +10,7 @@ export enum SortDirection {
 }
 
 export interface FilterOption {
+  id: string;
   label: string;
   active: boolean;
   disabled: boolean;

@@ -63,8 +63,8 @@ export class AdvancedSearchComponent implements OnDestroy, OnInit {
   public activeOption?: AdvancedSearch;
 
   public layoutChips: Chip[] = [
-    { label: '', icon: Layout.List, active: false, disabled: false },
-    { label: '', icon: Layout.Grid, active: false, disabled: false },
+    { id: '0', label: '', icon: Layout.List, active: false, disabled: false },
+    { id: '1', label: '', icon: Layout.Grid, active: false, disabled: false }
   ];
 
   private store = inject(Store);
@@ -116,8 +116,8 @@ export class AdvancedSearchComponent implements OnDestroy, OnInit {
     this.activeOption = filter;
   }
 
-  public toggleFilter(label: string): void {
-    const filter = this.filters.find(filter => filter.label === label);
+  public toggleFilter(id: string): void {
+    const filter = this.filters.find(filter => filter.id === id);
     if (filter) {
       filter.active = !filter.active;
     }

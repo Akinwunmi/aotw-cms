@@ -14,11 +14,19 @@ import {
   Router,
   RouterModule
 } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
-import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
+import { BreadcrumbItem } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
+import { TranslateService } from '@ngx-translate/core';
+import {
+  combineLatest,
+  filter,
+  map,
+  Subject,
+  switchMap,
+  take,
+  takeUntil
+} from 'rxjs';
 
-import { BreadcrumbItem } from '../../components/breadcrumb';
 import { DatetimeNavigatorComponent } from '../../components/datetime-navigator';
 import { DiscoverHeaderComponent } from '../../components/discover-header';
 import {
@@ -119,6 +127,11 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     });
   }
 
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
+  }
+
   public setActiveTopic(id: string): void {
     this.router.navigate(['topic', id], { relativeTo: this.route });
     this.activeMainTopicId = id;
@@ -131,7 +144,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     // structuredClone instead of a spread operator is needed to create a deep copy
     this.store.dispatch(setDiscoverState({
       ...initialState.discover,
-      filters: this.filters,
+      filters: structuredClone(this.filters),
       sorting: structuredClone(this.sorting),
       sortDirection: this.sortDirection
     }));
@@ -156,32 +169,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.archiveData = archiveData;
     const { topics, parentType } = this.archiveData;
 
-    this.filters = [
-      {
-        // TODO: Fix string not updating on language change
-        label: this.translate.instant('DISCOVER.HAS_PARENT', {
-          type: parentType?.toLowerCase()
-        }),
-        active: false,
-        disabled: false
-      }
-    ];
-    this.sorting = [
-      {
-        label: `${this.translate.instant('COMMON.NAME')}`,
-        firstValue: 'A',
-        secondValue: 'Z',
-        active: true,
-        disabled: false
-      },
-      {
-        label: `${this.translate.instant('DISCOVER.PARENT')}`,
-        firstValue: 'A',
-        secondValue: 'Z',
-        active: false,
-        disabled: false
-      }
-    ];
+    this.setFiltersAndSorting(parentType);
 
     this.mainTopicType = topics.find(topic => topic.id.length === 2)?.type;
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
@@ -194,8 +182,31 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.minYear = Math.min(...ranges.map(range => range?.start || this.currentYear));
   }
 
-  public ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+  private setFiltersAndSorting(parentType?: string): void {
+    combineLatest([
+      this.translate.stream(['DISCOVER.HAS_PARENT'], { type: parentType?.toLowerCase() }),
+      this.translate.stream(['COMMON.NAME', 'DISCOVER.PARENT'])
+    ]).pipe(
+      map(([filterTranslations, sortingTranslations]) => ({
+        filters: Object.values(filterTranslations) as string[],
+        sorting: Object.values(sortingTranslations) as string[]
+      })),
+      takeUntil(this.unsubscribe$)
+    ).subscribe(({ filters, sorting }) => {
+      this.filters = filters.map((label, index) => ({
+        id: String(index),
+        label,
+        active: false,
+        disabled: false
+      }));
+      this.sorting = sorting.map((label, index) => ({
+        id: String(index),
+        label,
+        firstValue: 'A',
+        secondValue: 'Z',
+        active: index === 0,
+        disabled: false
+      }));
+    });
   }
 }

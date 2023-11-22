@@ -7,6 +7,7 @@
     "APP_NAME": "The Flag Archive",
     "ARCHIVES": "Archieven",
     "CTA": {
+      "BACK": "Terug",
       "CANCEL": "Annuleer",
       "CONFIRM": "Bevestig",
       "NEXT": "Volgende"
@@ -25,7 +26,7 @@
     "FILTER_BY": "Filteren met:"
   },
   "DISCOVER": {
-    "HAS_PARENT": "Is onderdeel van {type}",
-    "PARENT": "Moeder"
+    "HAS_PARENT": "Is onderdeel van {{ type }}",
+    "PARENT": "Onderdeel van"
   }
 }

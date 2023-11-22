@@ -2,15 +2,19 @@ import {
   ChangeDetectionStrategy,
   Component,
   Input,
-  OnInit
+  OnInit,
+  inject
 } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { AotwIconComponent } from '@aotw/ng-components';
+import { Router, RouterModule } from '@angular/router';
+import {
+  AotwBreadcrumbComponent,
+  AotwIconComponent,
+  BreadcrumbItem
+} from '@aotw/ng-components';
 
 import { Topic } from '../../models';
 import { ImagePipe } from '../../pipes';
 import { SharedModule } from '../../shared';
-import { BreadcrumbComponent, BreadcrumbItem } from '../breadcrumb';
 
 @Component({
   selector: 'app-discover-header',
@@ -18,8 +22,8 @@ import { BreadcrumbComponent, BreadcrumbItem } from '../breadcrumb';
   imports: [
     SharedModule,
     RouterModule,
+    AotwBreadcrumbComponent,
     AotwIconComponent,
-    BreadcrumbComponent,
     ImagePipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -33,9 +37,16 @@ export class DiscoverHeaderComponent implements OnInit {
   @Input()
   public topic!: Topic;
 
+  private router = inject(Router);
+
   public archiveId!: string;
 
   public ngOnInit(): void {
     this.archiveId = '23flag01';
+  }
+
+  public goToPage(item: BreadcrumbItem): void {
+    const route = item.link?.split('/');
+    this.router.navigate(route || []);
   }
 }
