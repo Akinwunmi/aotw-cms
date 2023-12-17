@@ -1756,7 +1756,7 @@
       ]
     },
     {
-      "id": "eu-ned_kingdom",
+      "id": "eu-nld_kingdom",
       "name": "Netherlands, United Kingdom of the",
       "nameLocal": "Nederlanden, Verenigd Koninkrijk der",
       "image": true,
@@ -1769,7 +1769,7 @@
       ]
     },
     {
-      "id": "eu-ned",
+      "id": "eu-nld",
       "name": "Netherlands, the",
       "nameLocal": "Nederland",
       "languages": ["Dutch", "English", "Frisian", "Papiamento"],
@@ -1782,147 +1782,147 @@
       ]
     },
     {
-      "id": "eu-ned-dren",
+      "id": "eu-nld-dren",
       "name": "Drenthe",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-dren-aahun",
+      "id": "eu-nld-dren-aahun",
       "name": "Aa en Hunze",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-assen",
+      "id": "eu-nld-dren-assen",
       "name": "Assen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-borge",
+      "id": "eu-nld-dren-borge",
       "name": "Borger-Odoorn",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-coevo",
+      "id": "eu-nld-dren-coevo",
       "name": "Coevorden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-dewol",
+      "id": "eu-nld-dren-dewol",
       "name": "De Wolden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-emmen",
+      "id": "eu-nld-dren-emmen",
       "name": "Emmen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-hooge",
+      "id": "eu-nld-dren-hooge",
       "name": "Hoogeveen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-meppe",
+      "id": "eu-nld-dren-meppe",
       "name": "Meppel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-midde",
+      "id": "eu-nld-dren-midde",
       "name": "Midden-Drenthe",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-noord",
+      "id": "eu-nld-dren-noord",
       "name": "Noordenveld",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-tynaa",
+      "id": "eu-nld-dren-tynaa",
       "name": "Tynaarlo",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-weste",
+      "id": "eu-nld-dren-weste",
       "name": "Westerveld",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev",
+      "id": "eu-nld-flev",
       "name": "Flevoland",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-flev-almer",
+      "id": "eu-nld-flev-almer",
       "name": "Almere",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-dront",
+      "id": "eu-nld-flev-dront",
       "name": "Dronten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-lelys",
+      "id": "eu-nld-flev-lelys",
       "name": "Lelystad",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-nopol",
+      "id": "eu-nld-flev-nopol",
       "name": "Noordoostpolder",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-urkxx",
+      "id": "eu-nld-flev-urkxx",
       "name": "Urk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-zeewo",
+      "id": "eu-nld-flev-zeewo",
       "name": "Zeewolde",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys",
+      "id": "eu-nld-frys",
       "name": "Friesland",
       "nameLocal": "Fryslân",
       "image": true,
@@ -1930,1889 +1930,1898 @@
       "type": "Province"
     },
     {
-      "id": "eu-ned-frys-achtk",
+      "id": "eu-nld-frys-achtk",
       "name": "Achtkarspelen",
       "nameLocal": "Achtkarspelen",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-amela",
+      "id": "eu-nld-frys-amela",
       "name": "Ameland",
       "nameLocal": "It Amelân",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-dantu",
+      "id": "eu-nld-frys-dantu",
       "name": "Dantumadiel",
       "nameLocal": "Dantumadiel",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-dantu-dewest",
+      "id": "eu-nld-frys-dantu-dewest",
       "name": "Zwaagwesteinde",
       "nameLocal": "De Westereen",
       "image": true,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry",
+      "id": "eu-nld-frys-defry",
       "name": "De Fryske Marren",
       "nameLocal": "De Fryske Marren",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-defry-akmarp",
+      "id": "eu-nld-frys-defry-akmarp",
       "name": "Akmarijp",
       "nameLocal": "Eagmaryp",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-bakhuz",
+      "id": "eu-nld-frys-defry-bakhuz",
       "name": "Bakhuizen",
       "nameLocal": "Bakhuzen",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-balkxx",
+      "id": "eu-nld-frys-defry-balkxx",
       "name": "Balk",
       "nameLocal": "Balk",
       "image": true,
       "type": "Town"
     },
     {
-      "id": "eu-ned-frys-defry-banteg",
+      "id": "eu-nld-frys-defry-banteg",
       "name": "Bantega",
       "nameLocal": "Bantegea",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-boornz",
+      "id": "eu-nld-frys-defry-boornz",
       "name": "Boornzwaag",
       "nameLocal": "Boarnsweach",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-dbroek",
+      "id": "eu-nld-frys-defry-dbroek",
       "name": "Broek",
       "nameLocal": "De Broek",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-delfst",
+      "id": "eu-nld-frys-defry-delfst",
       "name": "Delfstrahuizen",
       "nameLocal": "Dolsterhuzen",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-dijken",
+      "id": "eu-nld-frys-defry-dijken",
       "name": "Dijken",
       "nameLocal": "Diken",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-doniag",
+      "id": "eu-nld-frys-defry-doniag",
       "name": "Doniaga",
       "nameLocal": "Dunegea",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-echten",
+      "id": "eu-nld-frys-defry-echten",
       "name": "Echten",
       "nameLocal": "Ychten",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-echtbr",
+      "id": "eu-nld-frys-defry-echtbr",
       "name": "Echtenerbrug",
       "nameLocal": "Ychtenbrêge",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-eester",
+      "id": "eu-nld-frys-defry-eester",
       "name": "Eesterga",
       "nameLocal": "Jistergea",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-elahui",
+      "id": "eu-nld-frys-defry-elahui",
       "name": "Elahuizen",
       "nameLocal": "Ealahuzen",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-folleg",
+      "id": "eu-nld-frys-defry-folleg",
       "name": "Follega",
       "nameLocal": "Follegea",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-goinga",
+      "id": "eu-nld-frys-defry-goinga",
       "name": "Goingarijp",
       "nameLocal": "Goaiïngaryp",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-harich",
+      "id": "eu-nld-frys-defry-harich",
       "name": "Harich",
       "nameLocal": "Harich",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-hasker",
+      "id": "eu-nld-frys-defry-hasker",
       "name": "Haskerhorne",
       "nameLocal": "Haskerhoarne",
       "image": true,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-idsken",
+      "id": "eu-nld-frys-defry-idsken",
       "name": "Idskenhuizen",
       "nameLocal": "Jiskenhuzen",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-jourex",
+      "id": "eu-nld-frys-defry-jourex",
       "name": "Joure",
       "nameLocal": "De Jouwer",
       "image": true,
       "type": "Town"
     },
     {
-      "id": "eu-ned-frys-defry-kolder",
+      "id": "eu-nld-frys-defry-kolder",
       "name": "Kolderwolde",
       "nameLocal": "Kolderwâlde",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-harli",
+      "id": "eu-nld-frys-harli",
       "name": "Harlingen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-heere",
+      "id": "eu-nld-frys-heere",
       "name": "Heerenveen",
       "nameLocal": "It Hearrenfean",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-leeuw",
+      "id": "eu-nld-frys-leeuw",
       "name": "Leeuwarden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-noard",
+      "id": "eu-nld-frys-noard",
       "name": "Noardeast-Fryslân",
       "nameLocal": "Noardeast-Fryslân",
       "image": true,
-      "type": "Municipality"
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 2019,
+          "end": 2021
+        },
+        {
+          "start": 2021
+        }
+      ]
     },
     {
-      "id": "eu-ned-frys-oosts",
+      "id": "eu-nld-frys-oosts",
       "name": "Ooststellingwerf",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-opste",
+      "id": "eu-nld-frys-opste",
       "name": "Opsterland",
       "nameLocal": "Opsterlân",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-schie",
+      "id": "eu-nld-frys-schie",
       "name": "Schiermonnikoog",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-small",
+      "id": "eu-nld-frys-small",
       "name": "Smallingerland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-sudwe",
+      "id": "eu-nld-frys-sudwe",
       "name": "Súdwest-Fryslân",
       "nameLocal": "Súdwest-Fryslân",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-tersc",
+      "id": "eu-nld-frys-tersc",
       "name": "Terschelling",
       "nameLocal": "Schylge",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-tytsj",
+      "id": "eu-nld-frys-tytsj",
       "name": "Tytsjerksteradiel",
       "nameLocal": "Tytsjerksteradiel",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-vliel",
+      "id": "eu-nld-frys-vliel",
       "name": "Vlieland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-waadh",
+      "id": "eu-nld-frys-waadh",
       "name": "Waadhoeke",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-wests",
+      "id": "eu-nld-frys-wests",
       "name": "Weststellingwerf",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld",
+      "id": "eu-nld-geld",
       "name": "Gelderland",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-geld-aalte",
+      "id": "eu-nld-geld-aalte",
       "name": "Aalten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-apeld",
+      "id": "eu-nld-geld-apeld",
       "name": "Apeldoorn",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-arnhe",
+      "id": "eu-nld-geld-arnhe",
       "name": "Arnhem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-barne",
+      "id": "eu-nld-geld-barne",
       "name": "Barneveld",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-bergd",
+      "id": "eu-nld-geld-bergd",
       "name": "Berg en Dal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-berke",
+      "id": "eu-nld-geld-berke",
       "name": "Berkelland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-beuni",
+      "id": "eu-nld-geld-beuni",
       "name": "Beuningen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-bronc",
+      "id": "eu-nld-geld-bronc",
       "name": "Bronckhorst",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-brumm",
+      "id": "eu-nld-geld-brumm",
       "name": "Brummen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-buren",
+      "id": "eu-nld-geld-buren",
       "name": "Buren",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-culem",
+      "id": "eu-nld-geld-culem",
       "name": "Culemborg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-doesb",
+      "id": "eu-nld-geld-doesb",
       "name": "Doesburg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-doeti",
+      "id": "eu-nld-geld-doeti",
       "name": "Doetinchem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-drute",
+      "id": "eu-nld-geld-drute",
       "name": "Druten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-duive",
+      "id": "eu-nld-geld-duive",
       "name": "Duiven",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-edexx",
+      "id": "eu-nld-geld-edexx",
       "name": "Ede",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-elbur",
+      "id": "eu-nld-geld-elbur",
       "name": "Elburg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-epexx",
+      "id": "eu-nld-geld-epexx",
       "name": "Epe",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-ermel",
+      "id": "eu-nld-geld-ermel",
       "name": "Ermelo",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-harde",
+      "id": "eu-nld-geld-harde",
       "name": "Harderwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-hatte",
+      "id": "eu-nld-geld-hatte",
       "name": "Hattem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-heerd",
+      "id": "eu-nld-geld-heerd",
       "name": "Heerde",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-heume",
+      "id": "eu-nld-geld-heume",
       "name": "Heumen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-linge",
+      "id": "eu-nld-geld-linge",
       "name": "Lingewaard",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-loche",
+      "id": "eu-nld-geld-loche",
       "name": "Lochem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-maasd",
+      "id": "eu-nld-geld-maasd",
       "name": "Maasdriel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-montf",
+      "id": "eu-nld-geld-montf",
       "name": "Montferland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-neder",
+      "id": "eu-nld-geld-neder",
       "name": "Neder-Betuwe",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-nijke",
+      "id": "eu-nld-geld-nijke",
       "name": "Nijkerk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-nijme",
+      "id": "eu-nld-geld-nijme",
       "name": "Nijmegen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-nunsp",
+      "id": "eu-nld-geld-nunsp",
       "name": "Nunspeet",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-oldeb",
+      "id": "eu-nld-geld-oldeb",
       "name": "Oldebroek",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-oostg",
+      "id": "eu-nld-geld-oostg",
       "name": "Oost Gelre",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-oijss",
+      "id": "eu-nld-geld-oijss",
       "name": "Oude IJsselstreek",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-overb",
+      "id": "eu-nld-geld-overb",
       "name": "Overbetuwe",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-putte",
+      "id": "eu-nld-geld-putte",
       "name": "Putten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-renku",
+      "id": "eu-nld-geld-renku",
       "name": "Renkum",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-rhede",
+      "id": "eu-nld-geld-rhede",
       "name": "Rheden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-rozen",
+      "id": "eu-nld-geld-rozen",
       "name": "Rozendaal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-scher",
+      "id": "eu-nld-geld-scher",
       "name": "Scherpenzeel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-tielx",
+      "id": "eu-nld-geld-tielx",
       "name": "Tiel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-voors",
+      "id": "eu-nld-geld-voors",
       "name": "Voorst",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-wagen",
+      "id": "eu-nld-geld-wagen",
       "name": "Wageningen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-westb",
+      "id": "eu-nld-geld-westb",
       "name": "West Betuwe",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-westm",
+      "id": "eu-nld-geld-westm",
       "name": "West Maas en Waal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-weste",
+      "id": "eu-nld-geld-weste",
       "name": "Westervoort",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-wijch",
+      "id": "eu-nld-geld-wijch",
       "name": "Wijchen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-winte",
+      "id": "eu-nld-geld-winte",
       "name": "Winterswijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-zaltb",
+      "id": "eu-nld-geld-zaltb",
       "name": "Zaltbommel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-zeven",
+      "id": "eu-nld-geld-zeven",
       "name": "Zevenaar",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-zutph",
+      "id": "eu-nld-geld-zutph",
       "name": "Zutphen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron",
+      "id": "eu-nld-gron",
       "name": "Groningen",
       "nameLocal": "Grunn",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-gron-eemsd",
+      "id": "eu-nld-gron-eemsd",
       "name": "Eemsdelta",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-groni",
+      "id": "eu-nld-gron-groni",
       "name": "Groningen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-hogel",
+      "id": "eu-nld-gron-hogel",
       "name": "Het Hogeland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-midde",
+      "id": "eu-nld-gron-midde",
       "name": "Midden-Groningen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-oldam",
+      "id": "eu-nld-gron-oldam",
       "name": "Oldambt",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-pekel",
+      "id": "eu-nld-gron-pekel",
       "name": "Pekela",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-stads",
+      "id": "eu-nld-gron-stads",
       "name": "Stadskanaal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-veend",
+      "id": "eu-nld-gron-veend",
       "name": "Veendam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-weste",
+      "id": "eu-nld-gron-weste",
       "name": "Westerkwartier",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-wwold",
+      "id": "eu-nld-gron-wwold",
       "name": "Westerwolde",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-limb",
+      "id": "eu-nld-limb",
       "name": "Limburg",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-nbra",
+      "id": "eu-nld-nbra",
       "name": "Noord-Brabant",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-nbra-alphe",
+      "id": "eu-nld-nbra-alphe",
       "name": "Alphen-Chaam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-alten",
+      "id": "eu-nld-nbra-alten",
       "name": "Altena",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-asten",
+      "id": "eu-nld-nbra-asten",
       "name": "Asten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-baarl",
+      "id": "eu-nld-nbra-baarl",
       "name": "Baarle-Nassau",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-berge",
+      "id": "eu-nld-nbra-berge",
       "name": "Bergeijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-beroz",
+      "id": "eu-nld-nbra-beroz",
       "name": "Bergen op Zoom",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-bernh",
+      "id": "eu-nld-nbra-bernh",
       "name": "Bernheze",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-bestx",
+      "id": "eu-nld-nbra-bestx",
       "name": "Best",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-blade",
+      "id": "eu-nld-nbra-blade",
       "name": "Bladel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-boeke",
+      "id": "eu-nld-nbra-boeke",
       "name": "Boekel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-boxme",
+      "id": "eu-nld-nbra-boxme",
       "name": "Boxmeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-boxte",
+      "id": "eu-nld-nbra-boxte",
       "name": "Boxtel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-breda",
+      "id": "eu-nld-nbra-breda",
       "name": "Breda",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-crane",
+      "id": "eu-nld-nbra-crane",
       "name": "Cranendonck",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-cuijk",
+      "id": "eu-nld-nbra-cuijk",
       "name": "Cuijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-deurn",
+      "id": "eu-nld-nbra-deurn",
       "name": "Deurne",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-donge",
+      "id": "eu-nld-nbra-donge",
       "name": "Dongen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-drimm",
+      "id": "eu-nld-nbra-drimm",
       "name": "Drimmelen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-eerse",
+      "id": "eu-nld-nbra-eerse",
       "name": "Eersel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-eindh",
+      "id": "eu-nld-nbra-eindh",
       "name": "Eindhoven",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-etten",
+      "id": "eu-nld-nbra-etten",
       "name": "Etten-Leur",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-geert",
+      "id": "eu-nld-nbra-geert",
       "name": "Geertruidenberg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-geldr",
+      "id": "eu-nld-nbra-geldr",
       "name": "Geldrop-Mierlo",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-gemer",
+      "id": "eu-nld-nbra-gemer",
       "name": "Gemert-Bakel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-gilze",
+      "id": "eu-nld-nbra-gilze",
       "name": "Gilze en Rijen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-goirl",
+      "id": "eu-nld-nbra-goirl",
       "name": "Goirle",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-grave",
+      "id": "eu-nld-nbra-grave",
       "name": "Grave",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-halde",
+      "id": "eu-nld-nbra-halde",
       "name": "Halderberge",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-heeze",
+      "id": "eu-nld-nbra-heeze",
       "name": "Heeze-Leende",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-helmo",
+      "id": "eu-nld-nbra-helmo",
       "name": "Helmond",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-denbo",
+      "id": "eu-nld-nbra-denbo",
       "name": "'s-Hertogenbosch",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-heusd",
+      "id": "eu-nld-nbra-heusd",
       "name": "Heusden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-hilva",
+      "id": "eu-nld-nbra-hilva",
       "name": "Hilvarenbeek",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-laarb",
+      "id": "eu-nld-nbra-laarb",
       "name": "Laarbeek",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-lande",
+      "id": "eu-nld-nbra-lande",
       "name": "Landerd",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-loonz",
+      "id": "eu-nld-nbra-loonz",
       "name": "Loon op Zand",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-meier",
+      "id": "eu-nld-nbra-meier",
       "name": "Meierijstad",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-mills",
+      "id": "eu-nld-nbra-mills",
       "name": "Mill en Sint Hubert",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-moerd",
+      "id": "eu-nld-nbra-moerd",
       "name": "Moerdijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-nuene",
+      "id": "eu-nld-nbra-nuene",
       "name": "Nuenen, Gerwen en Nederwetten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-oirsc",
+      "id": "eu-nld-nbra-oirsc",
       "name": "Oirschot",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-oiste",
+      "id": "eu-nld-nbra-oiste",
       "name": "Oisterwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-ooste",
+      "id": "eu-nld-nbra-ooste",
       "name": "Oosterhout",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-ossxx",
+      "id": "eu-nld-nbra-ossxx",
       "name": "Oss",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-reuse",
+      "id": "eu-nld-nbra-reuse",
       "name": "Reusel-De Mierden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-roose",
+      "id": "eu-nld-nbra-roose",
       "name": "Roosendaal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-rucph",
+      "id": "eu-nld-nbra-rucph",
       "name": "Rucphen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-sinta",
+      "id": "eu-nld-nbra-sinta",
       "name": "Sint Anthonis",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-sintm",
+      "id": "eu-nld-nbra-sintm",
       "name": "Sint-Michielsgestel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-somer",
+      "id": "eu-nld-nbra-somer",
       "name": "Someren",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-sonbr",
+      "id": "eu-nld-nbra-sonbr",
       "name": "Son en Breugel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-steen",
+      "id": "eu-nld-nbra-steen",
       "name": "Steenbergen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-tilbu",
+      "id": "eu-nld-nbra-tilbu",
       "name": "Tilburg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-udenx",
+      "id": "eu-nld-nbra-udenx",
       "name": "Uden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-valke",
+      "id": "eu-nld-nbra-valke",
       "name": "Valkenswaard",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-veldh",
+      "id": "eu-nld-nbra-veldh",
       "name": "Veldhoven",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-vught",
+      "id": "eu-nld-nbra-vught",
       "name": "Vught",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-waalr",
+      "id": "eu-nld-nbra-waalr",
       "name": "Waalre",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-waalw",
+      "id": "eu-nld-nbra-waalw",
       "name": "Waalwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-woens",
+      "id": "eu-nld-nbra-woens",
       "name": "Woensdrecht",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-zunde",
+      "id": "eu-nld-nbra-zunde",
       "name": "Zundert",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol",
+      "id": "eu-nld-nhol",
       "name": "Noord-Holland",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-nhol-aalsm",
+      "id": "eu-nld-nhol-aalsm",
       "name": "Aalsmeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-alkma",
+      "id": "eu-nld-nhol-alkma",
       "name": "Alkmaar",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-amstv",
+      "id": "eu-nld-nhol-amstv",
       "name": "Amstelveen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-amste",
+      "id": "eu-nld-nhol-amste",
       "name": "Amsterdam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-beems",
+      "id": "eu-nld-nhol-beems",
       "name": "Beemster",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-berge",
+      "id": "eu-nld-nhol-berge",
       "name": "Bergen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-bever",
+      "id": "eu-nld-nhol-bever",
       "name": "Beverwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-blari",
+      "id": "eu-nld-nhol-blari",
       "name": "Blaricum",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-bloem",
+      "id": "eu-nld-nhol-bloem",
       "name": "Bloemendaal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-castr",
+      "id": "eu-nld-nhol-castr",
       "name": "Castricum",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-denhe",
+      "id": "eu-nld-nhol-denhe",
       "name": "Den Helder",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-dieme",
+      "id": "eu-nld-nhol-dieme",
       "name": "Diemen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-drech",
+      "id": "eu-nld-nhol-drech",
       "name": "Drechterland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-evdam",
+      "id": "eu-nld-nhol-evdam",
       "name": "Edam-Volendam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-enkhu",
+      "id": "eu-nld-nhol-enkhu",
       "name": "Enkhuizen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-goois",
+      "id": "eu-nld-nhol-goois",
       "name": "Gooise Meren",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-haarl",
+      "id": "eu-nld-nhol-haarl",
       "name": "Haarlem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-haarm",
+      "id": "eu-nld-nhol-haarm",
       "name": "Haarlemmermeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-heems",
+      "id": "eu-nld-nhol-heems",
       "name": "Heemskerk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-heeme",
+      "id": "eu-nld-nhol-heeme",
       "name": "Heemstede",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-heerh",
+      "id": "eu-nld-nhol-heerh",
       "name": "Heerhugowaard",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-heilo",
+      "id": "eu-nld-nhol-heilo",
       "name": "Heiloo",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-hilve",
+      "id": "eu-nld-nhol-hilve",
       "name": "Hilversum",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-hkroo",
+      "id": "eu-nld-nhol-hkroo",
       "name": "Hollands Kroon",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-hoorn",
+      "id": "eu-nld-nhol-hoorn",
       "name": "Hoorn",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-huize",
+      "id": "eu-nld-nhol-huize",
       "name": "Huizen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-kogge",
+      "id": "eu-nld-nhol-kogge",
       "name": "Koggenland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-lands",
+      "id": "eu-nld-nhol-lands",
       "name": "Landsmeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-lange",
+      "id": "eu-nld-nhol-lange",
       "name": "Langedijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-laren",
+      "id": "eu-nld-nhol-laren",
       "name": "Laren",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-medem",
+      "id": "eu-nld-nhol-medem",
       "name": "Medemblik",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-oostz",
+      "id": "eu-nld-nhol-oostz",
       "name": "Oostzaan",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-opmee",
+      "id": "eu-nld-nhol-opmee",
       "name": "Opmeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-oamst",
+      "id": "eu-nld-nhol-oamst",
       "name": "Ouder-Amstel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-purme",
+      "id": "eu-nld-nhol-purme",
       "name": "Purmerend",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-schag",
+      "id": "eu-nld-nhol-schag",
       "name": "Schagen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-stbro",
+      "id": "eu-nld-nhol-stbro",
       "name": "Stede Broec",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-texel",
+      "id": "eu-nld-nhol-texel",
       "name": "Texel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-uitge",
+      "id": "eu-nld-nhol-uitge",
       "name": "Uitgeest",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-uitho",
+      "id": "eu-nld-nhol-uitho",
       "name": "Uithoorn",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-velse",
+      "id": "eu-nld-nhol-velse",
       "name": "Velsen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-water",
+      "id": "eu-nld-nhol-water",
       "name": "Waterland",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-weesp",
+      "id": "eu-nld-nhol-weesp",
       "name": "Weesp",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-wijde",
+      "id": "eu-nld-nhol-wijde",
       "name": "Wijdemeren",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-worme",
+      "id": "eu-nld-nhol-worme",
       "name": "Wormerland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-zaans",
+      "id": "eu-nld-nhol-zaans",
       "name": "Zaanstad",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-zaans-assend",
+      "id": "eu-nld-nhol-zaans-assend",
       "name": "Assendelft",
       "nameLocal": "",
       "type": "Town"
     },
     {
-      "id": "eu-ned-nhol-zandv",
+      "id": "eu-nld-nhol-zandv",
       "name": "Zandvoort",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-over",
+      "id": "eu-nld-over",
       "name": "Overijssel",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-utre",
+      "id": "eu-nld-utre",
       "name": "Utrecht",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-zeel",
+      "id": "eu-nld-zeel",
       "name": "Zeeland",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-zhol",
+      "id": "eu-nld-zhol",
       "name": "Zuid-Holland",
       "nameLocal": "",
       "image": true,
       "type": "Province"
     },
     {
-      "id": "eu-ned-zhol-albla",
+      "id": "eu-nld-zhol-albla",
       "name": "Alblasserdam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-albra",
+      "id": "eu-nld-zhol-albra",
       "name": "Albrandswaard",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-alphe",
+      "id": "eu-nld-zhol-alphe",
       "name": "Alphen aan den Rijn",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-baren",
+      "id": "eu-nld-zhol-baren",
       "name": "Barendrecht",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-bodeg",
+      "id": "eu-nld-zhol-bodeg",
       "name": "Bodegraven-Reeuwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-briel",
+      "id": "eu-nld-zhol-briel",
       "name": "Brielle",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-capel",
+      "id": "eu-nld-zhol-capel",
       "name": "Capelle aan den IJssel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-delft",
+      "id": "eu-nld-zhol-delft",
       "name": "Delft",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-dordt",
+      "id": "eu-nld-zhol-dordt",
       "name": "Dordrecht",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-goere",
+      "id": "eu-nld-zhol-goere",
       "name": "Goeree-Overflakkee",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-gorin",
+      "id": "eu-nld-zhol-gorin",
       "name": "Gorinchem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-gouda",
+      "id": "eu-nld-zhol-gouda",
       "name": "Gouda",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-denha",
+      "id": "eu-nld-zhol-denha",
       "name": "'s-Gravenhage",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-hardi",
+      "id": "eu-nld-zhol-hardi",
       "name": "Hardinxveld-Giessendam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-helle",
+      "id": "eu-nld-zhol-helle",
       "name": "Hellevoetsluis",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-hendr",
+      "id": "eu-nld-zhol-hendr",
       "name": "Hendrik-Ido-Ambacht",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-hille",
+      "id": "eu-nld-zhol-hille",
       "name": "Hillegom",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-hoeks",
+      "id": "eu-nld-zhol-hoeks",
       "name": "Hoeksche Waard",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-kaagb",
+      "id": "eu-nld-zhol-kaagb",
       "name": "Kaag en Braassem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-katwk",
+      "id": "eu-nld-zhol-katwk",
       "name": "Katwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-krimp",
+      "id": "eu-nld-zhol-krimp",
       "name": "Krimpen aan den IJssel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-krimw",
+      "id": "eu-nld-zhol-krimw",
       "name": "Krimpenerwaard",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-lansi",
+      "id": "eu-nld-zhol-lansi",
       "name": "Lansingerland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-leide",
+      "id": "eu-nld-zhol-leide",
       "name": "Leiden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-leidd",
+      "id": "eu-nld-zhol-leidd",
       "name": "Leiderdorp",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-leids",
+      "id": "eu-nld-zhol-leids",
       "name": "Leidschendam-Voorburg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-lisse",
+      "id": "eu-nld-zhol-lisse",
       "name": "Lisse",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-maass",
+      "id": "eu-nld-zhol-maass",
       "name": "Maassluis",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-midde",
+      "id": "eu-nld-zhol-midde",
       "name": "Midden-Delfland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-molen",
+      "id": "eu-nld-zhol-molen",
       "name": "Molenlanden",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-nieuw",
+      "id": "eu-nld-zhol-nieuw",
       "name": "Nieuwkoop",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-nisse",
+      "id": "eu-nld-zhol-nisse",
       "name": "Nissewaard",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-noord",
+      "id": "eu-nld-zhol-noord",
       "name": "Noordwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-oegst",
+      "id": "eu-nld-zhol-oegst",
       "name": "Oegstgeest",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-papen",
+      "id": "eu-nld-zhol-papen",
       "name": "Papendrecht",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-pijna",
+      "id": "eu-nld-zhol-pijna",
       "name": "Pijnacker-Nootdorp",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-ridde",
+      "id": "eu-nld-zhol-ridde",
       "name": "Ridderkerk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-rijsw",
+      "id": "eu-nld-zhol-rijsw",
       "name": "Rijswijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-rotte",
+      "id": "eu-nld-zhol-rotte",
       "name": "Rotterdam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-schie",
+      "id": "eu-nld-zhol-schie",
       "name": "Schiedam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-slied",
+      "id": "eu-nld-zhol-slied",
       "name": "Sliedrecht",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-teyli",
+      "id": "eu-nld-zhol-teyli",
       "name": "Teylingen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-vlaar",
+      "id": "eu-nld-zhol-vlaar",
       "name": "Vlaardingen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-voors",
+      "id": "eu-nld-zhol-voors",
       "name": "Voorschoten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-waddi",
+      "id": "eu-nld-zhol-waddi",
       "name": "Waddinxveen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-wasse",
+      "id": "eu-nld-zhol-wasse",
       "name": "Wassenaar",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-westl",
+      "id": "eu-nld-zhol-westl",
       "name": "Westland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-westv",
+      "id": "eu-nld-zhol-westv",
       "name": "Westvoorne",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-zoete",
+      "id": "eu-nld-zhol-zoete",
       "name": "Zoetermeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-zoetw",
+      "id": "eu-nld-zhol-zoetw",
       "name": "Zoeterwoude",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-zuidp",
+      "id": "eu-nld-zhol-zuidp",
       "name": "Zuidplas",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-zwijn",
+      "id": "eu-nld-zhol-zwijn",
       "name": "Zwijndrecht",
       "nameLocal": "",
       "image": true,

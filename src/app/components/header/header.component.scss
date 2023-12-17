@@ -15,7 +15,11 @@
 }
 
 .menu {
-  align-items: center;
-  display: flex;
-  gap: var(--aotw-space-s)
+  display: grid;
+  margin-right: var(--aotw-space-s);
+  min-width: 10rem;
+
+  aotw-ng-list-item {
+    cursor: pointer;
+  }
 }

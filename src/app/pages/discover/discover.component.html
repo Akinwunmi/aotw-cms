@@ -3,7 +3,7 @@
     @if (activeTopic) {
       <app-discover-header [breadcrumb]="topicsBreadcrumb" [topic]="activeTopic" />
     } @else {
-      <h2>{{ mainTopicType }}</h2>
+      <h2>{{ 'TOPICS.' + mainTopicType | uppercase | translate }}</h2>
       <ul>
         @for (topic of mainTopics; track $index) {
           <li>

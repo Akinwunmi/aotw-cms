@@ -2,13 +2,24 @@
   <aotw-ng-icon name="logo" size="medium" />
   <aotw-ng-dynamic-text>{{ 'COMMON.APP_NAME' | translate }}</aotw-ng-dynamic-text>
 </div>
-<!-- ! Replace below with menu containing "Translation" item -->
-<!-- <button type="button" ghost>
+<button
+  type="button"
+  ghost
+  [aotwDropdownTrigger]="dropdown"
+  [isOpen]="dropdownIsOpen"
+  (click)="setDropdownState()"
+>
   <aotw-ng-icon name="menu" size="medium" />
-</button> -->
-<div class="menu">
-  {{ currentLang | uppercase }}
-  <button type="button" title="Select language" ghost (click)="setTranslation()">
-    <aotw-ng-icon name="language" size="medium" />
-  </button>
-</div>
+</button>
+
+<ng-template #dropdown>
+  <div class="menu">
+    <aotw-ng-list-item (click)="setTranslation()">
+      {{ 'LANGUAGES.' + (currentLang === 'nl' ? 'EN' : 'NL') | translate }}
+      <aotw-ng-icon name="language" size="medium" suffix />
+    </aotw-ng-list-item>
+    <aotw-ng-list-item>
+      {{ 'PAGES.ABOUT' | translate }}
+    </aotw-ng-list-item>
+  </div>
+</ng-template>

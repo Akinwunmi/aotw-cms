@@ -119,6 +119,14 @@ export class TopicsComponent implements OnDestroy, OnInit {
     });
   }
 
+  public setParentLabel(parent: string): string {
+    return parent.split('-').slice(-1)[0];
+  }
+
+  public setTopicLabel(id: string): string {
+    return id.replaceAll('-', '_');
+  }
+
   private setImageRange(): void {
     this.filteredTopics = (this.filterTopics(this.topics()).map(topic => {
       if (!topic.ranges) {
@@ -151,10 +159,6 @@ export class TopicsComponent implements OnDestroy, OnInit {
         rangeSuffix: start ? `_${start}-${end || ''}` : undefined
       };
     }));
-  }
-
-  public setParentLabel(parent: string): string {
-    return parent.split('-').slice(-1)[0];
   }
 
   private getTopics(rawUrl: string): void {
