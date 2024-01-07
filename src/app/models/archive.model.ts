@@ -23,6 +23,7 @@ export interface Range {
 export interface Topic extends DefaultInfo {
   type?: string;
   image?: boolean;
+  imageUrl?: string;
   parent?: string;
   ranges?: Range[];
 }

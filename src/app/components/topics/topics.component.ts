@@ -44,6 +44,8 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
   public archiveId!: string;
 
+  public noImageFound = false;
+
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
@@ -119,6 +121,20 @@ export class TopicsComponent implements OnDestroy, OnInit {
     });
   }
 
+  public handleImageError(event: ErrorEvent): void {
+    this.noImageFound = true;
+    (event.target as HTMLImageElement).style.display = 'none';
+  }
+
+  public handleImageLoad(event: Event): void {
+    this.noImageFound = false;
+    (event.target as HTMLImageElement).style.display = 'block';
+  }
+
+  public setParentLabel(parent: string): string {
+    return parent.split('-').slice(-1)[0];
+  }
+
   private setImageRange(): void {
     this.filteredTopics = (this.filterTopics(this.topics()).map(topic => {
       if (!topic.ranges) {
@@ -151,10 +167,6 @@ export class TopicsComponent implements OnDestroy, OnInit {
         rangeSuffix: start ? `_${start}-${end || ''}` : undefined
       };
     }));
-  }
-
-  public setParentLabel(parent: string): string {
-    return parent.split('-').slice(-1)[0];
   }
 
   private getTopics(rawUrl: string): void {

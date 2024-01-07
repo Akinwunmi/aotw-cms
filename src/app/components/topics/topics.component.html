@@ -1,14 +1,16 @@
 @for (topic of filteredTopics; track $index) {
   <figure class="topic" [routerLink]="'../' + topic.id">
-    <div class="image" [ngClass]="{ 'no-image': !topic.image }">
+    <div class="image" [ngClass]="{ 'no-image': (!topic.image || !topic.imageUrl) && noImageFound }">
       @if (topic.image) {
         @defer {
           <img
-            [src]="topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix"
+            [src]="topic.imageUrl || (topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix)"
             [alt]="topic.name"
+            (error)="handleImageError($event)"
+            (load)="handleImageLoad($event)"
           />
-        } @placeholder (minimum 500ms) {
-          <aotw-ng-skeleton [loading]="true" />
+        <!-- } @placeholder (minimum 500ms) {
+          <aotw-ng-skeleton [loading]="true" /> -->
         }
       }
     </div>
@@ -19,8 +21,8 @@
           <span class="parent">{{ setParentLabel(topic.parent) }}</span>
         }
       </figcaption>
-    } @placeholder (minimum 500ms) {
-      <aotw-ng-skeleton [loading]="true" />
+    <!-- } @placeholder (minimum 500ms) {
+      <aotw-ng-skeleton [loading]="true" /> -->
     }
   </figure>
 }

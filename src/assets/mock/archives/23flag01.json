@@ -12,42 +12,49 @@
       "id": "af-dza",
       "name": "Algeria",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg",
       "type": "Country"
     },
     {
       "id": "af-ago",
       "name": "Angola",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg",
       "type": "Country"
     },
     {
       "id": "af-ben",
       "name": "Benin",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg",
       "type": "Country"
     },
     {
       "id": "af-bwa",
       "name": "Botswana",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Botswana.svg",
       "type": "Country"
     },
     {
       "id": "af-bfa",
       "name": "Burkina Faso",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg",
       "type": "Country"
     },
     {
       "id": "af-bdi",
       "name": "Burundi",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Burundi.svg",
       "type": "Country"
     },
     {
       "id": "af-cmr",
       "name": "Cameroon",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Cameroon.svg",
       "type": "Country"
     },
     {
@@ -822,6 +829,7 @@
       "id": "eu-alb",
       "name": "Albania",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg",
       "type": "Country",
       "ranges": [
         {
@@ -833,6 +841,7 @@
       "id": "eu-and",
       "name": "Andorra",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Andorra.svg",
       "type": "Country",
       "ranges": [
         {
@@ -864,6 +873,7 @@
       "id": "eu-arm",
       "name": "Armenia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg",
       "type": "Country",
       "ranges": [
         {
@@ -879,6 +889,7 @@
       "id": "eu-aut",
       "name": "Austria",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg",
       "type": "Country",
       "ranges": [
         {
@@ -898,6 +909,7 @@
       "id": "eu-aut_empire",
       "name": "Austrian Empire",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flag_of_the_Habsburg_Monarchy.svg",
       "type": "Country",
       "ranges": [
         {
@@ -910,6 +922,7 @@
       "id": "eu-blr",
       "name": "Belarus",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg",
       "type": "Country",
       "ranges": [
         {
@@ -930,6 +943,7 @@
       "name": "Belgium",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg",
       "type": "Country",
       "ranges": [
         {
@@ -942,6 +956,7 @@
       "name": "Bosnia and Herzegovina",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg",
       "type": "Country",
       "ranges": [
         {
@@ -957,6 +972,7 @@
       "id": "eu-bgr",
       "name": "Bulgaria",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg",
       "type": "Country",
       "ranges": [
         {
@@ -988,6 +1004,7 @@
       "id": "eu-hrv",
       "name": "Croatia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg",
       "type": "Country",
       "ranges": [
         {
@@ -999,6 +1016,7 @@
       "id": "eu-cyp",
       "name": "Cyprus",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1014,6 +1032,7 @@
       "id": "eu-cze",
       "name": "Czechia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1025,12 +1044,14 @@
       "id": "eu-dnk",
       "name": "Denmark",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg",
       "type": "Country"
     },
     {
       "id": "eu-est",
       "name": "Estonia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Flag_of_Estonia.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1046,6 +1067,7 @@
       "id": "eu-fin",
       "name": "Finland",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1061,6 +1083,7 @@
       "id": "eu-fra",
       "name": "France",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1088,6 +1111,7 @@
       "id": "eu-geo",
       "name": "Georgia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Georgia.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1105,6 +1129,7 @@
       "nameLocal": "Deutschland",
       "languages": ["German"],
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1117,6 +1142,7 @@
       "name": "Baden-Württemberg",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Baden-W%C3%BCrttemberg.svg",
       "type": "State"
     },
     {
@@ -1544,6 +1570,7 @@
       "name": "Greece",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1568,6 +1595,7 @@
       "name": "Hungary",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1600,6 +1628,7 @@
       "name": "Iceland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1612,6 +1641,7 @@
       "name": "Ireland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1637,6 +1667,7 @@
       "name": "Italy",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1657,6 +1688,7 @@
       "name": "Kosovo",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Kosovo.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1669,6 +1701,7 @@
       "name": "Latvia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Latvia.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1685,6 +1718,7 @@
       "name": "Liechtenstein",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Liechtenstein.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1713,6 +1747,7 @@
       "name": "Lithuania",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.svg",
       "type": "Country"
     },
     {
@@ -1720,6 +1755,7 @@
       "name": "Luxembourg",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg",
       "type": "Country"
     },
     {
@@ -1727,6 +1763,7 @@
       "name": "Malta",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg",
       "type": "Country"
     },
     {
@@ -1734,6 +1771,7 @@
       "name": "Moldova",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg",
       "type": "Country"
     },
     {
@@ -1741,6 +1779,7 @@
       "name": "Monaco",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Flag_of_Monaco.svg",
       "type": "Country"
     },
     {
@@ -1748,6 +1787,7 @@
       "name": "Montenegro",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Montenegro.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1774,6 +1814,7 @@
       "nameLocal": "Nederland",
       "languages": ["Dutch", "English", "Frisian", "Papiamento"],
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
       "type": "Country",
       "ranges": [
         {
@@ -3823,6 +3864,7 @@
       "name": "North Macedonia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_North_Macedonia.svg",
       "type": "Country"
     },
     {
@@ -3830,6 +3872,7 @@
       "name": "Norway",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
       "type": "Country"
     },
     {
@@ -3837,6 +3880,7 @@
       "name": "Poland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg",
       "type": "Country"
     },
     {
@@ -3844,6 +3888,7 @@
       "name": "Portugal",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg",
       "type": "Country"
     },
     {
@@ -3851,6 +3896,7 @@
       "name": "Romania",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
       "type": "Country"
     },
     {
@@ -3858,6 +3904,7 @@
       "name": "Russia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
       "type": "Country"
     },
     {
@@ -3865,6 +3912,7 @@
       "name": "San Marino",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_San_Marino.svg",
       "type": "Country"
     },
     {
@@ -3872,6 +3920,7 @@
       "name": "Serbia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg",
       "type": "Country"
     },
     {
@@ -3879,6 +3928,7 @@
       "name": "Slovakia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Slovakia.svg",
       "type": "Country"
     },
     {
@@ -3886,6 +3936,7 @@
       "name": "Slovenia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Slovenia.svg",
       "type": "Country"
     },
     {
@@ -3893,6 +3944,7 @@
       "name": "Spain",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
       "type": "Country"
     },
     {
@@ -3929,6 +3981,7 @@
       "name": "Sweden",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg",
       "type": "Country"
     },
     {
@@ -3936,6 +3989,7 @@
       "name": "Switzerland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
       "type": "Country",
       "ranges": [
         {
@@ -3948,6 +4002,7 @@
       "name": "Turkey",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
       "type": "Country"
     },
     {
@@ -3955,6 +4010,7 @@
       "name": "Ukraine",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
       "type": "Country"
     },
     {
@@ -3962,6 +4018,7 @@
       "name": "United Kingdom",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
       "type": "Country"
     },
     {
@@ -3969,6 +4026,7 @@
       "name": "Vatican City",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Flag_of_the_Vatican_City_%282023%E2%80%93present%29.svg",
       "type": "Country"
     },
     {
