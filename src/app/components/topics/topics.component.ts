@@ -121,14 +121,8 @@ export class TopicsComponent implements OnDestroy, OnInit {
     });
   }
 
-  public handleImageError(event: ErrorEvent): void {
+  public handleImageError(): void {
     this.noImageFound = true;
-    (event.target as HTMLImageElement).style.display = 'none';
-  }
-
-  public handleImageLoad(event: Event): void {
-    this.noImageFound = false;
-    (event.target as HTMLImageElement).style.display = 'block';
   }
 
   public setParentLabel(parent: string): string {

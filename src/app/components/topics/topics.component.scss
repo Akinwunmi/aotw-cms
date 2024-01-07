@@ -26,6 +26,10 @@
 
     &.no-image {
       background-color: var(--aotw-color-primary-100);
+
+      img {
+        display: none;
+      }
     }
   }
 

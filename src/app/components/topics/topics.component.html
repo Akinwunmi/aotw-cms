@@ -1,13 +1,12 @@
 @for (topic of filteredTopics; track $index) {
   <figure class="topic" [routerLink]="'../' + topic.id">
-    <div class="image" [ngClass]="{ 'no-image': (!topic.image || !topic.imageUrl) && noImageFound }">
+    <div class="image" [ngClass]="{ 'no-image': ((!topic.image || !topic.imageUrl) && noImageFound) || (!topic.image && !topic.imageUrl) }">
       @if (topic.image) {
         @defer {
           <img
             [src]="topic.imageUrl || (topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix)"
             [alt]="topic.name"
-            (error)="handleImageError($event)"
-            (load)="handleImageLoad($event)"
+            (error)="handleImageError()"
           />
         <!-- } @placeholder (minimum 500ms) {
           <aotw-ng-skeleton [loading]="true" /> -->
