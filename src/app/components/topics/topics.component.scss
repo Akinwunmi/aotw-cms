@@ -14,25 +14,6 @@
   margin: 0;
   width: 100%;
 
-  .image {
-    aspect-ratio: 3 / 2;
-    display: flex;
-
-    img {
-      margin: auto 0;
-      max-height: 100%;
-      max-width: 100%;
-    }
-
-    &.no-image {
-      background-color: var(--aotw-color-primary-100);
-
-      img {
-        display: none;
-      }
-    }
-  }
-
   .caption {
     display: flex;
     gap: var(--aotw-space-s);
@@ -66,10 +47,6 @@
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
       }
-    }
-
-    .placeholder {
-      background-color: red;
     }
   }
 }

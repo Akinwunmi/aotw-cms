@@ -18,6 +18,7 @@ export interface Range {
   start?: number;
   end?: number;
   image?: boolean;
+  imageUrl?: string;
 }
 
 export interface Topic extends DefaultInfo {

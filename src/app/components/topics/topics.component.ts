@@ -26,11 +26,12 @@ import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
+import { ImageComponent } from '../image';
 
 @Component({
   selector: 'app-topics',
   standalone: true,
-  imports: [SharedModule, RouterModule, AotwSkeletonComponent, ImagePipe],
+  imports: [SharedModule, RouterModule, AotwSkeletonComponent, ImageComponent, ImagePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']
@@ -154,10 +155,11 @@ export class TopicsComponent implements OnDestroy, OnInit {
         return {};
       });
 
-      const { start, end, image } = range;
+      const { start, end, image, imageUrl } = range;
       return {
         ...topic,
-        image: image ?? topic.image,
+        image: !!image ?? topic.image,
+        imageUrl: imageUrl ?? topic.imageUrl,
         rangeSuffix: start ? `_${start}-${end || ''}` : undefined
       };
     }));
