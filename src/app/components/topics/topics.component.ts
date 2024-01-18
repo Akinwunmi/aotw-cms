@@ -22,7 +22,7 @@ import {
   TopicWithRange
 } from '../../models';
 import { ImagePipe } from '../../pipes';
-import { ArchiveService } from '../../services';
+import { ArchiveService, TopicService } from '../../services';
 import { SharedModule } from '../../shared';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
@@ -50,6 +50,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
+  private topicService = inject(TopicService);
   private store = inject(Store);
 
   private topics = signal<TopicWithRange[]>([]);
@@ -99,7 +100,9 @@ export class TopicsComponent implements OnDestroy, OnInit {
       this.activeFilters = filters;
       this.activeSorting = sorting.find(option => option.active);
       this.selectedYear = selectedYear;
-      this.setImageRange();
+      this.filteredTopics = this.filterTopics(this.topics()).map(topic =>
+        this.topicService.setImageRange(topic, this.selectedYear)
+      );
       this.gridLayout = layout === Layout.Grid;
 
       // TODO - Fix parent sorting
@@ -128,41 +131,6 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
   public setParentLabel(parent: string): string {
     return parent.split('-').slice(-1)[0];
-  }
-
-  private setImageRange(): void {
-    this.filteredTopics = (this.filterTopics(this.topics()).map(topic => {
-      if (!topic.ranges) {
-        return topic;
-      }
-
-      if (topic.ranges.length === 1) {
-        const { start, end, image } = topic.ranges.slice(-1)[0];
-        return {
-          ...topic,
-          image: image ?? topic.image,
-          rangeSuffix: `_${start}-${end || ''}`
-        };
-      }
-
-      const range = topic.ranges.reduce((prev, curr) => {
-        if (curr.start && this.selectedYear - curr.start >= 0) {
-          return curr;
-        }
-        if (prev.start && this.selectedYear - prev.start >= 0) {
-          return prev;
-        }
-        return {};
-      });
-
-      const { start, end, image, imageUrl } = range;
-      return {
-        ...topic,
-        image: !!image ?? topic.image,
-        imageUrl: imageUrl ?? topic.imageUrl,
-        rangeSuffix: start ? `_${start}-${end || ''}` : undefined
-      };
-    }));
   }
 
   private getTopics(rawUrl: string): void {

@@ -1,5 +1,6 @@
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   Input,
   OnInit,
@@ -11,10 +12,15 @@ import {
   AotwIconComponent,
   BreadcrumbItem
 } from '@aotw/ng-components';
+import { Store } from '@ngrx/store';
+import { Subject, takeUntil } from 'rxjs';
 
-import { Topic } from '../../models';
+import { TopicWithRange } from '../../models';
 import { ImagePipe } from '../../pipes';
+import { TopicService } from '../../services';
 import { SharedModule } from '../../shared';
+import { selectSelectedYear } from '../../state/selectors';
+import { ImageComponent } from '../image';
 
 @Component({
   selector: 'app-discover-header',
@@ -24,6 +30,7 @@ import { SharedModule } from '../../shared';
     RouterModule,
     AotwBreadcrumbComponent,
     AotwIconComponent,
+    ImageComponent,
     ImagePipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -35,14 +42,29 @@ export class DiscoverHeaderComponent implements OnInit {
   public breadcrumb: BreadcrumbItem[] = [];
 
   @Input()
-  public topic!: Topic;
-
-  private router = inject(Router);
+  public topic!: TopicWithRange;
 
   public archiveId!: string;
 
+  public rangedTopic = this.topic;
+
+  private cdr = inject(ChangeDetectorRef);
+  private router = inject(Router);
+  private topicService = inject(TopicService);
+  private store = inject(Store);
+  
+  private unsubscribe$ = new Subject<void>();
+  private selectSelectedYear$ = this.store.select(selectSelectedYear);
+
   public ngOnInit(): void {
     this.archiveId = '23flag01';
+
+    this.selectSelectedYear$.pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(selectedYear => {
+      this.rangedTopic = this.topicService.setImageRange(this.topic, selectedYear);
+      this.cdr.detectChanges();
+    });
   }
 
   public goToPage(item: BreadcrumbItem): void {

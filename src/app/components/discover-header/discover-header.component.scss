@@ -36,16 +36,3 @@
     }
   }
 }
-
-.image {
-  aspect-ratio: 3 / 2;
-  display: flex;
-
-  img {
-    width: 100%;
-  }
-
-  &.no-image {
-    background-color: var(--aotw-color-primary-100);
-  }
-}
