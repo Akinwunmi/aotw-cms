@@ -2,7 +2,6 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  HostBinding,
   OnDestroy,
   OnInit,
   computed,
@@ -40,7 +39,6 @@ export class TopicsComponent implements OnDestroy, OnInit {
   // TODO - Implement applyFilters method
   public filteredTopics: TopicWithRange[] = [];
 
-  @HostBinding('class.grid')
   public gridLayout = true;
 
   public archiveId!: string;
