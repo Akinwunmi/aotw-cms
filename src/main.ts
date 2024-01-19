@@ -2,7 +2,7 @@ import { IMAGE_CONFIG } from '@angular/common';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideEffects } from '@ngrx/effects';
 import { provideRouterStore, routerReducer } from '@ngrx/router-store';
 import { provideStore } from '@ngrx/store';
@@ -30,7 +30,10 @@ bootstrapApplication(AppComponent, {
     })),
     provideEffects(),
     provideHttpClient(),
-    provideRouter(APP_ROUTES),
+    provideRouter(APP_ROUTES, withInMemoryScrolling({
+      scrollPositionRestoration: 'top',
+      anchorScrolling: 'enabled',
+    })),
     provideRouterStore(),
     provideStore({
       app: reducer,
