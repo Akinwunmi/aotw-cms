@@ -1,6 +1,7 @@
 <img
   [src]="src"
   [alt]="alt"
+  [ngClass]="{ right: alignToRight }"
   (error)="handleImageError()"
   (load)="handleImageLoad()"
 />

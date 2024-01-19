@@ -27,14 +27,15 @@ import {
   takeUntil
 } from 'rxjs';
 
-import { DatetimeNavigatorComponent } from '../../components/datetime-navigator';
-import { DiscoverHeaderComponent } from '../../components/discover-header';
 import {
   FilterOption,
   AdvancedSearchComponent,
   SortDirection,
   SortOption
 } from '../../components/advanced-search';
+import { DatetimeNavigatorComponent } from '../../components/datetime-navigator';
+import { DiscoverHeaderComponent } from '../../components/discover-header';
+import { TopicHeaderComponent } from '../../components/topic-header';
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { SharedModule } from '../../shared';
@@ -50,7 +51,8 @@ import { initialState } from '../../state/reducers';
     RouterModule,
     AdvancedSearchComponent,
     DatetimeNavigatorComponent,
-    DiscoverHeaderComponent
+    DiscoverHeaderComponent,
+    TopicHeaderComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover.component.html',
@@ -59,7 +61,6 @@ import { initialState } from '../../state/reducers';
 export class DiscoverComponent implements OnDestroy, OnInit {
   public archiveData!: ArchiveTopics;
 
-  public mainTopicType?: string;
   public mainTopics?: Topic[];
   public activeMainTopicId!: string;
 
@@ -171,7 +172,6 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
     this.setFiltersAndSorting(parentType);
 
-    this.mainTopicType = topics.find(topic => topic.id.length === 2)?.type;
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
     this.cdr.detectChanges();

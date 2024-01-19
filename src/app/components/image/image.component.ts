@@ -17,6 +17,9 @@ export class ImageComponent {
   @Input({ required: true })
   public alt!: string;
 
+  @Input()
+  public alignToRight = false;
+
   @HostBinding('class.placeholder')
   @Input()
   public placeholder = false;
