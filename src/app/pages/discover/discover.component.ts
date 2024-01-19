@@ -139,7 +139,6 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.activeTopic = this.topicNames()?.length > 1
       ? this.archiveData.topics.find(topic => topic.id === id)
       : undefined;
-    console.log(this.activeTopic);
     this.cdr.detectChanges();
   }
 

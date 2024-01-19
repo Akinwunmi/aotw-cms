@@ -1,10 +1,9 @@
 @if (archiveData) {
   <section class="header" [ngClass]="{ 'main-topic': !activeTopic }">
-    <!-- ! switch naming of topic- and discover-header -->
     @if (activeTopic) {
-      <app-discover-header [breadcrumb]="topicsBreadcrumb" [topic]="activeTopic" />
+      <app-topic-header [breadcrumb]="topicsBreadcrumb" [topic]="activeTopic" />
     } @else {
-      <app-topic-header
+      <app-discover-header
         [activeTopicId]="activeMainTopicId"
         [topics]="mainTopics"
         (activeTopic)="setActiveTopic($event)"
