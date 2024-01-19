@@ -41,8 +41,15 @@ export class DiscoverHeaderComponent implements OnInit {
   @Input()
   public breadcrumb: BreadcrumbItem[] = [];
 
+  private _topic!: TopicWithRange;
+  public get topic(): TopicWithRange {
+    return this._topic;
+  }
   @Input()
-  public topic!: TopicWithRange;
+  public set topic(topic: TopicWithRange) {
+    this._topic = topic;
+    this.rangedTopic = this.topicService.setImageRange(topic);
+  }
 
   public archiveId!: string;
 

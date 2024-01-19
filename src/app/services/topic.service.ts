@@ -6,7 +6,7 @@ import { Topic, TopicWithRange } from '../models';
   providedIn: 'root'
 })
 export class TopicService {
-  public setImageRange(topic: Topic, selectedYear: number): TopicWithRange {
+  public setImageRange(topic: Topic, selectedYear?: number): TopicWithRange {
     const { ranges } = topic;
 
     if (!ranges) {
@@ -20,6 +20,10 @@ export class TopicService {
         image: image ?? topic.image,
         rangeSuffix: `_${start}-${end || ''}`
       };
+    }
+
+    if (!selectedYear) {
+      return topic;
     }
 
     const range = ranges.reduce((prev, curr) => {
