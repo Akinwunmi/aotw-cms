@@ -1,0 +1,22 @@
+:host {
+  aspect-ratio: 3 / 2;
+  display: flex;
+
+  img {
+    margin: auto 0;
+    max-height: 100%;
+    max-width: 100%;
+
+    &.right {
+      margin: auto 0 auto auto;
+    }
+  }
+
+  &.placeholder {
+    background-color: var(--aotw-color-primary-100);
+
+    img {
+      display: none;
+    }
+  }
+}

@@ -1,71 +1,52 @@
-:host {
+section {
   display: grid;
   gap: var(--aotw-space-xl) var(--aotw-space-l);
   grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
-}
-
-.topic {
-  align-items: center;
-  cursor: pointer;
-  display: grid;
-  gap: var(--aotw-space-s);
-  grid-template-columns: var(--aotw-size-l) 1fr;
-  grid-template-rows: auto;
-  margin: 0;
-  width: 100%;
-
-  .image {
-    aspect-ratio: 3 / 2;
-    display: flex;
-
-    img {
-      margin: auto 0;
-      max-height: 100%;
-      max-width: 100%;
-    }
-
-    &.no-image {
-      background-color: var(--aotw-color-primary-100);
-    }
-  }
-
-  .caption {
-    display: flex;
-    gap: var(--aotw-space-s);
-
-    .parent {
-      color: var(--aotw-color-white);
-      font-size: var(--aotw-font-size-xs);
-      line-height: 1.5rem;
-      text-transform: uppercase;
-    }
-  }
-}
-
-:host(.grid) {
-  grid-template-columns: repeat(auto-fill, minmax(min(9.25rem, 100%), 1fr));
-
+  
   .topic {
-    gap: var(--aotw-space-xs);
-    grid-template-columns: auto;
-    grid-template-rows: auto var(--aotw-size-s);
-
+    align-items: center;
+    cursor: pointer;
+    display: grid;
+    gap: var(--aotw-space-s);
+    grid-template-columns: var(--aotw-size-l) 1fr;
+    grid-template-rows: auto;
+    margin: 0;
+    width: 100%;
+  
     .caption {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      height: 1.5rem;
-      overflow: hidden;
-
-      .name {
-        display: -webkit-box;
-        word-break: break-all;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
+      display: flex;
+      gap: var(--aotw-space-s);
+  
+      .parent {
+        color: var(--aotw-color-white);
+        font-size: var(--aotw-font-size-xs);
+        line-height: 1.5rem;
+        text-transform: uppercase;
       }
     }
+  }
 
-    .placeholder {
-      background-color: red;
+  &.grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(9.25rem, 100%), 1fr));
+
+    .topic {
+      gap: var(--aotw-space-xs);
+      grid-template-columns: auto;
+      grid-template-rows: auto var(--aotw-size-s);
+
+      .caption {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        height: 1.5rem;
+        overflow: hidden;
+
+        .name {
+          display: -webkit-box;
+          word-break: break-all;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+      }
     }
   }
 }

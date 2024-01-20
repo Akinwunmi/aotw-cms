@@ -1,34 +1,24 @@
 @if (archiveData) {
   <section class="header" [ngClass]="{ 'main-topic': !activeTopic }">
     @if (activeTopic) {
-      <app-discover-header [breadcrumb]="topicsBreadcrumb" [topic]="activeTopic" />
+      <app-topic-header [breadcrumb]="topicsBreadcrumb" [topic]="activeTopic" />
     } @else {
-      <h2>{{ mainTopicType }}</h2>
-      <ul>
-        @for (topic of mainTopics; track $index) {
-          <li>
-            <a
-              tabindex="0"
-              [ngClass]="{ active: topic.id === activeMainTopicId }"
-              (click)="setActiveTopic(topic.id)"
-              (keydown)="setActiveTopic(topic.id)"
-            >
-              {{ topic.name }}
-            </a>
-          </li>
-        }
-      </ul>
+      <app-discover-header
+        [activeTopicId]="activeMainTopicId"
+        [topics]="mainTopics"
+        (activeTopic)="setActiveTopic($event)"
+      />
     }
+    <div class="actions">
+      <app-datetime-navigator [min]="minYear" [max]="currentYear" />
+      <app-advanced-search
+        [(filters)]="filters"
+        [(sorting)]="sorting"
+        [(sortDirection)]="sortDirection"
+      />
+    </div>
   </section>
 }
 <section class="content">
-  <div class="content_header" [ngClass]="{ 'main-topic': !activeTopic }">
-    <app-datetime-navigator [min]="minYear" [max]="currentYear" />
-    <app-advanced-search
-      [(filters)]="filters"
-      [(sorting)]="sorting"
-      [(sortDirection)]="sortDirection"
-    />
-  </div>
   <router-outlet />
 </section>

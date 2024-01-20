@@ -1,9 +1,10 @@
 .header {
+  background-color: var(--aotw-color-grey-200);
   border-bottom: 2px solid var(--aotw-color-white);
-  display: grid;
-  font-weight: var(--aotw-font-weight-regular);
-  gap: var(--aotw-space-xs);
-  height: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10rem;
   overflow: hidden;
   padding-block: var(--aotw-space-m);
   padding-inline: var(--aotw-space-s);
@@ -12,81 +13,15 @@
   transition: height 150ms ease-in-out;
   z-index: 1;
 
-  &::before {
-    background-color: var(--aotw-color-grey-200);
-    content: '';
-    inset: 0;
-    position: absolute;
-    top: -1.875rem;
-    width: 100%;
-    z-index: -1;
-  }
-
   &.main-topic {
-    height: 8rem;
+    height: 11rem;
   }
 
-  h2 {
-    color: var(--aotw-color-white);
-    font-size: var(--aotw-font-size-s);
-    line-height: var(--aotw-font-line-height-s);
-    text-transform: uppercase;
-  }
-
-  ul {
-    display: grid;
-    font-size: var(--aotw-font-size-m);
-    grid-template-columns: repeat(2, 1fr);
-    line-height: var(--aotw-font-line-height-m);
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      a {
-        color: var(--aotw-color-white);
-        cursor: pointer;
-        text-decoration: none;
-
-        &:hover {
-          color: var(--aotw-color-primary-500);
-        }
-
-        &.active {
-          color: var(--aotw-color-primary-500);
-        }
-      }
-    }
-  }
-}
-
-.content {
-  display: grid;
-  gap: var(--aotw-space-s);
-  padding: var(--aotw-space-m) var(--aotw-space-s);
-
-  &_header {
+  .actions {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    margin-top: calc(var(--aotw-space-m) * -1);
-    padding-block: var(--aotw-space-m);
-    position: sticky;
-    top: 11.5rem;
     width: 100%;
-
-    &::before {
-      background-color: var(--aotw-color-grey-200);
-      content: '';
-      inset: 0;
-      opacity: 0.95;
-      position: absolute;
-      z-index: -1;
-    }
-
-    &.main-topic {
-      top: 11.5rem;
-    }
 
     @media only screen and (max-width: 30rem) {
       width: 100%;
@@ -96,4 +31,10 @@
       max-width: 27rem;
     }
   }
+}
+
+.content {
+  display: grid;
+  gap: var(--aotw-space-s);
+  padding: var(--aotw-space-m) var(--aotw-space-s);
 }

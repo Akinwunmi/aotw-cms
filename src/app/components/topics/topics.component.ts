@@ -2,7 +2,6 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  HostBinding,
   OnDestroy,
   OnInit,
   computed,
@@ -22,15 +21,16 @@ import {
   TopicWithRange
 } from '../../models';
 import { ImagePipe } from '../../pipes';
-import { ArchiveService } from '../../services';
+import { ArchiveService, TopicService } from '../../services';
 import { SharedModule } from '../../shared';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
+import { ImageComponent } from '../image';
 
 @Component({
   selector: 'app-topics',
   standalone: true,
-  imports: [SharedModule, RouterModule, AotwSkeletonComponent, ImagePipe],
+  imports: [SharedModule, RouterModule, AotwSkeletonComponent, ImageComponent, ImagePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']
@@ -39,14 +39,16 @@ export class TopicsComponent implements OnDestroy, OnInit {
   // TODO - Implement applyFilters method
   public filteredTopics: TopicWithRange[] = [];
 
-  @HostBinding('class.grid')
   public gridLayout = true;
 
   public archiveId!: string;
 
+  public noImageFound = false;
+
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
+  private topicService = inject(TopicService);
   private store = inject(Store);
 
   private topics = signal<TopicWithRange[]>([]);
@@ -96,7 +98,9 @@ export class TopicsComponent implements OnDestroy, OnInit {
       this.activeFilters = filters;
       this.activeSorting = sorting.find(option => option.active);
       this.selectedYear = selectedYear;
-      this.setImageRange();
+      this.filteredTopics = this.filterTopics(this.topics()).map(topic =>
+        this.topicService.setImageRange(topic, this.selectedYear)
+      );
       this.gridLayout = layout === Layout.Grid;
 
       // TODO - Fix parent sorting
@@ -119,38 +123,8 @@ export class TopicsComponent implements OnDestroy, OnInit {
     });
   }
 
-  private setImageRange(): void {
-    this.filteredTopics = (this.filterTopics(this.topics()).map(topic => {
-      if (!topic.ranges) {
-        return topic;
-      }
-
-      if (topic.ranges.length === 1) {
-        const { start, end, image } = topic.ranges.slice(-1)[0];
-        return {
-          ...topic,
-          image: image ?? topic.image,
-          rangeSuffix: `_${start}-${end || ''}`
-        };
-      }
-
-      const range = topic.ranges.reduce((prev, curr) => {
-        if (curr.start && this.selectedYear - curr.start >= 0) {
-          return curr;
-        }
-        if (prev.start && this.selectedYear - prev.start >= 0) {
-          return prev;
-        }
-        return {};
-      });
-
-      const { start, end, image } = range;
-      return {
-        ...topic,
-        image: image ?? topic.image,
-        rangeSuffix: start ? `_${start}-${end || ''}` : undefined
-      };
-    }));
+  public handleImageError(): void {
+    this.noImageFound = true;
   }
 
   public setParentLabel(parent: string): string {
