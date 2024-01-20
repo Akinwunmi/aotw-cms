@@ -1,26 +1,19 @@
-@for (topic of filteredTopics; track $index) {
-  <figure class="topic" [routerLink]="'../' + topic.id">
-    <div class="image" [ngClass]="{ 'no-image': !topic.image }">
-      @if (topic.image) {
-        @defer {
-          <img
-            [src]="topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix"
-            [alt]="topic.name"
-          />
-        } @placeholder (minimum 500ms) {
-          <aotw-ng-skeleton [loading]="true" />
-        }
+<section [ngClass]="{ grid: gridLayout }">
+  @for (topic of filteredTopics; track $index) {
+    <figure class="topic" [routerLink]="'../' + topic.id">
+      <app-image
+        [src]="topic.imageUrl || (topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix)"
+        [alt]="topic.name"
+        [placeholder]="!topic.imageUrl && !topic.image"
+      />
+      @defer {
+        <figcaption class="caption">
+          <span class="name">{{ 'REGIONS.' + setTopicLabel(topic.id) | uppercase | translate }}</span>
+          @if (topic.parent) {
+            <span class="parent">{{ setParentLabel(topic.parent) }}</span>
+          }
+        </figcaption>
       }
-    </div>
-    @defer {
-      <figcaption class="caption">
-        <span class="name">{{ 'REGIONS.' + setTopicLabel(topic.id) | uppercase | translate }}</span>
-        @if (topic.parent) {
-          <span class="parent">{{ setParentLabel(topic.parent) }}</span>
-        }
-      </figcaption>
-    } @placeholder (minimum 500ms) {
-      <aotw-ng-skeleton [loading]="true" />
-    }
-  </figure>
-}
+    </figure>
+  }
+</section>

@@ -1,52 +1,44 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  EventEmitter,
   Input,
   OnInit,
-  inject
+  Output
 } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import {
-  AotwBreadcrumbComponent,
-  AotwIconComponent,
-  BreadcrumbItem
-} from '@aotw/ng-components';
 
 import { Topic } from '../../models';
-import { ImagePipe } from '../../pipes';
 import { SharedModule } from '../../shared';
 
 @Component({
   selector: 'app-discover-header',
   standalone: true,
-  imports: [
-    SharedModule,
-    RouterModule,
-    AotwBreadcrumbComponent,
-    AotwIconComponent,
-    ImagePipe
-  ],
+  imports: [ SharedModule ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover-header.component.html',
-  styleUrls: ['./discover-header.component.scss'],
+  styleUrl: './discover-header.component.scss'
 })
 export class DiscoverHeaderComponent implements OnInit {
   @Input()
-  public breadcrumb: BreadcrumbItem[] = [];
+  public activeTopicId?: string;
 
   @Input()
-  public topic!: Topic;
+  public topics?: Topic[];
 
-  private router = inject(Router);
+  @Output()
+  public activeTopic = new EventEmitter<string>();
 
-  public archiveId!: string;
+  public mainTopicType?: string;
 
   public ngOnInit(): void {
-    this.archiveId = '23flag01';
+    if (!this.topics) {
+      return;
+    }
+
+    this.mainTopicType = this.topics[0].type;
   }
 
-  public goToPage(item: BreadcrumbItem): void {
-    const route = item.link?.split('/');
-    this.router.navigate(route || []);
+  public setActiveTopic(id: string): void {
+    this.activeTopic.emit(id);
   }
 }
