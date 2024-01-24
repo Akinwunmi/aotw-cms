@@ -1,23 +1,40 @@
 <div class="title" tabindex="0" (click)="goToHome()" (keydown)="goToHome()">
   <aotw-ng-icon name="logo" size="medium" />
-  <aotw-ng-dynamic-text>{{ 'COMMON.APP_NAME' | translate }}</aotw-ng-dynamic-text>
+  <aotw-ng-dynamic-text>
+    {{ 'COMMON.APP_NAME' | translate }}
+  </aotw-ng-dynamic-text>
 </div>
-<button
-  type="button"
-  ghost
-  [aotwDropdownTrigger]="dropdown"
-  [isOpen]="dropdownIsOpen"
-  (click)="setDropdownState()"
->
-  <aotw-ng-icon name="menu" size="medium" />
-</button>
+<div class="menu-list">
+  <button
+    type="button"
+    ghost
+    [aotwDropdownTrigger]="translationMenu"
+    [isOpen]="menuOpen === headerMenuEnum.Translation"
+    (click)="setMenuOpen(headerMenuEnum.Translation)"
+  >
+    <aotw-ng-icon name="language" size="medium" />
+  </button>
+  <button
+    type="button"
+    ghost
+    [aotwDropdownTrigger]="mainMenu"
+    [isOpen]="menuOpen === headerMenuEnum.Main"
+    (click)="setMenuOpen(headerMenuEnum.Main)"
+  >
+    <aotw-ng-icon name="menu" size="medium" />
+  </button>
+</div>
 
-<ng-template #dropdown>
+<ng-template #translationMenu>
   <div class="menu">
     <aotw-ng-list-item (click)="setTranslation()">
       {{ 'LANGUAGES.' + (currentLang === 'nl' ? 'EN' : 'NL') | translate }}
-      <aotw-ng-icon name="language" size="medium" suffix />
     </aotw-ng-list-item>
+  </div>
+</ng-template>
+
+<ng-template #mainMenu>
+  <div class="menu">
     <aotw-ng-list-item>
       {{ 'PAGES.ABOUT' | translate }}
     </aotw-ng-list-item>

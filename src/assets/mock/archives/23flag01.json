@@ -437,21 +437,21 @@
       "type": "Overseas Territory"
     },
     {
-      "id": "af-shn-asce",
+      "id": "af-shn-ascn",
       "name": "Ascension Island",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Ascension_Island.svg",
       "type": "Constituent Part"
     },
     {
-      "id": "af-shn-sain",
+      "id": "af-shn-sthe",
       "name": "Saint Helena",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Saint_Helena.svg",
       "type": "Constituent Part"
     },
     {
-      "id": "af-shn-tris",
+      "id": "af-shn-trdc",
       "name": "Tristan da Cunha",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Tristan_da_Cunha.svg",
@@ -901,7 +901,7 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_the_Cook_Islands.svg"
     },
     {
-      "id": "au-",
+      "id": "au-east",
       "name": "Easter Island",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Flag_of_Rapa_Nui%2C_Chile.svg"
@@ -4320,6 +4320,38 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
+      "type": "Country"
+    },
+    {
+      "id": "eu-gbr-engl",
+      "name": "England",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg",
+      "type": "Country"
+    },
+    {
+      "id": "eu-gbr-nire",
+      "name": "Northern Ireland",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Flag_of_Northern_Ireland_%281924%E2%80%931953%29.svg",
+      "type": "Province"
+    },
+    {
+      "id": "eu-gbr-scot",
+      "name": "Scotland",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Scotland.svg",
+      "type": "Country"
+    },
+    {
+      "id": "eu-gbr-wale",
+      "name": "Wales",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Flag_of_Wales.svg",
       "type": "Country"
     },
     {
