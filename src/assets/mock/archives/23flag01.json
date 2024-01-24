@@ -2233,7 +2233,13 @@
       "name": "De Fryske Marren",
       "nameLocal": "De Fryske Marren",
       "image": true,
-      "type": "Municipality"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/De_Friese_Meren_vlag.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 2014
+        }
+      ]
     },
     {
       "id": "eu-nld-frys-defry-akmarp",
@@ -2376,6 +2382,34 @@
       "type": "Village"
     },
     {
+      "id": "eu-nld-frys-donia",
+      "name": "Doniawerstal",
+      "nameLocal": "Doanjewerstâl",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Flag_of_Doniawerstal.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 1961,
+          "end": 1984
+        }
+      ]
+    },
+    {
+      "id": "eu-nld-frys-gaasl",
+      "name": "Gaasterlân-Sleat",
+      "nameLocal": "Gaasterlân-Sleat",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Gaasterlan-Sleat_flag.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 1984,
+          "end": 2014
+        }
+      ]
+    },
+    {
       "id": "eu-nld-frys-harli",
       "name": "Harlingen",
       "nameLocal": "",
@@ -2395,6 +2429,20 @@
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
+    },
+    {
+      "id": "eu-nld-frys-lemst",
+      "name": "Lemsterland",
+      "nameLocal": "Lemsterlân",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Lemsterland.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 1961,
+          "end": 2014
+        }
+      ]
     },
     {
       "id": "eu-nld-frys-noard",
@@ -2432,6 +2480,20 @@
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
+    },
+    {
+      "id": "eu-nld-frys-skars",
+      "name": "Skarsterlân",
+      "nameLocal": "Skarsterlân",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Skarsterlan_flag.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 1984,
+          "end": 2014
+        }
+      ]
     },
     {
       "id": "eu-nld-frys-small",

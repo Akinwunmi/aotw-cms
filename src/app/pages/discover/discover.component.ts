@@ -8,12 +8,7 @@ import {
   inject,
   signal
 } from '@angular/core';
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  Router,
-  RouterModule
-} from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { BreadcrumbItem } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
@@ -29,31 +24,21 @@ import {
 
 import {
   FilterOption,
-  AdvancedSearchComponent,
   SortDirection,
   SortOption
 } from '../../components/advanced-search';
-import { DatetimeNavigatorComponent } from '../../components/datetime-navigator';
-import { DiscoverHeaderComponent } from '../../components/discover-header';
-import { TopicHeaderComponent } from '../../components/topic-header';
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
-import { SharedModule } from '../../shared';
 import { setDiscoverState } from '../../state/actions';
 import { initialState } from '../../state/reducers';
+
+import { DISCOVER_IMPORTS } from './discover.imports';
 
 
 @Component({
   selector: 'app-discover',
   standalone: true,
-  imports: [
-    SharedModule,
-    RouterModule,
-    AdvancedSearchComponent,
-    DatetimeNavigatorComponent,
-    DiscoverHeaderComponent,
-    TopicHeaderComponent,
-  ],
+  imports: DISCOVER_IMPORTS,
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
@@ -70,7 +55,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public filters: FilterOption[] = [];
 
   public minYear = 0;
-  public currentYear = new Date().getFullYear();
+  public maxYear!: number;
 
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
@@ -82,7 +67,8 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   private topicId = signal('');
   private topicNames = computed(() => this.topicId()?.split('-'));
 
-  private archiveId!: string;
+  private archiveId = '23flag01';
+  private currentYear = new Date().getFullYear();
 
   private unsubscribe$ = new Subject<void>();
 
@@ -139,6 +125,8 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.activeTopic = this.topicNames()?.length > 1
       ? this.archiveData.topics.find(topic => topic.id === id)
       : undefined;
+    this.setMaxYear();
+
     this.cdr.detectChanges();
   }
 
@@ -154,8 +142,8 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   private getArchiveData(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
-    this.archiveId = '23flag01';
     this.topicId.set(url[RouteDiscover.Topic]);
+
     if (this.topicNames) {
       // set topic id as title and current url,
       // until index of parent topic + topic as link
@@ -164,6 +152,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
         link: `${rawUrl.slice(0, rawUrl.indexOf(topic))}${topic}`
       } as BreadcrumbItem));
     }
+
     this.cdr.detectChanges();
   }
 
@@ -175,12 +164,8 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
-    this.cdr.detectChanges();
-  }
 
-  private setMinYear(topics: Topic[]): void {
-    const ranges = topics.filter(topic => topic.ranges).flatMap(topic => topic.ranges);
-    this.minYear = Math.min(...ranges.map(range => range?.start || this.currentYear));
+    this.cdr.detectChanges();
   }
 
   private setFiltersAndSorting(parentType?: string): void {
@@ -209,5 +194,22 @@ export class DiscoverComponent implements OnDestroy, OnInit {
         disabled: false
       }));
     });
+  }
+
+  private setMaxYear(): void {
+    const ranges = this.activeTopic?.ranges || [];
+    const endYear = ranges.slice(-1)[0]?.end;
+
+    this.maxYear = endYear || this.currentYear;
+  }
+
+  private setMinYear(topics: Topic[]): void {
+    const allRanges = topics.filter(topic => topic.ranges).flatMap(topic => topic.ranges);
+    const ranges = this.activeTopic?.ranges || [];
+    const startYear = ranges[0]?.start;
+
+    this.minYear = startYear ?? Math.min(...allRanges.map(range =>
+      range?.start || this.currentYear
+    ));
   }
 }
