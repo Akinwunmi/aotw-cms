@@ -3,7 +3,8 @@
   display: flex;
 
   img {
-    height: 100%;
+    margin: auto 0;
+    max-height: 100%;
     max-width: 100%;
 
     &.right {
@@ -17,5 +18,14 @@
     img {
       display: none;
     }
+  }
+}
+
+// Fix for displaying images properly in Safari
+// ? This is needed because some external SVG images do not have a viewBox attribute
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  img {
+    height: 100%;
+    max-width: 100%;  
   }
 }
