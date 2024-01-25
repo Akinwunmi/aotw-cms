@@ -8,6 +8,7 @@ import {
 import '@aotw/components';
 import { Router } from '@angular/router';
 import {
+  AotwDropdownDirective,
   AotwDynamicTextComponent,
   AotwIconComponent,
   AotwListItemComponent
@@ -17,11 +18,14 @@ import { Subject, takeUntil } from 'rxjs';
 
 import { SharedModule } from '../../shared';
 
+import { HeaderMenu } from './header.model';
+
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     SharedModule,
+    AotwDropdownDirective,
     AotwDynamicTextComponent,
     AotwIconComponent,
     AotwListItemComponent,
@@ -31,7 +35,12 @@ import { SharedModule } from '../../shared';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnDestroy, OnInit {
+  public headerMenuEnum = HeaderMenu;
+
   public currentLang!: string;
+
+  public menuOpen?: HeaderMenu;
+  public isTranslationMenuOpen = false;
 
   private router = inject(Router);
   private translate = inject(TranslateService);
@@ -52,9 +61,13 @@ export class HeaderComponent implements OnDestroy, OnInit {
     this.router.navigate(['']);
   }
 
-  // ! Update once menu with "Translation" item is implemented
+  public setMenuOpen(menu: HeaderMenu): void {
+    this.menuOpen = menu;
+  }
+
   public setTranslation(): void {
     this.translate.use(this.translate.currentLang === 'en' ? 'nl' : 'en');
+    this.menuOpen = undefined;
   }
 
   public ngOnDestroy(): void {

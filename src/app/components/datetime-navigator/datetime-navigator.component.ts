@@ -55,7 +55,7 @@ export class DatetimeNavigatorComponent implements OnDestroy, OnInit {
       map(selectedYear => selectedYear),
       takeUntil(this.unsubscribe$)
     ).subscribe(selectedYear => {
-      this.selectedYear = selectedYear;
+      this.selectedYear = Math.min(this.max, selectedYear);
     });
   }
 

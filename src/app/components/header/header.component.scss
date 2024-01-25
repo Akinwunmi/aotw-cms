@@ -14,8 +14,17 @@
   padding-inline: var(--aotw-space-s);
 }
 
-.menu {
-  align-items: center;
+.menu-list {
   display: flex;
-  gap: var(--aotw-space-s)
+  gap: var(--aotw-space-s);
+}
+
+.menu {
+  display: grid;
+  margin-right: var(--aotw-space-s);
+  min-width: 10rem;
+
+  aotw-ng-list-item {
+    cursor: pointer;
+  }
 }

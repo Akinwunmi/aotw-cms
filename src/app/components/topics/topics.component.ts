@@ -131,6 +131,10 @@ export class TopicsComponent implements OnDestroy, OnInit {
     return parent.split('-').slice(-1)[0];
   }
 
+  public setTopicLabel(id: string): string {
+    return id.replaceAll('-', '_');
+  }
+
   private getTopics(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
     this.archiveId = '23flag01';

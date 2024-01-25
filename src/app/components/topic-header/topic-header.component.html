@@ -1,6 +1,6 @@
 <div class="info">
   <aotw-ng-breadcrumb [items]="breadcrumb" (selectedItem)="goToPage($event)" />
-  <h2>{{ rangedTopic.type || '\u2014' }}</h2>
+  <h2>{{ ('TOPICS.' + rangedTopic.type | uppercase | translate) || '\u2014' }}</h2>
   <div class="topic-name">
     <button title="The Flag Archive Logo">
       <aotw-ng-icon name="logo" />

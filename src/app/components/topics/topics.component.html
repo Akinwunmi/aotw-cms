@@ -8,7 +8,7 @@
       />
       @defer {
         <figcaption class="caption">
-          <span class="name">{{ topic.name }}</span>
+          <span class="name">{{ 'REGIONS.' + setTopicLabel(topic.id) | uppercase | translate }}</span>
           @if (topic.parent) {
             <span class="parent">{{ setParentLabel(topic.parent) }}</span>
           }
