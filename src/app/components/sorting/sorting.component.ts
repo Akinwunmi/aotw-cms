@@ -2,10 +2,8 @@ import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output
+  computed,
+  model
 } from '@angular/core';
 import {
   AotwChipComponent,
@@ -24,41 +22,28 @@ import { SortDirection, SortOption } from '../advanced-search';
   templateUrl: './sorting.component.html',
   styleUrls: ['./sorting.component.scss']
 })
-export class SortingComponent implements OnInit {
-  @Input()
-  public options: SortOption[] = [];
+export class SortingComponent {
+  public options = model<SortOption[]>([]);
+  public direction = model(SortDirection.Asc);
 
-  @Input()
-  public direction = SortDirection.Asc;
-
-  @Output()
-  public optionsChange = new EventEmitter<SortOption[]>();
-
-  @Output()
-  public directionChange = new EventEmitter<SortDirection>();
-
-  public optionChips: Chip[] = [];
+  public optionChips = computed(() => (
+    this.options().map(({ id, label, active, disabled }) => ({
+      id, label, active, disabled
+    })) as Chip[]
+  ));
 
   public sortDirectionEnum = SortDirection;
 
-  public ngOnInit(): void {
-    this.optionChips = this.options.map(({ id, label, active, disabled }) => ({
-      id, label, active, disabled
-    })) as Chip[];
-  }
-
   public setSortDirection(): void {
-    this.direction = this.direction === SortDirection.Asc
-      ? SortDirection.Desc
-      : SortDirection.Asc;
-    this.directionChange.emit(this.direction);
+    this.direction.set(
+      this.direction() === SortDirection.Asc ? SortDirection.Desc : SortDirection.Asc
+    );
   }
 
   public updateOptions(chip: Chip): void {
-    this.options = this.options.map(option => ({
+    this.options.set(this.options().map(option => ({
       ...option,
       active: option.id === chip.id
-    }));
-    this.optionsChange.emit(this.options);
+    })));
   }
 }

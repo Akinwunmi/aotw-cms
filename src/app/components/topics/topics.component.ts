@@ -22,7 +22,7 @@ import {
 } from '../../models';
 import { ImagePipe } from '../../pipes';
 import { ArchiveService, TopicService } from '../../services';
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
 import { ImageComponent } from '../image';
@@ -30,7 +30,13 @@ import { ImageComponent } from '../image';
 @Component({
   selector: 'app-topics',
   standalone: true,
-  imports: [SharedModule, RouterModule, AotwSkeletonComponent, ImageComponent, ImagePipe],
+  imports: [
+    ...SHARED_IMPORTS,
+    RouterModule,
+    AotwSkeletonComponent,
+    ImageComponent,
+    ImagePipe
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']
@@ -54,6 +60,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
   private store = inject(Store);
 
   private topics = signal<TopicWithRange[]>([]);
+
   private parentTopic = computed(
     () => this.topicId()?.split('-').slice(-1)[0] || ''
   );

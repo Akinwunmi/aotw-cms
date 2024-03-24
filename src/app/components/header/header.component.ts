@@ -16,7 +16,7 @@ import {
 import { TranslateService } from '@ngx-translate/core';
 import { Subject, takeUntil } from 'rxjs';
 
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 
 import { HeaderMenu } from './header.model';
 
@@ -24,7 +24,7 @@ import { HeaderMenu } from './header.model';
   selector: 'app-header',
   standalone: true,
   imports: [
-    SharedModule,
+    ...SHARED_IMPORTS,
     AotwDropdownDirective,
     AotwDynamicTextComponent,
     AotwIconComponent,

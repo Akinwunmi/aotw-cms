@@ -1,10 +1,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  Input,
   OnDestroy,
   OnInit,
-  inject
+  inject,
+  input
 } from '@angular/core';
 import {
   AotwChipComponent,
@@ -16,7 +16,7 @@ import {
 import { Store } from '@ngrx/store';
 import { Subject, map, takeUntil } from 'rxjs';
 
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 import { setSelectedYear } from '../../state/actions';
 import { selectSelectedYear } from '../../state/selectors';
 
@@ -24,7 +24,7 @@ import { selectSelectedYear } from '../../state/selectors';
   selector: 'app-datetime-navigator',
   standalone: true,
   imports: [
-    SharedModule,
+    ...SHARED_IMPORTS,
     AotwChipComponent,
     AotwDropdownDirective,
     AotwIconComponent,
@@ -36,11 +36,8 @@ import { selectSelectedYear } from '../../state/selectors';
   styleUrls: ['./datetime-navigator.component.scss']
 })
 export class DatetimeNavigatorComponent implements OnDestroy, OnInit {
-  @Input()
-  public min = 0;
-
-  @Input()
-  public max = new Date().getFullYear();
+  public min = input(0);
+  public max = input(new Date().getFullYear());
 
   private store = inject(Store);
 
@@ -55,7 +52,7 @@ export class DatetimeNavigatorComponent implements OnDestroy, OnInit {
       map(selectedYear => selectedYear),
       takeUntil(this.unsubscribe$)
     ).subscribe(selectedYear => {
-      this.selectedYear = Math.min(this.max, selectedYear);
+      this.selectedYear = Math.min(this.max(), selectedYear);
     });
   }
 

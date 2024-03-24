@@ -18,13 +18,13 @@ import {
 } from '../../components/advanced-search';
 import { Topic } from '../../models';
 import { ArchiveService } from '../../services';
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 
 @Component({
   selector: 'app-search',
   standalone: true,
   imports: [
-    SharedModule,
+    ...SHARED_IMPORTS,
     AdvancedSearchComponent,
     AotwFormFieldComponent,
   ],
@@ -46,7 +46,6 @@ export class SearchComponent implements OnInit {
 
   private archiveId = '23flag01';
   private topics = signal<Topic[]>([]);
-
 
   private unsubscribe$ = new Subject<void>();
 
