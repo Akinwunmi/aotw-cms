@@ -62,7 +62,7 @@ module.exports = {
         'max-lines': [
           'error',
           {
-            'max': 210
+            'max': 240
           }
         ],
         'rxjs/no-nested-subscribe': 'error'

@@ -8,42 +8,38 @@ import {
   inject,
   signal
 } from '@angular/core';
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  Router,
-  RouterModule
-} from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
-import { filter, map, Subject, switchMap, take, takeUntil } from 'rxjs';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { BreadcrumbItem } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
+import { TranslateService } from '@ngx-translate/core';
+import {
+  combineLatest,
+  filter,
+  map,
+  Subject,
+  switchMap,
+  take,
+  takeUntil
+} from 'rxjs';
 
-import { BreadcrumbItem } from '../../components/breadcrumb';
-import { DatetimeNavigatorComponent } from '../../components/datetime-navigator';
-import { DiscoverHeaderComponent } from '../../components/discover-header';
 import {
   FilterOption,
-  AdvancedSearchComponent,
   SortDirection,
   SortOption
 } from '../../components/advanced-search';
 import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
-import { SharedModule } from '../../shared';
 import { setDiscoverState } from '../../state/actions';
 import { initialState } from '../../state/reducers';
+import { selectDiscover } from '../../state/selectors';
+
+import { DISCOVER_IMPORTS } from './discover.imports';
 
 
 @Component({
   selector: 'app-discover',
   standalone: true,
-  imports: [
-    SharedModule,
-    RouterModule,
-    AdvancedSearchComponent,
-    DatetimeNavigatorComponent,
-    DiscoverHeaderComponent
-  ],
+  imports: DISCOVER_IMPORTS,
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
@@ -51,7 +47,6 @@ import { initialState } from '../../state/reducers';
 export class DiscoverComponent implements OnDestroy, OnInit {
   public archiveData!: ArchiveTopics;
 
-  public mainTopicType?: string;
   public mainTopics?: Topic[];
   public activeMainTopicId!: string;
 
@@ -61,7 +56,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   public filters: FilterOption[] = [];
 
   public minYear = 0;
-  public currentYear = new Date().getFullYear();
+  public maxYear!: number;
 
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
@@ -73,9 +68,13 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   private topicId = signal('');
   private topicNames = computed(() => this.topicId()?.split('-'));
 
-  private archiveId!: string;
+  private archiveId = '23flag01';
+  private currentYear = new Date().getFullYear();
 
   private unsubscribe$ = new Subject<void>();
+  private discoverState$ = this.store.select(selectDiscover).pipe(
+    take(1)
+  );
 
   private _sorting: SortOption[] = [];
   public get sorting(): SortOption[] {
@@ -119,19 +118,27 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     });
   }
 
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
+  }
+
   public setActiveTopic(id: string): void {
     this.router.navigate(['topic', id], { relativeTo: this.route });
     this.activeMainTopicId = id;
     this.activeTopic = this.topicNames()?.length > 1
-      ? this.archiveData.topics.find(topic => topic.id === id)
+      ? this.archiveData.topics.find(topic => topic.altId === id || topic.id === id)
       : undefined;
+    this.setMaxYear();
+
+    this.cdr.detectChanges();
   }
 
   public setState(): void {
     // structuredClone instead of a spread operator is needed to create a deep copy
     this.store.dispatch(setDiscoverState({
       ...initialState.discover,
-      filters: this.filters,
+      filters: structuredClone(this.filters),
       sorting: structuredClone(this.sorting),
       sortDirection: this.sortDirection
     }));
@@ -139,8 +146,14 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   private getArchiveData(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
-    this.archiveId = url[RouteDiscover.Archive];
-    this.topicId.set(url[RouteDiscover.Topic]);
+    if (url[RouteDiscover.Topic] === undefined) {
+      this.discoverState$.subscribe(({ activeTopicId }) => {
+        this.topicId.set(activeTopicId);
+      });
+    } else {
+      this.topicId.set(url[RouteDiscover.Topic]);
+    }
+
     if (this.topicNames) {
       // set topic id as title and current url,
       // until index of parent topic + topic as link
@@ -149,6 +162,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
         link: `${rawUrl.slice(0, rawUrl.indexOf(topic))}${topic}`
       } as BreadcrumbItem));
     }
+
     this.cdr.detectChanges();
   }
 
@@ -156,46 +170,62 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.archiveData = archiveData;
     const { topics, parentType } = this.archiveData;
 
-    this.filters = [
-      {
-        // TODO: Fix string not updating on language change
-        label: this.translate.instant('DISCOVER.HAS_PARENT', {
-          type: parentType?.toLowerCase()
-        }),
-        active: false,
-        disabled: false
-      }
-    ];
-    this.sorting = [
-      {
-        label: `${this.translate.instant('COMMON.NAME')}`,
-        firstValue: 'A',
-        secondValue: 'Z',
-        active: true,
-        disabled: false
-      },
-      {
-        label: `${this.translate.instant('DISCOVER.PARENT')}`,
-        firstValue: 'A',
-        secondValue: 'Z',
-        active: false,
-        disabled: false
-      }
-    ];
+    this.setFiltersAndSorting(parentType);
 
-    this.mainTopicType = topics.find(topic => topic.id.length === 2)?.type;
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
+    this.discoverState$.subscribe(discover => {
+      this.store.dispatch(setDiscoverState({
+        ...discover,
+        activeTopicId: this.topicId(),
+      }));
+    });
+
     this.cdr.detectChanges();
   }
 
-  private setMinYear(topics: Topic[]): void {
-    const ranges = topics.filter(topic => topic.ranges).flatMap(topic => topic.ranges);
-    this.minYear = Math.min(...ranges.map(range => range?.start || this.currentYear));
+  private setFiltersAndSorting(parentType?: string): void {
+    combineLatest([
+      this.translate.stream(['DISCOVER.HAS_PARENT'], { type: parentType?.toLowerCase() }),
+      this.translate.stream(['COMMON.NAME', 'DISCOVER.PARENT'])
+    ]).pipe(
+      map(([filterTranslations, sortingTranslations]) => ({
+        filters: Object.values(filterTranslations) as string[],
+        sorting: Object.values(sortingTranslations) as string[]
+      })),
+      takeUntil(this.unsubscribe$)
+    ).subscribe(({ filters, sorting }) => {
+      this.filters = filters.map((label, index) => ({
+        id: String(index),
+        label,
+        active: false,
+        disabled: false
+      }));
+      this.sorting = sorting.map((label, index) => ({
+        id: String(index),
+        label,
+        firstValue: 'A',
+        secondValue: 'Z',
+        active: index === 0,
+        disabled: false
+      }));
+    });
   }
 
-  public ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+  private setMaxYear(): void {
+    const ranges = this.activeTopic?.ranges || [];
+    const endYear = ranges.slice(-1)[0]?.end;
+
+    this.maxYear = endYear || this.currentYear;
+  }
+
+  private setMinYear(topics: Topic[]): void {
+    const allRanges = topics.filter(topic => topic.ranges).flatMap(topic => topic.ranges);
+    const ranges = this.activeTopic?.ranges || [];
+    const startYear = ranges[0]?.start;
+
+    this.minYear = startYear ?? Math.min(...allRanges.map(range =>
+      range?.start || this.currentYear
+    ));
   }
 }

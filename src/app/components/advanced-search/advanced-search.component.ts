@@ -10,10 +10,10 @@ import {
 } from '@angular/core';
 import {
   AotwChipGroupComponent,
-  AotwFieldComponent,
+  AotwFormFieldComponent,
   AotwIconComponent,
   Chip
-} from '@aotw/lib-ng';
+} from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 
@@ -36,9 +36,9 @@ import {
   imports: [
     SharedModule,
     AotwChipGroupComponent,
-    AotwFieldComponent,
+    AotwFormFieldComponent,
     AotwIconComponent,
-    SortingComponent
+    SortingComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './advanced-search.component.html',
@@ -47,6 +47,12 @@ import {
 export class AdvancedSearchComponent implements OnDestroy, OnInit {
   @Input()
   public filters: FilterOption[] = [];
+
+  @Input()
+  public hideSearch = false;
+
+  @Input()
+  public stretch = false;
 
   @Output()
   public filtersChange = new EventEmitter<FilterOption[]>();
@@ -63,8 +69,8 @@ export class AdvancedSearchComponent implements OnDestroy, OnInit {
   public activeOption?: AdvancedSearch;
 
   public layoutChips: Chip[] = [
-    { label: '', icon: Layout.List, active: false, disabled: false },
-    { label: '', icon: Layout.Grid, active: false, disabled: false },
+    { id: '0', label: '', icon: Layout.List, active: false, disabled: false },
+    { id: '1', label: '', icon: Layout.Grid, active: false, disabled: false }
   ];
 
   private store = inject(Store);
@@ -116,8 +122,8 @@ export class AdvancedSearchComponent implements OnDestroy, OnInit {
     this.activeOption = filter;
   }
 
-  public toggleFilter(label: string): void {
-    const filter = this.filters.find(filter => filter.label === label);
+  public toggleFilter(id: string): void {
+    const filter = this.filters.find(filter => filter.id === id);
     if (filter) {
       filter.active = !filter.active;
     }

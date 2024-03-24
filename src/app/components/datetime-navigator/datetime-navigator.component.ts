@@ -12,7 +12,7 @@ import {
   AotwIconComponent,
   AotwYearPickerComponent,
   RangePipe
-} from '@aotw/lib-ng';
+} from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
 import { Subject, map, takeUntil } from 'rxjs';
 
@@ -55,7 +55,7 @@ export class DatetimeNavigatorComponent implements OnDestroy, OnInit {
       map(selectedYear => selectedYear),
       takeUntil(this.unsubscribe$)
     ).subscribe(selectedYear => {
-      this.selectedYear = selectedYear;
+      this.selectedYear = Math.min(this.max, selectedYear);
     });
   }
 

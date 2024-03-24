@@ -1,6 +1,7 @@
 export enum ActionTypes {
   SetDiscoverState = '[Discover] Set Filters And Sorting',
-  SetSelectedYear = '[Filters] Set Selected Year',
   SetLayout = '[Display] Set Layout',
+  SetSearch = '[Search] Set Search',
+  SetSelectedYear = '[Filters] Set Selected Year',
   SetTheme = '[Display] Set Theme'
 }

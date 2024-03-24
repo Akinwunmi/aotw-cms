@@ -1,19 +1,8 @@
-import { ArchiveLayout } from './forms.model';
 import { Image } from './image.model';
 
 interface DefaultInfo {
   id: string;
   name: string;
-}
-
-interface ArchiveGeneralInfo extends DefaultInfo {
-  mainCategory: string;
-  topics: Topic[];
-}
-
-export interface ArchiveData {
-  generalInfo: ArchiveGeneralInfo;
-  layout: ArchiveLayout;
 }
 
 export interface Archive extends DefaultInfo {
@@ -25,15 +14,18 @@ export interface ArchiveTopics extends DefaultInfo {
   topics: Topic[];
 }
 
-export interface Range {
+export interface Range extends Omit<Topic, 'id' | 'altId' | 'name' | 'ranges'> {
   start?: number;
   end?: number;
-  image?: boolean;
+  id?: string;
+  name?: string;
 }
 
 export interface Topic extends DefaultInfo {
+  altId?: string;
   type?: string;
   image?: boolean;
+  imageUrl?: string;
   parent?: string;
   ranges?: Range[];
 }

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true
 })
 export class ImagePipe implements PipeTransform {
-  public transform(name: string, prefix?: string, suffix?: string): unknown {
+  public transform(name: string, prefix?: string, suffix?: string): string {
     if (!name) {
       return '';
     }

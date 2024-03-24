@@ -1,1 +1,15 @@
-<app-advanced-search></app-advanced-search>
+<app-advanced-search
+  [hideSearch]="true"
+  [sortDirection]="sortDirection"
+  [sorting]="sorting"
+  [stretch]="true"
+/>
+<aotw-ng-form-field class="search">
+  <input [placeholder]="'COMMON.SEARCH' | translate" />
+</aotw-ng-form-field>
+
+<ol>
+  @for (topic of filteredTopics(); track $index) {
+    <li>{{ 'REGIONS.' + setTopicLabel(topic.id) | uppercase | translate }}</li>
+  }
+</ol>

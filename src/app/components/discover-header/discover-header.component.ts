@@ -1,45 +1,44 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  EventEmitter,
   Input,
   OnInit,
-  inject,
+  Output
 } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { AotwIconComponent } from '@aotw/lib-ng';
 
-import { RouteDiscover, Topic } from '../../models';
-import { ImagePipe } from '../../pipes';
+import { Topic } from '../../models';
 import { SharedModule } from '../../shared';
-import { BreadcrumbComponent, BreadcrumbItem } from '../breadcrumb';
 
 @Component({
   selector: 'app-discover-header',
   standalone: true,
-  imports: [
-    SharedModule,
-    RouterModule,
-    AotwIconComponent,
-    BreadcrumbComponent,
-    ImagePipe
-  ],
+  imports: [ SharedModule ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover-header.component.html',
-  styleUrls: ['./discover-header.component.scss'],
+  styleUrl: './discover-header.component.scss'
 })
 export class DiscoverHeaderComponent implements OnInit {
   @Input()
-  public breadcrumb: BreadcrumbItem[] = [];
+  public activeTopicId?: string;
 
   @Input()
-  public topic!: Topic;
+  public topics?: Topic[];
 
-  public archiveId!: string;
+  @Output()
+  public activeTopic = new EventEmitter<string>();
 
-  private router = inject(Router);
+  public mainTopicType?: string;
 
   public ngOnInit(): void {
-    const url = this.router.url.slice(1).split('/');
-    this.archiveId = url[RouteDiscover.Archive];
+    if (!this.topics) {
+      return;
+    }
+
+    this.mainTopicType = this.topics[0].type;
+  }
+
+  public setActiveTopic(id: string): void {
+    this.activeTopic.emit(id);
   }
 }

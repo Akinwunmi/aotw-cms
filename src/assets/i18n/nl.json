@@ -1,52 +1,114 @@
 {
+  "LANGUAGES": {
+    "EN": "English",
+    "NL": "Nederlands"
+  },
   "PAGES": {
     "HOME": "Home",
-    "CREATE": "Creëer"
+    "ABOUT": "Over dit project"
   },
   "COMMON": {
     "ADD": "Voeg toe",
-    "APP_NAME": "Archive of the World",
+    "APP_NAME": "The Flag Archive",
     "ARCHIVES": "Archieven",
     "CTA": {
+      "BACK": "Terug",
       "CANCEL": "Annuleer",
       "CONFIRM": "Bevestig",
-      "CREATE": "Creëer",
       "NEXT": "Volgende"
     },
     "DISCOVER": "Ontdek",
     "FILTERS": "Filters",
     "NAME": "Naam",
+    "PAGE_NOT_FOUND": "Pagina onbekend",
     "SEARCH": "Zoek",
     "SORT": "Sorteer"
   },
   "FOOTER": {
     "SITEMAP": "Sitemap"
   },
-  "HOME": {
-    "NEW_ARCHIVE": "Nieuw archief"
-  },
-  "ARCHIVE": {
-    "EDIT_ARCHIVE": "Bewerk archief"
-  },
-  "CREATE": {
-    "TITLE": "Creëer nieuw archief",
-    "STEPS": {
-      "GENERAL_INFO": "Algemene informatie",
-      "LAYOUT": "Layout",
-      "MAIN_CATEGORY": "Hoofdcategorie",
-      "MAIN_TOPICS": "Primaire topics",
-      "NAME": "Naam"
-    },
-    "LAYOUTS": {
-      "MAIN": "Primaire layout",
-      "MAIN_WITHOUT_IMAGES": "Primaire layout zonder afbeeldingen"
-    }
-  },
   "FILTERS_AND_SORTING": {
     "FILTER_BY": "Filteren met:"
   },
   "DISCOVER": {
-    "HAS_PARENT": "Is onderdeel van {type}",
-    "PARENT": "Moeder"
+    "HAS_PARENT": "Is onderdeel van {{ type }}",
+    "PARENT": "Onderdeel van"
+  },
+  "TOPICS": {
+    "CONTINENT": "Continent",
+    "COUNTRY": "Land",
+    "MUNICIPALITY": "Gemeente",
+    "PROVINCE": "Provincie"
+  },
+  "REGIONS": {
+    "EU": "Europa",
+    "EU_ALB": "Albanië",
+    "EU_AND": "Andorra",
+    "EU_ARM": "Armenië",
+    "EU_AUT": "Oostenrijk",
+    "EU_BEL": "België",
+    "EU_BGR": "Bulgarije",
+    "EU_BIH": "Bosnië and Herzegovina",
+    "EU_BLR": "Wit-Rusland",
+    "EU_CHE": "Zwitserland",
+    "EU_CYP": "Cyprus",
+    "EU_CZE": "Tsjechië",
+    "EU_DEU": "Duitsland",
+    "EU_DNK": "Denemarken",
+    "EU_ESP": "Spanje",
+    "EU_EST": "Estland",
+    "EU_FIN": "Finland",
+    "EU_FIN_ALA": "Åland",
+    "EU_FRA": "Frankrijk",
+    "EU_GBR": "Verenigd Koninkrijk",
+    "EU_GEO": "Georgië",
+    "EU_GIB": "Gibraltar",
+    "EU_GRC": "Griekenland",
+    "EU_HRV": "Kroatië",
+    "EU_HUN": "Hongarije",
+    "EU_IRL": "Ierland",
+    "EU_ISL": "IJsland",
+    "EU_ITA": "Italië",
+    "EU_KOS": "Kosovo",
+    "EU_LIE": "Liechtenstein",
+    "EU_LTU": "Litouwen",
+    "EU_LUX": "Luxemburg",
+    "EU_LVA": "Letland",
+    "EU_MCO": "Monaco",
+    "EU_MDA": "Moldavië",
+    "EU_MKD": "Noord-Macedonië",
+    "EU_MLT": "Malta",
+    "EU_MNE": "Montenegro",
+    "EU_NLD": "Nederland",
+    "EU_NLD_ANT": "Nederlandse Antillen",
+    "EU_NLD_ABW": "Aruba",
+    "EU_NLD_BES": "Caribisch Nederland",
+    "EU_NLD_CUR": "Curaçao",
+    "EU_NLD_DREN": "Drenthe",
+    "EU_NLD_FLEV": "Flevoland",
+    "EU_NLD_FRYS": "Friesland",
+    "EU_NLD_GELD": "Gelderland",
+    "EU_NLD_GRON": "Groningen",
+    "EU_NLD_LIMB": "Limburg",
+    "EU_NLD_NBRA": "Noord-Brabant",
+    "EU_NLD_NHOL": "Noord-Holland",
+    "EU_NLD_OVER": "Overijssel",
+    "EU_NLD_ZHOL": "Zuid-Holland",
+    "EU_NLD_UTRE": "Utrecht",
+    "EU_NLD_ZEEL": "Zeeland",
+    "EU_NLD_SXM": "Sint Maarten",
+    "EU_NOR": "Noorwegen",
+    "EU_POL": "Polen",
+    "EU_PRT": "Portugal",
+    "EU_ROU": "Roemenië",
+    "EU_RUS": "Rusland",
+    "EU_SMR": "San Marino",
+    "EU_SRB": "Servië",
+    "EU_SVK": "Slowakije",
+    "EU_SVN": "Slovenië",
+    "EU_SWE": "Zweden",
+    "EU_TUR": "Turkije",
+    "EU_UKR": "Oekraïne",
+    "EU_VAT": "Vaticaanstad"
   }
 }

@@ -1,0 +1,22 @@
+:host {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+div {
+  align-items: center;
+  aspect-ratio: 3 / 2;
+  background-color: var(--aotw-color-primary-100);
+  display: flex;
+  font-size: var(--aotw-font-size-l);
+  justify-content: center;
+  width: 10rem;
+}
+
+p {
+  margin-block: var(--aotw-space-xs);
+  width: 10rem;
+}

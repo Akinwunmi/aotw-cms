@@ -1,7 +1,8 @@
+import { IMAGE_CONFIG } from '@angular/common';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideEffects } from '@ngrx/effects';
 import { provideRouterStore, routerReducer } from '@ngrx/router-store';
 import { provideStore } from '@ngrx/store';
@@ -29,7 +30,10 @@ bootstrapApplication(AppComponent, {
     })),
     provideEffects(),
     provideHttpClient(),
-    provideRouter(APP_ROUTES),
+    provideRouter(APP_ROUTES, withInMemoryScrolling({
+      scrollPositionRestoration: 'top',
+      anchorScrolling: 'enabled',
+    })),
     provideRouterStore(),
     provideStore({
       app: reducer,
@@ -39,6 +43,15 @@ bootstrapApplication(AppComponent, {
       maxAge: 25,
       trace: false,
       traceLimit: 75
-    })
+    }),
+    // ? - Needed to surpress warnings about intrinsic sizing for external SVG sources
+    // TODO - Find solution to decrease intrinsic size of external SVG sources
+    {
+      provide: IMAGE_CONFIG,
+      useValue: {
+        disableImageSizeWarning: true, 
+        disableImageLazyLoadWarning: true
+      }
+    },
   ]
 }).catch(err => console.error(err));
