@@ -6,8 +6,7 @@
   justify-content: space-between;
   height: 10rem;
   overflow: hidden;
-  padding-block: var(--aotw-space-m);
-  padding-inline: var(--aotw-space-s);
+  padding: var(--aotw-space-m) var(--aotw-space-s);
   position: sticky;
   top: var(--aotw-size-m);
   transition: height 150ms ease-in-out;

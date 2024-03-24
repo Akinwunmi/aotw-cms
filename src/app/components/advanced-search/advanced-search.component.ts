@@ -38,7 +38,7 @@ import {
     AotwChipGroupComponent,
     AotwFormFieldComponent,
     AotwIconComponent,
-    SortingComponent
+    SortingComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './advanced-search.component.html',
@@ -47,6 +47,12 @@ import {
 export class AdvancedSearchComponent implements OnDestroy, OnInit {
   @Input()
   public filters: FilterOption[] = [];
+
+  @Input()
+  public hideSearch = false;
+
+  @Input()
+  public stretch = false;
 
   @Output()
   public filtersChange = new EventEmitter<FilterOption[]>();

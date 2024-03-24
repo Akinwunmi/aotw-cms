@@ -1,34 +1,38 @@
 @if (showAllOptions) {
-  <div class="filters">
-    <!-- Filters on mobile -->
-    <button type="button" [title]="'COMMON.FILTERS' | translate" ghost class="mobile">
-      <aotw-ng-icon name="filter-list" size="medium" />
-    </button>
-    <!-- Search -->
-    <button
-      type="button"
-      ghost
-      [title]="'COMMON.SEARCH' | translate"
-      (click)="openOption(advancedSearchEnum.Search)"
-    >
-      <span>{{ 'COMMON.SEARCH' | translate }}</span>
-      <aotw-ng-icon name="search" size="medium" />
-    </button>
-    <!-- Sort -->
-    <button type="button" title="Sort" ghost (click)="openOption(advancedSearchEnum.Sort)">
-      <span>{{ 'COMMON.SORT' | translate }}</span>
-      <aotw-ng-icon name="sort" size="medium" />
-    </button>
-    <!-- Filters -->
-    <button
-      type="button"
-      ghost
-      [title]="'COMMON.FILTERS' | translate"
-      (click)="openOption(advancedSearchEnum.Filters)"
-    >
-      <span>{{ 'COMMON.FILTERS' | translate }}</span>
-      <aotw-ng-icon name="filter" size="medium" />
-    </button>
+  <div class="filters" [ngClass]="{ stretch }">
+    <div class="filter-group">
+      <!-- Filters on mobile -->
+      <button type="button" [title]="'COMMON.FILTERS' | translate" ghost class="mobile">
+        <aotw-ng-icon name="filter-list" size="medium" />
+      </button>
+      <!-- Search -->
+      @if (!hideSearch) {
+        <button
+          type="button"
+          ghost
+          [title]="'COMMON.SEARCH' | translate"
+          (click)="openOption(advancedSearchEnum.Search)"
+        >
+          <span>{{ 'COMMON.SEARCH' | translate }}</span>
+          <aotw-ng-icon name="search" size="medium" />
+        </button>
+      }
+      <!-- Sort -->
+      <button type="button" title="Sort" ghost (click)="openOption(advancedSearchEnum.Sort)">
+        <span>{{ 'COMMON.SORT' | translate }}</span>
+        <aotw-ng-icon name="sort" size="medium" />
+      </button>
+      <!-- Filters -->
+      <button
+        type="button"
+        ghost
+        [title]="'COMMON.FILTERS' | translate"
+        (click)="openOption(advancedSearchEnum.Filters)"
+      >
+        <span>{{ 'COMMON.FILTERS' | translate }}</span>
+        <aotw-ng-icon name="filter" size="medium" />
+      </button>
+    </div>
     <!-- Layout -->
     <aotw-ng-chip-group [chips]="layoutChips" (activeChip)="setLayout($event)" />
   </div>

@@ -31,6 +31,7 @@ import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
 import { ArchiveService } from '../../services';
 import { setDiscoverState } from '../../state/actions';
 import { initialState } from '../../state/reducers';
+import { selectDiscover } from '../../state/selectors';
 
 import { DISCOVER_IMPORTS } from './discover.imports';
 
@@ -71,6 +72,9 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   private currentYear = new Date().getFullYear();
 
   private unsubscribe$ = new Subject<void>();
+  private discoverState$ = this.store.select(selectDiscover).pipe(
+    take(1)
+  );
 
   private _sorting: SortOption[] = [];
   public get sorting(): SortOption[] {
@@ -123,7 +127,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
     this.router.navigate(['topic', id], { relativeTo: this.route });
     this.activeMainTopicId = id;
     this.activeTopic = this.topicNames()?.length > 1
-      ? this.archiveData.topics.find(topic => topic.id === id)
+      ? this.archiveData.topics.find(topic => topic.altId === id || topic.id === id)
       : undefined;
     this.setMaxYear();
 
@@ -142,7 +146,13 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   private getArchiveData(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
-    this.topicId.set(url[RouteDiscover.Topic]);
+    if (url[RouteDiscover.Topic] === undefined) {
+      this.discoverState$.subscribe(({ activeTopicId }) => {
+        this.topicId.set(activeTopicId);
+      });
+    } else {
+      this.topicId.set(url[RouteDiscover.Topic]);
+    }
 
     if (this.topicNames) {
       // set topic id as title and current url,
@@ -164,6 +174,12 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
     this.mainTopics = topics.filter(topic => topic.id.length === 2);
     this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
+    this.discoverState$.subscribe(discover => {
+      this.store.dispatch(setDiscoverState({
+        ...discover,
+        activeTopicId: this.topicId(),
+      }));
+    });
 
     this.cdr.detectChanges();
   }

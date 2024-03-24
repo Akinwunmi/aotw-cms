@@ -45,6 +45,8 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
   public noImageFound = false;
 
+  public topicId = signal('');
+
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
@@ -52,7 +54,6 @@ export class TopicsComponent implements OnDestroy, OnInit {
   private store = inject(Store);
 
   private topics = signal<TopicWithRange[]>([]);
-  private topicId = signal('');
   private parentTopic = computed(
     () => this.topicId()?.split('-').slice(-1)[0] || ''
   );
@@ -151,7 +152,10 @@ export class TopicsComponent implements OnDestroy, OnInit {
     return topics.filter(topic => {
       const query =
         // Define childs of parent topic
-        topic.id.startsWith(this.topicId()) &&
+        (
+          topic.id.startsWith(this.topicId()) ||
+          topic.altId?.startsWith(this.topicId())
+        ) &&
         // If the first character after the topic id is an underscore,
         // it is part of the parent screen and is filtered out
         topic.id[this.topicId().length] !== '_' &&

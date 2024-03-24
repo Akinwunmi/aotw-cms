@@ -14,6 +14,11 @@ export const initialState: AppState = {
     sortDirection: SortDirection.Asc
   },
   layout: Layout.Grid,
+  search: {
+    filters: [],
+    sorting: [],
+    sortDirection: SortDirection.Asc
+  },
   selectedYear: new Date().getFullYear(),
   theme: Theme.Light
 };

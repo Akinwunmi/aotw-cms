@@ -1,6 +1,6 @@
 <section [ngClass]="{ grid: gridLayout }">
   @for (topic of filteredTopics; track $index) {
-    <figure class="topic" [routerLink]="'../' + topic.id">
+    <figure class="topic" [routerLink]="'../' + (topic.altId?.startsWith(topicId()) ? topic.altId : topic.id)">
       <app-image
         [src]="topic.imageUrl || (topic.id | image: 'assets/mock/images/' + archiveId: topic.rangeSuffix)"
         [alt]="topic.name"
