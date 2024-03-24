@@ -27,7 +27,23 @@
       "name": "Benin",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1960,
+          "end": 1975,
+          "id": "af-dhy"
+        },
+        {
+          "start": 1975,
+          "end": 1990,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_Benin_%281975%E2%80%931990%29.svg",
+          "name": "People's Republic of Benin"
+        },
+        {
+          "start": 1990
+        }
+      ]
     },
     {
       "id": "af-bwa",
@@ -575,9 +591,20 @@
     },
     {
       "id": "as-arm",
+      "altId": "eu-arm",
       "name": "Armenia",
       "image": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg",
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1920
+        },
+        {
+          "start": 1991
+        }
+      ]
     },
     {
       "id": "as-aze",
@@ -622,22 +649,10 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg"
     },
     {
-      "id": "as-cyp",
-      "name": "Cyprus",
-      "image": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg"
-    },
-    {
       "id": "as-tls",
       "name": "East Timor",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Flag_of_East_Timor.svg"
-    },
-    {
-      "id": "as-geo",
-      "name": "Georgia",
-      "image": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Georgia.svg"
     },
     {
       "id": "as-ind",
@@ -789,9 +804,12 @@
     },
     {
       "id": "as-rus",
+      "altId": "eu-rus",
       "name": "Russia",
+      "nameLocal": "",
       "image": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
+      "type": "Country"
     },
     {
       "id": "as-sau",
@@ -843,9 +861,12 @@
     },
     {
       "id": "as-tur",
+      "altId": "eu-tur",
       "name": "Turkey",
+      "nameLocal": "",
       "image": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
+      "type": "Country"
     },
     {
       "id": "as-tkm",
@@ -1094,22 +1115,6 @@
       ]
     },
     {
-      "id": "eu-arm",
-      "name": "Armenia",
-      "image": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg",
-      "type": "Country",
-      "ranges": [
-        {
-          "start": 1918,
-          "end": 1920
-        },
-        {
-          "start": 1991
-        }
-      ]
-    },
-    {
       "id": "eu-aut",
       "name": "Austria",
       "image": true,
@@ -1238,6 +1243,7 @@
     },
     {
       "id": "eu-cyp",
+      "altId": "as-cyp",
       "name": "Cyprus",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg",
@@ -1335,6 +1341,7 @@
     },
     {
       "id": "eu-geo",
+      "altId": "as-geo",
       "name": "Georgia",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Georgia.svg",
@@ -4201,14 +4208,6 @@
       "type": "Country"
     },
     {
-      "id": "eu-rus",
-      "name": "Russia",
-      "nameLocal": "",
-      "image": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
-      "type": "Country"
-    },
-    {
       "id": "eu-smr",
       "name": "San Marino",
       "nameLocal": "",
@@ -4297,14 +4296,6 @@
           "start": 1841
         }
       ]
-    },
-    {
-      "id": "eu-tur",
-      "name": "Turkey",
-      "nameLocal": "",
-      "image": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
-      "type": "Country"
     },
     {
       "id": "eu-ukr",

@@ -14,14 +14,15 @@ export interface ArchiveTopics extends DefaultInfo {
   topics: Topic[];
 }
 
-export interface Range {
+export interface Range extends Omit<Topic, 'id' | 'altId' | 'name' | 'ranges'> {
   start?: number;
   end?: number;
-  image?: boolean;
-  imageUrl?: string;
+  id?: string;
+  name?: string;
 }
 
 export interface Topic extends DefaultInfo {
+  altId?: string;
   type?: string;
   image?: boolean;
   imageUrl?: string;

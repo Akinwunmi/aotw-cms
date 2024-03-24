@@ -14,9 +14,10 @@ export class TopicService {
     }
 
     if (ranges.length === 1) {
-      const { start, end, image } = ranges.slice(-1)[0];
+      const { start, end, id, image } = ranges.slice(-1)[0];
       return {
         ...topic,
+        id: id ?? topic.id,
         image: image ?? topic.image,
         rangeSuffix: `_${start}-${end || ''}`
       };
@@ -36,9 +37,10 @@ export class TopicService {
       return {};
     });
 
-    const { start, end, image, imageUrl } = range;
+    const { start, end, id, image, imageUrl } = range;
     return {
       ...topic,
+      id: id ?? topic.id,
       image: !!image ?? topic.image,
       imageUrl: imageUrl ?? topic.imageUrl,
       rangeSuffix: start ? `_${start}-${end || ''}` : undefined
