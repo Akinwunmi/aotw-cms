@@ -2,9 +2,11 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  Input,
   OnInit,
-  inject
+  computed,
+  inject,
+  input,
+  signal
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import {
@@ -18,7 +20,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { TopicWithRange } from '../../models';
 import { ImagePipe } from '../../pipes';
 import { TopicService } from '../../services';
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 import { selectSelectedYear } from '../../state/selectors';
 import { ImageComponent } from '../image';
 
@@ -26,7 +28,7 @@ import { ImageComponent } from '../image';
   selector: 'app-topic-header',
   standalone: true,
   imports: [
-    SharedModule,
+    ...SHARED_IMPORTS,
     RouterModule,
     AotwBreadcrumbComponent,
     AotwIconComponent,
@@ -38,22 +40,17 @@ import { ImageComponent } from '../image';
   styleUrls: ['./topic-header.component.scss'],
 })
 export class TopicHeaderComponent implements OnInit {
-  @Input()
-  public breadcrumb: BreadcrumbItem[] = [];
+  public topic = input.required<TopicWithRange>();
 
-  private _topic!: TopicWithRange;
-  public get topic(): TopicWithRange {
-    return this._topic;
-  }
-  @Input()
-  public set topic(topic: TopicWithRange) {
-    this._topic = topic;
-    this.rangedTopic = this.topicService.setImageRange(topic);
-  }
+  public breadcrumb = input<BreadcrumbItem[]>([]);
 
-  public archiveId!: string;
-
-  public rangedTopic = this.topic;
+  private selectedYear = signal<number | undefined>(undefined);
+  
+  public rangedTopic = computed(() => (
+    this.topicService.setImageRange(this.topic(), this.selectedYear()))
+  );
+  
+  public archiveId = '23flag01';
 
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
@@ -64,12 +61,10 @@ export class TopicHeaderComponent implements OnInit {
   private selectSelectedYear$ = this.store.select(selectSelectedYear);
 
   public ngOnInit(): void {
-    this.archiveId = '23flag01';
-
     this.selectSelectedYear$.pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(selectedYear => {
-      this.rangedTopic = this.topicService.setImageRange(this.topic, selectedYear);
+      this.selectedYear.set(selectedYear);
       this.cdr.detectChanges();
     });
   }

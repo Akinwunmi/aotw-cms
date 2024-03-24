@@ -41,7 +41,7 @@ export class TopicService {
     return {
       ...topic,
       id: id ?? topic.id,
-      image: !!image ?? topic.image,
+      image: !!image || topic.image,
       imageUrl: imageUrl ?? topic.imageUrl,
       rangeSuffix: start ? `_${start}-${end || ''}` : undefined
     };

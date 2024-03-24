@@ -2,14 +2,14 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { ARCHIVE_ROUTES } from '../../pages/archive';
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 
 import { SitemapItem } from './footer.model';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [SharedModule, RouterModule],
+  imports: [...SHARED_IMPORTS, RouterModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
