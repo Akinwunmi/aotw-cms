@@ -361,6 +361,25 @@
       "name": "Libya",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Libya.svg",
+      "ranges": [
+        {
+          "start": 1951,
+          "end": 1969
+        },
+        {
+          "start": 1969,
+          "end": 1972,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Flag_of_Libya_%281969%E2%80%931972%29.svg"
+        },
+        {
+          "start": 1977,
+          "end": 2011,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Libya_%281977%E2%80%932011%29.svg"
+        },
+        {
+          "start": 2011
+        }
+      ],
       "type": "Country"
     },
     {
@@ -397,6 +416,16 @@
       "name": "Mauritania",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Flag_of_Mauritania.svg",
+      "ranges": [
+        {
+          "start": 1959,
+          "end": 2017,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Flag_of_Mauritania_%281959%E2%80%932017%29.svg"
+        },
+        {
+          "start": 2017
+        }
+      ],
       "type": "Country"
     },
     {
