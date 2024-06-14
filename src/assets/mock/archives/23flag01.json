@@ -115,24 +115,58 @@
       "name": "Comoros, the",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Flag_of_the_Comoros.svg",
+      "ranges": [
+        {
+          "start": 1963,
+          "end": 1975,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_the_Comoros_%281963%E2%80%931975%29.svg",
+          "parent": "af-fra"
+        },
+        {
+          "start": 1975,
+          "end": 1978,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Flag_of_the_Comoros_%281975%E2%80%931978%29.svg"
+        },
+        {
+          "start": 1978,
+          "end": 1992,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Flag_of_the_Comoros_%281978%E2%80%931992%29.svg"
+        },
+        {
+          "start": 1992,
+          "end": 1996,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Flag_of_the_Comoros_%281992%E2%80%931996%29.svg"
+        },
+        {
+          "start": 1996,
+          "end": 2001,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Flag_of_the_Comoros_%281996%E2%80%932001%29.svg"
+        },
+        {
+          "start": 2001
+        }
+      ],
       "type": "Country"
     },
     {
       "id": "af-com-anjo",
       "name": "Anjouan",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Anjouan_%28official%29.svg",
       "type": "Autonomous Island"
     },
     {
       "id": "af-com-gran",
       "name": "Grande Comore",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Flag_of_Grande_Comore.svg",
       "type": "Autonomous Island"
     },
     {
       "id": "af-com-mohe",
       "name": "Mohéli",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Flag_of_Moh%C3%A9li_%28official%29.svg",
       "type": "Autonomous Island"
     },
     {
@@ -809,6 +843,16 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
+      "ranges": [
+        {
+          "start": 1991,
+          "end": 1993,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Russia_%281991%E2%80%931993%29.svg"
+        },
+        {
+          "start": 1993
+        }
+      ],
       "type": "Country"
     },
     {
@@ -1982,6 +2026,15 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.svg",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1940
+        },
+        {
+          "start": 1990
+        }
+      ],
       "type": "Country"
     },
     {
@@ -2212,6 +2265,7 @@
       "name": "Achtkarspelen",
       "nameLocal": "Achtkarspelen",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Flag_of_Achtkarspelen.svg",
       "type": "Municipality"
     },
     {
@@ -2219,6 +2273,7 @@
       "name": "Ameland",
       "nameLocal": "It Amelân",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Ameland.svg",
       "type": "Municipality"
     },
     {
@@ -2226,6 +2281,7 @@
       "name": "Dantumadiel",
       "nameLocal": "Dantumadiel",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Dantumadeel.svg",
       "type": "Municipality"
     },
     {
@@ -2428,6 +2484,7 @@
       "name": "Heerenveen",
       "nameLocal": "It Hearrenfean",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Heerenveen_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -2435,6 +2492,7 @@
       "name": "Leeuwarden",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Leeuwarden_vlag_2014.svg",
       "type": "Municipality"
     },
     {
@@ -2456,11 +2514,13 @@
       "name": "Noardeast-Fryslân",
       "nameLocal": "Noardeast-Fryslân",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flagge_fan_Noardeast-Frysl%C3%A2n.svg",
       "type": "Municipality",
       "ranges": [
         {
           "start": 2019,
-          "end": 2021
+          "end": 2021,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Noardeast-Frysl%C3%A2n_vlag_%282019%29.svg"
         },
         {
           "start": 2021
@@ -2472,6 +2532,7 @@
       "name": "Ooststellingwerf",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Ooststellingwerf_flag.svg",
       "type": "Municipality"
     },
     {
@@ -2479,6 +2540,7 @@
       "name": "Opsterland",
       "nameLocal": "Opsterlân",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_Opsterland.svg",
       "type": "Municipality"
     },
     {
@@ -2486,6 +2548,7 @@
       "name": "Schiermonnikoog",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Flag_of_Schiermonnikoog.svg",
       "type": "Municipality"
     },
     {
@@ -2507,6 +2570,7 @@
       "name": "Smallingerland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Smallingerland_flag.svg",
       "type": "Municipality"
     },
     {
@@ -2521,6 +2585,7 @@
       "name": "Terschelling",
       "nameLocal": "Schylge",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Flag_of_Terschelling.svg",
       "type": "Municipality"
     },
     {
@@ -2528,6 +2593,7 @@
       "name": "Tytsjerksteradiel",
       "nameLocal": "Tytsjerksteradiel",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Tytsjerksteradiel_flag.svg",
       "type": "Municipality"
     },
     {
@@ -2535,6 +2601,7 @@
       "name": "Vlieland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Vlieland.svg",
       "type": "Municipality"
     },
     {
@@ -2542,6 +2609,7 @@
       "name": "Waadhoeke",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Waadhoeke_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -2549,6 +2617,7 @@
       "name": "Weststellingwerf",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Weststellingwerf_flag.svg",
       "type": "Municipality"
     },
     {
@@ -2556,6 +2625,7 @@
       "name": "Gelderland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_Gelderland.svg",
       "type": "Province"
     },
     {
@@ -2920,6 +2990,7 @@
       "name": "Groningen",
       "nameLocal": "Grunn",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_Groningen.svg",
       "type": "Province"
     },
     {
@@ -2997,6 +3068,7 @@
       "name": "Limburg",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Flag_of_Limburg_%28Netherlands%29.svg",
       "type": "Province"
     },
     {
@@ -3004,6 +3076,7 @@
       "name": "Noord-Brabant",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/North_Brabant-Flag.svg",
       "type": "Province"
     },
     {
@@ -3438,6 +3511,7 @@
       "name": "Noord-Holland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Holland.svg",
       "type": "Province"
     },
     {
@@ -3780,6 +3854,7 @@
       "name": "Overijssel",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Flag_of_Overijssel.svg",
       "type": "Province"
     },
     {
@@ -3787,6 +3862,7 @@
       "name": "Utrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Utrecht_%28province%29-Flag.svg",
       "type": "Province"
     },
     {
@@ -3794,6 +3870,7 @@
       "name": "Zeeland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Zeeland.svg",
       "type": "Province"
     },
     {
@@ -3801,6 +3878,7 @@
       "name": "Zuid-Holland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Zuid-Holland.svg",
       "type": "Province"
     },
     {
@@ -3808,6 +3886,7 @@
       "name": "Alblasserdam",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Alblasserdam_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3815,6 +3894,7 @@
       "name": "Albrandswaard",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Albrandswaard_flag.svg",
       "type": "Municipality"
     },
     {
@@ -3822,6 +3902,7 @@
       "name": "Alphen aan den Rijn",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Vlag_Alphen_aan_den_Rijn.svg",
       "type": "Municipality"
     },
     {
@@ -3829,6 +3910,7 @@
       "name": "Barendrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Barendrecht_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3836,6 +3918,7 @@
       "name": "Bodegraven-Reeuwijk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Bodegraven-Reeuwijk_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3843,6 +3926,13 @@
       "name": "Brielle",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Flag_of_Brielle.svg",
+      "ranges": [
+        {
+          "start": 1980,
+          "end": 2023
+        }
+      ],
       "type": "Municipality"
     },
     {
@@ -3850,6 +3940,7 @@
       "name": "Capelle aan den IJssel",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Capelle_aan_den_IJssel_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3857,6 +3948,7 @@
       "name": "Delft",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Delft.svg",
       "type": "Municipality"
     },
     {
@@ -3864,6 +3956,7 @@
       "name": "Dordrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Flag_of_Dordrecht.svg",
       "type": "Municipality"
     },
     {
@@ -3871,6 +3964,7 @@
       "name": "Goeree-Overflakkee",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Goeree-Overflakkee_gemeentevlag.svg",
       "type": "Municipality"
     },
     {
@@ -3878,6 +3972,7 @@
       "name": "Gorinchem",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_Gorinchem.svg",
       "type": "Municipality"
     },
     {
@@ -3885,6 +3980,7 @@
       "name": "Gouda",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Gouda.svg",
       "type": "Municipality"
     },
     {
@@ -3892,6 +3988,7 @@
       "name": "'s-Gravenhage",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_The_Hague.svg",
       "type": "Municipality"
     },
     {
@@ -3899,6 +3996,7 @@
       "name": "Hardinxveld-Giessendam",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Hardinxveldgiessendam_flag.svg",
       "type": "Municipality"
     },
     {
@@ -3906,13 +4004,21 @@
       "name": "Hellevoetsluis",
       "nameLocal": "",
       "image": true,
-      "type": "Municipality"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flag_of_Hellevoetsluis.svg",
+      "ranges": [
+        {
+          "start": 1960,
+          "end": 2023
+        }
+      ],
+      "type": "City"
     },
     {
       "id": "eu-nld-zhol-hendr",
       "name": "Hendrik-Ido-Ambacht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Flag_of_Hendrik-Ido-Ambacht.svg",
       "type": "Municipality"
     },
     {
@@ -3920,6 +4026,7 @@
       "name": "Hillegom",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_Hillegom.svg",
       "type": "Municipality"
     },
     {
@@ -3927,6 +4034,7 @@
       "name": "Hoeksche Waard",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Hoeksche_Waard_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3941,6 +4049,7 @@
       "name": "Katwijk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Katwijk_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3948,6 +4057,7 @@
       "name": "Krimpen aan den IJssel",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Krimpen_aan_den_IJssel_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3955,6 +4065,7 @@
       "name": "Krimpenerwaard",
       "nameLocal": "",
       "image": false,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Gemeentevlag_Krimpenerwaard.svg",
       "type": "Municipality"
     },
     {
@@ -3962,6 +4073,7 @@
       "name": "Lansingerland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_Lansingerland.svg",
       "type": "Municipality"
     },
     {
@@ -3969,6 +4081,7 @@
       "name": "Leiden",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Leiden.svg",
       "type": "Municipality"
     },
     {
@@ -3976,6 +4089,7 @@
       "name": "Leiderdorp",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Leiderdorp_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3983,6 +4097,7 @@
       "name": "Leidschendam-Voorburg",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Leidschendam-Voorburg_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3990,6 +4105,7 @@
       "name": "Lisse",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Flag_of_Lisse.svg",
       "type": "Municipality"
     },
     {
@@ -3997,6 +4113,7 @@
       "name": "Maassluis",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Maassluis_flag.svg",
       "type": "Municipality"
     },
     {
@@ -4004,6 +4121,7 @@
       "name": "Midden-Delfland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Midden_Delfland_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -4018,6 +4136,7 @@
       "name": "Nieuwkoop",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Flag_of_Nieuwkoop.svg",
       "type": "Municipality"
     },
     {
@@ -4025,6 +4144,7 @@
       "name": "Nissewaard",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Nissewaard_gemeentevlag.svg",
       "type": "Municipality"
     },
     {
@@ -4032,6 +4152,7 @@
       "name": "Noordwijk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Noordwijk_vlag_2020.svg",
       "type": "Municipality"
     },
     {
@@ -4039,6 +4160,7 @@
       "name": "Oegstgeest",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Oegstgeest_Netherlands_flag.svg",
       "type": "Municipality"
     },
     {
@@ -4046,6 +4168,7 @@
       "name": "Papendrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Papendrecht.svg",
       "type": "Municipality"
     },
     {
@@ -4053,6 +4176,7 @@
       "name": "Pijnacker-Nootdorp",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Pijnacker-Nootdorp_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -4060,6 +4184,7 @@
       "name": "Ridderkerk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Ridderkerk_Netherlands.svg",
       "type": "Municipality"
     },
     {
@@ -4067,6 +4192,7 @@
       "name": "Rijswijk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Papendrecht.svg",
       "type": "Municipality"
     },
     {
@@ -4074,6 +4200,7 @@
       "name": "Rotterdam",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Flag_of_Rotterdam.svg",
       "type": "Municipality"
     },
     {
@@ -4081,6 +4208,7 @@
       "name": "Schiedam",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Flag_of_Schiedam.svg",
       "type": "Municipality"
     },
     {
@@ -4088,6 +4216,7 @@
       "name": "Sliedrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Flag_of_Sliedrecht.svg",
       "type": "Municipality"
     },
     {
@@ -4095,6 +4224,7 @@
       "name": "Teylingen",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Teylingen_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -4102,13 +4232,44 @@
       "name": "Vlaardingen",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Flag_of_Vlaardingen.svg",
       "type": "Municipality"
+    },
+    {
+      "id": "eu-nld-zhol-voorn",
+      "name": "Voorne aan Zee",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Flag_Voorne_aan_Zee.svg",
+      "ranges": [
+        {
+          "start": 2023
+        }
+      ],
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-nld-zhol-voorn-briell",
+      "name": "Brielle",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Flag_of_Brielle.svg",
+      "type": "City"
+    },
+    {
+      "id": "eu-nld-zhol-voorn-hellev",
+      "name": "Hellevoetsluis",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flag_of_Hellevoetsluis.svg",
+      "type": "City"
     },
     {
       "id": "eu-nld-zhol-voors",
       "name": "Voorschoten",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Flag_of_Voorschoten.svg",
       "type": "Municipality"
     },
     {
@@ -4116,6 +4277,7 @@
       "name": "Waddinxveen",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Vlag_waddinxveen.svg",
       "type": "Municipality"
     },
     {
@@ -4123,6 +4285,7 @@
       "name": "Wassenaar",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Wassenaar_flag.svg",
       "type": "Municipality"
     },
     {
@@ -4130,6 +4293,7 @@
       "name": "Westland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Westland_municipality_flag.svg",
       "type": "Municipality"
     },
     {
@@ -4137,6 +4301,13 @@
       "name": "Westvoorne",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Flag_of_Westvoorne.svg",
+      "ranges": [
+        {
+          "start": 1980,
+          "end": 2023
+        }
+      ],
       "type": "Municipality"
     },
     {
@@ -4144,6 +4315,7 @@
       "name": "Zoetermeer",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Zoetermeer_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -4151,6 +4323,7 @@
       "name": "Zoeterwoude",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Flag_of_Zoeterwoude.svg",
       "type": "Municipality"
     },
     {
@@ -4165,6 +4338,7 @@
       "name": "Zwijndrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Zwijndrecht_%28Nederland%29_vlag.svg",
       "type": "Municipality"
     },
     {
