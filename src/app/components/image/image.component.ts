@@ -14,8 +14,6 @@ export class ImageComponent {
   public src = input.required<string>();
   public alt = input.required<string>();
 
-  public alignToRight = input(false);
-
   public placeholder = input(false);
 
   private _placeholderClass = this.placeholder();

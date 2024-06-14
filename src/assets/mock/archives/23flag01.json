@@ -1961,6 +1961,7 @@
       "name": "Italy, Kingdom of",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Italy_%281861-1946%29_crowned.svg",
       "type": "Constitutional Monarchy",
       "ranges": [
         {
@@ -4376,6 +4377,16 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_North_Macedonia.svg",
+      "ranges": [
+        {
+          "start": 1992,
+          "end": 2019,
+          "name": "Macedonia"
+        },
+        {
+          "start": 2019
+        }
+      ],
       "type": "Country"
     },
     {
@@ -4384,6 +4395,11 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
+      "ranges": [
+        {
+          "start": 1821
+        }
+      ],
       "type": "Country"
     },
     {
@@ -4392,6 +4408,21 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg",
+      "ranges": [
+        {
+          "start": 1919,
+          "end": 1927,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Poland_%281919%E2%80%931928%29.svg"
+        },
+        {
+          "start": 1927,
+          "end": 1980,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Poland_%281928%E2%80%931980%29.svg"
+        },
+        {
+          "start": 1980
+        }
+      ],
       "type": "Country"
     },
     {
@@ -4459,23 +4490,28 @@
       "ranges": [
         {
           "start": 1922,
-          "end": 1923
+          "end": 1923,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_the_Soviet_Union_%281922%E2%80%931923%29.svg"
         },
         {
           "start": 1923,
-          "end": 1924
+          "end": 1924,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Soviet_Union_%281924%29.svg"
         },
         {
           "start": 1924,
-          "end": 1936
+          "end": 1936,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_the_Soviet_Union_%281924%E2%80%931936%29.svg"
         },
         {
           "start": 1936,
-          "end": 1955
+          "end": 1955,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_the_USSR_%281936-1955%29.svg"
         },
         {
           "start": 1955,
-          "end": 1991
+          "end": 1991,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Soviet_Union.svg"
         }
       ]
     },
@@ -4565,11 +4601,13 @@
       "ranges": [
         {
           "start": 1918,
-          "end": 1941
+          "end": 1941,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Flag_of_Yugoslavia_%281918%E2%80%931941%29.svg"
         },
         {
           "start": 1946,
-          "end": 1992
+          "end": 1992,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Flag_of_Yugoslavia_%281946-1992%29.svg"
         }
       ]
     },
@@ -4786,6 +4824,26 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Flag_of_Honduras.svg",
+      "ranges": [
+        {
+          "start": 1839,
+          "end": 1866,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Honduras_%281839-1866%29.svg"
+        },
+        {
+          "start": 1866,
+          "end": 1949,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Flag_of_Honduras_%281866-1949%29.svg"
+        },
+        {
+          "start": 1949,
+          "end": 2022,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Honduras_%281949%E2%80%932022%29.svg"
+        },
+        {
+          "start": 2022
+        }
+      ],
       "type": "Country"
     },
     {

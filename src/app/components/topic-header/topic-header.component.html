@@ -11,6 +11,5 @@
 <app-image
   [src]="rangedTopic().imageUrl || (rangedTopic().id | image: 'assets/mock/images/' + archiveId: rangedTopic().rangeSuffix)"
   [alt]="rangedTopic().name"
-  [alignToRight]="true"
   [placeholder]="!rangedTopic().imageUrl && !rangedTopic().image"
 />
