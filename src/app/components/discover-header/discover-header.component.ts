@@ -1,42 +1,29 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output
+  computed,
+  input,
+  output
 } from '@angular/core';
 
 import { Topic } from '../../models';
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 
 @Component({
   selector: 'app-discover-header',
   standalone: true,
-  imports: [ SharedModule ],
+  imports: SHARED_IMPORTS,
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover-header.component.html',
   styleUrl: './discover-header.component.scss'
 })
-export class DiscoverHeaderComponent implements OnInit {
-  @Input()
-  public activeTopicId?: string;
+export class DiscoverHeaderComponent {
+  public activeTopicId = input<string>();
+  public topics = input<Topic[]>();
 
-  @Input()
-  public topics?: Topic[];
+  public activeTopic = output<string>();
 
-  @Output()
-  public activeTopic = new EventEmitter<string>();
-
-  public mainTopicType?: string;
-
-  public ngOnInit(): void {
-    if (!this.topics) {
-      return;
-    }
-
-    this.mainTopicType = this.topics[0].type;
-  }
+  public mainTopicType = computed<string | undefined>(() => this.topics()?.[0].type);
 
   public setActiveTopic(id: string): void {
     this.activeTopic.emit(id);

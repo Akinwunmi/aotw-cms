@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 
 @Component({
   selector: 'app-page-not-found',
   standalone: true,
-  imports: [SharedModule],
+  imports: SHARED_IMPORTS,
   templateUrl: './page-not-found.component.html',
   styleUrl: './page-not-found.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

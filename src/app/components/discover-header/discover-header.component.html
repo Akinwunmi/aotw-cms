@@ -1,10 +1,10 @@
-<h2>{{ 'TOPICS.' + mainTopicType | uppercase | translate }}</h2>
+<h2>{{ 'TOPICS.' + mainTopicType() | uppercase | translate }}</h2>
 <ul>
-  @for (topic of topics; track $index) {
+  @for (topic of topics(); track topic.id) {
     <li>
       <a
         tabindex="0"
-        [ngClass]="{ active: topic.id === activeTopicId }"
+        [ngClass]="{ active: topic.id === activeTopicId() }"
         (click)="setActiveTopic(topic.id)"
         (keydown)="setActiveTopic(topic.id)"
       >

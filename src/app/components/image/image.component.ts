@@ -1,34 +1,37 @@
-import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, input } from '@angular/core';
 
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 
 @Component({
   selector: 'app-image',
   standalone: true,
-  imports: [SharedModule],
+  imports: SHARED_IMPORTS,
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './image.component.html',
   styleUrl: './image.component.scss'
 })
 export class ImageComponent {
-  @Input({ required: true })
-  public src?: string;
+  public src = input.required<string>();
+  public alt = input.required<string>();
 
-  @Input({ required: true })
-  public alt!: string;
+  public alignToRight = input(false);
 
-  @Input()
-  public alignToRight = false;
+  public placeholder = input(false);
 
+  private _placeholderClass = this.placeholder();
   @HostBinding('class.placeholder')
-  @Input()
-  public placeholder = false;
+  private get placeholderClass(): boolean {
+    return this._placeholderClass;
+  }
+  private set placeholderClass(placeholderClass: boolean) {
+    this._placeholderClass = placeholderClass;
+  }
 
   public handleImageError(): void {
-    this.placeholder = true;
+    this.placeholderClass = true;
   }
 
   public handleImageLoad(): void {
-    this.placeholder = false;
+    this.placeholderClass = false;
   }
 }

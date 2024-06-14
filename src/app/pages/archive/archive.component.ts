@@ -10,13 +10,13 @@ import { AotwIconComponent, AotwTabGroupComponent, Tab } from '@aotw/ng-componen
 import { TranslateService } from '@ngx-translate/core';
 import { map, Subject, takeUntil } from 'rxjs';
 
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
 
 @Component({
   selector: 'app-archive',
   standalone: true,
   imports: [
-    SharedModule,
+    ...SHARED_IMPORTS,
     AotwIconComponent,
     AotwTabGroupComponent,
     RouterModule
