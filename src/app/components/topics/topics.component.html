@@ -10,7 +10,7 @@
         <figcaption class="caption">
           <span class="name">{{ 'REGIONS.' + setTopicLabel(topic.id) | uppercase | translate }}</span>
           @if (topic.parent) {
-            <span class="parent">{{ setParentLabel(topic.parent) }}</span>
+            <span class="parent">({{ setParentLabel(topic.parent) }})</span>
           }
         </figcaption>
       }

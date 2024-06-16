@@ -73,4 +73,13 @@ export class TopicHeaderComponent implements OnInit {
     const route = item.link?.split('/');
     this.router.navigate(route || []);
   }
+
+  // TODO - Consider moving this to a pipe
+  public setTranslationKey(prefix: string, key?: string): string {
+    if (!key) {
+      return '\u2014';
+    }
+
+    return `${prefix}.${key.replace(/ /g, '_')}`;
+  }
 }
