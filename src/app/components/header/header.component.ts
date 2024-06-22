@@ -1,8 +1,6 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  HostBinding,
-  Input,
   OnDestroy,
   OnInit,
   inject,
@@ -10,20 +8,24 @@ import {
 import '@aotw/components';
 import { Router } from '@angular/router';
 import {
+  AotwDropdownDirective,
   AotwDynamicTextComponent,
   AotwIconComponent,
   AotwListItemComponent
-} from '@aotw/lib-ng';
+} from '@aotw/ng-components';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject, takeUntil } from 'rxjs';
 
-import { SharedModule } from '../../shared';
+import { SHARED_IMPORTS } from '../../shared';
+
+import { HeaderMenu } from './header.model';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    SharedModule,
+    ...SHARED_IMPORTS,
+    AotwDropdownDirective,
     AotwDynamicTextComponent,
     AotwIconComponent,
     AotwListItemComponent,
@@ -33,11 +35,12 @@ import { SharedModule } from '../../shared';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnDestroy, OnInit {
-  @HostBinding('class.create')
-  @Input()
-  public createMode = false;
+  public headerMenuEnum = HeaderMenu;
 
   public currentLang!: string;
+
+  public menuOpen?: HeaderMenu;
+  public isTranslationMenuOpen = false;
 
   private router = inject(Router);
   private translate = inject(TranslateService);
@@ -58,9 +61,13 @@ export class HeaderComponent implements OnDestroy, OnInit {
     this.router.navigate(['']);
   }
 
-  // ! Update once menu with "Translation" item is implemented
+  public setMenuOpen(menu: HeaderMenu): void {
+    this.menuOpen = menu;
+  }
+
   public setTranslation(): void {
     this.translate.use(this.translate.currentLang === 'en' ? 'nl' : 'en');
+    this.menuOpen = undefined;
   }
 
   public ngOnDestroy(): void {

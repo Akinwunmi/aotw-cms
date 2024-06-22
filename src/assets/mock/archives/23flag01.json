@@ -12,48 +12,72 @@
       "id": "af-dza",
       "name": "Algeria",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg",
       "type": "Country"
     },
     {
       "id": "af-ago",
       "name": "Angola",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg",
       "type": "Country"
     },
     {
       "id": "af-ben",
       "name": "Benin",
       "image": true,
-      "type": "Country"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg",
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1960,
+          "end": 1975,
+          "id": "af-dhy"
+        },
+        {
+          "start": 1975,
+          "end": 1990,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_Benin_%281975%E2%80%931990%29.svg",
+          "name": "People's Republic of Benin"
+        },
+        {
+          "start": 1990
+        }
+      ]
     },
     {
       "id": "af-bwa",
       "name": "Botswana",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Botswana.svg",
       "type": "Country"
     },
     {
       "id": "af-bfa",
       "name": "Burkina Faso",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg",
       "type": "Country"
     },
     {
       "id": "af-bdi",
       "name": "Burundi",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Burundi.svg",
       "type": "Country"
     },
     {
       "id": "af-cmr",
       "name": "Cameroon",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Cameroon.svg",
       "type": "Country"
     },
     {
       "id": "af-icx",
       "name": "Canary Islands",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Flag_of_the_Canary_Islands.svg",
       "parent": "eu-esp",
       "type": "Autonomous Community"
     },
@@ -61,18 +85,21 @@
       "id": "af-cpv",
       "name": "Cape Verde",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Cape_Verde.svg",
       "type": "Country"
     },
     {
       "id": "af-caf",
       "name": "Central African Republic",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Central_African_Republic.svg",
       "type": "Country"
     },
     {
       "id": "af-ceu",
       "name": "Ceuta",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_Ceuta.svg",
       "parent": "eu-esp",
       "type": "Autonomous City"
     },
@@ -80,78 +107,122 @@
       "id": "af-tcd",
       "name": "Chad",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Chad.svg",
       "type": "Country"
     },
     {
       "id": "af-com",
       "name": "Comoros, the",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Flag_of_the_Comoros.svg",
+      "ranges": [
+        {
+          "start": 1963,
+          "end": 1975,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_the_Comoros_%281963%E2%80%931975%29.svg",
+          "parent": "af-fra"
+        },
+        {
+          "start": 1975,
+          "end": 1978,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Flag_of_the_Comoros_%281975%E2%80%931978%29.svg"
+        },
+        {
+          "start": 1978,
+          "end": 1992,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Flag_of_the_Comoros_%281978%E2%80%931992%29.svg"
+        },
+        {
+          "start": 1992,
+          "end": 1996,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Flag_of_the_Comoros_%281992%E2%80%931996%29.svg"
+        },
+        {
+          "start": 1996,
+          "end": 2001,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Flag_of_the_Comoros_%281996%E2%80%932001%29.svg"
+        },
+        {
+          "start": 2001
+        }
+      ],
       "type": "Country"
     },
     {
       "id": "af-com-anjo",
       "name": "Anjouan",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Anjouan_%28official%29.svg",
       "type": "Autonomous Island"
     },
     {
       "id": "af-com-gran",
       "name": "Grande Comore",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Flag_of_Grande_Comore.svg",
       "type": "Autonomous Island"
     },
     {
       "id": "af-com-mohe",
       "name": "Mohéli",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Flag_of_Moh%C3%A9li_%28official%29.svg",
       "type": "Autonomous Island"
     },
     {
       "id": "af-cod",
       "name": "Congo, Democratic Republic of the",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg",
       "type": "Country"
     },
     {
       "id": "af-cog",
       "name": "Congo, Republic of the",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_the_Republic_of_the_Congo.svg",
       "type": "Country"
     },
     {
       "id": "af-dji",
       "name": "Djibouti",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_Djibouti.svg",
       "type": "Country"
     },
     {
       "id": "af-egy",
       "name": "Egypt",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
       "type": "Country"
     },
     {
       "id": "af-gnq",
       "name": "Equatorial Guinea",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Equatorial_Guinea.svg",
       "type": "Country"
     },
     {
       "id": "af-eri",
       "name": "Eritrea",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Eritrea.svg",
       "type": "Country"
     },
     {
       "id": "af-swz",
       "name": "Eswatini",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Flag_of_Eswatini.svg",
       "type": "Country"
     },
     {
       "id": "af-eth",
       "name": "Ethiopia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg",
       "type": "Country"
     },
     {
@@ -218,6 +289,7 @@
       "id": "af-atf",
       "name": "French Southern and Antarctic Lands",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Flag_of_the_French_Southern_and_Antarctic_Lands.svg",
       "parent": "eu-fra",
       "type": "Overseas Territory"
     },
@@ -225,72 +297,103 @@
       "id": "af-gab",
       "name": "Gabon",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Gabon.svg",
       "type": "Country"
     },
     {
       "id": "af-gmb",
       "name": "Gambia, the",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_The_Gambia.svg",
       "type": "Country"
     },
     {
       "id": "af-gha",
       "name": "Ghana",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Ghana.svg",
       "type": "Country"
     },
     {
       "id": "af-gin",
       "name": "Guinea",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_Guinea.svg",
       "type": "Country"
     },
     {
       "id": "af-gnb",
       "name": "Guinea-Bissau",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Guinea-Bissau.svg",
       "type": "Country"
     },
     {
       "id": "af-civ",
       "name": "Ivory Coast",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg",
       "type": "Country"
     },
     {
       "id": "af-ken",
       "name": "Kenya",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg",
       "type": "Country"
     },
     {
       "id": "af-lso",
       "name": "Lesotho",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Flag_of_Lesotho.svg",
       "type": "Country"
     },
     {
       "id": "af-lbr",
       "name": "Liberia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_Liberia.svg",
       "type": "Country"
     },
     {
       "id": "af-lby",
       "name": "Libya",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Libya.svg",
+      "ranges": [
+        {
+          "start": 1951,
+          "end": 1969
+        },
+        {
+          "start": 1969,
+          "end": 1972,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Flag_of_Libya_%281969%E2%80%931972%29.svg"
+        },
+        {
+          "start": 1977,
+          "end": 2011,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Libya_%281977%E2%80%932011%29.svg"
+        },
+        {
+          "start": 2011
+        }
+      ],
       "type": "Country"
     },
     {
       "id": "af-mdg",
       "name": "Madagascar",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Madagascar.svg",
       "type": "Country"
     },
     {
       "id": "af-mad",
       "name": "Madeira",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_Madeira.svg",
       "parent": "eu-prt",
       "type": "Autonomous Region"
     },
@@ -298,30 +401,45 @@
       "id": "af-mwi",
       "name": "Malawi",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Flag_of_Malawi.svg",
       "type": "Country"
     },
     {
       "id": "af-mli",
       "name": "Mali",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Mali.svg",
       "type": "Country"
     },
     {
       "id": "af-mrt",
       "name": "Mauritania",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Flag_of_Mauritania.svg",
+      "ranges": [
+        {
+          "start": 1959,
+          "end": 2017,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Flag_of_Mauritania_%281959%E2%80%932017%29.svg"
+        },
+        {
+          "start": 2017
+        }
+      ],
       "type": "Country"
     },
     {
       "id": "af-mus",
       "name": "Mauritius",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Mauritius.svg",
       "type": "Country"
     },
     {
       "id": "af-myt",
       "name": "Mayotte",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Flag_of_Mayotte_%28local%29.svg",
       "parent": "eu-fra",
       "type": "Overseas Department"
     },
@@ -329,6 +447,7 @@
       "id": "af-mel",
       "name": "Melilla",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Melilla.svg",
       "parent": "eu-esp",
       "type": "Autonomous City"
     },
@@ -336,36 +455,42 @@
       "id": "af-mar",
       "name": "Morocco",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg",
       "type": "Country"
     },
     {
       "id": "af-moz",
       "name": "Mozambique",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Mozambique.svg",
       "type": "Country"
     },
     {
       "id": "af-nam",
       "name": "Namibia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Namibia.svg",
       "type": "Country"
     },
     {
       "id": "af-ner",
       "name": "Niger",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Flag_of_Niger.svg",
       "type": "Country"
     },
     {
       "id": "af-nga",
       "name": "Nigeria",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg",
       "type": "Country"
     },
     {
       "id": "af-reu",
       "name": "Réunion",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Proposed_flag_of_R%C3%A9union_%28VAR%29.svg",
       "parent": "eu-fra",
       "type": "Overseas Department"
     },
@@ -373,126 +498,147 @@
       "id": "af-rwa",
       "name": "Rwanda",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Rwanda.svg",
       "type": "Country"
     },
     {
       "id": "af-sah",
       "name": "Sahrawi Arab Democratic Republic",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Flag_of_the_Sahrawi_Arab_Democratic_Republic.svg",
       "type": "Country"
     },
     {
       "id": "af-shn",
       "name": "Saint Helena, Ascension and Tristan da Cunha",
       "image": false,
+      "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
     {
-      "id": "af-shn-asce",
+      "id": "af-shn-ascn",
       "name": "Ascension Island",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Ascension_Island.svg",
       "type": "Constituent Part"
     },
     {
-      "id": "af-shn-sain",
+      "id": "af-shn-sthe",
       "name": "Saint Helena",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Saint_Helena.svg",
       "type": "Constituent Part"
     },
     {
-      "id": "af-shn-tris",
+      "id": "af-shn-trdc",
       "name": "Tristan da Cunha",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Tristan_da_Cunha.svg",
       "type": "Constituent Part"
     },
     {
       "id": "af-stp",
       "name": "São Tomé and Príncipe",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg",
       "type": "Country"
     },
     {
       "id": "af-sen",
       "name": "Senegal",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg",
       "type": "Country"
     },
     {
       "id": "af-syc",
       "name": "Seychelles",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Seychelles.svg",
       "type": "Country"
     },
     {
       "id": "af-sle",
       "name": "Sierra Leone",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Sierra_Leone.svg",
       "type": "Country"
     },
     {
       "id": "af-som",
       "name": "Somalia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_Somalia.svg",
       "type": "Country"
     },
     {
       "id": "af-sml",
       "name": "Somaliland",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flag_of_Somaliland.svg",
       "type": "Country"
     },
     {
       "id": "af-zaf",
       "name": "South Africa",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
       "type": "Country"
     },
     {
       "id": "af-ssd",
       "name": "South Sudan",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flag_of_South_Sudan.svg",
       "type": "Country"
     },
     {
       "id": "af-sdn",
       "name": "Sudan",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Sudan.svg",
       "type": "Country"
     },
     {
       "id": "af-tza",
       "name": "Tanzania",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Tanzania.svg",
       "type": "Country"
     },
     {
       "id": "af-tgo",
       "name": "Togo",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Togo.svg",
       "type": "Country"
     },
     {
       "id": "af-tun",
       "name": "Tunisia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg",
       "type": "Country"
     },
     {
       "id": "af-uga",
       "name": "Uganda",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Flag_of_Uganda.svg",
       "type": "Country"
     },
     {
       "id": "af-zmb",
       "name": "Zambia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Zambia.svg",
       "type": "Country"
     },
     {
       "id": "af-zwe",
       "name": "Zimbabwe",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Zimbabwe.svg",
       "type": "Country"
     },
     {
@@ -502,203 +648,328 @@
     },
     {
       "id": "as-afg",
-      "name": "Afghanistan"
+      "name": "Afghanistan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg"
     },
     {
       "id": "as-arm",
-      "name": "Armenia"
+      "altId": "eu-arm",
+      "name": "Armenia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg",
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1920
+        },
+        {
+          "start": 1991
+        }
+      ]
     },
     {
       "id": "as-aze",
-      "name": "Azerbaijan"
+      "name": "Azerbaijan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg"
     },
     {
       "id": "as-bhr",
-      "name": "Bahrain"
+      "name": "Bahrain",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg"
     },
     {
       "id": "as-bgd",
-      "name": "Bangladesh"
+      "name": "Bangladesh",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg"
     },
     {
       "id": "as-btn",
-      "name": "Bhutan"
+      "name": "Bhutan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg"
     },
     {
       "id": "as-brn",
-      "name": "Brunei Darussalam"
+      "name": "Brunei Darussalam",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg"
     },
     {
       "id": "as-khm",
-      "name": "Cambodia"
+      "name": "Cambodia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg"
     },
     {
       "id": "as-chn",
-      "name": "China"
-    },
-    {
-      "id": "as-cyp",
-      "name": "Cyprus"
+      "name": "China",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg"
     },
     {
       "id": "as-tls",
-      "name": "East Timor"
-    },
-    {
-      "id": "as-geo",
-      "name": "Georgia"
+      "name": "East Timor",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Flag_of_East_Timor.svg"
     },
     {
       "id": "as-ind",
-      "name": "India"
+      "name": "India",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
     },
     {
       "id": "as-idn",
-      "name": "Indonesia"
+      "name": "Indonesia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg"
     },
     {
       "id": "as-irn",
-      "name": "Iran"
+      "name": "Iran",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg"
     },
     {
       "id": "as-irq",
-      "name": "Iraq"
+      "name": "Iraq",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Iraq.svg"
     },
     {
       "id": "as-isr",
-      "name": "Israel"
+      "name": "Israel",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg"
     },
     {
       "id": "as-jap",
-      "name": "Japan"
+      "name": "Japan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg"
     },
     {
       "id": "as-jor",
-      "name": "Jordan"
+      "name": "Jordan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg"
     },
     {
       "id": "as-kaz",
-      "name": "Kazakhstan"
+      "name": "Kazakhstan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg"
     },
     {
       "id": "as-kwt",
-      "name": "Kuwait"
+      "name": "Kuwait",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg"
     },
     {
       "id": "as-kgz",
-      "name": "Kyrgyzstan"
+      "name": "Kyrgyzstan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg",
+      "ranges": [
+        {
+          "start": 1992,
+          "end": 2023,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Flag_of_Kyrgyzstan_%281992%E2%80%932023%29.svg"
+        },
+        {
+          "start": 2023
+        }
+      ]
     },
     {
       "id": "as-lao",
-      "name": "Laos"
+      "name": "Laos",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg"
     },
     {
       "id": "as-lbn",
-      "name": "Lebanon"
+      "name": "Lebanon",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Lebanon.svg"
     },
     {
       "id": "as-mys",
-      "name": "Malaysia"
+      "name": "Malaysia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg"
     },
     {
       "id": "as-mdv",
-      "name": "Maldives"
+      "name": "Maldives",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Maldives.svg"
     },
     {
       "id": "as-mng",
-      "name": "Mongolia"
+      "name": "Mongolia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg"
     },
     {
       "id": "as-mmr",
-      "name": "Myanmar"
+      "name": "Myanmar",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg"
     },
     {
       "id": "as-npl",
-      "name": "Nepal"
+      "name": "Nepal",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg"
     },
     {
       "id": "as-prk",
-      "name": "North Korea"
+      "name": "North Korea",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Korea.svg"
     },
     {
       "id": "as-omn",
-      "name": "Oman"
+      "name": "Oman",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Oman.svg"
     },
     {
       "id": "as-pak",
-      "name": "Pakistan"
+      "name": "Pakistan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg"
     },
     {
       "id": "as-pse",
-      "name": "Palestine, State of"
+      "name": "Palestine, State of",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg"
     },
     {
       "id": "as-phl",
-      "name": "Philippines, the"
+      "name": "Philippines, the",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg"
     },
     {
       "id": "as-qat",
-      "name": "Qatar"
+      "name": "Qatar",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Qatar.svg"
     },
     {
       "id": "as-rus",
-      "name": "Russia"
+      "altId": "eu-rus",
+      "name": "Russia",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
+      "ranges": [
+        {
+          "start": 1991,
+          "end": 1993,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Russia_%281991%E2%80%931993%29.svg"
+        },
+        {
+          "start": 1993
+        }
+      ],
+      "type": "Country"
     },
     {
       "id": "as-sau",
-      "name": "Saudi Arabia"
+      "name": "Saudi Arabia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
     },
     {
       "id": "as-sgp",
-      "name": "Singapore"
+      "name": "Singapore",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg"
     },
     {
       "id": "as-kor",
-      "name": "South Korea"
+      "name": "South Korea",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg"
     },
     {
       "id": "as-lka",
-      "name": "Sri Lanka"
+      "name": "Sri Lanka",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg"
     },
     {
       "id": "as-syr",
-      "name": "Syria"
+      "name": "Syria",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Flag_of_Syria.svg"
     },
     {
       "id": "as-twn",
-      "name": "Taiwan"
+      "name": "Taiwan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg"
     },
     {
       "id": "as-tjk",
-      "name": "Tajikistan"
+      "name": "Tajikistan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Tajikistan.svg"
     },
     {
       "id": "as-tha",
-      "name": "Thailand"
+      "name": "Thailand",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg"
     },
     {
       "id": "as-tur",
-      "name": "Turkey"
+      "altId": "eu-tur",
+      "name": "Turkey",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
+      "type": "Country"
     },
     {
       "id": "as-tkm",
-      "name": "Turkmenistan"
+      "name": "Turkmenistan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Turkmenistan.svg"
     },
     {
       "id": "as-are",
-      "name": "United Arab Emirates, the"
+      "name": "United Arab Emirates, the",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg"
     },
     {
       "id": "as-uzb",
-      "name": "Uzbekistan"
+      "name": "Uzbekistan",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg"
     },
     {
       "id": "as-vnm",
-      "name": "Vietnam"
+      "name": "Vietnam",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg"
     },
     {
       "id": "as-yem",
-      "name": "Yemen"
+      "name": "Yemen",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Yemen.svg"
     },
     {
       "id": "au",
@@ -707,111 +978,165 @@
     },
     {
       "id": "au-asm",
-      "name": "American Samoa"
+      "name": "American Samoa",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_American_Samoa.svg"
     },
     {
       "id": "au-aus",
-      "name": "Australia"
+      "name": "Australia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg"
     },
     {
       "id": "au-cok",
-      "name": "Cook Islands"
+      "name": "Cook Islands",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_the_Cook_Islands.svg"
     },
     {
-      "id": "au-",
-      "name": "Easter Island"
+      "id": "au-east",
+      "name": "Easter Island",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Flag_of_Rapa_Nui%2C_Chile.svg"
     },
     {
       "id": "au-fsm",
-      "name": "Federated States of Micronesia"
+      "name": "Federated States of Micronesia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg"
     },
     {
       "id": "au-fji",
-      "name": "Fiji"
+      "name": "Fiji",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Fiji.svg"
     },
     {
       "id": "au-pyf",
-      "name": "French Polynesia"
+      "name": "French Polynesia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Flag_of_French_Polynesia.svg"
     },
     {
       "id": "au-gal",
-      "name": "Galápagos Islands"
+      "name": "Galápagos Islands",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Flag_of_the_Gal%C3%A1pagos_Islands.svg"
     },
     {
       "id": "au-gum",
-      "name": "Guam"
+      "name": "Guam",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Flag_of_Guam.svg"
     },
     {
       "id": "au-haw",
-      "name": "Hawaii"
+      "name": "Hawaii",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Hawaii.svg"
     },
     {
       "id": "au-kir",
-      "name": "Kiribati"
+      "name": "Kiribati",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kiribati.svg"
     },
     {
       "id": "au-mhl",
-      "name": "Marshall Islands"
+      "name": "Marshall Islands",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_the_Marshall_Islands.svg"
     },
     {
       "id": "au-nru",
-      "name": "Nauru"
+      "name": "Nauru",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Flag_of_Nauru.svg"
     },
     {
       "id": "au-ncl",
-      "name": "New Caledonia"
+      "name": "New Caledonia",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_FLNKS.svg"
     },
     {
       "id": "au-nzl",
-      "name": "New Zealand"
+      "name": "New Zealand",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg"
     },
     {
       "id": "au-niu",
-      "name": "Niue"
+      "name": "Niue",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Niue.svg"
     },
     {
       "id": "au-mnp",
-      "name": "Northern Mariana Islands"
+      "name": "Northern Mariana Islands",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Flag_of_the_Northern_Mariana_Islands.svg"
     },
     {
       "id": "au-plw",
-      "name": "Palau"
+      "name": "Palau",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Palau.svg"
     },
     {
       "id": "au-png",
-      "name": "Papua New Guinea"
+      "name": "Papua New Guinea",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Flag_of_Papua_New_Guinea.svg"
     },
     {
       "id": "au-pcn",
-      "name": "Pitcairn Islands"
+      "name": "Pitcairn Islands",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_the_Pitcairn_Islands.svg"
     },
     {
       "id": "au-wsm",
-      "name": "Samoa"
+      "name": "Samoa",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Samoa.svg"
     },
     {
       "id": "au-slb",
-      "name": "Solomon Islands"
+      "name": "Solomon Islands",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_the_Solomon_Islands.svg"
     },
     {
       "id": "au-tkl",
-      "name": "Tokelau"
+      "name": "Tokelau",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Flag_of_Tokelau.svg"
     },
     {
       "id": "au-ton",
-      "name": "Tonga"
+      "name": "Tonga",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Tonga.svg"
     },
     {
       "id": "au-tuv",
-      "name": "Tuvalu"
+      "name": "Tuvalu",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Tuvalu.svg"
     },
     {
       "id": "au-vut",
-      "name": "Vanuatu"
+      "name": "Vanuatu",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Vanuatu.svg"
     },
     {
       "id": "au-wlf",
-      "name": "Wallis and Futuna"
+      "name": "Wallis and Futuna",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Flag_of_Wallis_and_Futuna.svg"
     },
     {
       "id": "eu",
@@ -822,6 +1147,7 @@
       "id": "eu-alb",
       "name": "Albania",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg",
       "type": "Country",
       "ranges": [
         {
@@ -833,6 +1159,7 @@
       "id": "eu-and",
       "name": "Andorra",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Andorra.svg",
       "type": "Country",
       "ranges": [
         {
@@ -861,24 +1188,10 @@
       ]
     },
     {
-      "id": "eu-arm",
-      "name": "Armenia",
-      "image": true,
-      "type": "Country",
-      "ranges": [
-        {
-          "start": 1918,
-          "end": 1920
-        },
-        {
-          "start": 1991
-        }
-      ]
-    },
-    {
       "id": "eu-aut",
       "name": "Austria",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg",
       "type": "Country",
       "ranges": [
         {
@@ -898,6 +1211,7 @@
       "id": "eu-aut_empire",
       "name": "Austrian Empire",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flag_of_the_Habsburg_Monarchy.svg",
       "type": "Country",
       "ranges": [
         {
@@ -910,6 +1224,7 @@
       "id": "eu-blr",
       "name": "Belarus",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg",
       "type": "Country",
       "ranges": [
         {
@@ -930,6 +1245,7 @@
       "name": "Belgium",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg",
       "type": "Country",
       "ranges": [
         {
@@ -942,6 +1258,7 @@
       "name": "Bosnia and Herzegovina",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg",
       "type": "Country",
       "ranges": [
         {
@@ -957,6 +1274,7 @@
       "id": "eu-bgr",
       "name": "Bulgaria",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg",
       "type": "Country",
       "ranges": [
         {
@@ -988,6 +1306,7 @@
       "id": "eu-hrv",
       "name": "Croatia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg",
       "type": "Country",
       "ranges": [
         {
@@ -997,8 +1316,10 @@
     },
     {
       "id": "eu-cyp",
+      "altId": "as-cyp",
       "name": "Cyprus",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1014,6 +1335,7 @@
       "id": "eu-cze",
       "name": "Czechia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1025,12 +1347,14 @@
       "id": "eu-dnk",
       "name": "Denmark",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg",
       "type": "Country"
     },
     {
       "id": "eu-est",
       "name": "Estonia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Flag_of_Estonia.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1046,6 +1370,7 @@
       "id": "eu-fin",
       "name": "Finland",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1061,6 +1386,7 @@
       "id": "eu-fra",
       "name": "France",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1069,7 +1395,8 @@
         },
         {
           "start": 1814,
-          "end": 1830
+          "end": 1830,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_France_%281814%E2%80%931830%29.svg"
         },
         {
           "start": 1830,
@@ -1077,7 +1404,8 @@
         },
         {
           "start": 1976,
-          "end": 2020
+          "end": 2020,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flag_of_France_%282020%E2%80%93present%29.svg"
         },
         {
           "start": 2020
@@ -1086,13 +1414,16 @@
     },
     {
       "id": "eu-geo",
+      "altId": "as-geo",
       "name": "Georgia",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Georgia.svg",
       "type": "Country",
       "ranges": [
         {
           "start": 1990,
-          "end": 2004
+          "end": 2004,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_Georgia_%281990%E2%80%932004%29.svg"
         },
         {
           "start": 2004
@@ -1105,6 +1436,7 @@
       "nameLocal": "Deutschland",
       "languages": ["German"],
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1117,6 +1449,7 @@
       "name": "Baden-Württemberg",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Baden-W%C3%BCrttemberg.svg",
       "type": "State"
     },
     {
@@ -1544,6 +1877,7 @@
       "name": "Greece",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1568,6 +1902,7 @@
       "name": "Hungary",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1600,6 +1935,7 @@
       "name": "Iceland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1612,6 +1948,7 @@
       "name": "Ireland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1624,6 +1961,7 @@
       "name": "Italy, Kingdom of",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Italy_%281861-1946%29_crowned.svg",
       "type": "Constitutional Monarchy",
       "ranges": [
         {
@@ -1637,6 +1975,7 @@
       "name": "Italy",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1657,6 +1996,7 @@
       "name": "Kosovo",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Kosovo.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1669,6 +2009,7 @@
       "name": "Latvia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Latvia.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1685,6 +2026,7 @@
       "name": "Liechtenstein",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Liechtenstein.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1713,6 +2055,16 @@
       "name": "Lithuania",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.svg",
+      "ranges": [
+        {
+          "start": 1918,
+          "end": 1940
+        },
+        {
+          "start": 1990
+        }
+      ],
       "type": "Country"
     },
     {
@@ -1720,6 +2072,7 @@
       "name": "Luxembourg",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg",
       "type": "Country"
     },
     {
@@ -1727,6 +2080,7 @@
       "name": "Malta",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg",
       "type": "Country"
     },
     {
@@ -1734,6 +2088,7 @@
       "name": "Moldova",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg",
       "type": "Country"
     },
     {
@@ -1741,6 +2096,7 @@
       "name": "Monaco",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Flag_of_Monaco.svg",
       "type": "Country"
     },
     {
@@ -1748,6 +2104,7 @@
       "name": "Montenegro",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Montenegro.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1756,7 +2113,7 @@
       ]
     },
     {
-      "id": "eu-ned_kingdom",
+      "id": "eu-nld_kingdom",
       "name": "Netherlands, United Kingdom of the",
       "nameLocal": "Nederlanden, Verenigd Koninkrijk der",
       "image": true,
@@ -1769,11 +2126,12 @@
       ]
     },
     {
-      "id": "eu-ned",
+      "id": "eu-nld",
       "name": "Netherlands, the",
       "nameLocal": "Nederland",
       "languages": ["Dutch", "English", "Frisian", "Papiamento"],
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
       "type": "Country",
       "ranges": [
         {
@@ -1782,2040 +2140,2235 @@
       ]
     },
     {
-      "id": "eu-ned-dren",
+      "id": "eu-nld-dren",
       "name": "Drenthe",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Flag_of_Drenthe.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-dren-aahun",
+      "id": "eu-nld-dren-aahun",
       "name": "Aa en Hunze",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-assen",
+      "id": "eu-nld-dren-assen",
       "name": "Assen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-borge",
+      "id": "eu-nld-dren-borge",
       "name": "Borger-Odoorn",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-coevo",
+      "id": "eu-nld-dren-coevo",
       "name": "Coevorden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-dewol",
+      "id": "eu-nld-dren-dewol",
       "name": "De Wolden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-emmen",
+      "id": "eu-nld-dren-emmen",
       "name": "Emmen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-hooge",
+      "id": "eu-nld-dren-hooge",
       "name": "Hoogeveen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-meppe",
+      "id": "eu-nld-dren-meppe",
       "name": "Meppel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-midde",
+      "id": "eu-nld-dren-midde",
       "name": "Midden-Drenthe",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-noord",
+      "id": "eu-nld-dren-noord",
       "name": "Noordenveld",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-tynaa",
+      "id": "eu-nld-dren-tynaa",
       "name": "Tynaarlo",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-dren-weste",
+      "id": "eu-nld-dren-weste",
       "name": "Westerveld",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev",
+      "id": "eu-nld-flev",
       "name": "Flevoland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Flevoland.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-flev-almer",
+      "id": "eu-nld-flev-almer",
       "name": "Almere",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-dront",
+      "id": "eu-nld-flev-dront",
       "name": "Dronten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-lelys",
+      "id": "eu-nld-flev-lelys",
       "name": "Lelystad",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-nopol",
+      "id": "eu-nld-flev-nopol",
       "name": "Noordoostpolder",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-urkxx",
+      "id": "eu-nld-flev-urkxx",
       "name": "Urk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-flev-zeewo",
+      "id": "eu-nld-flev-zeewo",
       "name": "Zeewolde",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys",
+      "id": "eu-nld-frys",
       "name": "Friesland",
       "nameLocal": "Fryslân",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Frisian_flag.svg",
       "ratio": "13 : 9",
       "type": "Province"
     },
     {
-      "id": "eu-ned-frys-achtk",
+      "id": "eu-nld-frys-achtk",
       "name": "Achtkarspelen",
       "nameLocal": "Achtkarspelen",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Flag_of_Achtkarspelen.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-amela",
+      "id": "eu-nld-frys-amela",
       "name": "Ameland",
       "nameLocal": "It Amelân",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Ameland.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-dantu",
+      "id": "eu-nld-frys-dantu",
       "name": "Dantumadiel",
       "nameLocal": "Dantumadiel",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Dantumadeel.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-dantu-dewest",
+      "id": "eu-nld-frys-dantu-dewest",
       "name": "Zwaagwesteinde",
       "nameLocal": "De Westereen",
       "image": true,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry",
+      "id": "eu-nld-frys-defry",
       "name": "De Fryske Marren",
       "nameLocal": "De Fryske Marren",
       "image": true,
-      "type": "Municipality"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/De_Friese_Meren_vlag.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 2014
+        }
+      ]
     },
     {
-      "id": "eu-ned-frys-defry-akmarp",
+      "id": "eu-nld-frys-defry-akmarp",
       "name": "Akmarijp",
       "nameLocal": "Eagmaryp",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-bakhuz",
+      "id": "eu-nld-frys-defry-bakhuz",
       "name": "Bakhuizen",
       "nameLocal": "Bakhuzen",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-balkxx",
+      "id": "eu-nld-frys-defry-balkxx",
       "name": "Balk",
       "nameLocal": "Balk",
       "image": true,
       "type": "Town"
     },
     {
-      "id": "eu-ned-frys-defry-banteg",
+      "id": "eu-nld-frys-defry-banteg",
       "name": "Bantega",
       "nameLocal": "Bantegea",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-boornz",
+      "id": "eu-nld-frys-defry-boornz",
       "name": "Boornzwaag",
       "nameLocal": "Boarnsweach",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-dbroek",
+      "id": "eu-nld-frys-defry-dbroek",
       "name": "Broek",
       "nameLocal": "De Broek",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-delfst",
+      "id": "eu-nld-frys-defry-delfst",
       "name": "Delfstrahuizen",
       "nameLocal": "Dolsterhuzen",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-dijken",
+      "id": "eu-nld-frys-defry-dijken",
       "name": "Dijken",
       "nameLocal": "Diken",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-doniag",
+      "id": "eu-nld-frys-defry-doniag",
       "name": "Doniaga",
       "nameLocal": "Dunegea",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-echten",
+      "id": "eu-nld-frys-defry-echten",
       "name": "Echten",
       "nameLocal": "Ychten",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-echtbr",
+      "id": "eu-nld-frys-defry-echtbr",
       "name": "Echtenerbrug",
       "nameLocal": "Ychtenbrêge",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-eester",
+      "id": "eu-nld-frys-defry-eester",
       "name": "Eesterga",
       "nameLocal": "Jistergea",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-elahui",
+      "id": "eu-nld-frys-defry-elahui",
       "name": "Elahuizen",
       "nameLocal": "Ealahuzen",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-folleg",
+      "id": "eu-nld-frys-defry-folleg",
       "name": "Follega",
       "nameLocal": "Follegea",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-goinga",
+      "id": "eu-nld-frys-defry-goinga",
       "name": "Goingarijp",
       "nameLocal": "Goaiïngaryp",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-harich",
+      "id": "eu-nld-frys-defry-harich",
       "name": "Harich",
       "nameLocal": "Harich",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-hasker",
+      "id": "eu-nld-frys-defry-hasker",
       "name": "Haskerhorne",
       "nameLocal": "Haskerhoarne",
       "image": true,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-idsken",
+      "id": "eu-nld-frys-defry-idsken",
       "name": "Idskenhuizen",
       "nameLocal": "Jiskenhuzen",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-defry-jourex",
+      "id": "eu-nld-frys-defry-jourex",
       "name": "Joure",
       "nameLocal": "De Jouwer",
       "image": true,
       "type": "Town"
     },
     {
-      "id": "eu-ned-frys-defry-kolder",
+      "id": "eu-nld-frys-defry-kolder",
       "name": "Kolderwolde",
       "nameLocal": "Kolderwâlde",
       "image": false,
       "type": "Village"
     },
     {
-      "id": "eu-ned-frys-harli",
+      "id": "eu-nld-frys-donia",
+      "name": "Doniawerstal",
+      "nameLocal": "Doanjewerstâl",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Flag_of_Doniawerstal.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 1961,
+          "end": 1984
+        }
+      ]
+    },
+    {
+      "id": "eu-nld-frys-gaasl",
+      "name": "Gaasterlân-Sleat",
+      "nameLocal": "Gaasterlân-Sleat",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Gaasterlan-Sleat_flag.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 1984,
+          "end": 2014
+        }
+      ]
+    },
+    {
+      "id": "eu-nld-frys-harli",
       "name": "Harlingen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-heere",
+      "id": "eu-nld-frys-heere",
       "name": "Heerenveen",
       "nameLocal": "It Hearrenfean",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Heerenveen_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-leeuw",
+      "id": "eu-nld-frys-leeuw",
       "name": "Leeuwarden",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Leeuwarden_vlag_2014.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-noard",
+      "id": "eu-nld-frys-lemst",
+      "name": "Lemsterland",
+      "nameLocal": "Lemsterlân",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Lemsterland.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 1961,
+          "end": 2014
+        }
+      ]
+    },
+    {
+      "id": "eu-nld-frys-noard",
       "name": "Noardeast-Fryslân",
       "nameLocal": "Noardeast-Fryslân",
       "image": true,
-      "type": "Municipality"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flagge_fan_Noardeast-Frysl%C3%A2n.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 2019,
+          "end": 2021,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Noardeast-Frysl%C3%A2n_vlag_%282019%29.svg"
+        },
+        {
+          "start": 2021
+        }
+      ]
     },
     {
-      "id": "eu-ned-frys-oosts",
+      "id": "eu-nld-frys-oosts",
       "name": "Ooststellingwerf",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Ooststellingwerf_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-opste",
+      "id": "eu-nld-frys-opste",
       "name": "Opsterland",
       "nameLocal": "Opsterlân",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_Opsterland.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-schie",
+      "id": "eu-nld-frys-schie",
       "name": "Schiermonnikoog",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Flag_of_Schiermonnikoog.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-small",
+      "id": "eu-nld-frys-skars",
+      "name": "Skarsterlân",
+      "nameLocal": "Skarsterlân",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Skarsterlan_flag.svg",
+      "type": "Municipality",
+      "ranges": [
+        {
+          "start": 1984,
+          "end": 2014
+        }
+      ]
+    },
+    {
+      "id": "eu-nld-frys-small",
       "name": "Smallingerland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Smallingerland_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-sudwe",
+      "id": "eu-nld-frys-sudwe",
       "name": "Súdwest-Fryslân",
       "nameLocal": "Súdwest-Fryslân",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-tersc",
+      "id": "eu-nld-frys-tersc",
       "name": "Terschelling",
       "nameLocal": "Schylge",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Flag_of_Terschelling.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-tytsj",
+      "id": "eu-nld-frys-tytsj",
       "name": "Tytsjerksteradiel",
       "nameLocal": "Tytsjerksteradiel",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Tytsjerksteradiel_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-vliel",
+      "id": "eu-nld-frys-vliel",
       "name": "Vlieland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Vlieland.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-waadh",
+      "id": "eu-nld-frys-waadh",
       "name": "Waadhoeke",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Waadhoeke_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-frys-wests",
+      "id": "eu-nld-frys-wests",
       "name": "Weststellingwerf",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Weststellingwerf_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld",
+      "id": "eu-nld-geld",
       "name": "Gelderland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_Gelderland.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-geld-aalte",
+      "id": "eu-nld-geld-aalte",
       "name": "Aalten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-apeld",
+      "id": "eu-nld-geld-apeld",
       "name": "Apeldoorn",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-arnhe",
+      "id": "eu-nld-geld-arnhe",
       "name": "Arnhem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-barne",
+      "id": "eu-nld-geld-barne",
       "name": "Barneveld",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-bergd",
+      "id": "eu-nld-geld-bergd",
       "name": "Berg en Dal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-berke",
+      "id": "eu-nld-geld-berke",
       "name": "Berkelland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-beuni",
+      "id": "eu-nld-geld-beuni",
       "name": "Beuningen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-bronc",
+      "id": "eu-nld-geld-bronc",
       "name": "Bronckhorst",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-brumm",
+      "id": "eu-nld-geld-brumm",
       "name": "Brummen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-buren",
+      "id": "eu-nld-geld-buren",
       "name": "Buren",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-culem",
+      "id": "eu-nld-geld-culem",
       "name": "Culemborg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-doesb",
+      "id": "eu-nld-geld-doesb",
       "name": "Doesburg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-doeti",
+      "id": "eu-nld-geld-doeti",
       "name": "Doetinchem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-drute",
+      "id": "eu-nld-geld-drute",
       "name": "Druten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-duive",
+      "id": "eu-nld-geld-duive",
       "name": "Duiven",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-edexx",
+      "id": "eu-nld-geld-edexx",
       "name": "Ede",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-elbur",
+      "id": "eu-nld-geld-elbur",
       "name": "Elburg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-epexx",
+      "id": "eu-nld-geld-epexx",
       "name": "Epe",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-ermel",
+      "id": "eu-nld-geld-ermel",
       "name": "Ermelo",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-harde",
+      "id": "eu-nld-geld-harde",
       "name": "Harderwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-hatte",
+      "id": "eu-nld-geld-hatte",
       "name": "Hattem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-heerd",
+      "id": "eu-nld-geld-heerd",
       "name": "Heerde",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-heume",
+      "id": "eu-nld-geld-heume",
       "name": "Heumen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-linge",
+      "id": "eu-nld-geld-linge",
       "name": "Lingewaard",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-loche",
+      "id": "eu-nld-geld-loche",
       "name": "Lochem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-maasd",
+      "id": "eu-nld-geld-maasd",
       "name": "Maasdriel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-montf",
+      "id": "eu-nld-geld-montf",
       "name": "Montferland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-neder",
+      "id": "eu-nld-geld-neder",
       "name": "Neder-Betuwe",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-nijke",
+      "id": "eu-nld-geld-nijke",
       "name": "Nijkerk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-nijme",
+      "id": "eu-nld-geld-nijme",
       "name": "Nijmegen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-nunsp",
+      "id": "eu-nld-geld-nunsp",
       "name": "Nunspeet",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-oldeb",
+      "id": "eu-nld-geld-oldeb",
       "name": "Oldebroek",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-oostg",
+      "id": "eu-nld-geld-oostg",
       "name": "Oost Gelre",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-oijss",
+      "id": "eu-nld-geld-oijss",
       "name": "Oude IJsselstreek",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-overb",
+      "id": "eu-nld-geld-overb",
       "name": "Overbetuwe",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-putte",
+      "id": "eu-nld-geld-putte",
       "name": "Putten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-renku",
+      "id": "eu-nld-geld-renku",
       "name": "Renkum",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-rhede",
+      "id": "eu-nld-geld-rhede",
       "name": "Rheden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-rozen",
+      "id": "eu-nld-geld-rozen",
       "name": "Rozendaal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-scher",
+      "id": "eu-nld-geld-scher",
       "name": "Scherpenzeel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-tielx",
+      "id": "eu-nld-geld-tielx",
       "name": "Tiel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-voors",
+      "id": "eu-nld-geld-voors",
       "name": "Voorst",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-wagen",
+      "id": "eu-nld-geld-wagen",
       "name": "Wageningen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-westb",
+      "id": "eu-nld-geld-westb",
       "name": "West Betuwe",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-westm",
+      "id": "eu-nld-geld-westm",
       "name": "West Maas en Waal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-weste",
+      "id": "eu-nld-geld-weste",
       "name": "Westervoort",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-wijch",
+      "id": "eu-nld-geld-wijch",
       "name": "Wijchen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-winte",
+      "id": "eu-nld-geld-winte",
       "name": "Winterswijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-zaltb",
+      "id": "eu-nld-geld-zaltb",
       "name": "Zaltbommel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-zeven",
+      "id": "eu-nld-geld-zeven",
       "name": "Zevenaar",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-geld-zutph",
+      "id": "eu-nld-geld-zutph",
       "name": "Zutphen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron",
+      "id": "eu-nld-gron",
       "name": "Groningen",
       "nameLocal": "Grunn",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_Groningen.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-gron-eemsd",
+      "id": "eu-nld-gron-eemsd",
       "name": "Eemsdelta",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-groni",
+      "id": "eu-nld-gron-groni",
       "name": "Groningen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-hogel",
+      "id": "eu-nld-gron-hogel",
       "name": "Het Hogeland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-midde",
+      "id": "eu-nld-gron-midde",
       "name": "Midden-Groningen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-oldam",
+      "id": "eu-nld-gron-oldam",
       "name": "Oldambt",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-pekel",
+      "id": "eu-nld-gron-pekel",
       "name": "Pekela",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-stads",
+      "id": "eu-nld-gron-stads",
       "name": "Stadskanaal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-veend",
+      "id": "eu-nld-gron-veend",
       "name": "Veendam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-weste",
+      "id": "eu-nld-gron-weste",
       "name": "Westerkwartier",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-gron-wwold",
+      "id": "eu-nld-gron-wwold",
       "name": "Westerwolde",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-limb",
+      "id": "eu-nld-limb",
       "name": "Limburg",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Flag_of_Limburg_%28Netherlands%29.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-nbra",
+      "id": "eu-nld-nbra",
       "name": "Noord-Brabant",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/North_Brabant-Flag.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-nbra-alphe",
+      "id": "eu-nld-nbra-alphe",
       "name": "Alphen-Chaam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-alten",
+      "id": "eu-nld-nbra-alten",
       "name": "Altena",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-asten",
+      "id": "eu-nld-nbra-asten",
       "name": "Asten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-baarl",
+      "id": "eu-nld-nbra-baarl",
       "name": "Baarle-Nassau",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-berge",
+      "id": "eu-nld-nbra-berge",
       "name": "Bergeijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-beroz",
+      "id": "eu-nld-nbra-beroz",
       "name": "Bergen op Zoom",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-bernh",
+      "id": "eu-nld-nbra-bernh",
       "name": "Bernheze",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-bestx",
+      "id": "eu-nld-nbra-bestx",
       "name": "Best",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-blade",
+      "id": "eu-nld-nbra-blade",
       "name": "Bladel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-boeke",
+      "id": "eu-nld-nbra-boeke",
       "name": "Boekel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-boxme",
+      "id": "eu-nld-nbra-boxme",
       "name": "Boxmeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-boxte",
+      "id": "eu-nld-nbra-boxte",
       "name": "Boxtel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-breda",
+      "id": "eu-nld-nbra-breda",
       "name": "Breda",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-crane",
+      "id": "eu-nld-nbra-crane",
       "name": "Cranendonck",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-cuijk",
+      "id": "eu-nld-nbra-cuijk",
       "name": "Cuijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-deurn",
+      "id": "eu-nld-nbra-deurn",
       "name": "Deurne",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-donge",
+      "id": "eu-nld-nbra-donge",
       "name": "Dongen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-drimm",
+      "id": "eu-nld-nbra-drimm",
       "name": "Drimmelen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-eerse",
+      "id": "eu-nld-nbra-eerse",
       "name": "Eersel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-eindh",
+      "id": "eu-nld-nbra-eindh",
       "name": "Eindhoven",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-etten",
+      "id": "eu-nld-nbra-etten",
       "name": "Etten-Leur",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-geert",
+      "id": "eu-nld-nbra-geert",
       "name": "Geertruidenberg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-geldr",
+      "id": "eu-nld-nbra-geldr",
       "name": "Geldrop-Mierlo",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-gemer",
+      "id": "eu-nld-nbra-gemer",
       "name": "Gemert-Bakel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-gilze",
+      "id": "eu-nld-nbra-gilze",
       "name": "Gilze en Rijen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-goirl",
+      "id": "eu-nld-nbra-goirl",
       "name": "Goirle",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-grave",
+      "id": "eu-nld-nbra-grave",
       "name": "Grave",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-halde",
+      "id": "eu-nld-nbra-halde",
       "name": "Halderberge",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-heeze",
+      "id": "eu-nld-nbra-heeze",
       "name": "Heeze-Leende",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-helmo",
+      "id": "eu-nld-nbra-helmo",
       "name": "Helmond",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-denbo",
+      "id": "eu-nld-nbra-denbo",
       "name": "'s-Hertogenbosch",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-heusd",
+      "id": "eu-nld-nbra-heusd",
       "name": "Heusden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-hilva",
+      "id": "eu-nld-nbra-hilva",
       "name": "Hilvarenbeek",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-laarb",
+      "id": "eu-nld-nbra-laarb",
       "name": "Laarbeek",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-lande",
+      "id": "eu-nld-nbra-lande",
       "name": "Landerd",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-loonz",
+      "id": "eu-nld-nbra-loonz",
       "name": "Loon op Zand",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-meier",
+      "id": "eu-nld-nbra-meier",
       "name": "Meierijstad",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-mills",
+      "id": "eu-nld-nbra-mills",
       "name": "Mill en Sint Hubert",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-moerd",
+      "id": "eu-nld-nbra-moerd",
       "name": "Moerdijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-nuene",
+      "id": "eu-nld-nbra-nuene",
       "name": "Nuenen, Gerwen en Nederwetten",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-oirsc",
+      "id": "eu-nld-nbra-oirsc",
       "name": "Oirschot",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-oiste",
+      "id": "eu-nld-nbra-oiste",
       "name": "Oisterwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-ooste",
+      "id": "eu-nld-nbra-ooste",
       "name": "Oosterhout",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-ossxx",
+      "id": "eu-nld-nbra-ossxx",
       "name": "Oss",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-reuse",
+      "id": "eu-nld-nbra-reuse",
       "name": "Reusel-De Mierden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-roose",
+      "id": "eu-nld-nbra-roose",
       "name": "Roosendaal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-rucph",
+      "id": "eu-nld-nbra-rucph",
       "name": "Rucphen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-sinta",
+      "id": "eu-nld-nbra-sinta",
       "name": "Sint Anthonis",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-sintm",
+      "id": "eu-nld-nbra-sintm",
       "name": "Sint-Michielsgestel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-somer",
+      "id": "eu-nld-nbra-somer",
       "name": "Someren",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-sonbr",
+      "id": "eu-nld-nbra-sonbr",
       "name": "Son en Breugel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-steen",
+      "id": "eu-nld-nbra-steen",
       "name": "Steenbergen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-tilbu",
+      "id": "eu-nld-nbra-tilbu",
       "name": "Tilburg",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-udenx",
+      "id": "eu-nld-nbra-udenx",
       "name": "Uden",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-valke",
+      "id": "eu-nld-nbra-valke",
       "name": "Valkenswaard",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-veldh",
+      "id": "eu-nld-nbra-veldh",
       "name": "Veldhoven",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-vught",
+      "id": "eu-nld-nbra-vught",
       "name": "Vught",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-waalr",
+      "id": "eu-nld-nbra-waalr",
       "name": "Waalre",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-waalw",
+      "id": "eu-nld-nbra-waalw",
       "name": "Waalwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-woens",
+      "id": "eu-nld-nbra-woens",
       "name": "Woensdrecht",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nbra-zunde",
+      "id": "eu-nld-nbra-zunde",
       "name": "Zundert",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol",
+      "id": "eu-nld-nhol",
       "name": "Noord-Holland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Holland.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-nhol-aalsm",
+      "id": "eu-nld-nhol-aalsm",
       "name": "Aalsmeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-alkma",
+      "id": "eu-nld-nhol-alkma",
       "name": "Alkmaar",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-amstv",
+      "id": "eu-nld-nhol-amstv",
       "name": "Amstelveen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-amste",
+      "id": "eu-nld-nhol-amste",
       "name": "Amsterdam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-beems",
+      "id": "eu-nld-nhol-beems",
       "name": "Beemster",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-berge",
+      "id": "eu-nld-nhol-berge",
       "name": "Bergen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-bever",
+      "id": "eu-nld-nhol-bever",
       "name": "Beverwijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-blari",
+      "id": "eu-nld-nhol-blari",
       "name": "Blaricum",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-bloem",
+      "id": "eu-nld-nhol-bloem",
       "name": "Bloemendaal",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-castr",
+      "id": "eu-nld-nhol-castr",
       "name": "Castricum",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-denhe",
+      "id": "eu-nld-nhol-denhe",
       "name": "Den Helder",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-dieme",
+      "id": "eu-nld-nhol-dieme",
       "name": "Diemen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-drech",
+      "id": "eu-nld-nhol-drech",
       "name": "Drechterland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-evdam",
+      "id": "eu-nld-nhol-evdam",
       "name": "Edam-Volendam",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-enkhu",
+      "id": "eu-nld-nhol-enkhu",
       "name": "Enkhuizen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-goois",
+      "id": "eu-nld-nhol-goois",
       "name": "Gooise Meren",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-haarl",
+      "id": "eu-nld-nhol-haarl",
       "name": "Haarlem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-haarm",
+      "id": "eu-nld-nhol-haarm",
       "name": "Haarlemmermeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-heems",
+      "id": "eu-nld-nhol-heems",
       "name": "Heemskerk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-heeme",
+      "id": "eu-nld-nhol-heeme",
       "name": "Heemstede",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-heerh",
+      "id": "eu-nld-nhol-heerh",
       "name": "Heerhugowaard",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-heilo",
+      "id": "eu-nld-nhol-heilo",
       "name": "Heiloo",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-hilve",
+      "id": "eu-nld-nhol-hilve",
       "name": "Hilversum",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-hkroo",
+      "id": "eu-nld-nhol-hkroo",
       "name": "Hollands Kroon",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-hoorn",
+      "id": "eu-nld-nhol-hoorn",
       "name": "Hoorn",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-huize",
+      "id": "eu-nld-nhol-huize",
       "name": "Huizen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-kogge",
+      "id": "eu-nld-nhol-kogge",
       "name": "Koggenland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-lands",
+      "id": "eu-nld-nhol-lands",
       "name": "Landsmeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-lange",
+      "id": "eu-nld-nhol-lange",
       "name": "Langedijk",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-laren",
+      "id": "eu-nld-nhol-laren",
       "name": "Laren",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-medem",
+      "id": "eu-nld-nhol-medem",
       "name": "Medemblik",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-oostz",
+      "id": "eu-nld-nhol-oostz",
       "name": "Oostzaan",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-opmee",
+      "id": "eu-nld-nhol-opmee",
       "name": "Opmeer",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-oamst",
+      "id": "eu-nld-nhol-oamst",
       "name": "Ouder-Amstel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-purme",
+      "id": "eu-nld-nhol-purme",
       "name": "Purmerend",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-schag",
+      "id": "eu-nld-nhol-schag",
       "name": "Schagen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-stbro",
+      "id": "eu-nld-nhol-stbro",
       "name": "Stede Broec",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-texel",
+      "id": "eu-nld-nhol-texel",
       "name": "Texel",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-uitge",
+      "id": "eu-nld-nhol-uitge",
       "name": "Uitgeest",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-uitho",
+      "id": "eu-nld-nhol-uitho",
       "name": "Uithoorn",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-velse",
+      "id": "eu-nld-nhol-velse",
       "name": "Velsen",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-water",
+      "id": "eu-nld-nhol-water",
       "name": "Waterland",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-weesp",
+      "id": "eu-nld-nhol-weesp",
       "name": "Weesp",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-wijde",
+      "id": "eu-nld-nhol-wijde",
       "name": "Wijdemeren",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-worme",
+      "id": "eu-nld-nhol-worme",
       "name": "Wormerland",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-zaans",
+      "id": "eu-nld-nhol-zaans",
       "name": "Zaanstad",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-nhol-zaans-assend",
+      "id": "eu-nld-nhol-zaans-assend",
       "name": "Assendelft",
       "nameLocal": "",
       "type": "Town"
     },
     {
-      "id": "eu-ned-nhol-zandv",
+      "id": "eu-nld-nhol-zandv",
       "name": "Zandvoort",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-over",
+      "id": "eu-nld-over",
       "name": "Overijssel",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Flag_of_Overijssel.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-utre",
+      "id": "eu-nld-utre",
       "name": "Utrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Utrecht_%28province%29-Flag.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-zeel",
+      "id": "eu-nld-zeel",
       "name": "Zeeland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Zeeland.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-zhol",
+      "id": "eu-nld-zhol",
       "name": "Zuid-Holland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Zuid-Holland.svg",
       "type": "Province"
     },
     {
-      "id": "eu-ned-zhol-albla",
+      "id": "eu-nld-zhol-albla",
       "name": "Alblasserdam",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Alblasserdam_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-albra",
+      "id": "eu-nld-zhol-albra",
       "name": "Albrandswaard",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Albrandswaard_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-alphe",
+      "id": "eu-nld-zhol-alphe",
       "name": "Alphen aan den Rijn",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Vlag_Alphen_aan_den_Rijn.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-baren",
+      "id": "eu-nld-zhol-baren",
       "name": "Barendrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Barendrecht_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-bodeg",
+      "id": "eu-nld-zhol-bodeg",
       "name": "Bodegraven-Reeuwijk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Bodegraven-Reeuwijk_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-briel",
+      "id": "eu-nld-zhol-briel",
       "name": "Brielle",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Flag_of_Brielle.svg",
+      "ranges": [
+        {
+          "start": 1980,
+          "end": 2023
+        }
+      ],
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-capel",
+      "id": "eu-nld-zhol-capel",
       "name": "Capelle aan den IJssel",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Capelle_aan_den_IJssel_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-delft",
+      "id": "eu-nld-zhol-delft",
       "name": "Delft",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Delft.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-dordt",
+      "id": "eu-nld-zhol-dordt",
       "name": "Dordrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Flag_of_Dordrecht.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-goere",
+      "id": "eu-nld-zhol-goere",
       "name": "Goeree-Overflakkee",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Goeree-Overflakkee_gemeentevlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-gorin",
+      "id": "eu-nld-zhol-gorin",
       "name": "Gorinchem",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_Gorinchem.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-gouda",
+      "id": "eu-nld-zhol-gouda",
       "name": "Gouda",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Gouda.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-denha",
+      "id": "eu-nld-zhol-denha",
       "name": "'s-Gravenhage",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_The_Hague.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-hardi",
+      "id": "eu-nld-zhol-hardi",
       "name": "Hardinxveld-Giessendam",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Hardinxveldgiessendam_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-helle",
+      "id": "eu-nld-zhol-helle",
       "name": "Hellevoetsluis",
       "nameLocal": "",
       "image": true,
-      "type": "Municipality"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flag_of_Hellevoetsluis.svg",
+      "ranges": [
+        {
+          "start": 1960,
+          "end": 2023
+        }
+      ],
+      "type": "City"
     },
     {
-      "id": "eu-ned-zhol-hendr",
+      "id": "eu-nld-zhol-hendr",
       "name": "Hendrik-Ido-Ambacht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Flag_of_Hendrik-Ido-Ambacht.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-hille",
+      "id": "eu-nld-zhol-hille",
       "name": "Hillegom",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_Hillegom.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-hoeks",
+      "id": "eu-nld-zhol-hoeks",
       "name": "Hoeksche Waard",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Hoeksche_Waard_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-kaagb",
+      "id": "eu-nld-zhol-kaagb",
       "name": "Kaag en Braassem",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-katwk",
+      "id": "eu-nld-zhol-katwk",
       "name": "Katwijk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Katwijk_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-krimp",
+      "id": "eu-nld-zhol-krimp",
       "name": "Krimpen aan den IJssel",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Krimpen_aan_den_IJssel_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-krimw",
+      "id": "eu-nld-zhol-krimw",
       "name": "Krimpenerwaard",
       "nameLocal": "",
       "image": false,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Gemeentevlag_Krimpenerwaard.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-lansi",
+      "id": "eu-nld-zhol-lansi",
       "name": "Lansingerland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_Lansingerland.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-leide",
+      "id": "eu-nld-zhol-leide",
       "name": "Leiden",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Leiden.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-leidd",
+      "id": "eu-nld-zhol-leidd",
       "name": "Leiderdorp",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Leiderdorp_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-leids",
+      "id": "eu-nld-zhol-leids",
       "name": "Leidschendam-Voorburg",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Leidschendam-Voorburg_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-lisse",
+      "id": "eu-nld-zhol-lisse",
       "name": "Lisse",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Flag_of_Lisse.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-maass",
+      "id": "eu-nld-zhol-maass",
       "name": "Maassluis",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Maassluis_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-midde",
+      "id": "eu-nld-zhol-midde",
       "name": "Midden-Delfland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Midden_Delfland_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-molen",
+      "id": "eu-nld-zhol-molen",
       "name": "Molenlanden",
       "nameLocal": "",
       "image": false,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-nieuw",
+      "id": "eu-nld-zhol-nieuw",
       "name": "Nieuwkoop",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Flag_of_Nieuwkoop.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-nisse",
+      "id": "eu-nld-zhol-nisse",
       "name": "Nissewaard",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Nissewaard_gemeentevlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-noord",
+      "id": "eu-nld-zhol-noord",
       "name": "Noordwijk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Noordwijk_vlag_2020.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-oegst",
+      "id": "eu-nld-zhol-oegst",
       "name": "Oegstgeest",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Oegstgeest_Netherlands_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-papen",
+      "id": "eu-nld-zhol-papen",
       "name": "Papendrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Papendrecht.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-pijna",
+      "id": "eu-nld-zhol-pijna",
       "name": "Pijnacker-Nootdorp",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Pijnacker-Nootdorp_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-ridde",
+      "id": "eu-nld-zhol-ridde",
       "name": "Ridderkerk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Ridderkerk_Netherlands.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-rijsw",
+      "id": "eu-nld-zhol-rijsw",
       "name": "Rijswijk",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Papendrecht.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-rotte",
+      "id": "eu-nld-zhol-rotte",
       "name": "Rotterdam",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Flag_of_Rotterdam.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-schie",
+      "id": "eu-nld-zhol-schie",
       "name": "Schiedam",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Flag_of_Schiedam.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-slied",
+      "id": "eu-nld-zhol-slied",
       "name": "Sliedrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Flag_of_Sliedrecht.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-teyli",
+      "id": "eu-nld-zhol-teyli",
       "name": "Teylingen",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Teylingen_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-vlaar",
+      "id": "eu-nld-zhol-vlaar",
       "name": "Vlaardingen",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Flag_of_Vlaardingen.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-voors",
+      "id": "eu-nld-zhol-voorn",
+      "name": "Voorne aan Zee",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Flag_Voorne_aan_Zee.svg",
+      "ranges": [
+        {
+          "start": 2023
+        }
+      ],
+      "type": "Municipality"
+    },
+    {
+      "id": "eu-nld-zhol-voorn-briell",
+      "name": "Brielle",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Flag_of_Brielle.svg",
+      "type": "City"
+    },
+    {
+      "id": "eu-nld-zhol-voorn-hellev",
+      "name": "Hellevoetsluis",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flag_of_Hellevoetsluis.svg",
+      "type": "City"
+    },
+    {
+      "id": "eu-nld-zhol-voors",
       "name": "Voorschoten",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Flag_of_Voorschoten.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-waddi",
+      "id": "eu-nld-zhol-waddi",
       "name": "Waddinxveen",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Vlag_waddinxveen.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-wasse",
+      "id": "eu-nld-zhol-wasse",
       "name": "Wassenaar",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Wassenaar_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-westl",
+      "id": "eu-nld-zhol-westl",
       "name": "Westland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Westland_municipality_flag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-westv",
+      "id": "eu-nld-zhol-westv",
       "name": "Westvoorne",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Flag_of_Westvoorne.svg",
+      "ranges": [
+        {
+          "start": 1980,
+          "end": 2023
+        }
+      ],
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-zoete",
+      "id": "eu-nld-zhol-zoete",
       "name": "Zoetermeer",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Zoetermeer_vlag.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-zoetw",
+      "id": "eu-nld-zhol-zoetw",
       "name": "Zoeterwoude",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Flag_of_Zoeterwoude.svg",
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-zuidp",
+      "id": "eu-nld-zhol-zuidp",
       "name": "Zuidplas",
       "nameLocal": "",
       "image": true,
       "type": "Municipality"
     },
     {
-      "id": "eu-ned-zhol-zwijn",
+      "id": "eu-nld-zhol-zwijn",
       "name": "Zwijndrecht",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Zwijndrecht_%28Nederland%29_vlag.svg",
       "type": "Municipality"
     },
     {
@@ -3823,6 +4376,17 @@
       "name": "North Macedonia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_North_Macedonia.svg",
+      "ranges": [
+        {
+          "start": 1992,
+          "end": 2019,
+          "name": "Macedonia"
+        },
+        {
+          "start": 2019
+        }
+      ],
       "type": "Country"
     },
     {
@@ -3830,6 +4394,12 @@
       "name": "Norway",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
+      "ranges": [
+        {
+          "start": 1821
+        }
+      ],
       "type": "Country"
     },
     {
@@ -3837,6 +4407,22 @@
       "name": "Poland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg",
+      "ranges": [
+        {
+          "start": 1919,
+          "end": 1927,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Poland_%281919%E2%80%931928%29.svg"
+        },
+        {
+          "start": 1927,
+          "end": 1980,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Poland_%281928%E2%80%931980%29.svg"
+        },
+        {
+          "start": 1980
+        }
+      ],
       "type": "Country"
     },
     {
@@ -3844,6 +4430,7 @@
       "name": "Portugal",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg",
       "type": "Country"
     },
     {
@@ -3851,13 +4438,7 @@
       "name": "Romania",
       "nameLocal": "",
       "image": true,
-      "type": "Country"
-    },
-    {
-      "id": "eu-rus",
-      "name": "Russia",
-      "nameLocal": "",
-      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
       "type": "Country"
     },
     {
@@ -3865,6 +4446,7 @@
       "name": "San Marino",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_San_Marino.svg",
       "type": "Country"
     },
     {
@@ -3872,6 +4454,7 @@
       "name": "Serbia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg",
       "type": "Country"
     },
     {
@@ -3879,6 +4462,7 @@
       "name": "Slovakia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Slovakia.svg",
       "type": "Country"
     },
     {
@@ -3886,6 +4470,7 @@
       "name": "Slovenia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Slovenia.svg",
       "type": "Country"
     },
     {
@@ -3893,6 +4478,7 @@
       "name": "Spain",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
       "type": "Country"
     },
     {
@@ -3904,23 +4490,28 @@
       "ranges": [
         {
           "start": 1922,
-          "end": 1923
+          "end": 1923,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_the_Soviet_Union_%281922%E2%80%931923%29.svg"
         },
         {
           "start": 1923,
-          "end": 1924
+          "end": 1924,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Soviet_Union_%281924%29.svg"
         },
         {
           "start": 1924,
-          "end": 1936
+          "end": 1936,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_the_Soviet_Union_%281924%E2%80%931936%29.svg"
         },
         {
           "start": 1936,
-          "end": 1955
+          "end": 1955,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_the_USSR_%281936-1955%29.svg"
         },
         {
           "start": 1955,
-          "end": 1991
+          "end": 1991,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Soviet_Union.svg"
         }
       ]
     },
@@ -3929,6 +4520,7 @@
       "name": "Sweden",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg",
       "type": "Country"
     },
     {
@@ -3936,6 +4528,7 @@
       "name": "Switzerland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
       "type": "Country",
       "ranges": [
         {
@@ -3944,17 +4537,11 @@
       ]
     },
     {
-      "id": "eu-tur",
-      "name": "Turkey",
-      "nameLocal": "",
-      "image": true,
-      "type": "Country"
-    },
-    {
       "id": "eu-ukr",
       "name": "Ukraine",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
       "type": "Country"
     },
     {
@@ -3962,6 +4549,39 @@
       "name": "United Kingdom",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
+      "type": "Country"
+    },
+    {
+      "id": "eu-gbr-engl",
+      "name": "England",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg",
+      "type": "Country"
+    },
+    {
+      "id": "eu-gbr-nire",
+      "name": "Northern Ireland",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Flag_of_Northern_Ireland_%281924%E2%80%931953%29.svg",
+      "type": "Province"
+    },
+    {
+      "id": "eu-gbr-scot",
+      "name": "Scotland",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Scotland.svg",
+      "type": "Country"
+    },
+    {
+      "id": "eu-gbr-wale",
+      "name": "Wales",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Flag_of_Wales.svg",
       "type": "Country"
     },
     {
@@ -3969,6 +4589,7 @@
       "name": "Vatican City",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Flag_of_the_Vatican_City_%282023%E2%80%93present%29.svg",
       "type": "Country"
     },
     {
@@ -3980,11 +4601,13 @@
       "ranges": [
         {
           "start": 1918,
-          "end": 1941
+          "end": 1941,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Flag_of_Yugoslavia_%281918%E2%80%931941%29.svg"
         },
         {
           "start": 1946,
-          "end": 1992
+          "end": 1992,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Flag_of_Yugoslavia_%281946-1992%29.svg"
         }
       ]
     },
@@ -3998,6 +4621,7 @@
       "name": "Anguilla",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Anguilla.svg",
       "parent": "eu-gbr",
       "type": "Country"
     },
@@ -4006,6 +4630,7 @@
       "name": "Antigua and Barbuda",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Antigua_and_Barbuda.svg",
       "type": "Country"
     },
     {
@@ -4013,6 +4638,7 @@
       "name": "Aruba",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Aruba.svg",
       "parent": "eu-nld",
       "type": "Country"
     },
@@ -4021,6 +4647,7 @@
       "name": "Bahamas, the",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Flag_of_the_Bahamas.svg",
       "type": "Country"
     },
     {
@@ -4028,6 +4655,7 @@
       "name": "Barbados",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Barbados.svg",
       "type": "Country"
     },
     {
@@ -4035,6 +4663,7 @@
       "name": "Belize",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Flag_of_Belize.svg",
       "type": "Country"
     },
     {
@@ -4042,6 +4671,7 @@
       "name": "Bermuda",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bermuda.svg",
       "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
@@ -4050,6 +4680,7 @@
       "name": "Bonaire",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_Bonaire.svg",
       "parent": "eu-nld",
       "type": "Special Municipality"
     },
@@ -4058,6 +4689,7 @@
       "name": "British Virgin Islands",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_British_Virgin_Islands.svg",
       "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
@@ -4066,6 +4698,7 @@
       "name": "Canada",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg",
       "type": "Country"
     },
     {
@@ -4073,6 +4706,7 @@
       "name": "Cayman Islands",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_the_Cayman_Islands.svg",
       "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
@@ -4089,6 +4723,7 @@
       "name": "Costa Rica",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg",
       "type": "Country"
     },
     {
@@ -4096,6 +4731,7 @@
       "name": "Cuba",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Flag_of_Cuba.svg",
       "type": "Country"
     },
     {
@@ -4103,6 +4739,7 @@
       "name": "Curaçao",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_Cura%C3%A7ao.svg",
       "parent": "eu-nld",
       "type": "Constituent Country"
     },
@@ -4111,6 +4748,7 @@
       "name": "Dominica",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Flag_of_Dominica.svg",
       "type": "Country"
     },
     {
@@ -4118,6 +4756,7 @@
       "name": "Dominican Republic",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg",
       "type": "Country"
     },
     {
@@ -4125,6 +4764,7 @@
       "name": "El Salvador",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_El_Salvador.svg",
       "type": "Country"
     },
     {
@@ -4132,6 +4772,7 @@
       "name": "Federal Dependencies of Venezuela",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Federal_dependencies_of_Venezuela%27s_Flag.svg",
       "parent": "sa-ven",
       "type": "Special Administrative Division"
     },
@@ -4140,6 +4781,7 @@
       "name": "Greenland",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_Greenland.svg",
       "parent": "eu-dnk",
       "type": "Autonomous Territory"
     },
@@ -4148,6 +4790,7 @@
       "name": "Grenada",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Grenada.svg",
       "type": "Country"
     },
     {
@@ -4155,6 +4798,7 @@
       "name": "Guadeloupe",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Unofficial_flag_of_Guadeloupe_%28local%29.svg",
       "parent": "eu-fra",
       "type": "Overseas Department"
     },
@@ -4163,6 +4807,7 @@
       "name": "Guatemala",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Guatemala.svg",
       "type": "Country"
     },
     {
@@ -4170,6 +4815,7 @@
       "name": "Haiti",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Haiti.svg",
       "type": "Country"
     },
     {
@@ -4177,6 +4823,27 @@
       "name": "Honduras",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Flag_of_Honduras.svg",
+      "ranges": [
+        {
+          "start": 1839,
+          "end": 1866,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Honduras_%281839-1866%29.svg"
+        },
+        {
+          "start": 1866,
+          "end": 1949,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Flag_of_Honduras_%281866-1949%29.svg"
+        },
+        {
+          "start": 1949,
+          "end": 2022,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Honduras_%281949%E2%80%932022%29.svg"
+        },
+        {
+          "start": 2022
+        }
+      ],
       "type": "Country"
     },
     {
@@ -4184,6 +4851,7 @@
       "name": "Jamaica",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Jamaica.svg",
       "type": "Country"
     },
     {
@@ -4191,6 +4859,7 @@
       "name": "Martinique",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag-of-Martinique.svg",
       "parent": "eu-fra",
       "type": "Overseas Department"
     },
@@ -4199,6 +4868,7 @@
       "name": "Mexico",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg",
       "type": "Country"
     },
     {
@@ -4206,6 +4876,7 @@
       "name": "Montserrat",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Montserrat.svg",
       "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
@@ -4214,6 +4885,7 @@
       "name": "Nicaragua",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg",
       "type": "Country"
     },
     {
@@ -4221,6 +4893,7 @@
       "name": "Nueva Esparta",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Nueva_Esparta.svg",
       "parent": "sa-ven",
       "type": "State"
     },
@@ -4229,6 +4902,7 @@
       "name": "Panama",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg",
       "type": "Country"
     },
     {
@@ -4236,6 +4910,7 @@
       "name": "Puerto Rico",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Flag_of_Puerto_Rico.svg",
       "parent": "na-usa",
       "type": "Unincorporated Territory"
     },
@@ -4244,6 +4919,7 @@
       "name": "Saba",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Saba.svg",
       "parent": "eu-nld",
       "type": "Special Municipality"
     },
@@ -4252,6 +4928,7 @@
       "name": "Saint Barthélemy",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Saint_Barth%C3%A9lemy_%28local%29.svg",
       "parent": "eu-fra",
       "type": "Overseas Collectivity"
     },
@@ -4260,6 +4937,7 @@
       "name": "Saint Kitts and Nevis",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg",
       "type": "Country"
     },
     {
@@ -4267,6 +4945,7 @@
       "name": "Saint Lucia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Saint_Lucia.svg",
       "type": "Country"
     },
     {
@@ -4282,6 +4961,7 @@
       "name": "Saint Pierre and Miquelon",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_Saint-Pierre_and_Miquelon.svg",
       "parent": "eu-fra",
       "type": "Overseas Collectivity"
     },
@@ -4290,6 +4970,7 @@
       "name": "Saint Vincent and the Grenadines",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg",
       "type": "Country"
     },
     {
@@ -4297,6 +4978,7 @@
       "name": "San Andrés and Providencia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_San_Andr%C3%A9s_y_Providencia.svg",
       "parent": "sa-col",
       "type": "Department"
     },
@@ -4305,6 +4987,7 @@
       "name": "Sint Eustatius",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_Sint_Eustatius.svg",
       "parent": "eu-nld",
       "type": "Special Municipality"
     },
@@ -4313,6 +4996,7 @@
       "name": "Sint Maarten",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Sint_Maarten.svg",
       "parent": "eu-nld",
       "type": "Constituent Country"
     },
@@ -4321,6 +5005,7 @@
       "name": "Trinidad and Tobago",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Trinidad_and_Tobago.svg",
       "type": "Country"
     },
     {
@@ -4328,6 +5013,7 @@
       "name": "Turks and Caicos Islands",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_the_Turks_and_Caicos_Islands.svg",
       "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
@@ -4336,13 +5022,407 @@
       "name": "United States",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
       "type": "Country"
+    },
+    {
+      "id": "na-usa-alab",
+      "name": "Alabama",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Alabama.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-alas",
+      "name": "Alaska",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Alaska.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-ariz",
+      "name": "Arizona",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arizona.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-arka",
+      "name": "Arkansas",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-cali",
+      "name": "California",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-colo",
+      "name": "Colorado",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Flag_of_Colorado.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-conn",
+      "name": "Connecticut",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Flag_of_Connecticut.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-dela",
+      "name": "Delaware",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Flag_of_Delaware.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-flor",
+      "name": "Florida",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-geor",
+      "name": "Georgia",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_the_State_of_Georgia.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-idah",
+      "name": "Idaho",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_Idaho.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-illi",
+      "name": "Illinois",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Illinois.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-indi",
+      "name": "Indiana",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Flag_of_Indiana.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-iowa",
+      "name": "Iowa",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Iowa.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-kans",
+      "name": "Kansas",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Kansas.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-kent",
+      "name": "Kentucky",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Flag_of_Kentucky.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-loui",
+      "name": "Louisiana",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Flag_of_Louisiana.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-main",
+      "name": "Maine",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Maine.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-mary",
+      "name": "Maryland",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_Maryland.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-mass",
+      "name": "Massachusetts",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Massachusetts.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-mich",
+      "name": "Michigan",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flag_of_Michigan.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-minn",
+      "name": "Minnesota",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Minnesota.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-miss",
+      "name": "Mississippi",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_Mississippi.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-misr",
+      "name": "Missouri",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Missouri.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-mont",
+      "name": "Montana",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_Montana.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-nebr",
+      "name": "Nebraska",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flag_of_Nebraska.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-neva",
+      "name": "Nevada",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Flag_of_Nevada.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-newh",
+      "name": "New Hampshire",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Flag_of_New_Hampshire.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-newj",
+      "name": "New Jersey",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_New_Jersey.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-newm",
+      "name": "New Mexico",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_New_Mexico.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-newy",
+      "name": "New York",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_New_York.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-ncar",
+      "name": "North Carolina",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Flag_of_North_Carolina.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-ndak",
+      "name": "North Dakota",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Flag_of_North_Dakota.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-ohio",
+      "name": "Ohio",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Ohio.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-okla",
+      "name": "Oklahoma",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Flag_of_Oklahoma.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-oreg",
+      "name": "Oregon",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Oregon.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-penn",
+      "name": "Pennsylvania",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Pennsylvania.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-rhod",
+      "name": "Rhode Island",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Rhode_Island.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-scar",
+      "name": "South Carolina",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_South_Carolina.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-sdak",
+      "name": "South Dakota",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_South_Dakota.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-tenn",
+      "name": "Tennessee",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Tennessee.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-texa",
+      "name": "Texas",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-utah",
+      "name": "Utah",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Utah.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-verm",
+      "name": "Vermont",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Vermont.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-virg",
+      "name": "Virginia",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Virginia.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-wash",
+      "name": "Washington",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Washington.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-wvir",
+      "name": "West Virginia",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Flag_of_West_Virginia.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-wisc",
+      "name": "Wisconsin",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Flag_of_Wisconsin.svg",
+      "type": "State"
+    },
+    {
+      "id": "na-usa-wyom",
+      "name": "Wyoming",
+      "nameLocal": "",
+      "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Wyoming.svg",
+      "type": "State"
     },
     {
       "id": "na-vir",
       "name": "United States Virgin Islands",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Flag_of_the_United_States_Virgin_Islands.svg",
       "parent": "na-usa",
       "type": "Unincorporated Territory"
     },
@@ -4356,6 +5436,7 @@
       "name": "Argentina",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
       "type": "Country"
     },
     {
@@ -4363,6 +5444,7 @@
       "name": "Bolivia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Flag_of_Bolivia_%28state%29.svg",
       "type": "Country"
     },
     {
@@ -4378,6 +5460,7 @@
       "name": "Brazil",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
       "type": "Country"
     },
     {
@@ -4385,6 +5468,7 @@
       "name": "Chile",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg",
       "type": "Country"
     },
     {
@@ -4392,6 +5476,7 @@
       "name": "Colombia",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg",
       "type": "Country"
     },
     {
@@ -4399,6 +5484,7 @@
       "name": "Ecuador",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg",
       "type": "Country"
     },
     {
@@ -4406,6 +5492,7 @@
       "name": "Falkland Islands",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_Falkland_Islands.svg",
       "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
@@ -4414,6 +5501,7 @@
       "name": "French Guiana",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_French_Guiana.svg",
       "parent": "eu-fra",
       "type": "Overseas Collectivity"
     },
@@ -4422,6 +5510,7 @@
       "name": "Guyana",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_Guyana.svg",
       "type": "Country"
     },
     {
@@ -4429,6 +5518,7 @@
       "name": "Paraguay",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Paraguay.svg",
       "type": "Country"
     },
     {
@@ -4436,6 +5526,7 @@
       "name": "Peru",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg",
       "type": "Country"
     },
     {
@@ -4443,6 +5534,7 @@
       "name": "South Georgia and the South Sandwich Islands",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_South_Georgia_and_the_South_Sandwich_Islands.svg",
       "parent": "eu-gbr",
       "type": "Overseas Territory"
     },
@@ -4451,6 +5543,7 @@
       "name": "Suriname",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Flag_of_Suriname.svg",
       "type": "Country"
     },
     {
@@ -4458,6 +5551,7 @@
       "name": "Uruguay",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Uruguay.svg",
       "type": "Country"
     },
     {
@@ -4465,6 +5559,7 @@
       "name": "Venezuela",
       "nameLocal": "",
       "image": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Venezuela.svg",
       "type": "Country"
     }
   ]

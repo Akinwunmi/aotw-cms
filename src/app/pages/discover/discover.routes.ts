@@ -13,7 +13,6 @@ export const DISCOVER_ROUTES: Route[] = [
         loadChildren: () => import('../../components/topics/topics.routes').then(
           m => m.TOPIC_ROUTES
         ),
-        title: 'Topic'
       }
     ]
   }

@@ -2,7 +2,6 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  HostBinding,
   OnDestroy,
   OnInit,
   computed,
@@ -10,6 +9,7 @@ import {
   signal
 } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { AotwSkeletonComponent } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
 import { Subject, combineLatest, filter, map, switchMap, take, takeUntil } from 'rxjs';
 
@@ -21,15 +21,22 @@ import {
   TopicWithRange
 } from '../../models';
 import { ImagePipe } from '../../pipes';
-import { ArchiveService } from '../../services';
-import { SharedModule } from '../../shared';
+import { ArchiveService, TopicService } from '../../services';
+import { SHARED_IMPORTS } from '../../shared';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
+import { ImageComponent } from '../image';
 
 @Component({
   selector: 'app-topics',
   standalone: true,
-  imports: [SharedModule, RouterModule, ImagePipe],
+  imports: [
+    ...SHARED_IMPORTS,
+    RouterModule,
+    AotwSkeletonComponent,
+    ImageComponent,
+    ImagePipe
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']
@@ -38,18 +45,22 @@ export class TopicsComponent implements OnDestroy, OnInit {
   // TODO - Implement applyFilters method
   public filteredTopics: TopicWithRange[] = [];
 
-  @HostBinding('class.grid')
   public gridLayout = true;
 
   public archiveId!: string;
 
+  public noImageFound = false;
+
+  public topicId = signal('');
+
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
+  private topicService = inject(TopicService);
   private store = inject(Store);
 
   private topics = signal<TopicWithRange[]>([]);
-  private topicId = signal('');
+
   private parentTopic = computed(
     () => this.topicId()?.split('-').slice(-1)[0] || ''
   );
@@ -95,7 +106,9 @@ export class TopicsComponent implements OnDestroy, OnInit {
       this.activeFilters = filters;
       this.activeSorting = sorting.find(option => option.active);
       this.selectedYear = selectedYear;
-      this.setImageRange();
+      this.filteredTopics = this.filterTopics(this.topics()).map(topic =>
+        this.topicService.setImageRange(topic, this.selectedYear)
+      );
       this.gridLayout = layout === Layout.Grid;
 
       // TODO - Fix parent sorting
@@ -118,47 +131,21 @@ export class TopicsComponent implements OnDestroy, OnInit {
     });
   }
 
-  private setImageRange(): void {
-    this.filteredTopics = (this.filterTopics(this.topics()).map(topic => {
-      if (!topic.ranges) {
-        return topic;
-      }
-
-      if (topic.ranges.length === 1) {
-        const { start, end, image } = topic.ranges.slice(-1)[0];
-        return {
-          ...topic,
-          image: image ?? topic.image,
-          rangeSuffix: `_${start}-${end || ''}`
-        };
-      }
-
-      const range = topic.ranges.reduce((prev, curr) => {
-        if (curr.start && this.selectedYear - curr.start >= 0) {
-          return curr;
-        }
-        if (prev.start && this.selectedYear - prev.start >= 0) {
-          return prev;
-        }
-        return {};
-      });
-
-      const { start, end, image } = range;
-      return {
-        ...topic,
-        image: image ?? topic.image,
-        rangeSuffix: start ? `_${start}-${end || ''}` : undefined
-      };
-    }));
+  public handleImageError(): void {
+    this.noImageFound = true;
   }
 
   public setParentLabel(parent: string): string {
     return parent.split('-').slice(-1)[0];
   }
 
+  public setTopicLabel(id: string): string {
+    return id.replaceAll('-', '_');
+  }
+
   private getTopics(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
-    this.archiveId = url[RouteDiscover.Archive];
+    this.archiveId = '23flag01';
     this.topicId.set(url[RouteDiscover.Topic]);
   }
 
@@ -172,7 +159,10 @@ export class TopicsComponent implements OnDestroy, OnInit {
     return topics.filter(topic => {
       const query =
         // Define childs of parent topic
-        topic.id.startsWith(this.topicId()) &&
+        (
+          topic.id.startsWith(this.topicId()) ||
+          topic.altId?.startsWith(this.topicId())
+        ) &&
         // If the first character after the topic id is an underscore,
         // it is part of the parent screen and is filtered out
         topic.id[this.topicId().length] !== '_' &&

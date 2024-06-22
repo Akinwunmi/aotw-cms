@@ -1,0 +1,37 @@
+:host {
+  aspect-ratio: 3 / 2;
+  display: flex;
+  position: relative;
+
+  &::before {
+    background-color: var(--aotw-color-white);
+    border: 1px solid var(--aotw-color-grey-400);
+    content: '';
+    inset: -0.125rem auto -0.125rem calc(var(--aotw-space-xs) * -1);
+    position: absolute;
+    width: 0.125rem;
+  }
+
+  img {
+    margin: 0 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+:host(.placeholder) {
+  background-color: var(--aotw-color-primary-100);
+
+  img {
+    display: none;
+  }
+}
+
+// Fix for displaying images properly in Safari
+// ? This is needed because some external SVG images do not have a viewBox attribute
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  img {
+    height: 100%;
+    max-width: 100%;  
+  }
+}

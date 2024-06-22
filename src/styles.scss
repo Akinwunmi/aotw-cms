@@ -13,11 +13,6 @@ body {
   color: var(--aotw-color-primary-500);
   font-family: var(--aotw-font-family-primary);
   transition: background-color 150ms ease-in-out;
-
-  &.create {
-    background-color: var(--aotw-color-primary-500);
-    color: var(--aotw-color-white);
-  }
 }
 
 h1,

@@ -8,21 +8,30 @@ import { AppState } from './reducers.model';
 
 export const initialState: AppState = {
   discover: {
+    activeTopicId: '', // TODO: Assign and check in Discover component on init
     filters: [],
     sorting: [],
     sortDirection: SortDirection.Asc
   },
   layout: Layout.Grid,
+  search: {
+    filters: [],
+    sorting: [],
+    sortDirection: SortDirection.Asc
+  },
   selectedYear: new Date().getFullYear(),
   theme: Theme.Light
 };
 
 export const reducer = createReducer(
   initialState,
-  on(setDiscoverState, (state, { filters, sorting, sortDirection }) => {
+  on(setDiscoverState, (
+    state,
+    { activeTopicId, filters, sorting, sortDirection }
+  ) => {
     return {
       ...state,
-      discover: { filters, sorting, sortDirection }
+      discover: { activeTopicId, filters, sorting, sortDirection }
     };
   }),
   on(setLayout, (state, { layout }) => ({ ...state, layout })),
