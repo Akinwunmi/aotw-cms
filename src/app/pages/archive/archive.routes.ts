@@ -15,13 +15,13 @@ export const ARCHIVE_ROUTES: Route[] = [
       },
       {
         path: 'search',
-        loadChildren: () => import('../search/search.routes').then(
+        loadChildren: () => import('../search').then(
           m => m.SEARCH_ROUTES
         )
       },
       {
         path: 'discover',
-        loadChildren: () => import('../discover/discover.routes').then(
+        loadChildren: () => import('../discover').then(
           m => m.DISCOVER_ROUTES
         )
       }

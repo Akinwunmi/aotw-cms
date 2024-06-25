@@ -22,7 +22,18 @@
 .menu {
   display: grid;
   margin-right: var(--aotw-space-s);
-  min-width: 10rem;
+  width: 12rem;
+  max-width: 100%;
+
+  .message {
+    align-items: center;
+    display: grid;
+    background-color: var(--aotw-color-white);
+    box-sizing: border-box;
+    color: var(--aotw-color-grey-500);
+    min-height: var(--aotw-size-l);
+    padding: var(--aotw-space-s);
+  }
 
   aotw-ng-list-item {
     cursor: pointer;
