@@ -4,8 +4,10 @@
     "NL": "Nederlands"
   },
   "PAGES": {
+    "ABOUT": "Over dit project",
     "HOME": "Home",
-    "ABOUT": "Over dit project"
+    "LOGIN": "Inloggen",
+    "SIGNUP": "Registreren"
   },
   "COMMON": {
     "ADD": "Voeg toe",
@@ -18,14 +20,26 @@
       "NEXT": "Volgende"
     },
     "DISCOVER": "Ontdek",
+    "EMAIL_ADDRESS": "E-mailadres",
     "FILTERS": "Filters",
+    "LOGGED_OUT": "Uitgelogd",
+    "LOGIN": "Inloggen",
+    "LOGOUT": "Uitloggen",
     "NAME": "Naam",
     "PAGE_NOT_FOUND": "Pagina onbekend",
+    "PASSWORD": "Wachtwoord",
     "SEARCH": "Zoek",
-    "SORT": "Sorteer"
+    "SIGNUP": "Registreren",
+    "SORT": "Sorteer",
+    "USERNAME": "Gebruikersnaam",
+    "WELCOME": "Welkom!",
+    "WELCOME_USER": "Welkom {{ username }}!"
   },
   "FOOTER": {
     "SITEMAP": "Sitemap"
+  },
+  "SIGNUP": {
+    "HAS_ACCOUNT": "Ik heb al een account"
   },
   "FILTERS_AND_SORTING": {
     "FILTER_BY": "Filteren met:"

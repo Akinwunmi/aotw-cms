@@ -4,8 +4,10 @@
     "NL": "Nederlands"
   },
   "PAGES": {
+    "ABOUT": "About this project",
     "HOME": "Home",
-    "ABOUT": "About this project"
+    "LOGIN": "Log in",
+    "SIGNUP": "Sign up"
   },
   "COMMON": {
     "ADD": "Add",
@@ -18,14 +20,26 @@
       "NEXT": "Next"
     },
     "DISCOVER": "Discover",
+    "EMAIL_ADDRESS": "Email Address",
     "FILTERS": "Filters",
+    "LOGGED_OUT": "Logged out",
+    "LOGIN": "Log in",
+    "LOGOUT": "Log out",
     "NAME": "Name",
     "PAGE_NOT_FOUND": "Page Not Found",
+    "PASSWORD": "Password",
     "SEARCH": "Search",
-    "SORT": "Sort"
+    "SIGNUP": "Sign up",
+    "SORT": "Sort",
+    "USERNAME": "Username",
+    "WELCOME": "Welcome!",
+    "WELCOME_USER": "Welcome {{ username }}!"
   },
   "FOOTER": {
     "SITEMAP": "Sitemap"
+  },
+  "SIGNUP": {
+    "HAS_ACCOUNT": "I already have an account"
   },
   "FILTERS_AND_SORTING": {
     "FILTER_BY": "Filter by:"

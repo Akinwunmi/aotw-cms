@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="signUp()">
+  <aotw-ng-form-field [label]="'COMMON.USERNAME' | translate">
+    <input type="text" [placeholder]="'COMMON.USERNAME' | translate" formControlName="username" />
+  </aotw-ng-form-field>
+  <aotw-ng-form-field [label]="'COMMON.EMAIL_ADDRESS' | translate">
+    <input type="email" [placeholder]="'COMMON.EMAIL_ADDRESS' | translate" formControlName="email" />
+  </aotw-ng-form-field>
+  <aotw-ng-form-field [label]="'COMMON.PASSWORD' | translate">
+    <input type="password" [placeholder]="'COMMON.PASSWORD' | translate" formControlName="password" />
+  </aotw-ng-form-field>
+  <button type="submit">
+    {{ 'COMMON.SIGNUP' | translate }}
+  </button>
+</form>
+<button ghost (click)="goToLogIn()">
+  {{ 'SIGNUP.HAS_ACCOUNT' | translate }}
+</button>
+{{ errorMessage }}

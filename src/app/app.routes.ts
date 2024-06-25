@@ -5,9 +5,21 @@ import { PageNotFoundComponent } from './pages/page-not-found';
 export const APP_ROUTES: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/archive/archive.routes').then(
+    loadChildren: () => import('./pages/archive').then(
       m => m.ARCHIVE_ROUTES
     ),
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login').then(
+      m => m.LOGIN_ROUTES
+    )
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./pages/signup').then(
+      m => m.SIGNUP_ROUTES
+    )
   },
   {
     path: '**',
