@@ -4431,6 +4431,81 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg",
+      "ranges": [
+        {
+          "start": 1095,
+          "end": 1143,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/PortugueseFlag1095.svg"
+        },
+        {
+          "start": 1143,
+          "end": 1185,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/PortugueseFlag1143.svg"
+        },
+        {
+          "start": 1185,
+          "end": 1248,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/PortugueseFlag1185.svg"
+        },
+        {
+          "start": 1248,
+          "end": 1385,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_Kingdom_of_Portugal_%281248%E2%80%931385%29.svg"
+        },
+        {
+          "start": 1385,
+          "end": 1485,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_the_Kingdom_of_Portugal_%281385%E2%80%931485%29.svg"
+        },
+        {
+          "start": 1485,
+          "end": 1521,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_the_Kingdom_of_Portugal_%281485%E2%80%93mid-16th_century%29.svg"
+        },
+        {
+          "start": 1521,
+          "end": 1578,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Portugal_%281521%29.svg"
+        },
+        {
+          "start": 1578,
+          "end": 1640,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_Portugal_%281578%29.svg"
+        },
+        {
+          "start": 1640,
+          "end": 1667,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_Portugal_%281640%29.svg"
+        },
+        {
+          "start": 1667,
+          "end": 1706,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Flag_of_Portugal_%281667%29.svg"
+        },
+        {
+          "start": 1706,
+          "end": 1816,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Portugal_%281707-1816%29.svg"
+        },
+        {
+          "start": 1816,
+          "end": 1826,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_the_United_Kingdom_of_Portugal%2C_Brazil%2C_and_the_Algarves_%281815-1825%29.svg"
+        },
+        {
+          "start": 1826,
+          "end": 1834,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Portugal_1826-1834.svg"
+        },
+        {
+          "start": 1834,
+          "end": 1910,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Flag_of_Portugal_%281830%E2%80%931910%29.svg"
+        },
+        {
+          "start": 1910
+        }
+      ],
       "type": "Country"
     },
     {
