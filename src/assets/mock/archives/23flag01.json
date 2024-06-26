@@ -939,7 +939,12 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1923
+        }
+      ]
     },
     {
       "id": "as-tkm",
@@ -1348,7 +1353,12 @@
       "name": "Denmark",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1219
+        }
+      ]
     },
     {
       "id": "eu-est",
@@ -2073,7 +2083,12 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1845
+        }
+      ]
     },
     {
       "id": "eu-mlt",
@@ -2081,7 +2096,12 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1964
+        }
+      ]
     },
     {
       "id": "eu-mda",
@@ -2089,7 +2109,17 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1990,
+          "end": 2010,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Moldova_%281990%E2%80%932010%29.svg"
+        },
+        {
+          "start": 2010
+        }
+      ]
     },
     {
       "id": "eu-mco",
@@ -2097,7 +2127,16 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Flag_of_Monaco.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1297,
+          "imageUrl": ""
+        },
+        {
+          "start": 1881
+        }
+      ]
     },
     {
       "id": "eu-mne",
@@ -4397,6 +4436,11 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
       "ranges": [
         {
+          "start": 1814,
+          "end": 1821,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Flag_of_the_Kingdom_of_Norway_%281814%29.svg"
+        },
+        {
           "start": 1821
         }
       ],
@@ -4514,7 +4558,31 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1866,
+          "end": 1948
+        },
+        {
+          "start": 1948,
+          "end": 1952,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Romania_%281948%E2%80%931952%29.svg"
+        },
+        {
+          "start": 1952,
+          "end": 1965,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_Romania_%281952%E2%80%931965%29.svg"
+        },
+        {
+          "start": 1965,
+          "end": 1989,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_Romania_%281965%E2%80%931989%29.svg"
+        },
+        {
+          "start": 1989
+        }
+      ]
     },
     {
       "id": "eu-smr",
@@ -4522,7 +4590,17 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_San_Marino.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1862,
+          "end": 2011,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Flag_of_San_Marino_%28pre-2011%29.svg"
+        },
+        {
+          "start": 2011
+        }
+      ]
     },
     {
       "id": "eu-srb",
@@ -4530,7 +4608,32 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1281,
+          "end": 1346,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Serbia_%281281%29.svg"
+        },
+        {
+          "start": 1346,
+          "end": 1371,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Flag_of_the_Serbian_Empire%2C_reconstruction.svg"
+        },
+        {
+          "start": 1882,
+          "end": 1918,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Serbia_%281882%E2%80%931918%29.svg"
+        },
+        {
+          "start": 2006,
+          "end": 2010,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Serbia_%282004%E2%80%932010%29.svg"
+        },
+        {
+          "start": 2010
+        }
+      ]
     },
     {
       "id": "eu-svk",
@@ -4538,7 +4641,12 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Slovakia.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1993
+        }
+      ]
     },
     {
       "id": "eu-svn",
@@ -4546,7 +4654,12 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Slovenia.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1991
+        }
+      ]
     },
     {
       "id": "eu-esp",
@@ -4554,7 +4667,67 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1492,
+          "end": 1506,
+          "imageUrl": ""
+        },
+        {
+          "start": 1506,
+          "end": 1808,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Flag_of_Cross_of_Burgundy.svg"
+        },
+        {
+          "start": 1808,
+          "end": 1813,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Bandera_de_Espa%C3%B1a_1808-1813.svg"
+        },
+        {
+          "start": 1813,
+          "end": 1843,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Flag_of_Cross_of_Burgundy.svg"
+        },
+        {
+          "start": 1843,
+          "end": 1873,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Flag_of_Spain_%281785%E2%80%931873%2C_1875%E2%80%931931%29.svg"
+        },
+        {
+          "start": 1873,
+          "end": 1874,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_the_First_Spanish_Republic.svg"
+        },
+        {
+          "start": 1874,
+          "end": 1931,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Flag_of_Spain_%281785%E2%80%931873%2C_1875%E2%80%931931%29.svg"
+        },
+        {
+          "start": 1931,
+          "end": 1939,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Bandera_de_la_Rep%C3%BAblica_Espa%C3%B1ola_%281931-1939%29.svg"
+        },
+        {
+          "start": 1939,
+          "end": 1945,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Spain_%281938%E2%80%931945%29.svg"
+        },
+        {
+          "start": 1945,
+          "end": 1977,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Flag_of_Spain_%281945%E2%80%931977%29.svg"
+        },
+        {
+          "start": 1977,
+          "end": 1981,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Spain_%281977%E2%80%931981%29.svg"
+        },
+        {
+          "start": 1981
+        }
+      ]
     },
     {
       "id": "eu-sov",
@@ -4596,7 +4769,37 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1523,
+          "end": 1620,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Sweden-Flag-1562.svg"
+        },
+        {
+          "start": 1620,
+          "end": 1815,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Swedish_Empire_flag.png"
+        },
+        {
+          "start": 1815,
+          "end": 1844,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Ensign_of_Sweden_and_Norway_%281815%E2%80%931844%29.svg"
+        },
+        {
+          "start": 1844,
+          "end": 1905,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Swedish_civil_ensign_%281844%E2%80%931905%29.svg"
+        },
+        {
+          "start": 1905,
+          "end": 1906,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Flag_of_Sweden_%28pre-1906%29.svg"
+        },
+        {
+          "start": 1906
+        }
+      ]
     },
     {
       "id": "eu-che",
@@ -4617,7 +4820,12 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1991
+        }
+      ]
     },
     {
       "id": "eu-gbr",
@@ -4625,7 +4833,12 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1801
+        }
+      ]
     },
     {
       "id": "eu-gbr-engl",
@@ -4665,7 +4878,22 @@
       "nameLocal": "",
       "image": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Flag_of_the_Vatican_City_%282023%E2%80%93present%29.svg",
-      "type": "Country"
+      "type": "Country",
+      "ranges": [
+        {
+          "start": 1929,
+          "end": 2001,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Flag_of_the_Vatican_City_%281929-2001%29.svg"
+        },
+        {
+          "start": 2001,
+          "end": 2023,
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_the_Vatican_City_%282001%E2%80%932023%29.svg"
+        },
+        {
+          "start": 2023
+        }
+      ]
     },
     {
       "id": "eu-yug",
