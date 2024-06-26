@@ -2,12 +2,13 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  OnDestroy,
+  DestroyRef,
   OnInit,
   computed,
   inject,
   signal
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { BreadcrumbItem } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
@@ -16,10 +17,8 @@ import {
   combineLatest,
   filter,
   map,
-  Subject,
   switchMap,
-  take,
-  takeUntil
+  take
 } from 'rxjs';
 
 import {
@@ -44,7 +43,7 @@ import { DISCOVER_IMPORTS } from './discover.imports';
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
 })
-export class DiscoverComponent implements OnDestroy, OnInit {
+export class DiscoverComponent implements OnInit {
   public archiveData!: ArchiveTopics;
 
   public mainTopics?: Topic[];
@@ -60,6 +59,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
 
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
+  private destroyRef = inject(DestroyRef);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private store = inject(Store);
@@ -71,7 +71,6 @@ export class DiscoverComponent implements OnDestroy, OnInit {
   private archiveId = '23flag01';
   private currentYear = new Date().getFullYear();
 
-  private unsubscribe$ = new Subject<void>();
   private discoverState$ = this.store.select(selectDiscover).pipe(
     take(1)
   );
@@ -112,15 +111,10 @@ export class DiscoverComponent implements OnDestroy, OnInit {
         this.getArchiveData(url);
         return getArchive$;
       }),
-      takeUntil(this.unsubscribe$)
+      takeUntilDestroyed(this.destroyRef)
     ).subscribe(archiveData => {
       this.setArchiveData(archiveData);
     });
-  }
-
-  public ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
   }
 
   public setActiveTopic(id: string): void {
@@ -193,7 +187,7 @@ export class DiscoverComponent implements OnDestroy, OnInit {
         filters: Object.values(filterTranslations) as string[],
         sorting: Object.values(sortingTranslations) as string[]
       })),
-      takeUntil(this.unsubscribe$)
+      takeUntilDestroyed(this.destroyRef)
     ).subscribe(({ filters, sorting }) => {
       this.filters = filters.map((label, index) => ({
         id: String(index),
