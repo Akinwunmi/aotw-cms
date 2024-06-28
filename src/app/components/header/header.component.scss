@@ -8,20 +8,20 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  gap: var(--aotw-space-s);
+  gap: var(--aotw-space-sm);
   max-width: 100%;
   min-width: 18rem;
-  padding-inline: var(--aotw-space-s);
+  padding-inline: var(--aotw-space-sm);
 }
 
 .menu-list {
   display: flex;
-  gap: var(--aotw-space-s);
+  gap: var(--aotw-space-sm);
 }
 
 .menu {
   display: grid;
-  margin-right: var(--aotw-space-s);
+  margin-right: var(--aotw-space-sm);
   width: 12rem;
   max-width: 100%;
 
@@ -31,8 +31,8 @@
     background-color: var(--aotw-color-white);
     box-sizing: border-box;
     color: var(--aotw-color-grey-500);
-    min-height: var(--aotw-size-l);
-    padding: var(--aotw-space-s);
+    min-height: var(--aotw-size-lg);
+    padding: var(--aotw-space-sm);
   }
 
   aotw-ng-list-item {

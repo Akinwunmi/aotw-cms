@@ -1,15 +1,15 @@
 :host {
   align-items: center;
   display: grid;
-  gap: 0 var(--aotw-space-l);
+  gap: 0 var(--aotw-space-lg);
   grid-template-columns: 1fr auto;
-  padding-block: var(--aotw-space-l);
+  padding-block: var(--aotw-space-lg);
   width: 100%;
   height: 100%;
 }
 
 aotw-tab-group {
-  padding-top: var(--aotw-space-s);
+  padding-top: var(--aotw-space-sm);
 
   aotw-tab {
     box-sizing: content-box;
@@ -17,7 +17,7 @@ aotw-tab-group {
 }
 
 button {
-  margin-right: var(--aotw-space-s);
+  margin-right: var(--aotw-space-sm);
 
   @media only screen and (max-width: 30rem) {
     span {

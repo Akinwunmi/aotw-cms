@@ -1,0 +1,9 @@
+<h2>{{ 'PAGES.MY_FAVORITES' | translate }}</h2>
+<section>
+  @for (topic of favoriteTopics$ | async; track topic.id) {
+    <div class="topic">
+      <app-topic [routerLink]="'../discover/topic/' + topic.id" [topic]="topic" />
+      <app-favorite-button [id]="topic.id" />
+    </div>
+  }
+</section>

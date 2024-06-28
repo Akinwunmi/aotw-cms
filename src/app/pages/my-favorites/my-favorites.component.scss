@@ -1,0 +1,17 @@
+:host {
+  align-content: flex-start;
+  display: grid;
+  gap: var(--aotw-space-lg);
+  padding: var(--aotw-space-md) var(--aotw-space-sm);
+}
+
+section {
+  display: grid;
+  gap: var(--aotw-space-xl) var(--aotw-space-lg);
+  grid-template-columns: repeat(auto-fill, minmax(min(9.25rem, 100%), 1fr));
+
+  .topic {
+    display: grid;
+    gap: var(--aotw-space-xs);
+  }
+}

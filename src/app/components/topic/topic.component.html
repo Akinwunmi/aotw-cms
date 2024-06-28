@@ -1,0 +1,15 @@
+<figure [ngClass]="{ card: card() }">
+  <app-image
+    [src]="topic().imageUrl || (topic().id | image: 'assets/mock/images/': topic().rangeSuffix)"
+    [alt]="topic().name"
+    [placeholder]="!topic().imageUrl && !topic().image"
+  />
+  @if (showLabel()) {
+    <figcaption>
+      <span class="name">{{ 'REGIONS' | translationKey: topic().id | translate }}</span>
+      @if (topic().parent; as parent) {
+        <span class="parent">({{ setParentLabel(parent) }})</span>
+      }
+    </figcaption>
+  }
+</figure>
