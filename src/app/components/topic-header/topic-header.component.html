@@ -2,9 +2,15 @@
   <aotw-ng-breadcrumb [items]="breadcrumb()" (selectedItem)="goToPage($event)" />
   <h2>{{ setTranslationKey('TOPICS', rangedTopic().type) | uppercase | translate }}</h2>
   <div class="topic-name">
-    <button title="The Flag Archive Logo">
-      <aotw-ng-icon name="logo" />
-    </button>
+    @if (isFavorite()) {
+      <button (click)="removeFavorite()">
+        <aotw-ng-icon class="star" name="shine" size="large" />
+      </button>
+    } @else {
+      <button (click)="addFavorite()">
+        <aotw-ng-icon class="star" name="logo" size="large" />
+      </button>
+    }
     <h3>{{ rangedTopic().name }}</h3>
   </div>
 </div>

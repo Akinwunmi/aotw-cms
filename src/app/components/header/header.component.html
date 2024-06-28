@@ -35,8 +35,23 @@
 
 <ng-template #mainMenu>
   <div class="menu">
+    <div class="message">
+      {{ menuMessage | translate}}
+    </div>
     <aotw-ng-list-item>
       {{ 'PAGES.ABOUT' | translate }}
     </aotw-ng-list-item>
+    @if (currentUser()) {
+      <aotw-ng-list-item role="button" (click)="logOut()">
+        {{ 'COMMON.LOGOUT' | translate }}
+      </aotw-ng-list-item>
+    } @else {
+      <aotw-ng-list-item role="button" (click)="goToLogin()">
+        {{ 'COMMON.LOGIN' | translate }}
+      </aotw-ng-list-item>
+      <aotw-ng-list-item role="button" (click)="signUp()">
+        {{ 'COMMON.SIGNUP' | translate }}
+      </aotw-ng-list-item>
+    }
   </div>
 </ng-template>

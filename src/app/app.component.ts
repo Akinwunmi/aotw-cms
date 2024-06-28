@@ -25,15 +25,10 @@ import { HeaderComponent } from './components/header';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  public title = 'aotw-cms';
-
   private translate = inject(TranslateService);
-
-  public constructor() {
-    AotwIconRegistry.register(icons);
-  }
-
+  
   public ngOnInit(): void {
+    AotwIconRegistry.register(icons);
     this.setDefaultLanguage();
   }
 
