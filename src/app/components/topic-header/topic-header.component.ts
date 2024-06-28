@@ -15,11 +15,11 @@ import {
   BreadcrumbItem
 } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, switchMap, takeUntil } from 'rxjs';
 
 import { TopicWithRange } from '../../models';
 import { ImagePipe } from '../../pipes';
-import { TopicService } from '../../services';
+import { TopicService, UserService } from '../../services';
 import { SHARED_IMPORTS } from '../../shared';
 import { selectSelectedYear } from '../../state/selectors';
 import { ImageComponent } from '../image';
@@ -44,6 +44,7 @@ export class TopicHeaderComponent implements OnInit {
 
   public breadcrumb = input<BreadcrumbItem[]>([]);
 
+  public isFavorite = signal(false);
   private selectedYear = signal<number | undefined>(undefined);
   
   public rangedTopic = computed(() => (
@@ -56,16 +57,39 @@ export class TopicHeaderComponent implements OnInit {
   private router = inject(Router);
   private topicService = inject(TopicService);
   private store = inject(Store);
+  private userService = inject(UserService);
   
   private unsubscribe$ = new Subject<void>();
   private selectSelectedYear$ = this.store.select(selectSelectedYear);
 
   public ngOnInit(): void {
+    this.userService.getUser().subscribe((user) => {
+      this.isFavorite.set(user?.favorites.includes(this.topic().id));
+    });
+
     this.selectSelectedYear$.pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(selectedYear => {
       this.selectedYear.set(selectedYear);
       this.cdr.detectChanges();
+    });
+  }
+
+  public addFavorite(): void {
+    // TODO - Improve handling the updated favorites list
+    this.userService.addFavorite(this.topic().id).pipe(
+      switchMap(() => this.userService.getUser()),
+    ).subscribe(user => {
+      this.isFavorite.set(user?.favorites.includes(this.topic().id));
+    });
+  }
+
+  public removeFavorite(): void {
+    // TODO - Improve handling the updated favorites list
+    this.userService.removeFavorite(this.topic().id).pipe(
+      switchMap(() => this.userService.getUser()),
+    ).subscribe(user => {
+      this.isFavorite.set(user?.favorites.includes(this.topic().id));
     });
   }
 
