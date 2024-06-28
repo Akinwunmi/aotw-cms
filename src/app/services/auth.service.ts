@@ -10,7 +10,7 @@ import {
 } from '@angular/fire/auth';
 import { Observable, from } from 'rxjs';
 
-import { User } from '../models';
+import { AuthUser } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -19,9 +19,11 @@ export class AuthService {
   private firebaseAuth = inject(Auth);
 
   private user = toSignal(user(this.firebaseAuth));
-  public currentUser = computed<User | undefined>(() => {
+  public currentUser = computed<AuthUser | undefined>(() => {
     const user = this.user();
-    return user ? { email: user.email, username: user.displayName } as User : undefined;
+    return user
+      ? { email: user.email, username: user.displayName } as AuthUser
+      : undefined;
   });
 
   public signUp(username: string, email: string, password: string): Observable<void> {
