@@ -16,6 +16,12 @@ export const APP_ROUTES: Routes = [
     )
   },
   {
+    path: 'my-favorites',
+    loadChildren: () => import('./pages/my-favorites').then(
+      m => m.MY_FAVORITES_ROUTES
+    )
+  },
+  {
     path: 'signup',
     loadChildren: () => import('./pages/signup').then(
       m => m.SIGNUP_ROUTES

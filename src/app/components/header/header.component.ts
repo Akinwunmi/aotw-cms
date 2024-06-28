@@ -69,6 +69,11 @@ export class HeaderComponent implements OnInit {
     this.menuOpen = undefined;
   }
 
+  public goToMyFavorites(): void {
+    this.router.navigate(['my-favorites']);
+    this.menuOpen = undefined;
+  }
+
   public logOut(): void {
     this.authService.logOut();
     this.menuMessage = 'COMMON.LOGGED_OUT';

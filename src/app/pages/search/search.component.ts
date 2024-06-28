@@ -44,13 +44,12 @@ export class SearchComponent implements OnInit {
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
 
-  private archiveId = '23flag01';
   private topics = signal<Topic[]>([]);
 
   private unsubscribe$ = new Subject<void>();
 
   public ngOnInit(): void {
-    this.archiveService.getArchive(this.archiveId).pipe(
+    this.archiveService.getArchive().pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(({ topics }) => {
       this.topics.set(topics);

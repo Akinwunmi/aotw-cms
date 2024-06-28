@@ -2,16 +2,17 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  OnDestroy,
+  DestroyRef,
   OnInit,
   computed,
   inject,
   signal
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { AotwSkeletonComponent } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
-import { Subject, combineLatest, filter, map, switchMap, take, takeUntil } from 'rxjs';
+import { combineLatest, filter, map, switchMap, take } from 'rxjs';
 
 import {
   ArchiveTopics,
@@ -26,28 +27,28 @@ import { SHARED_IMPORTS } from '../../shared';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
 import { ImageComponent } from '../image';
+import { TopicComponent } from '../topic';
 
 @Component({
   selector: 'app-topics',
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    RouterModule,
     AotwSkeletonComponent,
     ImageComponent,
-    ImagePipe
+    ImagePipe,
+    RouterModule,
+    TopicComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topics.component.html',
   styleUrls: ['./topics.component.scss']
 })
-export class TopicsComponent implements OnDestroy, OnInit {
+export class TopicsComponent implements OnInit {
   // TODO - Implement applyFilters method
   public filteredTopics: TopicWithRange[] = [];
 
   public gridLayout = true;
-
-  public archiveId!: string;
 
   public noImageFound = false;
 
@@ -55,9 +56,10 @@ export class TopicsComponent implements OnDestroy, OnInit {
 
   private archiveService = inject(ArchiveService);
   private cdr = inject(ChangeDetectorRef);
+  private destroyRef = inject(DestroyRef);
   private router = inject(Router);
-  private topicService = inject(TopicService);
   private store = inject(Store);
+  private topicService = inject(TopicService);
 
   private topics = signal<TopicWithRange[]>([]);
 
@@ -69,14 +71,13 @@ export class TopicsComponent implements OnDestroy, OnInit {
   private activeSorting?: SortOption;
   private selectedYear!: number;
 
-  private unsubscribe$ = new Subject<void>();
   private selectDiscover$ = this.store.select(selectDiscover);
   private selectLayout$ = this.store.select(selectLayout);
   private selectSelectedYear$ = this.store.select(selectSelectedYear);
 
   public ngOnInit(): void {
     this.getTopics(this.router.url);
-    const getArchive$ = this.archiveService.getArchive(this.archiveId);
+    const getArchive$ = this.archiveService.getArchive();
 
     getArchive$.pipe(
       take(1)
@@ -91,7 +92,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
         this.getTopics(url);
         return getArchive$;
       }),
-      takeUntil(this.unsubscribe$)
+      takeUntilDestroyed(this.destroyRef)
     ).subscribe(archiveData => {
       this.setTopics(archiveData);
     });
@@ -101,7 +102,7 @@ export class TopicsComponent implements OnDestroy, OnInit {
       this.selectLayout$,
       this.selectSelectedYear$
     ]).pipe(
-      takeUntil(this.unsubscribe$)
+      takeUntilDestroyed(this.destroyRef)
     ).subscribe(([{ filters, sorting, sortDirection }, layout, selectedYear]) => {
       this.activeFilters = filters;
       this.activeSorting = sorting.find(option => option.active);
@@ -131,21 +132,8 @@ export class TopicsComponent implements OnDestroy, OnInit {
     });
   }
 
-  public handleImageError(): void {
-    this.noImageFound = true;
-  }
-
-  public setParentLabel(parent: string): string {
-    return parent.split('-').slice(-1)[0];
-  }
-
-  public setTopicLabel(id: string): string {
-    return id.replaceAll('-', '_');
-  }
-
   private getTopics(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
-    this.archiveId = '23flag01';
     this.topicId.set(url[RouteDiscover.Topic]);
   }
 
@@ -186,10 +174,5 @@ export class TopicsComponent implements OnDestroy, OnInit {
           start && start <= this.selectedYear && (!end || end > this.selectedYear)
         );
     });
-  }
-
-  public ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
   }
 }

@@ -5,7 +5,7 @@
   <aotw-ng-form-field [label]="'COMMON.PASSWORD' | translate">
     <input type="password" [placeholder]="'COMMON.PASSWORD' | translate" formControlName="password" />
   </aotw-ng-form-field>
-  <button type="submit" [disabled]="form.invalid || form.pristine">
+  <button raised type="submit" [disabled]="form.invalid || form.pristine">
     {{ 'COMMON.LOGIN' | translate }}
   </button>
 </form>

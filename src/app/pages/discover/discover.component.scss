@@ -6,9 +6,9 @@
   justify-content: space-between;
   height: 10rem;
   overflow: hidden;
-  padding: var(--aotw-space-m) var(--aotw-space-s);
+  padding: var(--aotw-space-md) var(--aotw-space-sm);
   position: sticky;
-  top: var(--aotw-size-m);
+  top: var(--aotw-size-md);
   transition: height 150ms ease-in-out;
   z-index: 1;
 
@@ -34,6 +34,6 @@
 
 .content {
   display: grid;
-  gap: var(--aotw-space-s);
-  padding: var(--aotw-space-m) var(--aotw-space-s);
+  gap: var(--aotw-space-sm);
+  padding: var(--aotw-space-md) var(--aotw-space-sm);
 }
