@@ -1,7 +1,7 @@
 :host {
   align-items: center;
   display: grid;
-  gap: var(--aotw-space-l);
+  gap: var(--aotw-space-lg);
   height: 2.5rem;
 }
 
@@ -17,7 +17,7 @@
 
   .filter-group {
     display: flex;
-    gap: var(--aotw-space-m);
+    gap: var(--aotw-space-md);
     
     .mobile {
       display: none;
@@ -37,14 +37,14 @@
 
 .active-filter {
   display: grid;
-  gap: var(--aotw-space-s);
+  gap: var(--aotw-space-sm);
   grid-template-columns: auto 1fr;
 
   .filters {
     align-items: center;
     display: flex;
     font-weight: var(--aotw-font-weight-light);
-    gap: var(--aotw-space-s);
+    gap: var(--aotw-space-sm);
     justify-content: flex-start;
   }
 }

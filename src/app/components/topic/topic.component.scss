@@ -1,0 +1,41 @@
+figure {
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  gap: var(--aotw-space-sm);
+  grid-template-columns: var(--aotw-size-lg) 1fr;
+  grid-template-rows: auto;
+  margin: 0;
+  width: 100%;
+
+  figcaption {
+    display: flex;
+    gap: var(--aotw-space-sm);
+
+    .parent {
+      font-size: var(--aotw-font-size-xs);
+      line-height: var(--aotw-font-line-height-md);
+      text-transform: uppercase;
+    }
+  }
+
+  &.card {
+    gap: var(--aotw-space-xs);
+    grid-template-columns: auto;
+    grid-template-rows: auto var(--aotw-size-sm);
+    
+    figcaption {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      height: var(--aotw-space-xl);
+      overflow: hidden;
+    
+      .name {
+        display: -webkit-box;
+        word-break: break-all;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
