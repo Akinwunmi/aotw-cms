@@ -1,9 +1,9 @@
 @if (active()) {
-  <button rounded (click)="remove()">
-    <aotw-ng-icon name="favorite-fill" size="large" />
+  <button flagButton rounded (click)="remove()">
+    <flag-icon name="star-fill" />
   </button>
 } @else {
-  <button rounded (click)="add()">
-    <aotw-ng-icon name="favorite" size="large" />
+  <button flagButton rounded (click)="add()">
+    <flag-icon name="star" />
   </button>
 }

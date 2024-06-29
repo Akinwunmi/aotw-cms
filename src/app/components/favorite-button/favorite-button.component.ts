@@ -5,14 +5,14 @@ import {
   inject,
   input
 } from '@angular/core';
-import { AotwIconComponent } from '@aotw/ng-components';
+import { ButtonDirective, FlagIconComponent } from '@flagarchive/angular';
 
 import { UserService } from '../../services';
 
 @Component({
   selector: 'app-favorite-button',
   standalone: true,
-  imports: [AotwIconComponent],
+  imports: [ButtonDirective, FlagIconComponent],
   templateUrl: './favorite-button.component.html',
   styleUrl: './favorite-button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

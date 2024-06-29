@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AotwFormFieldComponent } from '@aotw/ng-components';
+import { FlagFormFieldComponent } from '@flagarchive/angular';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { AuthService } from '../../services';
@@ -9,7 +9,7 @@ import { AuthService } from '../../services';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [AotwFormFieldComponent, ReactiveFormsModule, TranslateModule],
+  imports: [FlagFormFieldComponent, ReactiveFormsModule, TranslateModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

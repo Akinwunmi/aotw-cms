@@ -5,19 +5,20 @@ import {
   inject
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AotwIconRegistry } from '@aotw/components';
-import icons from '@aotw/core/dist/icons/icons.json';
+import { IconService } from '@flagarchive/angular';
 import { TranslateService } from '@ngx-translate/core';
 
-import { FooterComponent } from './components/footer';
-import { HeaderComponent } from './components/header';
+import { ICONS } from '../assets/images/icons';
+
+import { ApplicationFooterComponent } from './components/application-footer';
+import { ApplicationHeaderComponent } from './components/application-header';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    FooterComponent,
-    HeaderComponent,
+    ApplicationFooterComponent,
+    ApplicationHeaderComponent,
     RouterModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -25,10 +26,11 @@ import { HeaderComponent } from './components/header';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  private iconService = inject(IconService);
   private translate = inject(TranslateService);
   
   public ngOnInit(): void {
-    AotwIconRegistry.register(icons);
+    this.iconService.register(ICONS);
     this.setDefaultLanguage();
   }
 

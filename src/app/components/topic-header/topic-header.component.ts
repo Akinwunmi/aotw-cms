@@ -11,11 +11,7 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router, RouterModule } from '@angular/router';
-import {
-  AotwBreadcrumbComponent,
-  AotwIconComponent,
-  BreadcrumbItem
-} from '@aotw/ng-components';
+import { BreadcrumbItem, FlagBreadcrumbComponent } from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
 
 import { TopicWithRange } from '../../models';
@@ -31,9 +27,8 @@ import { ImageComponent } from '../image';
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    AotwBreadcrumbComponent,
-    AotwIconComponent,
     FavoriteButtonComponent,
+    FlagBreadcrumbComponent,
     ImageComponent,
     ImagePipe,
     RouterModule,

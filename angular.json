@@ -34,7 +34,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/@aotw/core/dist/style.css"
+              "node_modules/@flagarchive/angular/core/styles.scss"
             ],
             "scripts": [],
             "browser": "src/main.ts"

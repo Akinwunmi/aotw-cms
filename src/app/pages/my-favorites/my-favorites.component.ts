@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { map, switchMap } from 'rxjs';
 
 import { FavoriteButtonComponent } from '../../components/favorite-button';
+import { PageHeaderComponent } from '../../components/page-header';
 import { TopicComponent } from '../../components/topic';
 import { TopicWithRange } from '../../models';
 import { ArchiveService, UserService } from '../../services';
@@ -15,9 +16,10 @@ import { ArchiveService, UserService } from '../../services';
   imports: [
     AsyncPipe,
     FavoriteButtonComponent,
-    RouterLink,
+    PageHeaderComponent,
     TopicComponent,
-    TranslateModule
+    TranslateModule,
+    RouterLink
   ],
   templateUrl: './my-favorites.component.html',
   styleUrl: './my-favorites.component.scss',

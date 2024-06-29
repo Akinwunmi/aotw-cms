@@ -1,17 +1,25 @@
 :host {
-  align-content: flex-start;
-  display: grid;
-  gap: var(--aotw-space-lg);
-  padding: var(--aotw-space-md) var(--aotw-space-sm);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--flag-space-lg);
+  padding: var(--flag-space-md) var(--flag-space-sm);
+  width: 100%;
+}
+
+app-page-header,
+section {
+  max-width: 58.25rem;
+  width: 100%;
 }
 
 section {
   display: grid;
-  gap: var(--aotw-space-xl) var(--aotw-space-lg);
-  grid-template-columns: repeat(auto-fill, minmax(min(9.25rem, 100%), 1fr));
+  gap: var(--flag-space-xl) var(--flag-space-lg);
+  grid-template-columns: repeat(12, 1fr);
 
   .topic {
     display: grid;
-    gap: var(--aotw-space-xs);
+    gap: var(--flag-space-xs);
   }
 }

@@ -7,35 +7,34 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
-import '@aotw/components';
 import {
-  AotwDropdownDirective,
-  AotwDynamicTextComponent,
-  AotwIconComponent,
-  AotwListItemComponent
-} from '@aotw/ng-components';
+  FlagDropdownDirective,
+  FlagListItemComponent,
+  FlagIconComponent,
+  ButtonDirective
+} from '@flagarchive/angular';
 import { TranslateService } from '@ngx-translate/core';
 
 import { AuthService } from '../../services';
 import { SHARED_IMPORTS } from '../../shared';
 
-import { HeaderMenu } from './header.model';
+import { HeaderMenu } from './application-header.model';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    AotwDropdownDirective,
-    AotwDynamicTextComponent,
-    AotwIconComponent,
-    AotwListItemComponent,
+    ButtonDirective,
+    FlagDropdownDirective,
+    FlagListItemComponent,
+    FlagIconComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  templateUrl: './application-header.component.html',
+  styleUrls: ['./application-header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class ApplicationHeaderComponent implements OnInit {
   private authService = inject(AuthService);
   private destroyRef = inject(DestroyRef);
   private router = inject(Router);
@@ -48,7 +47,7 @@ export class HeaderComponent implements OnInit {
 
   public menuOpen?: HeaderMenu;
   public isTranslationMenuOpen = false;
-  public menuMessage = 'COMMON.WELCOME';
+  public menuMessage!: string;
 
   public ngOnInit(): void {
     this.currentLang = this.translate.currentLang;
@@ -64,28 +63,19 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  public goToLogin(): void {
-    this.router.navigate(['login']);
-    this.menuOpen = undefined;
-  }
-
-  public goToMyFavorites(): void {
-    this.router.navigate(['my-favorites']);
+  public goToPage(name: string): void {
+    this.router.navigate([name]);
     this.menuOpen = undefined;
   }
 
   public logOut(): void {
     this.authService.logOut();
-    this.menuMessage = 'COMMON.LOGGED_OUT';
-  }
-
-  public signUp(): void {
-    this.router.navigate(['signup']);
-    this.menuOpen = undefined;
+    this.router.navigate(['']);
   }
 
   public setMenuOpen(menu: HeaderMenu): void {
     this.menuOpen = menu;
+    this.menuMessage = 'COMMON.WELCOME';
   }
 
   public setTranslation(): void {

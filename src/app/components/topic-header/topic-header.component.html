@@ -1,5 +1,5 @@
 <div class="info">
-  <aotw-ng-breadcrumb [items]="breadcrumb()" (selectedItem)="goToPage($event)" />
+  <flag-breadcrumb [items]="breadcrumb()" (selectedItem)="goToPage($event)" />
   <h2>{{ 'TOPICS' | translationKey: rangedTopic().type | translate }}</h2>
   <div class="topic-name">
     <app-favorite-button [id]="rangedTopic().id" />

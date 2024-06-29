@@ -1,15 +1,17 @@
 <form [formGroup]="form" (ngSubmit)="logIn()">
-  <aotw-ng-form-field [label]="'COMMON.EMAIL_ADDRESS' | translate">
-    <input type="email" [placeholder]="'COMMON.EMAIL_ADDRESS' | translate" formControlName="email" />
-  </aotw-ng-form-field>
-  <aotw-ng-form-field [label]="'COMMON.PASSWORD' | translate">
-    <input type="password" [placeholder]="'COMMON.PASSWORD' | translate" formControlName="password" />
-  </aotw-ng-form-field>
-  <button raised type="submit" [disabled]="form.invalid || form.pristine">
+  <flag-form-field>
+    <label for="email-address">{{ 'COMMON.EMAIL_ADDRESS' | translate }}</label>
+    <input flagInput type="email" name="email-address" [placeholder]="'COMMON.EMAIL_ADDRESS' | translate" formControlName="email" />
+  </flag-form-field>
+  <flag-form-field>
+    <label for="password">{{ 'COMMON.PASSWORD' | translate }}</label>
+    <input flagInput type="password" name="password" [placeholder]="'COMMON.PASSWORD' | translate" formControlName="password" />
+  </flag-form-field>
+  <button flagButton raised type="submit" [disabled]="form.invalid || form.pristine">
     {{ 'COMMON.LOGIN' | translate }}
   </button>
 </form>
-<button ghost (click)="goToSignUp()">
+<button flagButton ghost (click)="goToSignUp()">
   {{ 'COMMON.SIGNUP' | translate }}
 </button>
 {{ errorMessage }}

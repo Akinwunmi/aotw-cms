@@ -1,35 +1,35 @@
 <div class="title" tabindex="0" (click)="goToHome()" (keydown)="goToHome()">
-  <aotw-ng-icon name="logo" size="medium" />
-  <aotw-ng-dynamic-text>
-    {{ 'COMMON.APP_NAME' | translate }}
-  </aotw-ng-dynamic-text>
+  <flag-icon name="logo" />
+  {{ 'COMMON.APP_NAME' | translate }}
 </div>
 <div class="menu-list">
   <button
+    flagButton
     type="button"
     ghost
-    [aotwDropdownTrigger]="translationMenu"
+    [flagDropdownTrigger]="translationMenu"
     [isOpen]="menuOpen === headerMenuEnum.Translation"
     (click)="setMenuOpen(headerMenuEnum.Translation)"
   >
-    <aotw-ng-icon name="language" size="medium" />
+    <flag-icon name="language" />
   </button>
   <button
+    flagButton
     type="button"
     ghost
-    [aotwDropdownTrigger]="mainMenu"
+    [flagDropdownTrigger]="mainMenu"
     [isOpen]="menuOpen === headerMenuEnum.Main"
     (click)="setMenuOpen(headerMenuEnum.Main)"
   >
-    <aotw-ng-icon name="menu" size="medium" />
+    <flag-icon name="menu" />
   </button>
 </div>
 
 <ng-template #translationMenu>
   <div class="menu">
-    <aotw-ng-list-item (click)="setTranslation()">
+    <flag-list-item (click)="setTranslation()">
       {{ 'LANGUAGES.' + (currentLang === 'nl' ? 'EN' : 'NL') | translate }}
-    </aotw-ng-list-item>
+    </flag-list-item>
   </div>
 </ng-template>
 
@@ -38,23 +38,26 @@
     <div class="message">
       {{ menuMessage | translate}}
     </div>
-    <aotw-ng-list-item>
+    <flag-list-item>
       {{ 'PAGES.ABOUT' | translate }}
-    </aotw-ng-list-item>
+    </flag-list-item>
     @if (currentUser()) {
-      <aotw-ng-list-item role="button" (click)="goToMyFavorites()">
+      <flag-list-item role="button" (click)="goToPage('my-account')">
+        {{ 'PAGES.MY_ACCOUNT' | translate }}
+      </flag-list-item>
+      <flag-list-item role="button" (click)="goToPage('my-favorites')">
         {{ 'PAGES.MY_FAVORITES' | translate }}
-      </aotw-ng-list-item>
-      <aotw-ng-list-item role="button" (click)="logOut()">
+      </flag-list-item>
+      <flag-list-item role="button" (click)="logOut()">
         {{ 'COMMON.LOGOUT' | translate }}
-      </aotw-ng-list-item>
+      </flag-list-item>
     } @else {
-      <aotw-ng-list-item role="button" (click)="goToLogin()">
+      <flag-list-item role="button" (click)="goToPage('login')">
         {{ 'PAGES.LOGIN' | translate }}
-      </aotw-ng-list-item>
-      <aotw-ng-list-item role="button" (click)="signUp()">
+      </flag-list-item>
+      <flag-list-item role="button" (click)="goToPage('signup')">
         {{ 'PAGES.SIGNUP' | translate }}
-      </aotw-ng-list-item>
+      </flag-list-item>
     }
   </div>
 </ng-template>

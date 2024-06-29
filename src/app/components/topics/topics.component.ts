@@ -10,7 +10,6 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { AotwSkeletonComponent } from '@aotw/ng-components';
 import { Store } from '@ngrx/store';
 import { combineLatest, filter, map, switchMap, take } from 'rxjs';
 
@@ -34,7 +33,6 @@ import { TopicComponent } from '../topic';
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    AotwSkeletonComponent,
     ImageComponent,
     ImagePipe,
     RouterModule,

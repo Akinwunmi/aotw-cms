@@ -7,12 +7,13 @@
     "ABOUT": "Over dit project",
     "HOME": "Home",
     "LOGIN": "Inloggen",
+    "MY_ACCOUNT": "Mijn account",
     "MY_FAVORITES": "Mijn favorieten",
     "SIGNUP": "Registreren"
   },
   "COMMON": {
     "ADD": "Voeg toe",
-    "APP_NAME": "The Flag Archive",
+    "APP_NAME": "Flag Archive",
     "ARCHIVES": "Archieven",
     "CTA": {
       "BACK": "Terug",
@@ -23,15 +24,17 @@
     "DISCOVER": "Ontdek",
     "EMAIL_ADDRESS": "E-mailadres",
     "FILTERS": "Filters",
-    "LOGGED_OUT": "Uitgelogd",
+    "FULL_NAME": "Volledige naam",
     "LOGIN": "Inloggen",
     "LOGOUT": "Uitloggen",
     "NAME": "Naam",
+    "SURNAME": "Achternaam",
     "PAGE_NOT_FOUND": "Pagina onbekend",
     "PASSWORD": "Wachtwoord",
     "SEARCH": "Zoek",
     "SIGNUP": "Registreren",
     "SORT": "Sorteer",
+    "TIMELINE": "Tijdlijn",
     "USERNAME": "Gebruikersnaam",
     "WELCOME": "Welkom!",
     "WELCOME_USER": "Welkom {{ username }}!"
@@ -42,11 +45,18 @@
   "SIGNUP": {
     "HAS_ACCOUNT": "Ik heb al een account"
   },
+  "MY_ACCOUNT": {
+    "CHANGE_PASSWORD": "Wachtwoord wijzigen",
+    "EDIT_ACCOUNT": "Account bewerken"
+  },
   "FILTERS_AND_SORTING": {
+    "ADVANCED_SEARCH": "Geavanceerd zoeken",
     "FILTER_BY": "Filteren met:"
   },
   "DISCOVER": {
+    "CONTINENTS": "Continenten",
     "HAS_PARENT": "Is onderdeel van {{ type }}",
+    "ORGANIZATIONS": "Organisaties",
     "PARENT": "Onderdeel van"
   },
   "TOPICS": {

@@ -2,32 +2,32 @@ figure {
   align-items: center;
   cursor: pointer;
   display: grid;
-  gap: var(--aotw-space-sm);
-  grid-template-columns: var(--aotw-size-lg) 1fr;
+  gap: var(--flag-space-sm);
+  grid-template-columns: var(--flag-size-lg) 1fr;
   grid-template-rows: auto;
   margin: 0;
   width: 100%;
 
   figcaption {
     display: flex;
-    gap: var(--aotw-space-sm);
+    gap: var(--flag-space-sm);
 
     .parent {
-      font-size: var(--aotw-font-size-xs);
-      line-height: var(--aotw-font-line-height-md);
+      font-size: var(--flag-font-size-xs);
+      line-height: var(--flag-font-line-height-md);
       text-transform: uppercase;
     }
   }
 
   &.card {
-    gap: var(--aotw-space-xs);
+    gap: var(--flag-space-xs);
     grid-template-columns: auto;
-    grid-template-rows: auto var(--aotw-size-sm);
+    grid-template-rows: auto var(--flag-size-sm);
     
     figcaption {
       display: grid;
       grid-template-columns: 1fr auto;
-      height: var(--aotw-space-xl);
+      height: var(--flag-space-xl);
       overflow: hidden;
     
       .name {

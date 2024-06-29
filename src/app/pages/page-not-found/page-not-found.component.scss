@@ -9,14 +9,14 @@
 div {
   align-items: center;
   aspect-ratio: 3 / 2;
-  background-color: var(--aotw-color-primary-100);
+  background-color: var(--flag-color-primary-100);
   display: flex;
-  font-size: var(--aotw-font-size-lg);
+  font-size: var(--flag-font-size-lg);
   justify-content: center;
   width: 10rem;
 }
 
 p {
-  margin-block: var(--aotw-space-xs);
+  margin-block: var(--flag-space-xs);
   width: 10rem;
 }

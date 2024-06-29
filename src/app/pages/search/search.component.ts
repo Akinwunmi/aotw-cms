@@ -7,7 +7,7 @@ import {
   inject,
   signal
 } from '@angular/core';
-import { AotwFormFieldComponent } from '@aotw/ng-components';
+import { FlagFormFieldComponent } from '@flagarchive/angular';
 import { Subject, takeUntil } from 'rxjs';
 
 import {
@@ -26,7 +26,7 @@ import { SHARED_IMPORTS } from '../../shared';
   imports: [
     ...SHARED_IMPORTS,
     AdvancedSearchComponent,
-    AotwFormFieldComponent,
+    FlagFormFieldComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './search.component.html',

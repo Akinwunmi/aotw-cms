@@ -4915,6 +4915,16 @@
       ]
     },
     {
+      "id": "oi",
+      "name": "International",
+      "type": "Organization"
+    },
+    {
+      "id": "oo",
+      "name": "Miscellaneous",
+      "type": "Organization"
+    },
+    {
       "id": "na",
       "name": "North America",
       "type": "Continent"

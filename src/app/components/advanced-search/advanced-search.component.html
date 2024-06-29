@@ -1,53 +1,46 @@
 @if (showAllOptions) {
   <div class="filters" [ngClass]="{ stretch }">
+    <p>{{ 'FILTERS_AND_SORTING.ADVANCED_SEARCH' | translate }}</p>
     <div class="filter-group">
-      <!-- Filters on mobile -->
-      <button type="button" [title]="'COMMON.FILTERS' | translate" ghost class="mobile">
-        <aotw-ng-icon name="filter-list" size="medium" />
-      </button>
       <!-- Search -->
       @if (!hideSearch) {
         <button
+          flagButton
           type="button"
           ghost
           [title]="'COMMON.SEARCH' | translate"
           (click)="openOption(advancedSearchEnum.Search)"
         >
           <span>{{ 'COMMON.SEARCH' | translate }}</span>
-          <aotw-ng-icon name="search" size="medium" />
+          <flag-icon name="search" />
         </button>
       }
-      <!-- Sort -->
-      <button type="button" title="Sort" ghost (click)="openOption(advancedSearchEnum.Sort)">
-        <span>{{ 'COMMON.SORT' | translate }}</span>
-        <aotw-ng-icon name="sort" size="medium" />
-      </button>
       <!-- Filters -->
-      <button
-        type="button"
-        ghost
-        [title]="'COMMON.FILTERS' | translate"
-        (click)="openOption(advancedSearchEnum.Filters)"
-      >
-        <span>{{ 'COMMON.FILTERS' | translate }}</span>
-        <aotw-ng-icon name="filter" size="medium" />
+      <button flagButton type="button" [title]="'COMMON.FILTERS' | translate">
+        <flag-icon name="filter" />
       </button>
     </div>
     <!-- Layout -->
-    <aotw-ng-chip-group [chips]="layoutChips" (activeChip)="setLayout($event)" />
+    <div class="layout-actions">
+      @for (button of layoutButtons; track button.id) {
+        <button flagButton [attr.raised]="button.active || undefined" (click)="setLayout(button)">
+          <flag-icon [name]="button.icon || ''" />
+        </button>
+      }
+     </div>
   </div>
 } @else {
   <div class="active-filter">
     <!-- Go back -->
-    <button ghost [title]="'COMMON.CTA.BACK' | translate" (click)="closeOption()">
-      <aotw-ng-icon name="chevron-up" size="medium" />
+    <button flagButton ghost [title]="'COMMON.CTA.BACK' | translate" (click)="closeOption()">
+      <flag-icon name="chevron-up" />
     </button>
     @switch (activeOption) {
       <!-- Search field -->
       @case (advancedSearchEnum.Search) {
-        <aotw-ng-form-field class="search">
-          <input [placeholder]="'COMMON.SEARCH' | translate" />
-        </aotw-ng-form-field>
+        <flag-form-field class="search">
+          <input flagInput [placeholder]="'COMMON.SEARCH' | translate" />
+        </flag-form-field>
       }
       <!-- Filter options -->
       @case (advancedSearchEnum.Filters) {
@@ -55,6 +48,7 @@
           {{ 'FILTERS_AND_SORTING.FILTER_BY' | translate }}
           @for(filter of filters(); track $index) {
             <button
+              flagButton
               [attr.ghost]="!filter.active || null"
               [title]="filter.label"
               (click)="toggleFilter(filter.id)"

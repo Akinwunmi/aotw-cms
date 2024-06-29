@@ -26,14 +26,14 @@ export class UserService {
 
   public favorites = signal<string[]>([]);
 
-  public addUser(): Observable<void> {
+  public addUser(name: string, surname: string): Observable<void> {
     return this.docRef$.pipe(
       switchMap(docRef => {
         if (!docRef) {
           return EMPTY;
         }
 
-        const promise = setDoc(docRef, { favorites: [] });
+        const promise = setDoc(docRef, { favorites: [], name, surname });
         return from(promise);
       })
     );

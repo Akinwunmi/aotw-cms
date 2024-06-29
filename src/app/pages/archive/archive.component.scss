@@ -1,28 +1,17 @@
 :host {
   align-items: center;
   display: grid;
-  gap: 0 var(--aotw-space-lg);
-  grid-template-columns: 1fr auto;
-  padding-block: var(--aotw-space-lg);
+  gap: 0 var(--flag-space-lg);
+  padding-block: var(--flag-space-lg);
   width: 100%;
   height: 100%;
 }
 
-aotw-tab-group {
-  padding-top: var(--aotw-space-sm);
+flag-tab-group {
+  padding-top: var(--flag-space-sm);
 
-  aotw-tab {
+  flag-tab {
     box-sizing: content-box;
-  }
-}
-
-button {
-  margin-right: var(--aotw-space-sm);
-
-  @media only screen and (max-width: 30rem) {
-    span {
-      display: none;
-    }
   }
 }
 

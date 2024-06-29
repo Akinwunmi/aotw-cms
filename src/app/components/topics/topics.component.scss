@@ -1,6 +1,6 @@
 section {
   display: grid;
-  gap: var(--aotw-space-xl) var(--aotw-space-lg);
+  gap: var(--flag-space-xl) var(--flag-space-lg);
   grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
 
   &.grid {

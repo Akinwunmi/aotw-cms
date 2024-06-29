@@ -1,4 +1,4 @@
-<h2>{{ 'PAGES.MY_FAVORITES' | translate }}</h2>
+<app-page-header title="PAGES.MY_FAVORITES" />
 <section>
   @for (topic of favoriteTopics$ | async; track topic.id) {
     <div class="topic">

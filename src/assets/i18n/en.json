@@ -7,12 +7,13 @@
     "ABOUT": "About this project",
     "HOME": "Home",
     "LOGIN": "Log in",
+    "MY_ACCOUNT": "My account",
     "MY_FAVORITES": "My favorites",
     "SIGNUP": "Sign up"
   },
   "COMMON": {
     "ADD": "Add",
-    "APP_NAME": "The Flag Archive",
+    "APP_NAME": "Flag Archive",
     "ARCHIVES": "Archives",
     "CTA": {
       "BACK": "Back",
@@ -23,15 +24,17 @@
     "DISCOVER": "Discover",
     "EMAIL_ADDRESS": "Email Address",
     "FILTERS": "Filters",
-    "LOGGED_OUT": "Logged out",
+    "FULL_NAME": "Full Name",
     "LOGIN": "Log in",
     "LOGOUT": "Log out",
     "NAME": "Name",
+    "SURNAME": "Surname",
     "PAGE_NOT_FOUND": "Page Not Found",
     "PASSWORD": "Password",
     "SEARCH": "Search",
     "SIGNUP": "Sign up",
     "SORT": "Sort",
+    "TIMELINE": "Timeline",
     "USERNAME": "Username",
     "WELCOME": "Welcome!",
     "WELCOME_USER": "Welcome {{ username }}!"
@@ -42,11 +45,18 @@
   "SIGNUP": {
     "HAS_ACCOUNT": "I already have an account"
   },
+  "MY_ACCOUNT": {
+    "CHANGE_PASSWORD": "Change password",
+    "EDIT_ACCOUNT": "Edit account"
+  },
   "FILTERS_AND_SORTING": {
+    "ADVANCED_SEARCH": "Advanced search",
     "FILTER_BY": "Filter by:"
   },
   "DISCOVER": {
+    "CONTINENTS": "Continents",
     "HAS_PARENT": "Has parent {{ type }}",
+    "ORGANIZATIONS": "Organizations",
     "PARENT": "Parent"
   },
   "TOPICS": {

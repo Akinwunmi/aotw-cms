@@ -9,9 +9,9 @@ body {
 }
 
 body {
-  background-color: var(--aotw-color-grey-200);
-  color: var(--aotw-color-primary-500);
-  font-family: var(--aotw-font-family-primary);
+  background-color: var(--flag-color-grey-200);
+  color: var(--flag-color-primary-500);
+  font-family: var(--flag-font-family-primary);
   transition: background-color 150ms ease-in-out;
 }
 
@@ -21,8 +21,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--aotw-font-weight-medium);
-  font-size: var(--aotw-font-size-lg);
-  line-height: var(--aotw-font-line-height-s);
+  font-weight: var(--flag-font-weight-medium);
+  font-size: var(--flag-font-size-lg);
+  line-height: var(--flag-font-line-height-s);
   margin: 0;
 }
+
+p {
+  margin: 0;
+}
+

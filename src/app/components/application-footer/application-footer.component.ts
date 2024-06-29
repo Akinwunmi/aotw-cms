@@ -4,17 +4,17 @@ import { RouterModule } from '@angular/router';
 import { ARCHIVE_ROUTES } from '../../pages/archive';
 import { SHARED_IMPORTS } from '../../shared';
 
-import { SitemapItem } from './footer.model';
+import { SitemapItem } from './application-footer.model';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [...SHARED_IMPORTS, RouterModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss'],
+  templateUrl: './application-footer.component.html',
+  styleUrls: ['./application-footer.component.scss'],
 })
-export class FooterComponent implements OnInit {
+export class ApplicationFooterComponent implements OnInit {
   public currentYear = new Date().getFullYear();
   public sitemap!: SitemapItem[];
 
