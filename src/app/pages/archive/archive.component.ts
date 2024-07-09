@@ -6,7 +6,7 @@ import {
   inject
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { AotwIconComponent, AotwTabGroupComponent, Tab } from '@aotw/ng-components';
+import { FlagTabGroupComponent, Tab } from '@flagarchive/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { map, Subject, takeUntil } from 'rxjs';
 
@@ -17,8 +17,7 @@ import { SHARED_IMPORTS } from '../../shared';
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    AotwIconComponent,
-    AotwTabGroupComponent,
+    FlagTabGroupComponent,
     RouterModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -50,8 +49,12 @@ export class ArchiveComponent implements OnDestroy, OnInit {
     this.setActiveTab(this.router.url);
   }
 
-  public goToPage(path: string): void {
-    this.router.navigate([path]);
+  public goToPage(id: number): void {
+    const name = this.tabs.find(tab => tab.id === id)?.name;
+    if (!name) {
+      return;
+    }
+    this.router.navigate([name]);
   }
 
   private setActiveTab(url: string): void {

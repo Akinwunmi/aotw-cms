@@ -1,0 +1,39 @@
+<form [formGroup]="form" (ngSubmit)="signUp()">
+  <flag-form-field>
+    <label for="username">
+      {{ 'COMMON.USERNAME' | translate }}
+    </label>
+    <input flagInput type="text" name="username" [placeholder]="'COMMON.USERNAME' | translate" formControlName="username" />
+  </flag-form-field>
+  <flag-form-field>
+    <label for="name">
+      {{ 'COMMON.NAME' | translate }}
+    </label>
+    <input flagInput type="text" name="name" [placeholder]="'COMMON.NAME' | translate" formControlName="name" />
+  </flag-form-field>
+  <flag-form-field>
+    <label for="surname">
+      {{ 'COMMON.SURNAME' | translate }}
+    </label>
+    <input flagInput type="text" name="surname" [placeholder]="'COMMON.SURNAME' | translate" formControlName="surname" />
+  </flag-form-field>
+  <flag-form-field>
+    <label for="email-address">
+      {{ 'COMMON.EMAIL_ADDRESS' | translate }}
+    </label>
+    <input flagInput type="email" name="email-address" [placeholder]="'COMMON.EMAIL_ADDRESS' | translate" formControlName="email" />
+  </flag-form-field>
+  <flag-form-field>
+    <label for="password">
+      {{ 'COMMON.PASSWORD' | translate }}
+    </label>
+    <input flagInput type="password" name="password" [placeholder]="'COMMON.PASSWORD' | translate" formControlName="password" />
+  </flag-form-field>
+  <button flagButton raised type="submit">
+    {{ 'COMMON.SIGNUP' | translate }}
+  </button>
+</form>
+<button flagButton ghost (click)="goToLogIn()">
+  {{ 'SIGNUP.HAS_ACCOUNT' | translate }}
+</button>
+{{ errorMessage }}

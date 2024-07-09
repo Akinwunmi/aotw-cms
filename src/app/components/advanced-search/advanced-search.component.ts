@@ -8,11 +8,10 @@ import {
   model
 } from '@angular/core';
 import {
-  AotwChipGroupComponent,
-  AotwFormFieldComponent,
-  AotwIconComponent,
-  Chip
-} from '@aotw/ng-components';
+  ButtonDirective,
+  FlagFormFieldComponent,
+  FlagIconComponent,
+} from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 
@@ -34,9 +33,9 @@ import {
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    AotwChipGroupComponent,
-    AotwFormFieldComponent,
-    AotwIconComponent,
+    ButtonDirective,
+    FlagFormFieldComponent,
+    FlagIconComponent,
     SortingComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -56,7 +55,7 @@ export class AdvancedSearchComponent implements OnDestroy, OnInit {
   public showAllOptions = true;
   public activeOption?: AdvancedSearch;
 
-  public layoutChips: Chip[] = [
+  public layoutButtons: FilterOption[] = [
     { id: '0', label: '', icon: Layout.List, active: false, disabled: false },
     { id: '1', label: '', icon: Layout.Grid, active: false, disabled: false }
   ];
@@ -70,12 +69,12 @@ export class AdvancedSearchComponent implements OnDestroy, OnInit {
     this.selectLayout$.pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(layout => {
-      this.layoutChips.forEach(chip => chip.active = chip.icon === layout);
+      this.layoutButtons.forEach(button => button.active = button.icon === layout);
     });
   }
 
-  public setLayout(chip: Chip): void {
-    this.store.dispatch(setLayout({ layout: chip.icon as Layout }));
+  public setLayout(button: FilterOption): void {
+    this.store.dispatch(setLayout({ layout: button.icon as Layout }));
   }
 
   public closeOption(): void {

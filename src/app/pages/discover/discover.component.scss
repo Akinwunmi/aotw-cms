@@ -1,20 +1,15 @@
 .header {
-  background-color: var(--aotw-color-grey-200);
-  border-bottom: 2px solid var(--aotw-color-white);
+  background-color: var(--flag-color-grey-200);
+  border-bottom: 2px solid var(--flag-color-white);
   display: flex;
   flex-direction: column;
+  gap: var(--flag-space-lg);
   justify-content: space-between;
-  height: 10rem;
   overflow: hidden;
-  padding: var(--aotw-space-m) var(--aotw-space-s);
+  padding: var(--flag-space-md) var(--flag-space-sm);
   position: sticky;
-  top: var(--aotw-size-m);
-  transition: height 150ms ease-in-out;
+  top: var(--flag-size-xl);
   z-index: 1;
-
-  &.main-topic {
-    height: 11rem;
-  }
 
   .actions {
     box-sizing: border-box;
@@ -22,18 +17,36 @@
     justify-content: space-between;
     width: 100%;
 
-    @media only screen and (max-width: 30rem) {
-      width: 100%;
+    .timeline {
+      align-items: center;
+      display: flex;
+      gap: var(--flag-space-lg);
+
+      p {
+        display: none;
+
+        @media screen and (min-width: 40rem) {
+          display: block;
+        }
+      }
     }
 
     app-advanced-search {
       max-width: 27rem;
     }
   }
+
+  @media only screen and (min-width: 40rem) {
+    padding-inline: var(--flag-space-lg);
+  }
 }
 
 .content {
   display: grid;
-  gap: var(--aotw-space-s);
-  padding: var(--aotw-space-m) var(--aotw-space-s);
+  gap: var(--flag-space-sm);
+  padding: var(--flag-space-md) var(--flag-space-sm);
+
+  @media only screen and (min-width: 40rem) {
+    padding-inline: var(--flag-space-lg);
+  }
 }

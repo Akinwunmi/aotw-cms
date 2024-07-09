@@ -4,9 +4,9 @@
   [sorting]="sorting"
   [stretch]="true"
 />
-<aotw-ng-form-field class="search">
-  <input [placeholder]="'COMMON.SEARCH' | translate" />
-</aotw-ng-form-field>
+<flag-form-field class="search">
+  <input flagInput [placeholder]="'COMMON.SEARCH' | translate" />
+</flag-form-field>
 
 <ol>
   @for (topic of filteredTopics(); track $index) {

@@ -2,26 +2,24 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  DestroyRef,
   OnInit,
   computed,
   inject,
   input,
   signal
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router, RouterModule } from '@angular/router';
-import {
-  AotwBreadcrumbComponent,
-  AotwIconComponent,
-  BreadcrumbItem
-} from '@aotw/ng-components';
+import { BreadcrumbItem, FlagBreadcrumbComponent } from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
-import { Subject, takeUntil } from 'rxjs';
 
 import { TopicWithRange } from '../../models';
-import { ImagePipe } from '../../pipes';
-import { TopicService } from '../../services';
+import { ImagePipe, TranslationKeyPipe } from '../../pipes';
+import { TopicService, UserService } from '../../services';
 import { SHARED_IMPORTS } from '../../shared';
 import { selectSelectedYear } from '../../state/selectors';
+import { FavoriteButtonComponent } from '../favorite-button';
 import { ImageComponent } from '../image';
 
 @Component({
@@ -29,11 +27,12 @@ import { ImageComponent } from '../image';
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    RouterModule,
-    AotwBreadcrumbComponent,
-    AotwIconComponent,
+    FavoriteButtonComponent,
+    FlagBreadcrumbComponent,
     ImageComponent,
-    ImagePipe
+    ImagePipe,
+    RouterModule,
+    TranslationKeyPipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './topic-header.component.html',
@@ -43,26 +42,26 @@ export class TopicHeaderComponent implements OnInit {
   public topic = input.required<TopicWithRange>();
 
   public breadcrumb = input<BreadcrumbItem[]>([]);
-
   private selectedYear = signal<number | undefined>(undefined);
   
   public rangedTopic = computed(() => (
     this.topicService.setImageRange(this.topic(), this.selectedYear()))
   );
   
-  public archiveId = '23flag01';
-
   private cdr = inject(ChangeDetectorRef);
+  private destroyRef = inject(DestroyRef);
   private router = inject(Router);
   private topicService = inject(TopicService);
   private store = inject(Store);
+  private userService = inject(UserService);
   
-  private unsubscribe$ = new Subject<void>();
   private selectSelectedYear$ = this.store.select(selectSelectedYear);
 
   public ngOnInit(): void {
+    this.userService.getUser().subscribe();
+
     this.selectSelectedYear$.pipe(
-      takeUntil(this.unsubscribe$)
+      takeUntilDestroyed(this.destroyRef)
     ).subscribe(selectedYear => {
       this.selectedYear.set(selectedYear);
       this.cdr.detectChanges();
@@ -72,14 +71,5 @@ export class TopicHeaderComponent implements OnInit {
   public goToPage(item: BreadcrumbItem): void {
     const route = item.link?.split('/');
     this.router.navigate(route || []);
-  }
-
-  // TODO - Consider moving this to a pipe
-  public setTranslationKey(prefix: string, key?: string): string {
-    if (!key) {
-      return '\u2014';
-    }
-
-    return `${prefix}.${key.replace(/ /g, '_')}`;
   }
 }

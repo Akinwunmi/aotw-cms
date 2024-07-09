@@ -1,15 +1,13 @@
 <div class="info">
-  <aotw-ng-breadcrumb [items]="breadcrumb()" (selectedItem)="goToPage($event)" />
-  <h2>{{ setTranslationKey('TOPICS', rangedTopic().type) | uppercase | translate }}</h2>
+  <flag-breadcrumb [items]="breadcrumb()" (selectedItem)="goToPage($event)" />
+  <h2>{{ 'TOPICS' | translationKey: rangedTopic().type | translate }}</h2>
   <div class="topic-name">
-    <button title="The Flag Archive Logo">
-      <aotw-ng-icon name="logo" />
-    </button>
+    <app-favorite-button [id]="rangedTopic().id" />
     <h3>{{ rangedTopic().name }}</h3>
   </div>
 </div>
 <app-image
-  [src]="rangedTopic().imageUrl || (rangedTopic().id | image: 'assets/mock/images/' + archiveId: rangedTopic().rangeSuffix)"
+  [src]="rangedTopic().imageUrl || (rangedTopic().id | image: 'assets/mock/images/': rangedTopic().rangeSuffix)"
   [alt]="rangedTopic().name"
   [placeholder]="!rangedTopic().imageUrl && !rangedTopic().image"
 />

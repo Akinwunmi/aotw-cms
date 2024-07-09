@@ -1,0 +1,46 @@
+:host {
+  background-color: var(--flag-color-grey-200);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--flag-space-sm) var(--flag-space-sm) 0;
+
+  @media screen and (min-width: 40rem) {
+    padding-inline: var(--flag-space-lg);
+    
+  }
+}
+
+.title {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: var(--flag-space-sm);
+  text-transform: uppercase;
+
+  flag-icon {
+    width: var(--flag-size-sm);
+  }
+}
+
+.menu-list {
+  display: flex;
+  gap: var(--flag-space-sm);
+}
+
+.menu {
+  display: grid;
+  margin-right: var(--flag-space-sm);
+  width: 12rem;
+  max-width: 100%;
+
+  .message {
+    align-items: center;
+    display: grid;
+    background-color: var(--flag-color-white);
+    box-sizing: border-box;
+    color: var(--flag-color-grey-500);
+    min-height: var(--flag-size-lg);
+    padding: var(--flag-space-sm);
+  }
+}

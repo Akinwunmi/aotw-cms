@@ -1,12 +1,12 @@
 :host {
   display: flex;
-  gap: var(--aotw-space-xs);
+  gap: var(--flag-space-xs);
 }
 
 .year {
   width: 6rem;
 
-  aotw-ng-chip {
+  button {
     width: 100%;
   }
 }

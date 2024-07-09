@@ -1,18 +1,21 @@
+import { NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  HostListener,
   input,
-  output
+  output,
 } from '@angular/core';
+import { FlagIconComponent } from '@flagarchive/angular';
 
-import { Topic } from '../../models';
+import { DiscoverSection, Topic } from '../../models';
 import { SHARED_IMPORTS } from '../../shared';
 
 @Component({
   selector: 'app-discover-header',
   standalone: true,
-  imports: SHARED_IMPORTS,
+  imports: [...SHARED_IMPORTS, FlagIconComponent, NgClass],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover-header.component.html',
   styleUrl: './discover-header.component.scss'
@@ -23,7 +26,28 @@ export class DiscoverHeaderComponent {
 
   public activeTopic = output<string>();
 
-  public mainTopicType = computed<string | undefined>(() => this.topics()?.[0].type);
+  public continents = computed(() => this.topics()?.filter(topic =>
+    topic.type === 'Continent',
+  ));
+  
+  public organizations = computed(() => this.topics()?.filter(topic =>
+    topic.type === 'Organization',
+  ));
+
+  public discoverSectionEnum = DiscoverSection;
+
+  public activeSection = DiscoverSection.Continents;
+
+  public isMobile = window.innerWidth < 640;
+  
+  @HostListener('window:resize')
+  public onWindowResize(): void {
+    this.isMobile = window.innerWidth < 640;
+  }
+
+  public setActiveSection(section: DiscoverSection): void {
+    this.activeSection = section;
+  }
 
   public setActiveTopic(id: string): void {
     this.activeTopic.emit(id);

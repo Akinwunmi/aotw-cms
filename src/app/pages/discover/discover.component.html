@@ -10,7 +10,10 @@
       />
     }
     <div class="actions">
-      <app-datetime-navigator [min]="minYear" [max]="maxYear" />
+      <div class="timeline">
+        <p>{{ 'COMMON.TIMELINE' | translate }}</p>
+        <app-datetime-navigator [min]="minYear" [max]="maxYear" />
+      </div>
       <app-advanced-search
         [(filters)]="filters"
         [(sorting)]="sorting"
