@@ -1,23 +1,12 @@
-import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  model
-} from '@angular/core';
-import {
-  AotwChipComponent,
-  AotwChipGroupComponent,
-  AotwIconComponent,
-  Chip
-} from '@aotw/ng-components';
+import { ChangeDetectionStrategy, Component, model } from '@angular/core';
+import { FlagIconComponent } from '@flagarchive/angular';
 
 import { SortDirection, SortOption } from '../advanced-search';
 
 @Component({
   selector: 'app-sorting',
   standalone: true,
-  imports: [CommonModule, AotwChipComponent, AotwChipGroupComponent, AotwIconComponent],
+  imports: [FlagIconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './sorting.component.html',
   styleUrls: ['./sorting.component.scss']
@@ -25,12 +14,6 @@ import { SortDirection, SortOption } from '../advanced-search';
 export class SortingComponent {
   public options = model<SortOption[]>([]);
   public direction = model(SortDirection.Asc);
-
-  public optionChips = computed(() => (
-    this.options().map(({ id, label, active, disabled }) => ({
-      id, label, active, disabled
-    })) as Chip[]
-  ));
 
   public sortDirectionEnum = SortDirection;
 
@@ -40,10 +23,10 @@ export class SortingComponent {
     );
   }
 
-  public updateOptions(chip: Chip): void {
+  public updateOptions(id: string): void {
     this.options.set(this.options().map(option => ({
       ...option,
-      active: option.id === chip.id
+      active: option.id === id
     })));
   }
 }

@@ -13,6 +13,7 @@ export interface FilterOption {
   id: string;
   label: string;
   active: boolean;
+  icon?: string;
   disabled: boolean;
 }
 

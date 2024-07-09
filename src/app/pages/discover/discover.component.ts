@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { BreadcrumbItem } from '@aotw/ng-components';
+import { BreadcrumbItem } from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import {
@@ -68,7 +68,6 @@ export class DiscoverComponent implements OnInit {
   private topicId = signal('');
   private topicNames = computed(() => this.topicId()?.split('-'));
 
-  private archiveId = '23flag01';
   private currentYear = new Date().getFullYear();
 
   private discoverState$ = this.store.select(selectDiscover).pipe(
@@ -95,7 +94,7 @@ export class DiscoverComponent implements OnInit {
 
   public ngOnInit(): void {
     this.getArchiveData(this.router.url);
-    const getArchive$ = this.archiveService.getArchive(this.archiveId);
+    const getArchive$ = this.archiveService.getArchive();
 
     getArchive$.pipe(
       take(1)

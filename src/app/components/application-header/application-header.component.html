@@ -1,0 +1,63 @@
+<div class="title" tabindex="0" (click)="goToHome()" (keydown)="goToHome()">
+  <flag-icon name="logo" />
+  {{ 'COMMON.APP_NAME' | translate }}
+</div>
+<div class="menu-list">
+  <button
+    flagButton
+    type="button"
+    ghost
+    [flagDropdownTrigger]="translationMenu"
+    [isOpen]="menuOpen === headerMenuEnum.Translation"
+    (click)="setMenuOpen(headerMenuEnum.Translation)"
+  >
+    <flag-icon name="language" />
+  </button>
+  <button
+    flagButton
+    type="button"
+    ghost
+    [flagDropdownTrigger]="mainMenu"
+    [isOpen]="menuOpen === headerMenuEnum.Main"
+    (click)="setMenuOpen(headerMenuEnum.Main)"
+  >
+    <flag-icon name="menu" />
+  </button>
+</div>
+
+<ng-template #translationMenu>
+  <div class="menu">
+    <flag-list-item (click)="setTranslation()">
+      {{ 'LANGUAGES.' + (currentLang === 'nl' ? 'EN' : 'NL') | translate }}
+    </flag-list-item>
+  </div>
+</ng-template>
+
+<ng-template #mainMenu>
+  <div class="menu">
+    <div class="message">
+      {{ menuMessage | translate}}
+    </div>
+    <flag-list-item>
+      {{ 'PAGES.ABOUT' | translate }}
+    </flag-list-item>
+    @if (currentUser()) {
+      <flag-list-item role="button" (click)="goToPage('my-account')">
+        {{ 'PAGES.MY_ACCOUNT' | translate }}
+      </flag-list-item>
+      <flag-list-item role="button" (click)="goToPage('my-favorites')">
+        {{ 'PAGES.MY_FAVORITES' | translate }}
+      </flag-list-item>
+      <flag-list-item role="button" (click)="logOut()">
+        {{ 'COMMON.LOGOUT' | translate }}
+      </flag-list-item>
+    } @else {
+      <flag-list-item role="button" (click)="goToPage('login')">
+        {{ 'PAGES.LOGIN' | translate }}
+      </flag-list-item>
+      <flag-list-item role="button" (click)="goToPage('signup')">
+        {{ 'PAGES.SIGNUP' | translate }}
+      </flag-list-item>
+    }
+  </div>
+</ng-template>

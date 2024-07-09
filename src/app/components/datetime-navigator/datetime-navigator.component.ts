@@ -7,12 +7,12 @@ import {
   input
 } from '@angular/core';
 import {
-  AotwChipComponent,
-  AotwDropdownDirective,
-  AotwIconComponent,
   AotwYearPickerComponent,
+  ButtonDirective,
+  FlagDropdownDirective,
+  FlagIconComponent,
   RangePipe
-} from '@aotw/ng-components';
+} from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
 import { Subject, map, takeUntil } from 'rxjs';
 
@@ -25,10 +25,10 @@ import { selectSelectedYear } from '../../state/selectors';
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    AotwChipComponent,
-    AotwDropdownDirective,
-    AotwIconComponent,
     AotwYearPickerComponent,
+    ButtonDirective,
+    FlagDropdownDirective,
+    FlagIconComponent,
     RangePipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,4 +1,4 @@
-<aotw-ng-tab-group [activeTab]="activeTab" [tabs]="tabs" (selectedTab)="goToPage($event.name)" />
+<flag-tab-group [active]="activeTab" [tabs]="tabs" (activeChange)="goToPage($event)" />
 <div class="main">
   <router-outlet />
 </div>

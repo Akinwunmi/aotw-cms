@@ -1,15 +1,54 @@
-<h2>{{ 'TOPICS.' + mainTopicType() | uppercase | translate }}</h2>
-<ul>
-  @for (topic of topics(); track topic.id) {
-    <li>
-      <a
-        tabindex="0"
-        [ngClass]="{ active: topic.id === activeTopicId() }"
-        (click)="setActiveTopic(topic.id)"
-        (keydown)="setActiveTopic(topic.id)"
-      >
-        {{ topic.name }}
-      </a>
-    </li>
-  }
-</ul>
+<div class="actions">
+  <button
+    flagButton
+    [attr.ghost]="activeSection !== discoverSectionEnum.Continents || undefined"
+    (click)="setActiveSection(discoverSectionEnum.Continents)"
+  >
+    {{ 'DISCOVER.CONTINENTS' | translate }}
+    @if (activeSection !== discoverSectionEnum.Continents) {
+      <flag-icon name="switch" />
+    }
+  </button>
+  <button
+    flagButton
+    [attr.ghost]="activeSection !== discoverSectionEnum.Organizations || undefined"
+    (click)="setActiveSection(discoverSectionEnum.Organizations)"
+  >
+    @if (activeSection !== discoverSectionEnum.Organizations) {
+      <flag-icon name="switch" />
+    }
+    {{ 'DISCOVER.ORGANIZATIONS' | translate }}
+  </button>
+</div>
+@if (!isMobile || (isMobile && activeSection === discoverSectionEnum.Continents)) {
+  <ng-container *ngTemplateOutlet="topicsTemplate; context: {
+    $implicit: continents(),
+    title: 'DISCOVER.CONTINENTS',
+  }" />
+}
+@if (!isMobile || (isMobile && activeSection === discoverSectionEnum.Organizations)) {
+  <ng-container *ngTemplateOutlet="topicsTemplate; context: {
+    $implicit: organizations(),
+    title: 'DISCOVER.ORGANIZATIONS',
+  }" />
+}
+
+<ng-template #topicsTemplate let-topics let-title="title">
+  <section [ngClass]="{ mobile: isMobile }">
+    <h2>{{ title | translate }}</h2>
+    <ul>
+      @for (topic of topics; track topic.id) {
+        <li>
+          <a
+            tabindex="0"
+            [ngClass]="{ active: topic.id === activeTopicId() }"
+            (click)="setActiveTopic(topic.id)"
+            (keydown)="setActiveTopic(topic.id)"
+          >
+            {{ topic.name }}
+          </a>
+        </li>
+      }
+    </ul>
+  </section>
+</ng-template>
