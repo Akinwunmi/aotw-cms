@@ -4920,9 +4920,57 @@
       "type": "Organization"
     },
     {
+      "id": "oi-ioc",
+      "name": "International Olympic Committee",
+      "type": "Non-Governmental Organization",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Olympic_flag.svg"
+    },
+    {
+      "id": "oi-ipc",
+      "name": "International Paralympic Committee",
+      "type": "Non-Governmental Organization",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Paralympic_flag_%282019%29.svg"
+    },
+    {
+      "id": "oi-une",
+      "name": "UNESCO",
+      "type": "Specialized Agency",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_UNESCO.svg"
+    },
+    {
+      "id": "oi-unx",
+      "name": "United Nations",
+      "type": "Intergovernmental Organization",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_the_United_Nations.svg"
+    },
+    {
       "id": "oo",
       "name": "Miscellaneous",
       "type": "Organization"
+    },
+    {
+      "id": "oo-lgb",
+      "name": "LGBT Community",
+      "type": "Community",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Gay_Pride_Flag.svg"
+    },
+    {
+      "id": "oo-non",
+      "name": "Non-binary Community",
+      "type": "Community",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Nonbinary_flag.svg"
+    },
+    {
+      "id": "oo-pan",
+      "name": "Pansexual Community",
+      "type": "Community",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Pansexuality_Pride_Flag.svg"
+    },
+    {
+      "id": "oo-tra",
+      "name": "Transgender Community",
+      "type": "Community",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Transgender_Pride_flag.svg"
     },
     {
       "id": "na",

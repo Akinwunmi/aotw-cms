@@ -60,12 +60,19 @@
     "PARENT": "Onderdeel van"
   },
   "TOPICS": {
+    "COMMUNITY": "Gemeenschap",
     "CONTINENT": "Continent",
     "COUNTRY": "Land",
+    "INTERGOVERNMENTAL_ORGANIZATION": "Intergouvernementele organisatie",
     "MUNICIPALITY": "Gemeente",
-    "PROVINCE": "Provincie"
+    "NON_GOVERNMENTAL_ORGANIZATION": "Niet-gouvernementele organisatie",
+    "PROVINCE": "Provincie",
+    "SPECIALIZED_AGENCY": "Gespecialiseerde organisatie"
   },
   "REGIONS": {
+    "AF": "Afrika",
+    "AS": "Azië",
+    "AU": "Australië",
     "EU": "Europa",
     "EU_ALB": "Albanië",
     "EU_AND": "Andorra",
@@ -134,6 +141,18 @@
     "EU_SWE": "Zweden",
     "EU_TUR": "Turkije",
     "EU_UKR": "Oekraïne",
-    "EU_VAT": "Vaticaanstad"
+    "EU_VAT": "Vaticaanstad",
+    "NA": "Noord-Amerika",
+    "OI": "Internationaal",
+    "OI_IOC": "Internationaal Olympisch Comité",
+    "OI_IPC": "Internationaal Paralympisch Comité",
+    "OI_UNE": "UNESCO",
+    "OI_UNX": "Verenigde Naties",
+    "OO": "Diversen",
+    "OO_LGB": "LGBT gemeenschap",
+    "OO_NON": "Non-binaire gemeenschap",
+    "OO_PAN": "Pansexuele gemeenschap",
+    "OO_TRA": "Transexuele gemeenschap",
+    "SA": "Zuid-Amerika"
   }
 }
