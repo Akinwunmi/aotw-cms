@@ -71,6 +71,7 @@ export class ApplicationHeaderComponent implements OnInit {
   public logOut(): void {
     this.authService.logOut();
     this.router.navigate(['']);
+    this.menuOpen = undefined;
   }
 
   public setMenuOpen(menu: HeaderMenu): void {
