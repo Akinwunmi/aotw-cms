@@ -45,7 +45,7 @@
             (click)="setActiveTopic(topic.id)"
             (keydown)="setActiveTopic(topic.id)"
           >
-            {{ topic.name }}
+            {{ 'REGIONS.' + topic.id | uppercase | translate }}
           </a>
         </li>
       }
