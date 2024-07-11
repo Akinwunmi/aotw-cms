@@ -22,7 +22,7 @@
     "@angular/platform-browser": "^18.0.3",
     "@angular/platform-browser-dynamic": "^18.0.3",
     "@angular/router": "^18.0.3",
-    "@flagarchive/angular": "^0.0.1-beta.3",
+    "@flagarchive/angular": "^0.0.1-beta.4",
     "@ngrx/effects": "^18.0.0",
     "@ngrx/operators": "^18.0.0",
     "@ngrx/router-store": "^18.0.0",

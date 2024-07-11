@@ -1,9 +1,9 @@
 @if (active()) {
   <button flagButton rounded (click)="remove()">
-    <flag-icon name="star-fill" />
+    <flag-icon class="fill">star</flag-icon>
   </button>
 } @else {
   <button flagButton rounded (click)="add()">
-    <flag-icon name="star" />
+    <flag-icon>star</flag-icon>
   </button>
 }

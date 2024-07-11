@@ -7,10 +7,10 @@ import {
   input
 } from '@angular/core';
 import {
-  AotwYearPickerComponent,
-  ButtonDirective,
+  FlagButtonDirective,
   FlagDropdownDirective,
   FlagIconComponent,
+  FlagYearPickerComponent,
   RangePipe
 } from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
@@ -25,10 +25,10 @@ import { selectSelectedYear } from '../../state/selectors';
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    AotwYearPickerComponent,
-    ButtonDirective,
+    FlagButtonDirective,
     FlagDropdownDirective,
     FlagIconComponent,
+    FlagYearPickerComponent,
     RangePipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,

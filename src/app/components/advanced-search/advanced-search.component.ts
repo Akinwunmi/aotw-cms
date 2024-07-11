@@ -8,7 +8,7 @@ import {
   model
 } from '@angular/core';
 import {
-  ButtonDirective,
+  FlagButtonDirective,
   FlagFormFieldComponent,
   FlagIconComponent,
 } from '@flagarchive/angular';
@@ -33,7 +33,7 @@ import {
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    ButtonDirective,
+    FlagButtonDirective,
     FlagFormFieldComponent,
     FlagIconComponent,
     SortingComponent,

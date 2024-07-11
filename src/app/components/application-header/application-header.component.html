@@ -1,43 +1,48 @@
 <div class="title" tabindex="0" (click)="goToHome()" (keydown)="goToHome()">
-  <flag-icon name="logo" />
+  <img class="logo" src="assets/images/logo.svg" alt="Flag Archive logo" />
   {{ 'COMMON.APP_NAME' | translate }}
 </div>
 <div class="menu-list">
   <button
     flagButton
     type="button"
-    ghost
+    [attr.ghost]="menuOpen !== headerMenuEnum.Translation || undefined"
     [flagDropdownTrigger]="translationMenu"
     [isOpen]="menuOpen === headerMenuEnum.Translation"
+    (isOpenChange)="setMenuOpen(headerMenuEnum.Translation, !$event)"
     (click)="setMenuOpen(headerMenuEnum.Translation)"
   >
-    <flag-icon name="language" />
+    <flag-icon>translate</flag-icon>
   </button>
   <button
     flagButton
     type="button"
-    ghost
+    [attr.ghost]="menuOpen !== headerMenuEnum.Main || undefined"
     [flagDropdownTrigger]="mainMenu"
     [isOpen]="menuOpen === headerMenuEnum.Main"
+    (isOpenChange)="setMenuOpen(headerMenuEnum.Main, !$event)"
     (click)="setMenuOpen(headerMenuEnum.Main)"
   >
-    <flag-icon name="menu" />
+    <flag-icon>
+      @if (menuOpen === headerMenuEnum.Main) {
+        close
+      } @else {
+        menu
+      }
+    </flag-icon>
   </button>
 </div>
 
 <ng-template #translationMenu>
-  <div class="menu">
+  <flag-card>
     <flag-list-item (click)="setTranslation()">
       {{ 'LANGUAGES.' + (currentLang === 'nl' ? 'EN' : 'NL') | translate }}
     </flag-list-item>
-  </div>
+  </flag-card>
 </ng-template>
 
 <ng-template #mainMenu>
-  <div class="menu">
-    <div class="message">
-      {{ menuMessage | translate}}
-    </div>
+  <flag-card>
     <flag-list-item>
       {{ 'PAGES.ABOUT' | translate }}
     </flag-list-item>
@@ -59,5 +64,5 @@
         {{ 'PAGES.SIGNUP' | translate }}
       </flag-list-item>
     }
-  </div>
+  </flag-card>
 </ng-template>
