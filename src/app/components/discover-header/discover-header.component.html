@@ -6,7 +6,7 @@
   >
     {{ 'DISCOVER.CONTINENTS' | translate }}
     @if (activeSection !== discoverSectionEnum.Continents) {
-      <flag-icon name="switch" />
+      <flag-icon>swap_horiz</flag-icon>
     }
   </button>
   <button
@@ -15,7 +15,7 @@
     (click)="setActiveSection(discoverSectionEnum.Organizations)"
   >
     @if (activeSection !== discoverSectionEnum.Organizations) {
-      <flag-icon name="switch" />
+      <flag-icon>swap_horiz</flag-icon>
     }
     {{ 'DISCOVER.ORGANIZATIONS' | translate }}
   </button>

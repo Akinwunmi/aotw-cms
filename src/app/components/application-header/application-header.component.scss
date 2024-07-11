@@ -18,7 +18,7 @@
   gap: var(--flag-space-sm);
   text-transform: uppercase;
 
-  flag-icon {
+  img {
     width: var(--flag-size-sm);
   }
 }
@@ -26,21 +26,4 @@
 .menu-list {
   display: flex;
   gap: var(--flag-space-sm);
-}
-
-.menu {
-  display: grid;
-  margin-right: var(--flag-space-sm);
-  width: 12rem;
-  max-width: 100%;
-
-  .message {
-    align-items: center;
-    display: grid;
-    background-color: var(--flag-color-white);
-    box-sizing: border-box;
-    color: var(--flag-color-grey-500);
-    min-height: var(--flag-size-lg);
-    padding: var(--flag-space-sm);
-  }
 }

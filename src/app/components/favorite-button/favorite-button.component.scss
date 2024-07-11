@@ -1,4 +1,8 @@
 button {
   aspect-ratio: 1 / 1;
   padding: 0;
+
+  .fill {
+    font-variation-settings: 'FILL' 1;
+  }
 }
