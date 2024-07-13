@@ -14,6 +14,7 @@
   .actions {
     box-sizing: border-box;
     display: flex;
+    gap: var(--flag-space-lg);
     justify-content: space-between;
     width: 100%;
 

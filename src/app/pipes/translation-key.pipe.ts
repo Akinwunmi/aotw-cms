@@ -10,6 +10,6 @@ export class TranslationKeyPipe implements PipeTransform {
       return '\u2014';
     }
 
-    return `${prefix}.${key.replace(/[ -]/g, '_')}`.toUpperCase();
+    return `${prefix}.${key.replace(/[ -]/g, '_').replace(/\//g, '.')}`.toUpperCase();
   }
 }

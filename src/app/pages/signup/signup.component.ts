@@ -1,33 +1,29 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  inject
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { Validators, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FlagFormFieldComponent } from '@flagarchive/angular';
 import { TranslateModule } from '@ngx-translate/core';
 import { switchMap } from 'rxjs';
 
+import { TranslationKeyPipe } from '../../pipes';
 import { AuthService, UserService } from '../../services';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [FlagFormFieldComponent, ReactiveFormsModule, TranslateModule],
+  imports: [FlagFormFieldComponent, ReactiveFormsModule, TranslateModule, TranslationKeyPipe],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignupComponent {
   private authService = inject(AuthService);
-  private cdr = inject(ChangeDetectorRef);
   private fb = inject(FormBuilder);
   private router = inject(Router);
   private userService = inject(UserService);
 
-  public errorMessage: string | null = null;
+  public errorMessage = signal<string | null>(null);
+
   public form = this.fb.nonNullable.group({
     username: ['', Validators.required],
     name: ['', Validators.required],
@@ -45,8 +41,7 @@ export class SignupComponent {
         this.router.navigate(['/']);
       },
       error: (error) => {
-        this.errorMessage = error.code;
-        this.cdr.markForCheck();
+        this.errorMessage.set(error.code);
       },
     });
   }

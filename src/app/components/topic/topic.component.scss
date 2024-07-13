@@ -32,6 +32,7 @@ figure {
     
       .name {
         display: -webkit-box;
+        line-clamp: 1;
         word-break: break-all;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;

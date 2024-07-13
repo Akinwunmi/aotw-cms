@@ -39,6 +39,11 @@
     "WELCOME": "Welcome!",
     "WELCOME_USER": "Welcome {{ username }}!"
   },
+  "MESSAGES": {
+    "AUTH": {
+      "INVALID_CREDENTIAL": "Username or password is incorrect"
+    }  
+  },
   "FOOTER": {
     "SITEMAP": "Sitemap"
   },

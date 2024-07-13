@@ -43,7 +43,7 @@
 
 <ng-template #mainMenu>
   <flag-card>
-    <flag-list-item>
+    <flag-list-item [disabled]="true">
       {{ 'PAGES.ABOUT' | translate }}
     </flag-list-item>
     @if (currentUser()) {
