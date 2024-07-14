@@ -16,6 +16,7 @@ import {
 } from '@flagarchive/angular';
 import { TranslateService } from '@ngx-translate/core';
 
+import { DefaultTopic } from '../../models';
 import { AuthService } from '../../services';
 import { SHARED_IMPORTS } from '../../shared';
 
@@ -61,7 +62,7 @@ export class ApplicationHeaderComponent implements OnInit {
   }
 
   public goToHome(): void {
-    this.router.navigate(['']);
+    this.router.navigate(['discover', 'topic', DefaultTopic.Continents]);
   }
 
   public goToPage(name: string): void {

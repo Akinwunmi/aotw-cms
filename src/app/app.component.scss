@@ -14,6 +14,6 @@ app-header {
 
 main {
   display: flex;
-  min-height: calc(100% - var(--flag-size-xl) * 3);
+  min-height: calc(100% - 15rem);
   z-index: 1;
 }

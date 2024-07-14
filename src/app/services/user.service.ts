@@ -11,7 +11,7 @@ import {
 } from '@angular/fire/firestore';
 import { EMPTY, Observable, from, map, switchMap, tap } from 'rxjs';
 
-import { User } from '../models';
+import { DatabaseCollection, User } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class UserService {
   private firestore = inject(Firestore);
 
   private docRef$ = user(this.firebaseAuth).pipe(
-    map(user => user ? doc(this.firestore, `users/${user.uid}`) : undefined)
+    map(user => user ? doc(this.firestore, `${DatabaseCollection.Users}/${user.uid}`) : undefined),
   );
 
   public favorites = signal<string[]>([]);
