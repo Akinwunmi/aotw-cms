@@ -3,6 +3,8 @@ import {
   ChangeDetectorRef,
   Component,
   DestroyRef,
+  HostBinding,
+  HostListener,
   OnInit,
   computed,
   inject,
@@ -11,12 +13,17 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router, RouterModule } from '@angular/router';
-import { BreadcrumbItem, FlagBreadcrumbComponent } from '@flagarchive/angular';
+import {
+  BreadcrumbItem,
+  FlagBreadcrumbComponent,
+  FlagButtonDirective,
+  FlagIconComponent,
+} from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
 
 import { TopicWithRange } from '../../models';
 import { ImagePipe, TranslationKeyPipe } from '../../pipes';
-import { TopicService, UserService } from '../../services';
+import { AuthService, TopicService } from '../../services';
 import { SHARED_IMPORTS } from '../../shared';
 import { selectSelectedYear } from '../../state/selectors';
 import { FavoriteButtonComponent } from '../favorite-button';
@@ -29,6 +36,8 @@ import { ImageComponent } from '../image';
     ...SHARED_IMPORTS,
     FavoriteButtonComponent,
     FlagBreadcrumbComponent,
+    FlagButtonDirective,
+    FlagIconComponent,
     ImageComponent,
     ImagePipe,
     RouterModule,
@@ -39,27 +48,37 @@ import { ImageComponent } from '../image';
   styleUrls: ['./topic-header.component.scss'],
 })
 export class TopicHeaderComponent implements OnInit {
-  public topic = input.required<TopicWithRange>();
-
-  public breadcrumb = input<BreadcrumbItem[]>([]);
-  private selectedYear = signal<number | undefined>(undefined);
-  
-  public rangedTopic = computed(() => (
-    this.topicService.setImageRange(this.topic(), this.selectedYear()))
-  );
-  
+  private authService = inject(AuthService);
   private cdr = inject(ChangeDetectorRef);
   private destroyRef = inject(DestroyRef);
   private router = inject(Router);
   private topicService = inject(TopicService);
   private store = inject(Store);
-  private userService = inject(UserService);
+
+  public topic = input.required<TopicWithRange>();
+
+  public breadcrumb = input<BreadcrumbItem[]>([]);
+  private selectedYear = signal<number | undefined>(undefined);
+
+  public isLoggedIn = computed(() => !!this.authService.currentUser());
   
+  public rangedTopic = computed(() => (
+    this.topicService.setImageRange(this.topic(), this.selectedYear()))
+  );
+
+  @HostBinding('class.expanded')
+  public isExpanded = true;
+
+  public isMobile = window.innerWidth < 640;
+
   private selectSelectedYear$ = this.store.select(selectSelectedYear);
+  
+  @HostListener('window:resize')
+  public onWindowResize(): void {
+    this.isMobile = window.innerWidth < 640;
+  }
 
   public ngOnInit(): void {
-    this.userService.getUser().subscribe();
-
     this.selectSelectedYear$.pipe(
       takeUntilDestroyed(this.destroyRef)
     ).subscribe(selectedYear => {
@@ -71,5 +90,9 @@ export class TopicHeaderComponent implements OnInit {
   public goToPage(item: BreadcrumbItem): void {
     const route = item.link?.split('/');
     this.router.navigate(route || []);
+  }
+
+  public toggleState(): void {
+    this.isExpanded = !this.isExpanded;
   }
 }

@@ -1,15 +1,16 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FlagFormFieldComponent } from '@flagarchive/angular';
 import { TranslateModule } from '@ngx-translate/core';
 
+import { TranslationKeyPipe } from '../../pipes';
 import { AuthService } from '../../services';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FlagFormFieldComponent, ReactiveFormsModule, TranslateModule],
+  imports: [FlagFormFieldComponent, ReactiveFormsModule, TranslateModule, TranslationKeyPipe],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -19,7 +20,8 @@ export class LoginComponent {
   private fb = inject(FormBuilder);
   private router = inject(Router);
 
-  public errorMessage: string | null = null;
+  public errorMessage = signal<string | null>(null);
+
   public form = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
@@ -32,7 +34,7 @@ export class LoginComponent {
         this.router.navigate(['']);
       },
       error: (error) => {
-        this.errorMessage = error.code;
+        this.errorMessage.set(error.code);
       }
     });
   }

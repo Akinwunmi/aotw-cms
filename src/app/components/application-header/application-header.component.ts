@@ -8,10 +8,11 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import {
+  FlagButtonDirective,
+  FlagCardComponent,
   FlagDropdownDirective,
-  FlagListItemComponent,
   FlagIconComponent,
-  ButtonDirective
+  FlagListItemComponent,
 } from '@flagarchive/angular';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -25,10 +26,11 @@ import { HeaderMenu } from './application-header.model';
   standalone: true,
   imports: [
     ...SHARED_IMPORTS,
-    ButtonDirective,
+    FlagButtonDirective,
+    FlagCardComponent,
     FlagDropdownDirective,
-    FlagListItemComponent,
     FlagIconComponent,
+    FlagListItemComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './application-header.component.html',
@@ -47,7 +49,6 @@ export class ApplicationHeaderComponent implements OnInit {
 
   public menuOpen?: HeaderMenu;
   public isTranslationMenuOpen = false;
-  public menuMessage!: string;
 
   public ngOnInit(): void {
     this.currentLang = this.translate.currentLang;
@@ -74,9 +75,8 @@ export class ApplicationHeaderComponent implements OnInit {
     this.menuOpen = undefined;
   }
 
-  public setMenuOpen(menu: HeaderMenu): void {
-    this.menuOpen = menu;
-    this.menuMessage = 'COMMON.WELCOME';
+  public setMenuOpen(menu: HeaderMenu, closed?: boolean): void {
+    this.menuOpen = closed ? undefined : menu;
   }
 
   public setTranslation(): void {

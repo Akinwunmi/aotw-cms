@@ -2,7 +2,7 @@
   @for (topic of filteredTopics; track $index) {
     <app-topic
       [card]="gridLayout"
-      [routerLink]="'../' + (topic.altId?.startsWith(topicId()) ? topic.altId : topic.id)"
+      [routerLink]="'../' + (topic.altId?.startsWith(parentTopicId()) ? topic.altId : topic.id)"
       [topic]="topic"
     />
   }

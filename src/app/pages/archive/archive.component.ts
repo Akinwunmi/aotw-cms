@@ -42,7 +42,7 @@ export class ArchiveComponent implements OnDestroy, OnInit {
         id: index,
         name: index === 0 ? 'search' : 'discover',
         label,
-        disabled: false
+        disabled: index === 0
       }));
     });
 

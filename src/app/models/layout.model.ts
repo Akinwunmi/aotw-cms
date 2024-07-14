@@ -1,6 +1,6 @@
 export enum Layout {
-  Grid = 'grid',
-  List = 'list'
+  Grid = 'grid_view',
+  List = 'splitscreen'
 }
 
 export enum Theme {

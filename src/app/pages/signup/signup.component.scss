@@ -1,5 +1,6 @@
 :host {
   display: grid;
+  gap: var(--flag-space-lg);
   grid-template-columns: 24rem;
   height: 100vh;
   place-content: center;
@@ -8,4 +9,5 @@
 
 form {
   display: grid;
+  gap: var(--flag-space-lg);
 }

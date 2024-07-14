@@ -1,5 +1,5 @@
 <button flagButton [disabled]="min() === selectedYear" (click)="previous()">
-  <flag-icon name="chevron-left" />
+  <flag-icon>keyboard_arrow_left</flag-icon>
 </button>
 <div
   #year
@@ -15,7 +15,7 @@
   </button>
 </div>
 <button flagButton [disabled]="max() === selectedYear" (click)="next()">
-  <flag-icon name="chevron-right" />
+  <flag-icon>keyboard_arrow_right</flag-icon>
 </button>
 
 <ng-template #dropdown>

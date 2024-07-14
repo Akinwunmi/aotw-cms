@@ -5,6 +5,6 @@
     </button>
   }
   <button flagButton (click)="setSortDirection()">
-    <flag-icon [name]="direction() === sortDirectionEnum.Asc ? 'arrow-down' : 'arrow-up'" />
+    <flag-icon>{{ direction() === sortDirectionEnum.Asc ? 'arrow-down' : 'arrow-up' }}</flag-icon>
   </button>
 }
