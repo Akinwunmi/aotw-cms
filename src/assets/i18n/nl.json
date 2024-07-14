@@ -39,6 +39,11 @@
     "WELCOME": "Welkom!",
     "WELCOME_USER": "Welkom {{ username }}!"
   },
+  "MESSAGES": {
+    "AUTH": {
+      "INVALID_CREDENTIAL": "Gebruikersnaam of wachtwoord is onjuist"
+    }  
+  },
   "FOOTER": {
     "SITEMAP": "Sitemap"
   },

@@ -16,6 +16,7 @@ import { combineLatest, filter, map, switchMap, take } from 'rxjs';
 import {
   ArchiveTopics,
   Layout,
+  Range,
   RouteDiscover,
   Topic,
   TopicWithRange
@@ -43,27 +44,27 @@ import { TopicComponent } from '../topic';
   styleUrls: ['./topics.component.scss']
 })
 export class TopicsComponent implements OnInit {
+  private readonly archiveService = inject(ArchiveService);
+  private readonly cdr = inject(ChangeDetectorRef);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly router = inject(Router);
+  private readonly store = inject(Store);
+  private readonly topicService = inject(TopicService);
+
+  public parentTopicId = signal('');
+
+  private topics = signal<TopicWithRange[]>([]);
+
+  private grandparentTopicId = computed(
+    () => this.parentTopicId()?.split('-').slice(-1)[0] || ''
+  );
+
   // TODO - Implement applyFilters method
   public filteredTopics: TopicWithRange[] = [];
 
   public gridLayout = true;
 
   public noImageFound = false;
-
-  public topicId = signal('');
-
-  private archiveService = inject(ArchiveService);
-  private cdr = inject(ChangeDetectorRef);
-  private destroyRef = inject(DestroyRef);
-  private router = inject(Router);
-  private store = inject(Store);
-  private topicService = inject(TopicService);
-
-  private topics = signal<TopicWithRange[]>([]);
-
-  private parentTopic = computed(
-    () => this.topicId()?.split('-').slice(-1)[0] || ''
-  );
 
   private activeFilters: FilterOption[] = [];
   private activeSorting?: SortOption;
@@ -74,7 +75,7 @@ export class TopicsComponent implements OnInit {
   private selectSelectedYear$ = this.store.select(selectSelectedYear);
 
   public ngOnInit(): void {
-    this.getTopics(this.router.url);
+    this.setParentTopicId(this.router.url);
     const getArchive$ = this.archiveService.getArchive();
 
     getArchive$.pipe(
@@ -87,7 +88,7 @@ export class TopicsComponent implements OnInit {
       filter(event => event instanceof NavigationEnd),
       map(event => (event as NavigationEnd).url),
       switchMap(url => {
-        this.getTopics(url);
+        this.setParentTopicId(url);
         return getArchive$;
       }),
       takeUntilDestroyed(this.destroyRef)
@@ -130,47 +131,55 @@ export class TopicsComponent implements OnInit {
     });
   }
 
-  private getTopics(rawUrl: string): void {
+  private filterTopics(topics: TopicWithRange[]): TopicWithRange[] {
+    return topics.filter(({ altId, id, ranges}) => {
+      const isChildTopic = this.isChildTopic(id) || this.isChildTopic(altId);
+
+      if (!ranges || !ranges[0].start) {
+        return isChildTopic;
+      }
+
+      return isChildTopic && this.selectedYearIsInRange(ranges);
+    });
+  }
+
+  private isChildTopic(id?: string): boolean {
+    if (!id) {
+      return false;
+    }
+    
+    // Define children of parent topic
+    const isChild = id.startsWith(this.parentTopicId());
+    const isGrandchild = this.isGrandchildTopic(id);
+    const isSibling = this.isSiblingTopic(id);
+
+    return isChild && !isGrandchild && !isSibling;
+  }
+
+  private isGrandchildTopic(id: string): boolean {
+    const fullParentId = this.parentTopicId().length + this.grandparentTopicId().length;
+    return id.length > fullParentId + 3 && id[fullParentId + 2] !== '_';
+  }
+
+  private isSiblingTopic(id: string): boolean {
+    // If the first character after the topic id is an underscore, it is a sibling
+    return id[this.parentTopicId().length] === '_' || id.length <= this.parentTopicId().length;
+  }
+
+  private selectedYearIsInRange(ranges: Range[]): boolean {
+    return !!ranges.find(({ start, end }) =>
+      start && start <= this.selectedYear && (!end || end > this.selectedYear)
+    );
+  }
+
+  private setParentTopicId(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
-    this.topicId.set(url[RouteDiscover.Topic]);
+    this.parentTopicId.set(url[RouteDiscover.Topic]);
   }
 
   private setTopics(archiveData: ArchiveTopics): void {
     this.topics.set(archiveData.topics);
     this.filteredTopics = this.filterTopics(this.topics());
     this.cdr.detectChanges();
-  }
-
-  private filterTopics(topics: TopicWithRange[]): TopicWithRange[] {
-    return topics.filter(topic => {
-      const query =
-        // Define childs of parent topic
-        (
-          topic.id.startsWith(this.topicId()) ||
-          topic.altId?.startsWith(this.topicId())
-        ) &&
-        // If the first character after the topic id is an underscore,
-        // it is part of the parent screen and is filtered out
-        topic.id[this.topicId().length] !== '_' &&
-        topic.id.length > this.topicId().length &&
-        (
-          // Only take direct children by validating length opposed to parent
-          topic.id.length <= this.topicId().length + this.parentTopic().length + 3 ||
-          // Also check if the next character is an underscore so it is included
-          topic.id[this.topicId().length + this.parentTopic().length + 2] === '_'
-        );
-
-      const { ranges } = topic;
-
-      if (!ranges || !ranges[0].start) {
-        return query;
-      }
-
-      // Check if selected year is within range
-      return query &&
-        ranges.find(({ start, end }) =>
-          start && start <= this.selectedYear && (!end || end > this.selectedYear)
-        );
-    });
   }
 }

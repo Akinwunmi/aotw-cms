@@ -59,7 +59,13 @@ module.exports = {
           }
         ],
         'change-detection-strategy/on-push': 'error',
-        'max-lines': [
+        'max-len': [
+          'error',
+          {
+            'code': 100
+          }
+        ],
+            'max-lines': [
           'error',
           {
             'max': 240
