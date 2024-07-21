@@ -1,13 +1,15 @@
-<p>{{ 'FOOTER.SITEMAP' | translate }}</p>
+<h5>{{ 'FOOTER.SITEMAP' | translate }}</h5>
 <ul>
   @for (item of sitemap; track $index) {
     <li>
       <a [routerLink]="[item.path]">
-        {{ ('PAGES.' + item.title) | uppercase | translate }}
+        {{ 'PAGES' | translationKey: item.title | translate }}
       </a>
     </li>
   }
 </ul>
-<p class="copyright">
-  &copy; {{ 'COMMON.APP_NAME' | translate }} / Jurrit van der Ploeg {{ currentYear }}
-</p>
+<div class="copyright">
+  <p>
+    &copy; {{ 'COMMON.APP_NAME' | translate }} / Jurrit van der Ploeg {{ currentYear }}
+  </p>
+</div>

@@ -1,0 +1,32 @@
+:host {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--flag-space-lg);
+  padding: var(--flag-space-md) var(--flag-space-sm);
+  width: 100%;
+}
+
+app-page-header,
+section {
+  box-sizing: border-box;
+  max-width: 58.25rem;
+  width: 100%;
+}
+
+section {
+  display: grid;
+  padding-bottom: var(--flag-space-3xl);
+
+  h3,
+  h4 {
+    font-size: var(--flag-font-size-md);
+    margin-block: var(--flag-space-3xl) var(--flag-space-lg);
+  }
+
+  p,
+  dl {
+    margin-bottom: var(--flag-space-md);
+    max-width: 37.5rem;
+  }
+}
