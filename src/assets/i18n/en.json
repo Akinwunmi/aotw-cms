@@ -64,7 +64,7 @@
     "ORGANIZATIONS": "Organizations",
     "PARENT": "Parent"
   },
-  "TOPICS": {
+  "ENTITY_TYPES": {
     "AUTONOMOUS_CITY": "Autonomous City",
     "AUTONOMOUS_COMMUNITY": "Autonomous Community",
     "AUTONOMOUS_ISLAND": "Autonomous Island",
@@ -93,7 +93,7 @@
     "UNINCORPORATED_TERRITORY": "Unincorporated Territory",
     "VILLAGE": "Village"
   },
-  "REGIONS": {
+  "ENTITIES": {
     "AF": "Africa",
     "AF_AGO": "Angola",
     "AF_ATF": "French Southern Territories",

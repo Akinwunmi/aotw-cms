@@ -1,0 +1,9 @@
+<section [ngClass]="{ grid: gridLayout }">
+  @for (entity of filteredEntities; track $index) {
+    <app-entity
+      [card]="gridLayout"
+      [routerLink]="'../' + (entity.altId?.startsWith(parentEntityId()) ? entity.altId : entity.id)"
+      [entity]="entity"
+    />
+  }
+</section>

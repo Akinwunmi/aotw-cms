@@ -2,20 +2,20 @@ import { NgClass } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { TopicWithRange } from '../../models';
+import { EntityWithRangeSuffix } from '../../models';
 import { ImagePipe, TranslationKeyPipe } from '../../pipes';
 import { ImageComponent } from '../image';
 
 @Component({
-  selector: 'app-topic',
+  selector: 'app-entity',
   standalone: true,
   imports: [ImageComponent, ImagePipe, NgClass, TranslateModule, TranslationKeyPipe],
-  templateUrl: './topic.component.html',
-  styleUrl: './topic.component.scss',
+  templateUrl: './entity.component.html',
+  styleUrl: './entity.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TopicComponent {
-  public topic = input.required<TopicWithRange>();
+export class EntityComponent {
+  public entity = input.required<EntityWithRangeSuffix>();
   public card = input(true);
   public showLabel = input(true);
 

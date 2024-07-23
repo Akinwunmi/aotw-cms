@@ -9,7 +9,7 @@
 </flag-form-field>
 
 <ol>
-  @for (topic of filteredTopics(); track $index) {
-    <li>{{ 'REGIONS.' + setTopicLabel(topic.id) | uppercase | translate }}</li>
+  @for (entity of filteredEntities(); track $index) {
+    <li>{{ 'ENTITIES' | translationKey: entity.id | translate }}</li>
   }
 </ol>

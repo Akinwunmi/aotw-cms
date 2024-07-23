@@ -1,9 +1,9 @@
 <app-page-header title="PAGES.MY_FAVORITES" />
 <section>
-  @for (topic of favoriteTopics$ | async; track topic.id) {
-    <div class="topic">
-      <app-topic [routerLink]="'../discover/topic/' + topic.id" [topic]="topic" />
-      <app-favorite-button [id]="topic.id" />
+  @for (entity of favoriteEntities$ | async; track entity.id) {
+    <div class="entity">
+      <app-entity [routerLink]="'../discover/entity/' + entity.id" [entity]="entity" />
+      <app-favorite-button [id]="entity.id" />
     </div>
   }
 </section>

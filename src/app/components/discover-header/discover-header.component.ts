@@ -16,7 +16,7 @@ import { FlagIconComponent } from '@flagarchive/angular';
 import { TranslateModule } from '@ngx-translate/core';
 import { filter, startWith } from 'rxjs';
 
-import { DefaultTopic, DiscoverSection, RouteDiscover, Topic } from '../../models';
+import { DefaultEntity, DiscoverSection, Entity, EntityType, RouteDiscover } from '../../models';
 
 @Component({
   selector: 'app-discover-header',
@@ -27,20 +27,20 @@ import { DefaultTopic, DiscoverSection, RouteDiscover, Topic } from '../../model
   styleUrl: './discover-header.component.scss'
 })
 export class DiscoverHeaderComponent implements OnInit {
-  private destroyRef = inject(DestroyRef);
-  private router = inject(Router);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly router = inject(Router);
 
-  public activeTopicId = input<string>();
-  public topics = input<Topic[]>();
+  public activeEntityId = input<string>();
+  public entities = input<Entity[]>();
 
-  public activeTopic = output<string>();
+  public activeEntity = output<string>();
 
-  public continents = computed(() => this.topics()?.filter(topic =>
-    topic.type === 'Continent',
+  public continents = computed(() => this.entities()?.filter(entity =>
+    entity.type === EntityType.Continent,
   ));
   
-  public organizations = computed(() => this.topics()?.filter(topic =>
-    topic.type === 'Organization',
+  public organizations = computed(() => this.entities()?.filter(entity =>
+    entity.type === EntityType.Organization,
   ));
 
   public discoverSectionEnum = DiscoverSection;
@@ -54,8 +54,8 @@ export class DiscoverHeaderComponent implements OnInit {
       startWith(this.router.url),
       takeUntilDestroyed(this.destroyRef),
     ).subscribe(() => {
-      const topicId = this.router.url.slice(1).split('/')[RouteDiscover.Topic];
-      const section = topicId.startsWith('o')
+      const entityId = this.router.url.slice(1).split('/')[RouteDiscover.Entity];
+      const section = entityId.startsWith('o')
         ? DiscoverSection.Organizations
         : DiscoverSection.Continents;
       this.activeSection = section;
@@ -68,14 +68,14 @@ export class DiscoverHeaderComponent implements OnInit {
   }
 
   public setActiveSection(section: DiscoverSection): void {
-    const topicId = section === DiscoverSection.Continents
-      ? DefaultTopic.Continents
-      : DefaultTopic.Organizations;
-    this.router.navigate(['discover', 'topic', topicId]);
+    const entityId = section === DiscoverSection.Continents
+      ? DefaultEntity.Continents
+      : DefaultEntity.Organizations;
+    this.router.navigate(['discover', 'entity', entityId]);
     this.activeSection = section;
   }
 
-  public setActiveTopic(id: string): void {
-    this.activeTopic.emit(id);
+  public setActiveEntity(id: string): void {
+    this.activeEntity.emit(id);
   }
 }

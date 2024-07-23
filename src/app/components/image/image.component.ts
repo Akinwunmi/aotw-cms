@@ -1,11 +1,8 @@
 import { ChangeDetectionStrategy, Component, HostBinding, input } from '@angular/core';
 
-import { SHARED_IMPORTS } from '../../shared';
-
 @Component({
   selector: 'app-image',
   standalone: true,
-  imports: SHARED_IMPORTS,
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './image.component.html',
   styleUrl: './image.component.scss'

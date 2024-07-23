@@ -20,20 +20,19 @@ import {
   FlagIconComponent,
 } from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
+import { TranslateModule } from '@ngx-translate/core';
 
-import { TopicWithRange } from '../../models';
+import { EntityWithRangeSuffix } from '../../models';
 import { ImagePipe, TranslationKeyPipe } from '../../pipes';
-import { AuthService, TopicService } from '../../services';
-import { SHARED_IMPORTS } from '../../shared';
+import { AuthService, EntityService } from '../../services';
 import { selectSelectedYear } from '../../state/selectors';
 import { FavoriteButtonComponent } from '../favorite-button';
 import { ImageComponent } from '../image';
 
 @Component({
-  selector: 'app-topic-header',
+  selector: 'app-entity-header',
   standalone: true,
   imports: [
-    ...SHARED_IMPORTS,
     FavoriteButtonComponent,
     FlagBreadcrumbComponent,
     FlagButtonDirective,
@@ -41,29 +40,30 @@ import { ImageComponent } from '../image';
     ImageComponent,
     ImagePipe,
     RouterModule,
-    TranslationKeyPipe
+    TranslateModule,
+    TranslationKeyPipe,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './topic-header.component.html',
-  styleUrls: ['./topic-header.component.scss'],
+  templateUrl: './entity-header.component.html',
+  styleUrls: ['./entity-header.component.scss'],
 })
-export class TopicHeaderComponent implements OnInit {
+export class EntityHeaderComponent implements OnInit {
   private authService = inject(AuthService);
   private cdr = inject(ChangeDetectorRef);
   private destroyRef = inject(DestroyRef);
+  private entityService = inject(EntityService);
   private router = inject(Router);
-  private topicService = inject(TopicService);
   private store = inject(Store);
 
-  public topic = input.required<TopicWithRange>();
+  public entity = input.required<EntityWithRangeSuffix>();
 
   public breadcrumb = input<BreadcrumbItem[]>([]);
   private selectedYear = signal<number | undefined>(undefined);
 
   public isLoggedIn = computed(() => !!this.authService.currentUser());
   
-  public rangedTopic = computed(() => (
-    this.topicService.setImageRange(this.topic(), this.selectedYear()))
+  public rangedEntity = computed(() => (
+    this.entityService.setImageRange(this.entity(), this.selectedYear()))
   );
 
   @HostBinding('class.expanded')

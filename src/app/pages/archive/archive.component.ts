@@ -10,13 +10,10 @@ import { FlagTabGroupComponent, Tab } from '@flagarchive/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { map, Subject, takeUntil } from 'rxjs';
 
-import { SHARED_IMPORTS } from '../../shared';
-
 @Component({
   selector: 'app-archive',
   standalone: true,
   imports: [
-    ...SHARED_IMPORTS,
     FlagTabGroupComponent,
     RouterModule
   ],

@@ -1,17 +1,17 @@
 import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { APP_ROUTES } from '../../app.routes';
 import { TranslationKeyPipe } from '../../pipes';
 import { AuthService } from '../../services';
-import { SHARED_IMPORTS } from '../../shared';
 
 import { SitemapItem } from './application-footer.model';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [...SHARED_IMPORTS, RouterModule, TranslationKeyPipe],
+  imports: [RouterModule, TranslateModule, TranslationKeyPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './application-footer.component.html',
   styleUrls: ['./application-footer.component.scss'],

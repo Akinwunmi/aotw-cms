@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ArchiveService } from './archive.service';
+import { EntityService } from './entity.service';
 
-describe('ArchiveService', () => {
-  let service: ArchiveService;
+describe('EntityService', () => {
+  let service: EntityService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ArchiveService);
+    service = TestBed.inject(EntityService);
   });
 
   it('should be created', () => {

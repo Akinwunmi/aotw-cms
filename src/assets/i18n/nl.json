@@ -64,7 +64,7 @@
     "ORGANIZATIONS": "Organisaties",
     "PARENT": "Onderdeel van"
   },
-  "TOPICS": {
+  "ENTITY_TYPES": {
     "COMMUNITY": "Gemeenschap",
     "CONTINENT": "Continent",
     "COUNTRY": "Land",
@@ -74,7 +74,7 @@
     "PROVINCE": "Provincie",
     "SPECIALIZED_AGENCY": "Gespecialiseerde organisatie"
   },
-  "REGIONS": {
+  "ENTITIES": {
     "AF": "Afrika",
     "AS": "Azië",
     "AU": "Australië",
