@@ -55,6 +55,10 @@ export class DiscoverHeaderComponent implements OnInit {
       takeUntilDestroyed(this.destroyRef),
     ).subscribe(() => {
       const entityId = this.router.url.slice(1).split('/')[RouteDiscover.Entity];
+      if (!entityId) {
+        return;
+      }
+
       const section = entityId.startsWith('o')
         ? DiscoverSection.Organizations
         : DiscoverSection.Continents;

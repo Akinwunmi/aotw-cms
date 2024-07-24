@@ -5,6 +5,7 @@
   },
   "PAGES": {
     "ABOUT": "About this project",
+    "ADMIN": "Admin Dashboard",
     "HOME": "Home",
     "LOGIN": "Log in",
     "MY_ACCOUNT": "My account",
@@ -297,6 +298,7 @@
     "EU_NLD_BES": "Bonaire, Sint Eustatius and Saba",
     "EU_NLD_CUR": "Curaçao",
     "EU_NLD_DREN": "Drenthe",
+    "EU_NLD_DREN_AAHUN": "Aa en Hunze",
     "EU_NLD_FLEV": "Flevoland",
     "EU_NLD_FRYS": "Friesland",
     "EU_NLD_FRYS_ACHTK": "Achtkarspelen",

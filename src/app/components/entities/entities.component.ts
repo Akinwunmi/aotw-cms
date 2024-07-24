@@ -17,11 +17,9 @@ import { combineLatest, filter, map, switchMap, take, tap } from 'rxjs';
 import {
   Entity,
   EntityRange,
-  EntityWithRangeSuffix,
   Layout,
   RouteDiscover,
 } from '../../models';
-import { ImagePipe } from '../../pipes';
 import { EntityService } from '../../services';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
@@ -34,7 +32,6 @@ import { EntityComponent } from '../entity';
   imports: [
     EntityComponent,
     ImageComponent,
-    ImagePipe,
     NgClass,
     RouterModule,
   ],
@@ -51,14 +48,14 @@ export class EntitiesComponent implements OnInit {
 
   public parentEntityId = signal('');
 
-  private entities = signal<EntityWithRangeSuffix[]>([]);
+  private entities = signal<Entity[]>([]);
 
   private grandparentEntityId = computed(
     () => this.parentEntityId()?.split('-').slice(-1)[0] || ''
   );
 
   // TODO - Implement applyFilters method
-  public filteredEntities: EntityWithRangeSuffix[] = [];
+  public filteredEntities: Entity[] = [];
 
   public gridLayout = true;
 
@@ -127,7 +124,7 @@ export class EntitiesComponent implements OnInit {
     });
   }
 
-  private filterEntities(entities: EntityWithRangeSuffix[]): EntityWithRangeSuffix[] {
+  private filterEntities(entities: Entity[]): Entity[] {
     return entities.filter(({ altId, id, ranges}) => {
       const isChildEntity = this.isChildEntity(id) || this.isChildEntity(altId);
 

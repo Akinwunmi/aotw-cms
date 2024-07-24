@@ -7,7 +7,6 @@ import { map, switchMap } from 'rxjs';
 import { EntityComponent } from '../../components/entity';
 import { FavoriteButtonComponent } from '../../components/favorite-button';
 import { PageHeaderComponent } from '../../components/page-header';
-import { EntityWithRangeSuffix } from '../../models';
 import { EntityService, UserService } from '../../services';
 
 @Component({
@@ -39,6 +38,6 @@ export class MyFavoritesComponent {
     )),
     map(({ entities, favorites }) => (
       entities.filter(entity => favorites?.includes(entity.id)) ?? []
-    ) as EntityWithRangeSuffix[])
+    ))
   );
 }

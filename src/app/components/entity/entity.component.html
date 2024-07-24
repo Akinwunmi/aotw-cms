@@ -2,7 +2,7 @@
 
 <figure [ngClass]="{ card: card() }">
   <app-image
-    [src]="entity().imageUrl || (entity().id | image: 'assets/mock/images/': entity().rangeSuffix)"
+    [src]="entity().imageUrl ?? ''"
     [alt]="NAME_TRANSLATION"
     [placeholder]="!entity().imageUrl"
   />

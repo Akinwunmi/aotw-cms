@@ -39,10 +39,10 @@ import { HeaderMenu } from './application-header.model';
   styleUrls: ['./application-header.component.scss'],
 })
 export class ApplicationHeaderComponent implements OnInit {
-  private authService = inject(AuthService);
-  private destroyRef = inject(DestroyRef);
-  private router = inject(Router);
-  private translate = inject(TranslateService);
+  private readonly authService = inject(AuthService);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly router = inject(Router);
+  private readonly translate = inject(TranslateService);
 
   public headerMenuEnum = HeaderMenu;
 

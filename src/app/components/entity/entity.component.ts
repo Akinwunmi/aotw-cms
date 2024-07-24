@@ -2,20 +2,20 @@ import { NgClass } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { EntityWithRangeSuffix } from '../../models';
-import { ImagePipe, TranslationKeyPipe } from '../../pipes';
+import { Entity } from '../../models';
+import { TranslationKeyPipe } from '../../pipes';
 import { ImageComponent } from '../image';
 
 @Component({
   selector: 'app-entity',
   standalone: true,
-  imports: [ImageComponent, ImagePipe, NgClass, TranslateModule, TranslationKeyPipe],
+  imports: [ImageComponent, NgClass, TranslateModule, TranslationKeyPipe],
   templateUrl: './entity.component.html',
   styleUrl: './entity.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EntityComponent {
-  public entity = input.required<EntityWithRangeSuffix>();
+  public entity = input.required<Entity>();
   public card = input(true);
   public showLabel = input(true);
 

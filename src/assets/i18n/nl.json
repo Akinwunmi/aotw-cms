@@ -5,6 +5,7 @@
   },
   "PAGES": {
     "ABOUT": "Over dit project",
+    "ADMIN": "Admin dashboard",
     "HOME": "Home",
     "LOGIN": "Inloggen",
     "MY_ACCOUNT": "Mijn account",
@@ -122,6 +123,7 @@
     "EU_NLD_BES": "Caribisch Nederland",
     "EU_NLD_CUR": "Curaçao",
     "EU_NLD_DREN": "Drenthe",
+    "EU_NLD_DREN_AAHUN": "Aa en Hunze",
     "EU_NLD_FLEV": "Flevoland",
     "EU_NLD_FRYS": "Friesland",
     "EU_NLD_GELD": "Gelderland",

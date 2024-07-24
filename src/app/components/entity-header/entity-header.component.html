@@ -27,7 +27,7 @@
   }
 </div>
 <app-image
-  [src]="rangedEntity().imageUrl || (rangedEntity().id | image: 'assets/mock/images/': rangedEntity().rangeSuffix)"
+  [src]="rangedEntity().imageUrl ?? ''"
   [alt]="NAME_TRANSLATION"
   [placeholder]="!rangedEntity().imageUrl"
 />

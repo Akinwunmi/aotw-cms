@@ -22,8 +22,8 @@ import {
 import { Store } from '@ngrx/store';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { EntityWithRangeSuffix } from '../../models';
-import { ImagePipe, TranslationKeyPipe } from '../../pipes';
+import { Entity } from '../../models';
+import { TranslationKeyPipe } from '../../pipes';
 import { AuthService, EntityService } from '../../services';
 import { selectSelectedYear } from '../../state/selectors';
 import { FavoriteButtonComponent } from '../favorite-button';
@@ -38,7 +38,6 @@ import { ImageComponent } from '../image';
     FlagButtonDirective,
     FlagIconComponent,
     ImageComponent,
-    ImagePipe,
     RouterModule,
     TranslateModule,
     TranslationKeyPipe,
@@ -55,7 +54,7 @@ export class EntityHeaderComponent implements OnInit {
   private router = inject(Router);
   private store = inject(Store);
 
-  public entity = input.required<EntityWithRangeSuffix>();
+  public entity = input.required<Entity>();
 
   public breadcrumb = input<BreadcrumbItem[]>([]);
   private selectedYear = signal<number | undefined>(undefined);

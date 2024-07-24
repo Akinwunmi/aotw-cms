@@ -12,11 +12,14 @@ import { Observable, from } from 'rxjs';
 
 import { AuthUser } from '../models';
 
+import { UserService } from './user.service';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private firebaseAuth = inject(Auth);
+  private readonly firebaseAuth = inject(Auth);
+  private readonly userService = inject(UserService);
 
   private user = toSignal(user(this.firebaseAuth));
   public currentUser = computed<AuthUser | undefined>(() => {
@@ -48,6 +51,8 @@ export class AuthService {
 
   public logOut(): Observable<void> {
     const promise = signOut(this.firebaseAuth);
+    this.userService.favorites.set([]);
+    this.userService.roles.set([]);
     return from(promise);
   }
 }

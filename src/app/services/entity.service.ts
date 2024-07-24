@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { collection, collectionData, Firestore } from '@angular/fire/firestore';
 import { map, Observable } from 'rxjs';
 
-import { DatabaseCollection, DatabaseKey, Entity, EntityWithRangeSuffix } from '../models';
+import { DatabaseCollection, DatabaseKey, Entity } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,7 @@ export class EntityService {
     );
   }
 
-  public setImageRange(entity: Entity, selectedYear?: number): EntityWithRangeSuffix {
+  public setImageRange(entity: Entity, selectedYear?: number): Entity {
     const { ranges } = entity;
 
     if (!ranges) {
@@ -32,12 +32,11 @@ export class EntityService {
     }
 
     if (ranges.length === 1) {
-      const { start, end, id, imageUrl } = ranges.slice(-1)[0];
+      const { id, imageUrl } = ranges.slice(-1)[0];
       return {
         ...entity,
         id: id ?? entity.id,
         imageUrl: imageUrl ?? entity.imageUrl,
-        rangeSuffix: `_${start}-${end || ''}`
       };
     }
 
@@ -55,12 +54,11 @@ export class EntityService {
       return {};
     });
 
-    const { start, end, id, imageUrl } = range;
+    const { id, imageUrl } = range;
     return {
       ...entity,
       id: id ?? entity.id,
       imageUrl: imageUrl ?? entity.imageUrl,
-      rangeSuffix: start ? `_${start}-${end || ''}` : undefined
     };
   }
 }

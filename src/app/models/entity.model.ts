@@ -22,8 +22,3 @@ export interface Entity {
   parent?: string;
   ranges?: EntityRange[];
 }
-
-// ? - Is this needed?
-export interface EntityWithRangeSuffix extends Entity {
-  rangeSuffix?: string;
-}
