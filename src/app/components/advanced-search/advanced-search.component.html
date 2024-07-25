@@ -1,3 +1,5 @@
+@let SEARCH_TRANSLATION = 'COMMON.SEARCH' | translate;
+
 @if (showAllOptions) {
   <div class="filters" [ngClass]="{ stretch }">
     <p>{{ 'FILTERS_AND_SORTING.ADVANCED_SEARCH' | translate }}</p>
@@ -8,10 +10,10 @@
           flagButton
           type="button"
           ghost
-          [title]="'COMMON.SEARCH' | translate"
+          [title]="SEARCH_TRANSLATION"
           (click)="openOption(advancedSearchEnum.Search)"
         >
-          <span>{{ 'COMMON.SEARCH' | translate }}</span>
+          <span>{{ SEARCH_TRANSLATION }}</span>
           <flag-icon>search</flag-icon>
         </button>
       }
@@ -39,7 +41,7 @@
       <!-- Search field -->
       @case (advancedSearchEnum.Search) {
         <flag-form-field class="search">
-          <input flagInput [placeholder]="'COMMON.SEARCH' | translate" />
+          <input flagInput [placeholder]="SEARCH_TRANSLATION" />
         </flag-form-field>
       }
       <!-- Filter options -->

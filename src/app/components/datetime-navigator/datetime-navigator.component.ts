@@ -16,7 +16,6 @@ import {
 import { Store } from '@ngrx/store';
 import { Subject, map, takeUntil } from 'rxjs';
 
-import { SHARED_IMPORTS } from '../../shared';
 import { setSelectedYear } from '../../state/actions';
 import { selectSelectedYear } from '../../state/selectors';
 
@@ -24,7 +23,6 @@ import { selectSelectedYear } from '../../state/selectors';
   selector: 'app-datetime-navigator',
   standalone: true,
   imports: [
-    ...SHARED_IMPORTS,
     FlagButtonDirective,
     FlagDropdownDirective,
     FlagIconComponent,

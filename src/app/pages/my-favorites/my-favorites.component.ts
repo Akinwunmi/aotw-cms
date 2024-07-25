@@ -4,20 +4,19 @@ import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { map, switchMap } from 'rxjs';
 
+import { EntityComponent } from '../../components/entity';
 import { FavoriteButtonComponent } from '../../components/favorite-button';
 import { PageHeaderComponent } from '../../components/page-header';
-import { TopicComponent } from '../../components/topic';
-import { TopicWithRange } from '../../models';
-import { ArchiveService, UserService } from '../../services';
+import { EntityService, UserService } from '../../services';
 
 @Component({
   selector: 'app-my-favorites',
   standalone: true,
   imports: [
     AsyncPipe,
+    EntityComponent,
     FavoriteButtonComponent,
     PageHeaderComponent,
-    TopicComponent,
     TranslateModule,
     RouterLink
   ],
@@ -26,19 +25,19 @@ import { ArchiveService, UserService } from '../../services';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MyFavoritesComponent {
-  private archiveService = inject(ArchiveService);
-  private userService = inject(UserService);
+  private readonly entityService = inject(EntityService);
+  private readonly userService = inject(UserService);
 
   private favorites$ = this.userService.getUser().pipe(
     map(user => user.favorites)
   );
 
-  public favoriteTopics$ = this.favorites$.pipe(
-    switchMap(favorites => this.archiveService.getArchive().pipe(
-      map(archive => ({ topics: archive.topics, favorites }))
+  public favoriteEntities$ = this.favorites$.pipe(
+    switchMap(favorites => this.entityService.getEntities().pipe(
+      map(entities => ({ entities, favorites }))
     )),
-    map(({ topics, favorites }) => (
-      topics.filter(topic => favorites?.includes(topic.id)) ?? []
-    ) as TopicWithRange[])
+    map(({ entities, favorites }) => (
+      entities.filter(entity => favorites?.includes(entity.id)) ?? []
+    ))
   );
 }

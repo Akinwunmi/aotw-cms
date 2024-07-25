@@ -1,33 +1,39 @@
+@let EMAIL_ADDRESS_TRANSLATION = 'COMMON.EMAIL_ADDRESS' | translate;
+@let NAME_TRANSLATION = 'COMMON.NAME' | translate;
+@let PASSWORD_TRANSLATION = 'COMMON.PASSWORD' | translate;
+@let SURNAME_TRANSLATION = 'COMMON.SURNAME' | translate;
+@let USERNAME_TRANSLATION = 'COMMON.USERNAME' | translate;
+
 <form [formGroup]="form" (ngSubmit)="signUp()">
   <flag-form-field>
     <label for="username">
-      {{ 'COMMON.USERNAME' | translate }}
+      {{ USERNAME_TRANSLATION }}
     </label>
-    <input flagInput type="text" name="username" [placeholder]="'COMMON.USERNAME' | translate" formControlName="username" />
+    <input flagInput type="text" name="username" [placeholder]="USERNAME_TRANSLATION" formControlName="username" />
   </flag-form-field>
   <flag-form-field>
     <label for="name">
-      {{ 'COMMON.NAME' | translate }}
+      {{ NAME_TRANSLATION }}
     </label>
-    <input flagInput type="text" name="name" [placeholder]="'COMMON.NAME' | translate" formControlName="name" />
+    <input flagInput type="text" name="name" [placeholder]="NAME_TRANSLATION" formControlName="name" />
   </flag-form-field>
   <flag-form-field>
     <label for="surname">
-      {{ 'COMMON.SURNAME' | translate }}
+      {{ SURNAME_TRANSLATION }}
     </label>
-    <input flagInput type="text" name="surname" [placeholder]="'COMMON.SURNAME' | translate" formControlName="surname" />
+    <input flagInput type="text" name="surname" [placeholder]="SURNAME_TRANSLATION" formControlName="surname" />
   </flag-form-field>
   <flag-form-field>
     <label for="email-address">
-      {{ 'COMMON.EMAIL_ADDRESS' | translate }}
+      {{ EMAIL_ADDRESS_TRANSLATION }}
     </label>
-    <input flagInput type="email" name="email-address" [placeholder]="'COMMON.EMAIL_ADDRESS' | translate" formControlName="email" />
+    <input flagInput type="email" name="email-address" [placeholder]="EMAIL_ADDRESS_TRANSLATION" formControlName="email" />
   </flag-form-field>
   <flag-form-field>
     <label for="password">
-      {{ 'COMMON.PASSWORD' | translate }}
+      {{ PASSWORD_TRANSLATION }}
     </label>
-    <input flagInput type="password" name="password" [placeholder]="'COMMON.PASSWORD' | translate" formControlName="password" />
+    <input flagInput type="password" name="password" [placeholder]="PASSWORD_TRANSLATION" formControlName="password" />
   </flag-form-field>
   <button flagButton raised type="submit">
     {{ 'COMMON.SIGNUP' | translate }}

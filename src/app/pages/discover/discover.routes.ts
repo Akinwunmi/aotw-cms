@@ -9,9 +9,9 @@ export const DISCOVER_ROUTES: Route[] = [
     title: 'Discover',
     children: [
       {
-        path: 'topic',
-        loadChildren: () => import('../../components/topics/topics.routes').then(
-          m => m.TOPIC_ROUTES
+        path: 'entity',
+        loadChildren: () => import('../../components/entities/entities.routes').then(
+          m => m.ENTITY_ROUTES
         ),
       }
     ]

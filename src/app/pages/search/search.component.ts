@@ -2,13 +2,15 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  DestroyRef,
   OnInit,
   computed,
   inject,
   signal
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FlagFormFieldComponent } from '@flagarchive/angular';
-import { Subject, takeUntil } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
 
 import {
   AdvancedSearchComponent,
@@ -16,60 +18,56 @@ import {
   SortDirection,
   SortOption
 } from '../../components/advanced-search';
-import { Topic } from '../../models';
-import { ArchiveService } from '../../services';
-import { SHARED_IMPORTS } from '../../shared';
+import { Entity } from '../../models';
+import { TranslationKeyPipe } from '../../pipes';
+import { EntityService } from '../../services';
 
 @Component({
   selector: 'app-search',
   standalone: true,
   imports: [
-    ...SHARED_IMPORTS,
     AdvancedSearchComponent,
     FlagFormFieldComponent,
+    TranslateModule,
+    TranslationKeyPipe,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit {
-  public filteredTopics = computed(() => {
-    return this.sortTopics();
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly entityService = inject(EntityService);
+  private readonly cdr = inject(ChangeDetectorRef);
+
+  public filteredEntities = computed(() => {
+    return this.sortEntities();
   });
 
   public filters: FilterOption[] = [];
   public sorting: SortOption[] = [];
   public sortDirection = SortDirection.Asc;
 
-  private archiveService = inject(ArchiveService);
-  private cdr = inject(ChangeDetectorRef);
-
-  private topics = signal<Topic[]>([]);
-
-  private unsubscribe$ = new Subject<void>();
+  private entities = signal<Entity[]>([]);
 
   public ngOnInit(): void {
-    this.archiveService.getArchive().pipe(
-      takeUntil(this.unsubscribe$)
-    ).subscribe(({ topics }) => {
-      this.topics.set(topics);
+    this.entityService.getEntities().pipe(
+      takeUntilDestroyed(this.destroyRef),
+    ).subscribe(entities => {
+      this.entities.set(entities);
       this.cdr.detectChanges();
     });
   }
 
-  public setTopicLabel(id: string): string {
-    return id.replaceAll('-', '_');
-  }
-
-  private sortTopics(): Topic[] {
-    return this.topics().sort((a, b) => {
+  private sortEntities(): Entity[] {
+    return this.entities().sort((a, b) => {
       const start = this.sortDirection === SortDirection.Asc ? a : b;
       const end = this.sortDirection === SortDirection.Asc ? b : a;
-      if (end.name < start.name) {
-        return 1;
+      if (end.id < start.id) {
+        return start.id.localeCompare(end.id);
       }
-      if (end.name > start.name) {
-        return -1;
+      if (end.id > start.id) {
+        return end.id.localeCompare(start.id);
       }
       return 0;
     });

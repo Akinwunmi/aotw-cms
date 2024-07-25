@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopicHeaderComponent } from './topic-header.component';
+import { EntityHeaderComponent } from './entity-header.component';
 
-describe('TopicHeaderComponent', () => {
-  let component: TopicHeaderComponent;
-  let fixture: ComponentFixture<TopicHeaderComponent>;
+describe('EntityHeaderComponent', () => {
+  let component: EntityHeaderComponent;
+  let fixture: ComponentFixture<EntityHeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TopicHeaderComponent]
+      imports: [EntityHeaderComponent]
     }).compileComponents();
     
-    fixture = TestBed.createComponent(TopicHeaderComponent);
+    fixture = TestBed.createComponent(EntityHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

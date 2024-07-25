@@ -18,6 +18,8 @@ section {
   grid-template-columns: repeat(12, 1fr);
 
   .info {
+    display: grid;
+    gap: var(--flag-space-lg);
     grid-column: 1 / 8;
   }
 
