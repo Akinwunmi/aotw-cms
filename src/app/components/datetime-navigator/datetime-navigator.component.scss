@@ -1,4 +1,5 @@
 :host {
+  align-items: center;
   display: flex;
   gap: var(--flag-space-xs);
 }
@@ -8,5 +9,19 @@
 
   button {
     width: 100%;
+  }
+}
+
+.play {
+  align-items: center;
+  display: none;
+  gap: var(--flag-space-xs);
+  
+  @media screen and (min-width: 60rem) {
+    display: flex;
+  }
+
+  p {
+    padding-inline: var(--flag-space-md);
   }
 }

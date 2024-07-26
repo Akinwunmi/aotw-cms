@@ -1,4 +1,7 @@
-<button flagButton [disabled]="min() === selectedYear" (click)="previous()">
+@let MAX_SELECTED_YEAR = max() === selectedYear;
+@let MIN_SELECTED_YEAR = min() === selectedYear;
+
+<button flagButton [disabled]="MIN_SELECTED_YEAR" (click)="previous()">
   <flag-icon>keyboard_arrow_left</flag-icon>
 </button>
 <div
@@ -14,9 +17,31 @@
     {{ selectedYear }}
   </button>
 </div>
-<button flagButton [disabled]="max() === selectedYear" (click)="next()">
+<button flagButton [disabled]="MAX_SELECTED_YEAR" (click)="next()">
   <flag-icon>keyboard_arrow_right</flag-icon>
 </button>
+
+<div class="play">
+  <p>Play</p>
+  @if (!isPlayingBackward) {
+    <button flagButton [disabled]="MIN_SELECTED_YEAR || isPlayingForward" (click)="play(true)">
+      <flag-icon>fast_rewind</flag-icon>
+    </button>
+  } @else {
+    <button flagButton [disabled]="MIN_SELECTED_YEAR" (click)="stop()">
+      <flag-icon>pause</flag-icon>
+    </button>
+  }
+  @if (!isPlayingForward) {
+    <button flagButton [disabled]="MAX_SELECTED_YEAR || isPlayingBackward" (click)="play()">
+      <flag-icon>fast_forward</flag-icon>
+    </button>
+  } @else {
+    <button flagButton [disabled]="MAX_SELECTED_YEAR" (click)="stop()">
+      <flag-icon>pause</flag-icon>
+    </button>
+  }
+</div>
 
 <ng-template #dropdown>
   <flag-year-picker
