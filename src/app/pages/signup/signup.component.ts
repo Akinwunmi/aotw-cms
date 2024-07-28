@@ -1,17 +1,17 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { Validators, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { Validators, ReactiveFormsModule, FormBuilder, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FlagFormFieldComponent } from '@flagarchive/angular';
 import { TranslateModule } from '@ngx-translate/core';
 import { switchMap } from 'rxjs';
 
+import { FormFieldInputComponent } from '../../components/form-field-input';
 import { TranslationKeyPipe } from '../../pipes';
 import { AuthService, UserService } from '../../services';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [FlagFormFieldComponent, ReactiveFormsModule, TranslateModule, TranslationKeyPipe],
+  imports: [FormFieldInputComponent, ReactiveFormsModule, TranslateModule, TranslationKeyPipe],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -32,6 +32,14 @@ export class SignupComponent {
     password: ['', Validators.required],
   });
 
+  public getControl(key: string): FormControl {
+    return this.form.get(key) as FormControl;
+  }
+
+  public goToLogIn(): void {
+    this.router.navigate(['login']);
+  }
+
   public signUp(): void {
     const { username, name, surname, email, password } = this.form.getRawValue();
     this.authService.signUp(username, email, password).pipe(
@@ -44,9 +52,5 @@ export class SignupComponent {
         this.errorMessage.set(error.code);
       },
     });
-  }
-
-  public goToLogIn(): void {
-    this.router.navigate(['login']);
   }
 }

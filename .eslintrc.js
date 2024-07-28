@@ -65,7 +65,7 @@ module.exports = {
             'code': 100
           }
         ],
-            'max-lines': [
+        'max-lines': [
           'error',
           {
             'max': 240
@@ -82,7 +82,20 @@ module.exports = {
         'plugin:@angular-eslint/template/recommended',
         'plugin:@angular-eslint/template/accessibility'
       ],
-      rules: {}
+      rules: {
+        'max-len': [
+          'error',
+          {
+            'code': 100
+          }
+        ],
+        'max-lines': [
+          'error',
+          {
+            'max': 240
+          }
+        ],
+      }
     }
   ]
 }

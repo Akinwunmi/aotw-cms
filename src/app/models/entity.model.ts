@@ -22,3 +22,5 @@ export interface Entity {
   parent?: string;
   ranges?: EntityRange[];
 }
+
+export interface EntityWithoutBaseId extends Omit<Entity, 'baseId'> {}

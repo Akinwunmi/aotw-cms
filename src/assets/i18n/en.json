@@ -5,6 +5,7 @@
   },
   "PAGES": {
     "ABOUT": "About this project",
+    "ADD_ENTITY": "Add entity",
     "ADMIN": "Admin Dashboard",
     "HOME": "Home",
     "LOGIN": "Log in",
@@ -29,16 +30,16 @@
     "LOGIN": "Log in",
     "LOGOUT": "Log out",
     "NAME": "Name",
-    "SURNAME": "Surname",
     "PAGE_NOT_FOUND": "Page Not Found",
     "PASSWORD": "Password",
+    "PLAY": "Play",
     "SEARCH": "Search",
     "SIGNUP": "Sign up",
     "SORT": "Sort",
+    "SURNAME": "Surname",
     "TIMELINE": "Timeline",
     "USERNAME": "Username",
-    "WELCOME": "Welcome!",
-    "WELCOME_USER": "Welcome {{ username }}!"
+    "WELCOME": "Welcome!"
   },
   "MESSAGES": {
     "AUTH": {
@@ -55,6 +56,14 @@
     "CHANGE_PASSWORD": "Change password",
     "EDIT_ACCOUNT": "Edit account"
   },
+  "ADMIN": {
+    "ADD_ENTITY": "Add entity"
+  },
+  "ADD_ENTITY": {
+    "ADD_RANGE": "Add range",
+    "RANGE_TITLE": "Range {{ index }}",
+    "UPLOAD": "Upload entity"
+  },
   "FILTERS_AND_SORTING": {
     "ADVANCED_SEARCH": "Advanced search",
     "FILTER_BY": "Filter by:"
@@ -64,6 +73,58 @@
     "HAS_PARENT": "Has parent {{ type }}",
     "ORGANIZATIONS": "Organizations",
     "PARENT": "Parent"
+  },
+  "FORM": {
+    "CONTROLS": {
+      "ALT_ID": {
+        "LABEL": "Alternative ID",
+        "PLACEHOLDER": "Enter alternative ID"
+      },
+      "EMAIL_ADDRESS": {
+        "LABEL": "Email address",
+        "PLACEHOLDER": "Enter email address"
+      },
+      "ID": {
+        "LABEL": "ID",
+        "PLACEHOLDER": "Enter ID"
+      },
+      "IMAGE_URL": {
+        "LABEL": "Image URL",
+        "PLACEHOLDER": "Enter image URL"
+      },
+      "NAME": {
+        "LABEL": "Name",
+        "PLACEHOLDER": "Enter name"
+      },
+      "PARENT": {
+        "LABEL": "Parent",
+        "PLACEHOLDER": "Enter parent ID"
+      },
+      "PASSWORD": {
+        "LABEL": "Password",
+        "PLACEHOLDER": "Enter password"
+      },
+      "RANGE_END": {
+        "LABEL": "End",
+        "PLACEHOLDER": "Enter range end year"
+      },
+      "RANGE_START": {
+        "LABEL": "Start",
+        "PLACEHOLDER": "Enter range start year"
+      },
+      "SURNAME": {
+        "LABEL": "Surname",
+        "PLACEHOLDER": "Enter surname"
+      },
+      "TYPE": {
+        "LABEL": "Type",
+        "PLACEHOLDER": "Enter type"
+      },
+      "USERNAME": {
+        "LABEL": "Username",
+        "PLACEHOLDER": "Enter username"
+      }
+    }
   },
   "ENTITY_TYPES": {
     "AUTONOMOUS_CITY": "Autonomous City",

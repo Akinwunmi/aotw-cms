@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 
-import { authGuard } from './guards';
 import { PageNotFoundComponent } from './pages/page-not-found';
 
 export const APP_ROUTES: Routes = [
@@ -15,13 +14,6 @@ export const APP_ROUTES: Routes = [
     loadChildren: () => import('./pages/about').then(
       m => m.ABOUT_ROUTES
     )
-  },
-  {
-    path: 'admin',
-    loadChildren: () => import('./pages/admin').then(
-      m => m.ADMIN_ROUTES
-    ),
-    canActivate: [authGuard],
   },
   {
     path: 'signup',
@@ -46,6 +38,12 @@ export const APP_ROUTES: Routes = [
     loadChildren: () => import('./pages/my-favorites').then(
       m => m.MY_FAVORITES_ROUTES
     )
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin').then(
+      m => m.ADMIN_ROUTES
+    ),
   },
   {
     path: '**',

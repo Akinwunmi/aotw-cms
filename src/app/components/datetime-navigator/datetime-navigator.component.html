@@ -22,7 +22,7 @@
 </button>
 
 <div class="play">
-  <p>Play</p>
+  <p>{{ 'COMMON.PLAY' | translate }}</p>
   @if (!isPlayingBackward) {
     <button flagButton [disabled]="MIN_SELECTED_YEAR || isPlayingForward" (click)="play(true)">
       <flag-icon>fast_rewind</flag-icon>
