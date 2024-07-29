@@ -17,6 +17,7 @@ import {
   RangePipe
 } from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
+import { TranslateModule } from '@ngx-translate/core';
 import { interval, map, Subject, takeUntil } from 'rxjs';
 
 import { setSelectedYear } from '../../state/actions';
@@ -30,7 +31,8 @@ import { selectSelectedYear } from '../../state/selectors';
     FlagDropdownDirective,
     FlagIconComponent,
     FlagYearPickerComponent,
-    RangePipe
+    RangePipe,
+    TranslateModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './datetime-navigator.component.html',

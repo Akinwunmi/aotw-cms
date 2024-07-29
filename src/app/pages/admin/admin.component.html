@@ -1,1 +1,4 @@
-<app-page-header [title]="'PAGES.ADMIN' | translate" />
+<app-page-header title="PAGES.ADMIN" />
+<button flagButton raised (click)="goToAddEntity()">
+  {{ 'ADMIN.ADD_ENTITY' | translate }}
+</button>

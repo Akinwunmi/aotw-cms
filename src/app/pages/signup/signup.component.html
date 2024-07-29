@@ -1,41 +1,32 @@
-@let EMAIL_ADDRESS_TRANSLATION = 'COMMON.EMAIL_ADDRESS' | translate;
-@let NAME_TRANSLATION = 'COMMON.NAME' | translate;
-@let PASSWORD_TRANSLATION = 'COMMON.PASSWORD' | translate;
-@let SURNAME_TRANSLATION = 'COMMON.SURNAME' | translate;
-@let USERNAME_TRANSLATION = 'COMMON.USERNAME' | translate;
-
 <form [formGroup]="form" (ngSubmit)="signUp()">
-  <flag-form-field>
-    <label for="username">
-      {{ USERNAME_TRANSLATION }}
-    </label>
-    <input flagInput type="text" name="username" [placeholder]="USERNAME_TRANSLATION" formControlName="username" />
-  </flag-form-field>
-  <flag-form-field>
-    <label for="name">
-      {{ NAME_TRANSLATION }}
-    </label>
-    <input flagInput type="text" name="name" [placeholder]="NAME_TRANSLATION" formControlName="name" />
-  </flag-form-field>
-  <flag-form-field>
-    <label for="surname">
-      {{ SURNAME_TRANSLATION }}
-    </label>
-    <input flagInput type="text" name="surname" [placeholder]="SURNAME_TRANSLATION" formControlName="surname" />
-  </flag-form-field>
-  <flag-form-field>
-    <label for="email-address">
-      {{ EMAIL_ADDRESS_TRANSLATION }}
-    </label>
-    <input flagInput type="email" name="email-address" [placeholder]="EMAIL_ADDRESS_TRANSLATION" formControlName="email" />
-  </flag-form-field>
-  <flag-form-field>
-    <label for="password">
-      {{ PASSWORD_TRANSLATION }}
-    </label>
-    <input flagInput type="password" name="password" [placeholder]="PASSWORD_TRANSLATION" formControlName="password" />
-  </flag-form-field>
-  <button flagButton raised type="submit">
+  <app-form-field-input
+    translationKey="USERNAME"
+    [control]="getControl('username')"
+    [required]="true"
+  />
+  <app-form-field-input
+    translationKey="NAME"
+    [control]="getControl('name')"
+    [required]="true"
+  />
+  <app-form-field-input
+    translationKey="SURNAME"
+    [control]="getControl('surname')"
+    [required]="true"
+  />
+  <app-form-field-input
+    type="email"
+    translationKey="EMAIL_ADDRESS"
+    [control]="getControl('email')"
+    [required]="true"
+  />
+  <app-form-field-input
+    type="password"
+    translationKey="PASSWORD"
+    [control]="getControl('password')"
+    [required]="true"
+  />
+  <button flagButton raised type="submit" [disabled]="form.invalid || form.pristine">
     {{ 'COMMON.SIGNUP' | translate }}
   </button>
 </form>

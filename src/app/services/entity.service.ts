@@ -1,8 +1,8 @@
 import { inject, Injectable } from '@angular/core';
-import { collection, collectionData, Firestore } from '@angular/fire/firestore';
-import { map, Observable } from 'rxjs';
+import { addDoc, collection, collectionData, Firestore } from '@angular/fire/firestore';
+import { from, map, Observable } from 'rxjs';
 
-import { DatabaseCollection, DatabaseKey, Entity } from '../models';
+import { DatabaseCollection, DatabaseKey, Entity, EntityWithoutBaseId } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,11 @@ export class EntityService {
   private readonly firestore = inject(Firestore);
 
   private entities = collection(this.firestore, DatabaseCollection.Entities);
+
+  public addEntity(entity: EntityWithoutBaseId): Observable<string> {
+    const promise = addDoc(this.entities, entity).then(response => response.id);
+    return from(promise);
+  }
 
   public getEntities(): Observable<Entity[]> {
     return (

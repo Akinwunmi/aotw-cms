@@ -1,0 +1,17 @@
+@let TRANSLATION_PREFIX = 'FORM.CONTROLS.' + translationKey() + '.';
+
+<flag-form-field
+  [infoMessage]="hasInfoMessage() ? (TRANSLATION_PREFIX + 'INFO_MESSAGE' | translate) : undefined"
+>
+  <label flagLabel [for]="id" [attr.required]="required() || undefined">
+    {{ TRANSLATION_PREFIX + 'LABEL' | translate }}
+  </label>
+  <input
+    flagInput
+    [attr.required]="required() || undefined"
+    [id]="id"
+    [formControl]="control()"
+    [placeholder]="TRANSLATION_PREFIX + 'PLACEHOLDER' | translate"
+    [type]="type()"
+  />
+</flag-form-field>

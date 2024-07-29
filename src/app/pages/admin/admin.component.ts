@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { PageHeaderComponent } from '../../components/page-header';
@@ -11,4 +12,10 @@ import { PageHeaderComponent } from '../../components/page-header';
   styleUrl: './admin.component.scss',
   templateUrl: './admin.component.html',
 })
-export class AdminComponent {}
+export class AdminComponent {
+  private readonly router = inject(Router);
+
+  public goToAddEntity(): void {
+    this.router.navigate(['admin', 'add-entity']);
+  }
+}
