@@ -24,8 +24,9 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { Entity } from '../../models';
 import { TranslationKeyPipe } from '../../pipes';
-import { AuthService, EntityService } from '../../services';
+import { AuthService, UserService } from '../../services';
 import { selectSelectedYear } from '../../state/selectors';
+import { setImageRange } from '../../utils';
 import { FavoriteButtonComponent } from '../favorite-button';
 import { ImageComponent } from '../image';
 
@@ -50,9 +51,9 @@ export class EntityHeaderComponent implements OnInit {
   private authService = inject(AuthService);
   private cdr = inject(ChangeDetectorRef);
   private destroyRef = inject(DestroyRef);
-  private entityService = inject(EntityService);
   private router = inject(Router);
   private store = inject(Store);
+  private userService = inject(UserService);
 
   public entity = input.required<Entity>();
 
@@ -60,9 +61,10 @@ export class EntityHeaderComponent implements OnInit {
   private selectedYear = signal<number | undefined>(undefined);
 
   public isLoggedIn = computed(() => !!this.authService.currentUser());
+  public isAdmin = computed(() => this.isLoggedIn() && this.userService.isAdmin());
   
   public rangedEntity = computed(() => (
-    this.entityService.setImageRange(this.entity(), this.selectedYear()))
+    setImageRange(this.entity(), this.selectedYear()))
   );
 
   @HostBinding('class.expanded')
@@ -84,6 +86,10 @@ export class EntityHeaderComponent implements OnInit {
       this.selectedYear.set(selectedYear);
       this.cdr.detectChanges();
     });
+  }
+
+  public goToEditPage(): void {
+    this.router.navigate(['admin', 'entity', 'edit', this.entity().baseId]);
   }
 
   public goToPage(item: BreadcrumbItem): void {

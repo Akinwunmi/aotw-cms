@@ -10,6 +10,6 @@
 
 <ol>
   @for (entity of filteredEntities(); track $index) {
-    <li>{{ 'ENTITIES' | translationKey: entity.id | translate }}</li>
+    <li>{{ 'ENTITIES' | translationKey: entity.translationKey | translate }}</li>
   }
 </ol>

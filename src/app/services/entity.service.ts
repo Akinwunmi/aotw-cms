@@ -1,5 +1,13 @@
 import { inject, Injectable } from '@angular/core';
-import { addDoc, collection, collectionData, Firestore } from '@angular/fire/firestore';
+import {
+  addDoc,
+  collection,
+  collectionData,
+  doc,
+  Firestore,
+  getDoc,
+  setDoc,
+} from '@angular/fire/firestore';
 import { from, map, Observable } from 'rxjs';
 
 import { DatabaseCollection, DatabaseKey, Entity, EntityWithoutBaseId } from '../models';
@@ -17,6 +25,14 @@ export class EntityService {
     return from(promise);
   }
 
+  public getEntityByBaseId(baseId: string): Observable<Entity> {
+    const docRef = doc(this.firestore, DatabaseCollection.Entities, baseId);
+    const promise = getDoc(docRef);
+    return from(promise).pipe(
+      map(entity => entity.data() as Entity),
+    );
+  }
+
   public getEntities(): Observable<Entity[]> {
     return (
       collectionData(this.entities, { idField: DatabaseKey.BaseId }) as Observable<Entity[]>
@@ -29,41 +45,9 @@ export class EntityService {
     );
   }
 
-  public setImageRange(entity: Entity, selectedYear?: number): Entity {
-    const { ranges } = entity;
-
-    if (!ranges) {
-      return entity;
-    }
-
-    if (ranges.length === 1) {
-      const { id, imageUrl } = ranges.slice(-1)[0];
-      return {
-        ...entity,
-        id: id ?? entity.id,
-        imageUrl: imageUrl ?? entity.imageUrl,
-      };
-    }
-
-    if (!selectedYear) {
-      return entity;
-    }
-
-    const range = ranges.reduce((prev, curr) => {
-      if (curr.start && selectedYear - curr.start >= 0) {
-        return curr;
-      }
-      if (prev.start && selectedYear - prev.start >= 0) {
-        return prev;
-      }
-      return {};
-    });
-
-    const { id, imageUrl } = range;
-    return {
-      ...entity,
-      id: id ?? entity.id,
-      imageUrl: imageUrl ?? entity.imageUrl,
-    };
+  public updateEntityByBaseId(baseId: string, entity: EntityWithoutBaseId): Observable<void> {
+    const docRef = doc(this.firestore, DatabaseCollection.Entities, baseId);
+    const promise = setDoc(docRef, entity);
+    return from(promise);
   }
 }

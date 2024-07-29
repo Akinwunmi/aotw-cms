@@ -3,17 +3,27 @@
   <div class="row">
     <app-form-field-input
       translationKey="ID"
-      [control]="getControl(fieldEnum.Id)"
+      [control]="getControl(entityKeyEnum.Id)"
       [required]="true"
     />
-    <app-form-field-input translationKey="ALT_ID" [control]="getControl(fieldEnum.AltId)" />
-    <app-form-field-input translationKey="PARENT" [control]="getControl(fieldEnum.Parent)" />
+    <app-form-field-input
+      translationKey="TRANSLATION_KEY"
+      [control]="getControl(entityKeyEnum.TranslationKey)"
+      [required]="true"
+    />
   </div>
   <div class="row">
-    <app-form-field-input translationKey="IMAGE_URL" [control]="getControl(fieldEnum.ImageUrl)" />
+    <app-form-field-input translationKey="ALT_ID" [control]="getControl(entityKeyEnum.AltId)" />
+    <app-form-field-input translationKey="PARENT" [control]="getControl(entityKeyEnum.Parent)" />
+  </div>
+  <div class="row">
+    <app-form-field-input
+      translationKey="IMAGE_URL"
+      [control]="getControl(entityKeyEnum.ImageUrl)"
+    />
     <app-form-field-input
       translationKey="TYPE"
-      [control]="getControl(fieldEnum.Type)"
+      [control]="getControl(entityKeyEnum.Type)"
       [required]="true"
     />
   </div>
@@ -30,24 +40,33 @@
           <app-form-field-input
             translationKey="RANGE_START"
             type="number"
-            [control]="getControl(fieldEnum.Start, range)"
+            [control]="getControl(entityRangeKeyEnum.Start, range)"
             [required]="true"
           />
           <app-form-field-input
             translationKey="RANGE_END"
             type="number"
-            [control]="getControl(fieldEnum.End, range)"
+            [control]="getControl(entityRangeKeyEnum.End, range)"
           />
-          <app-form-field-input translationKey="ID" [control]="getControl(fieldEnum.Id, range)" />
+        </div>
+        <div class="row">
+          <app-form-field-input
+            translationKey="TRANSLATION_KEY"
+            [control]="getControl(entityRangeKeyEnum.TranslationKey, range)"
+          />
+          <app-form-field-input
+            translationKey="PARENT"
+            [control]="getControl(entityRangeKeyEnum.Parent, range)"
+          />
         </div>
         <div class="row">
           <app-form-field-input
             translationKey="IMAGE_URL"
-            [control]="getControl(fieldEnum.ImageUrl, range)"
+            [control]="getControl(entityRangeKeyEnum.ImageUrl, range)"
           />
           <app-form-field-input
             translationKey="TYPE"
-            [control]="getControl(fieldEnum.Type, range)"
+            [control]="getControl(entityRangeKeyEnum.Type, range)"
           />
         </div>
       </flag-card>
@@ -58,6 +77,6 @@
     </button>
   </div>
   <button flagButton type="submit" raised [disabled]="form.invalid || form.pristine">
-    {{ 'ADD_ENTITY.UPLOAD' | translate }}
+    {{ 'ADD_ENTITY' | translationKey: mode | translate }}
   </button>
 </form>

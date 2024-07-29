@@ -1,31 +1,22 @@
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
-import { EntityType } from '../../models';
-
-export enum Field {
-  AltId = 'altId',
-  End = 'end',
-  Id = 'id',
-  ImageUrl = 'imageUrl',
-  Parent = 'parent',
-  Ranges = 'ranges',
-  Start = 'start',
-  Type = 'type',
-}
+import { EntityKey, EntityRangeKey, EntityType } from '../../models';
 
 export interface EntityForm {
-  [Field.Id]: FormControl<string | null>;
-  [Field.AltId]: FormControl<string | null>;
-  [Field.Parent]: FormControl<string | null>;
-  [Field.ImageUrl]: FormControl<string | null>;
-  [Field.Type]: FormControl<EntityType | null>;
-  [Field.Ranges]: FormArray<FormGroup<EntityRangeForm>>;
+  [EntityKey.Id]: FormControl<string | null>;
+  [EntityKey.TranslationKey]: FormControl<string | null>;
+  [EntityKey.Type]: FormControl<EntityType | null>;
+  [EntityKey.AltId]: FormControl<string | null>;
+  [EntityKey.ImageUrl]: FormControl<string | null>;
+  [EntityKey.Parent]: FormControl<string | null>;
+  [EntityKey.Ranges]: FormArray<FormGroup<EntityRangeForm>>;
 }
 
 export interface EntityRangeForm {
-  [Field.Start]: FormControl<string | null>;
-  [Field.End]: FormControl<string | null>;
-  [Field.Id]: FormControl<string | null>;
-  [Field.ImageUrl]: FormControl<string | null>;
-  [Field.Type]: FormControl<string | null>;
+  [EntityRangeKey.Start]: FormControl<number | null>;
+  [EntityRangeKey.End]: FormControl<number | null>;
+  [EntityRangeKey.ImageUrl]: FormControl<string | null>;
+  [EntityRangeKey.Parent]: FormControl<string | null>;
+  [EntityRangeKey.TranslationKey]: FormControl<string | null>;
+  [EntityRangeKey.Type]: FormControl<string | null>;
 }

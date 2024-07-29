@@ -1,4 +1,4 @@
-@let NAME_TRANSLATION = 'ENTITIES' | translationKey: rangedEntity().id | translate;
+@let NAME_TRANSLATION = 'ENTITIES' | translationKey: rangedEntity().translationKey | translate;
 
 <section class="content">
   <div>
@@ -24,6 +24,11 @@
   </button>
   @if (isLoggedIn()) {
     <app-favorite-button [id]="rangedEntity().id" />
+  }
+  @if (isAdmin()) {
+    <button flagButton raised rounded secondary (click)="goToEditPage()">
+      <flag-icon>edit</flag-icon>
+    </button>
   }
 </div>
 <app-image

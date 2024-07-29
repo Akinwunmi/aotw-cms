@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -5,8 +6,10 @@ import {
   DestroyRef,
   OnDestroy,
   OnInit,
+  computed,
   inject,
-  input
+  input,
+  signal
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
@@ -31,6 +34,7 @@ import { selectSelectedYear } from '../../state/selectors';
     FlagDropdownDirective,
     FlagIconComponent,
     FlagYearPickerComponent,
+    NgClass,
     RangePipe,
     TranslateModule,
   ],
@@ -46,9 +50,12 @@ export class DatetimeNavigatorComponent implements OnDestroy, OnInit {
   public min = input(0);
   public max = input(new Date().getFullYear());
 
+  private isPlayingBackward = signal(false);
+  private isPlayingForward = signal(false);
+
+  public isPlaying = computed(() => this.isPlayingBackward() || this.isPlayingForward());
+
   public dropdownIsOpen = false;
-  public isPlayingBackward = false;
-  public isPlayingForward = false;
   public selectedYear!: number;
 
   private stop$ = new Subject<void>();
@@ -82,22 +89,24 @@ export class DatetimeNavigatorComponent implements OnDestroy, OnInit {
   }
 
   public play(backward?: boolean): void {
-    this.isPlayingBackward = !!backward;
-    this.isPlayingForward = !backward;
+    this.isPlayingBackward.set(!!backward);
+    this.isPlayingForward.set(!backward);
     this.playSpeed$.subscribe(() => {
-      const maxReached = this.isPlayingForward && this.max() === this.selectedYear;
-      const minReached = this.isPlayingBackward && this.min() === this.selectedYear;
+      const maxReached = this.isPlayingForward() && this.max() === this.selectedYear;
+      const minReached = this.isPlayingBackward() && this.min() === this.selectedYear;
       if (maxReached || minReached) {
         this.stop();
       }
-      this.setSelectedYear(this.isPlayingBackward ? this.selectedYear - 1 : this.selectedYear + 1);
+      this.setSelectedYear(
+        this.isPlayingBackward() ? this.selectedYear - 1 : this.selectedYear + 1,
+      );
     });
   }
 
   public stop(): void {
     this.stop$.next();
-    this.isPlayingBackward = false;
-    this.isPlayingForward = false;
+    this.isPlayingBackward.set(false);
+    this.isPlayingForward.set(false);
   }
 
   public setDropdownState(): void {
