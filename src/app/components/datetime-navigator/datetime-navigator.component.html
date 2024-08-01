@@ -13,7 +13,7 @@
   (click)="setDropdownState()"
   (keyup)="setDropdownState()"
 >
-  <button flagButton>
+  <button flagButton [ngClass]="{ pulse: isPlaying() }">
     {{ selectedYear }}
   </button>
 </div>
@@ -23,24 +23,16 @@
 
 <div class="play">
   <p>{{ 'COMMON.PLAY' | translate }}</p>
-  @if (!isPlayingBackward) {
-    <button flagButton [disabled]="MIN_SELECTED_YEAR || isPlayingForward" (click)="play(true)">
-      <flag-icon>fast_rewind</flag-icon>
-    </button>
-  } @else {
-    <button flagButton [disabled]="MIN_SELECTED_YEAR" (click)="stop()">
-      <flag-icon>pause</flag-icon>
-    </button>
-  }
-  @if (!isPlayingForward) {
-    <button flagButton [disabled]="MAX_SELECTED_YEAR || isPlayingBackward" (click)="play()">
-      <flag-icon>fast_forward</flag-icon>
-    </button>
-  } @else {
-    <button flagButton [disabled]="MAX_SELECTED_YEAR" (click)="stop()">
-      <flag-icon>pause</flag-icon>
-    </button>
-  }
+  <button flagButton [disabled]="MIN_SELECTED_YEAR || isPlaying()" (click)="play(true)">
+    <flag-icon>arrow_back_2</flag-icon>
+  </button>
+  <button
+    flagButton [disabled]="!isPlaying()" (click)="stop()">
+    <flag-icon>pause</flag-icon>
+  </button>
+  <button flagButton [disabled]="MAX_SELECTED_YEAR || isPlaying()" (click)="play()">
+    <flag-icon>play_arrow</flag-icon>
+  </button>
 </div>
 
 <ng-template #dropdown>

@@ -12,7 +12,7 @@ export const ADMIN_ROUTES: Route[] = [
     canActivate: [authGuard],
   },
   {
-    path: 'add-entity',
+    path: 'entity',
     loadChildren: () => import('../add-entity').then(
       m => m.ADD_ENTITY_ROUTES
     ),

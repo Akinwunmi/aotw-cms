@@ -45,7 +45,7 @@
             (click)="setActiveEntity(entity.id)"
             (keydown)="setActiveEntity(entity.id)"
           >
-            {{ 'ENTITIES.' + entity.id | uppercase | translate }}
+            {{ 'ENTITIES' | translationKey: entity.translationKey | translate }}
           </a>
         </li>
       }

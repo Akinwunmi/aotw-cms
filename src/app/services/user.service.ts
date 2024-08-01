@@ -1,4 +1,4 @@
-import { Injectable, inject, signal } from '@angular/core';
+import { Injectable, computed, inject, signal } from '@angular/core';
 import { Auth, user } from '@angular/fire/auth';
 import {
   Firestore,
@@ -26,6 +26,8 @@ export class UserService {
 
   public favorites = signal<string[]>([]);
   public roles = signal<UserRole[]>([]);
+
+  public isAdmin = computed(() => this.roles().includes(UserRole.Admin));
 
   public addUser(name: string, surname: string): Observable<void> {
     return this.docRef$.pipe(

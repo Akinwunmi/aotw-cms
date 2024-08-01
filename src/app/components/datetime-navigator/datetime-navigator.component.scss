@@ -8,7 +8,15 @@
   width: 6rem;
 
   button {
+    transition: font-weight 250ms ease-in-out;
     width: 100%;
+
+    &.pulse {
+      animation: pulse 3s infinite;
+      background-color: var(--flag-color-primary-100);
+      font-weight: 600;
+      outline: 2px solid transparent;
+    }
   }
 }
 
@@ -23,5 +31,17 @@
 
   p {
     padding-inline: var(--flag-space-md);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    outline-color: transparent;
+  }
+  65% {
+    outline-color: var(--flag-color-primary-500);
+  }
+  100% {
+    outline-color: transparent;
   }
 }

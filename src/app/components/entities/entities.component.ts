@@ -22,6 +22,7 @@ import {
 } from '../../models';
 import { EntityService } from '../../services';
 import { selectDiscover, selectLayout, selectSelectedYear } from '../../state/selectors';
+import { setImageRange } from '../../utils';
 import { FilterOption, SortDirection, SortOption } from '../advanced-search';
 import { ImageComponent } from '../image';
 import { EntityComponent } from '../entity';
@@ -100,7 +101,7 @@ export class EntitiesComponent implements OnInit {
       this.activeSorting = sorting.find(option => option.active);
       this.selectedYear = selectedYear;
       this.filteredEntities = this.filterEntities(this.entities()).map(entity =>
-        this.entityService.setImageRange(entity, this.selectedYear)
+        setImageRange(entity, this.selectedYear)
       );
       this.gridLayout = layout === Layout.Grid;
 
@@ -127,7 +128,6 @@ export class EntitiesComponent implements OnInit {
   private filterEntities(entities: Entity[]): Entity[] {
     return entities.filter(({ altId, id, ranges}) => {
       const isChildEntity = this.isChildEntity(id) || this.isChildEntity(altId);
-
       if (!ranges || !ranges[0].start) {
         return isChildEntity;
       }
@@ -140,23 +140,9 @@ export class EntitiesComponent implements OnInit {
     if (!id) {
       return false;
     }
-    
-    // Define children of parent entity
-    const isChild = id.startsWith(this.parentEntityId());
-    const isGrandchild = this.isGrandchildEntity(id);
-    const isSibling = this.isSiblingEntity(id);
 
-    return isChild && !isGrandchild && !isSibling;
-  }
-
-  private isGrandchildEntity(id: string): boolean {
-    const fullParentId = this.parentEntityId().length + this.grandparentEntityId().length;
-    return id.length > fullParentId + 3 && id[fullParentId + 2] !== '_';
-  }
-
-  private isSiblingEntity(id: string): boolean {
-    // If the first character after the entity id is an underscore, it is a sibling
-    return id[this.parentEntityId().length] === '_' || id.length <= this.parentEntityId().length;
+    const parentIdLength = this.parentEntityId().split('-').length;
+    return id.startsWith(this.parentEntityId()) && id.split('-').length === parentIdLength + 1;
   }
 
   private selectedYearIsInRange(ranges: EntityRange[]): boolean {

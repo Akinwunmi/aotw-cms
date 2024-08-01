@@ -1,4 +1,4 @@
-import { NgClass, NgTemplateOutlet, UpperCasePipe } from '@angular/common';
+import { NgClass, NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -17,11 +17,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { filter, startWith } from 'rxjs';
 
 import { DefaultEntity, DiscoverSection, Entity, EntityType, RouteDiscover } from '../../models';
+import { TranslationKeyPipe } from '../../pipes';
 
 @Component({
   selector: 'app-discover-header',
   standalone: true,
-  imports: [FlagIconComponent, NgClass, NgTemplateOutlet, TranslateModule, UpperCasePipe],
+  imports: [FlagIconComponent, NgClass, NgTemplateOutlet, TranslateModule, TranslationKeyPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover-header.component.html',
   styleUrl: './discover-header.component.scss'

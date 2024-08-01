@@ -16,6 +16,6 @@ export class AdminComponent {
   private readonly router = inject(Router);
 
   public goToAddEntity(): void {
-    this.router.navigate(['admin', 'add-entity']);
+    this.router.navigate(['admin', 'entity', 'add']);
   }
 }
