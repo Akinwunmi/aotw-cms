@@ -1,4 +1,4 @@
-import { Injectable, inject, signal } from '@angular/core';
+import { Injectable, computed, inject, signal } from '@angular/core';
 import { Auth, user } from '@angular/fire/auth';
 import {
   Firestore,
@@ -11,7 +11,7 @@ import {
 } from '@angular/fire/firestore';
 import { EMPTY, Observable, from, map, switchMap, tap } from 'rxjs';
 
-import { DatabaseCollection, User } from '../models';
+import { DatabaseCollection, User, UserRole } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,9 @@ export class UserService {
   );
 
   public favorites = signal<string[]>([]);
+  public roles = signal<UserRole[]>([]);
+
+  public isAdmin = computed(() => this.roles().includes(UserRole.Admin));
 
   public addUser(name: string, surname: string): Observable<void> {
     return this.docRef$.pipe(
@@ -48,7 +51,10 @@ export class UserService {
 
         const promise = getDoc(docRef).then(snapshot => snapshot.data() as User);
         return from(promise).pipe(
-          tap(user => this.favorites.set(user.favorites))
+          tap(user => {
+            this.favorites.set(user.favorites);
+            this.roles.set(user.roles ?? []);
+          })
         );
       })
     );

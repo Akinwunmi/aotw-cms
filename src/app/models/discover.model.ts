@@ -1,4 +1,4 @@
-export enum DefaultTopic {
+export enum DefaultEntity {
   Continents = 'af',
   Organizations = 'oi',
 }

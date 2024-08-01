@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -13,10 +14,10 @@ import {
   FlagIconComponent,
 } from '@flagarchive/angular';
 import { Store } from '@ngrx/store';
+import { TranslateModule } from '@ngx-translate/core';
 import { Subject, takeUntil } from 'rxjs';
 
 import { Layout } from '../../models';
-import { SHARED_IMPORTS } from '../../shared';
 import { setLayout } from '../../state/actions';
 import { selectLayout } from '../../state/selectors';
 import { SortingComponent } from '../sorting';
@@ -32,11 +33,12 @@ import {
   selector: 'app-advanced-search',
   standalone: true,
   imports: [
-    ...SHARED_IMPORTS,
     FlagButtonDirective,
     FlagFormFieldComponent,
     FlagIconComponent,
+    NgClass,
     SortingComponent,
+    TranslateModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './advanced-search.component.html',

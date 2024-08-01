@@ -1,0 +1,38 @@
+@let NAME_TRANSLATION = 'ENTITIES' | translationKey: rangedEntity().translationKey | translate;
+
+<section class="content">
+  <div>
+    <flag-breadcrumb [items]="breadcrumb()" (selectedItem)="goToPage($event)" />
+    @if (isExpanded || !isMobile) {
+      <h2>{{ NAME_TRANSLATION }}</h2>
+      <h3>{{ 'ENTITY_TYPES' | translationKey: rangedEntity().type | translate }}</h3>
+    }
+  </div>
+  <button flagButton ghost type="button" (click)="toggleState()">
+    <flag-icon>
+      @if (isExpanded) {
+        keyboard_arrow_up
+      } @else {
+        keyboard_arrow_down
+      }
+    </flag-icon>
+  </button>
+</section>
+<div class="actions">
+  <button flagButton raised rounded disabled>
+    <flag-icon>info_i</flag-icon>
+  </button>
+  @if (isLoggedIn()) {
+    <app-favorite-button [id]="rangedEntity().id" />
+  }
+  @if (isAdmin()) {
+    <button flagButton raised rounded secondary (click)="goToEditPage()">
+      <flag-icon>edit</flag-icon>
+    </button>
+  }
+</div>
+<app-image
+  [src]="rangedEntity().imageUrl ?? ''"
+  [alt]="NAME_TRANSLATION"
+  [placeholder]="!rangedEntity().imageUrl"
+/>

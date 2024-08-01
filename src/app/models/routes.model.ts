@@ -1,7 +1,14 @@
+export enum RouteAdmin {
+  AdminIdentifier = 0,
+  EntityIdentifier = 1,
+  Mode = 2,
+  Entity = 3,
+}
+
 export enum RouteDiscover {
   DiscoverIdentifier = 0,
-  TopicIdentifier = 1,
-  Topic = 2
+  EntityIdentifier = 1,
+  Entity = 2
 }
 
 export enum RouteSearch {

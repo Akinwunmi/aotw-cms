@@ -1,6 +1,10 @@
 @if (options().length) {
   @for (option of options(); track option.id) {
-    <button flagButton [attr.raised]="option.active || undefined" (click)="updateOptions(option.id)">
+    <button
+      flagButton
+      [attr.raised]="option.active || undefined"
+      (click)="updateOptions(option.id)"
+    >
       {{ option.label }}
     </button>
   }

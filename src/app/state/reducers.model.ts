@@ -14,7 +14,7 @@ export interface AppState {
 }
 
 export interface DiscoverState extends SearchState {
-  activeTopicId: string;
+  activeEntityId: string;
 }
 
 export type LayoutState = Pick<AppState, 'layout'>;

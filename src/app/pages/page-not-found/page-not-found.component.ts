@@ -1,13 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-
-import { SHARED_IMPORTS } from '../../shared';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [TranslateModule],
   selector: 'app-page-not-found',
   standalone: true,
-  imports: SHARED_IMPORTS,
-  templateUrl: './page-not-found.component.html',
   styleUrl: './page-not-found.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './page-not-found.component.html',
 })
 export class PageNotFoundComponent {}

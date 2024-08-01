@@ -1,4 +1,7 @@
-<button flagButton [disabled]="min() === selectedYear" (click)="previous()">
+@let MAX_SELECTED_YEAR = max() === selectedYear;
+@let MIN_SELECTED_YEAR = min() === selectedYear;
+
+<button flagButton [disabled]="MIN_SELECTED_YEAR" (click)="previous()">
   <flag-icon>keyboard_arrow_left</flag-icon>
 </button>
 <div
@@ -10,13 +13,27 @@
   (click)="setDropdownState()"
   (keyup)="setDropdownState()"
 >
-  <button flagButton>
+  <button flagButton [ngClass]="{ pulse: isPlaying() }">
     {{ selectedYear }}
   </button>
 </div>
-<button flagButton [disabled]="max() === selectedYear" (click)="next()">
+<button flagButton [disabled]="MAX_SELECTED_YEAR" (click)="next()">
   <flag-icon>keyboard_arrow_right</flag-icon>
 </button>
+
+<div class="play">
+  <p>{{ 'COMMON.PLAY' | translate }}</p>
+  <button flagButton [disabled]="MIN_SELECTED_YEAR || isPlaying()" (click)="play(true)">
+    <flag-icon>arrow_back_2</flag-icon>
+  </button>
+  <button
+    flagButton [disabled]="!isPlaying()" (click)="stop()">
+    <flag-icon>pause</flag-icon>
+  </button>
+  <button flagButton [disabled]="MAX_SELECTED_YEAR || isPlaying()" (click)="play()">
+    <flag-icon>play_arrow</flag-icon>
+  </button>
+</div>
 
 <ng-template #dropdown>
   <flag-year-picker

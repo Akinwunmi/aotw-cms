@@ -18,7 +18,8 @@ import {
   filter,
   map,
   switchMap,
-  take
+  take,
+  tap,
 } from 'rxjs';
 
 import {
@@ -26,8 +27,8 @@ import {
   SortDirection,
   SortOption
 } from '../../components/advanced-search';
-import { ArchiveTopics, RouteDiscover, Topic } from '../../models';
-import { ArchiveService } from '../../services';
+import { Entity, RouteDiscover } from '../../models';
+import { EntityService } from '../../services';
 import { setDiscoverState } from '../../state/actions';
 import { initialState } from '../../state/reducers';
 import { selectDiscover } from '../../state/selectors';
@@ -38,38 +39,38 @@ import { DISCOVER_IMPORTS } from './discover.imports';
 @Component({
   selector: 'app-discover',
   standalone: true,
-  imports: DISCOVER_IMPORTS,
+  imports: [...DISCOVER_IMPORTS],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss']
 })
 export class DiscoverComponent implements OnInit {
-  public archiveData!: ArchiveTopics;
+  private readonly cdr = inject(ChangeDetectorRef);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly entityService = inject(EntityService);
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  private readonly store = inject(Store);
+  private readonly translate = inject(TranslateService);
 
-  public mainTopics?: Topic[];
-  public activeMainTopicId!: string;
+  private entityId = signal('');
+  private entityNames = computed(() => this.entityId()?.split('-'));
 
-  public activeTopic?: Topic;
-  public topicsBreadcrumb: BreadcrumbItem[] = [];
+  public entities!: Entity[];
+  public mainEntities?: Entity[];
+  public activeMainEntityId!: string;
+
+  public activeEntity?: Entity;
+  public entitiesBreadcrumb: BreadcrumbItem[] = [];
 
   public filters: FilterOption[] = [];
 
   public minYear = 0;
   public maxYear!: number;
 
-  private archiveService = inject(ArchiveService);
-  private cdr = inject(ChangeDetectorRef);
-  private destroyRef = inject(DestroyRef);
-  private route = inject(ActivatedRoute);
-  private router = inject(Router);
-  private store = inject(Store);
-  private translate = inject(TranslateService);
-
-  private topicId = signal('');
-  private topicNames = computed(() => this.topicId()?.split('-'));
-
   private currentYear = new Date().getFullYear();
-
+  
+  private entities$ = this.entityService.getEntities();
   private discoverState$ = this.store.select(selectDiscover).pipe(
     take(1)
   );
@@ -93,34 +94,31 @@ export class DiscoverComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.getArchiveData(this.router.url);
-    const getArchive$ = this.archiveService.getArchive();
+    this.setEntityIdAndBreadcrumb(this.router.url);
 
-    getArchive$.pipe(
+    this.entities$.pipe(
       take(1)
-    ).subscribe(archiveData => {
-      this.setArchiveData(archiveData);
-      this.setMinYear(archiveData.topics);
+    ).subscribe(entities => {
+      this.setEntities(entities);
+      this.setMinYear(entities);
     });
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(event => (event as NavigationEnd).url),
-      switchMap(url => {
-        this.getArchiveData(url);
-        return getArchive$;
-      }),
-      takeUntilDestroyed(this.destroyRef)
-    ).subscribe(archiveData => {
-      this.setArchiveData(archiveData);
+      tap(url => this.setEntityIdAndBreadcrumb(url)),
+      switchMap(() => this.entities$),
+      takeUntilDestroyed(this.destroyRef),
+    ).subscribe((entities) => {
+      this.setEntities(entities);
     });
   }
 
-  public setActiveTopic(id: string): void {
-    this.router.navigate(['topic', id], { relativeTo: this.route });
-    this.activeMainTopicId = id;
-    this.activeTopic = this.topicNames()?.length > 1
-      ? this.archiveData.topics.find(topic => topic.altId === id || topic.id === id)
+  public setActiveEntity(id: string): void {
+    this.router.navigate(['entity', id], { relativeTo: this.route });
+    this.activeMainEntityId = id;
+    this.activeEntity = this.entityNames()?.length > 1
+      ? this.entities.find(entity => entity.altId === id || entity.id === id)
       : undefined;
     this.setMaxYear();
 
@@ -137,49 +135,49 @@ export class DiscoverComponent implements OnInit {
     }));
   }
 
-  private getArchiveData(rawUrl: string): void {
+  private setEntityIdAndBreadcrumb(rawUrl: string): void {
     const url = rawUrl.slice(1).split('/');
-    if (url[RouteDiscover.Topic] === undefined) {
-      this.discoverState$.subscribe(({ activeTopicId }) => {
-        this.topicId.set(activeTopicId);
+    if (url[RouteDiscover.Entity] === undefined) {
+      this.discoverState$.pipe(
+        take(1),
+      ).subscribe(({ activeEntityId }) => {
+        this.entityId.set(activeEntityId);
       });
     } else {
-      this.topicId.set(url[RouteDiscover.Topic]);
+      this.entityId.set(url[RouteDiscover.Entity]);
     }
 
-    if (this.topicNames) {
-      // set topic id as title and current url,
-      // until index of parent topic + topic as link
-      this.topicsBreadcrumb = this.topicNames()?.slice(0, -1).map(topic => ({
-        title: topic,
-        link: `${rawUrl.slice(0, rawUrl.indexOf(topic))}${topic}`
+    if (this.entityNames) {
+      // set entity id as title and current url,
+      // until index of parent entity + entity as link
+      this.entitiesBreadcrumb = this.entityNames()?.slice(0, -1).map(entity => ({
+        title: entity,
+        link: `${rawUrl.slice(0, rawUrl.indexOf(entity))}${entity}`
       } as BreadcrumbItem));
     }
 
     this.cdr.detectChanges();
   }
 
-  private setArchiveData(archiveData: ArchiveTopics): void {
-    this.archiveData = archiveData;
-    const { topics, parentType } = this.archiveData;
+  private setEntities(entities: Entity[]): void {
+    this.entities = entities;
+    this.setFiltersAndSorting();
 
-    this.setFiltersAndSorting(parentType);
-
-    this.mainTopics = topics.filter(topic => topic.id.length === 2);
-    this.setActiveTopic(this.topicId() || this.mainTopics[0].id);
+    this.mainEntities = entities.filter(entity => entity.id.length === 2);
+    this.setActiveEntity(this.entityId() || this.mainEntities[0].id);
     this.discoverState$.subscribe(discover => {
       this.store.dispatch(setDiscoverState({
         ...discover,
-        activeTopicId: this.topicId(),
+        activeEntityId: this.entityId(),
       }));
     });
 
     this.cdr.detectChanges();
   }
 
-  private setFiltersAndSorting(parentType?: string): void {
+  private setFiltersAndSorting(): void {
     combineLatest([
-      this.translate.stream(['DISCOVER.HAS_PARENT'], { type: parentType?.toLowerCase() }),
+      this.translate.stream(['DISCOVER.HAS_PARENT'], { type: 'country' }),
       this.translate.stream(['COMMON.NAME', 'DISCOVER.PARENT'])
     ]).pipe(
       map(([filterTranslations, sortingTranslations]) => ({
@@ -206,15 +204,15 @@ export class DiscoverComponent implements OnInit {
   }
 
   private setMaxYear(): void {
-    const ranges = this.activeTopic?.ranges || [];
+    const ranges = this.activeEntity?.ranges || [];
     const endYear = ranges.slice(-1)[0]?.end;
 
     this.maxYear = endYear || this.currentYear;
   }
 
-  private setMinYear(topics: Topic[]): void {
-    const allRanges = topics.filter(topic => topic.ranges).flatMap(topic => topic.ranges);
-    const ranges = this.activeTopic?.ranges || [];
+  private setMinYear(entities: Entity[]): void {
+    const allRanges = entities.filter(entity => entity.ranges).flatMap(entity => entity.ranges);
+    const ranges = this.activeEntity?.ranges || [];
     const startYear = ranges[0]?.start;
 
     this.minYear = startYear ?? Math.min(...allRanges.map(range =>

@@ -1,0 +1,82 @@
+<app-page-header title="PAGES.ADD_ENTITY" />
+<form [formGroup]="form" (ngSubmit)="upload()">
+  <div class="row">
+    <app-form-field-input
+      translationKey="ID"
+      [control]="getControl(entityKeyEnum.Id)"
+      [required]="true"
+    />
+    <app-form-field-input
+      translationKey="TRANSLATION_KEY"
+      [control]="getControl(entityKeyEnum.TranslationKey)"
+      [required]="true"
+    />
+  </div>
+  <div class="row">
+    <app-form-field-input translationKey="ALT_ID" [control]="getControl(entityKeyEnum.AltId)" />
+    <app-form-field-input translationKey="PARENT" [control]="getControl(entityKeyEnum.Parent)" />
+  </div>
+  <div class="row">
+    <app-form-field-input
+      translationKey="IMAGE_URL"
+      [control]="getControl(entityKeyEnum.ImageUrl)"
+    />
+    <app-form-field-input
+      translationKey="TYPE"
+      [control]="getControl(entityKeyEnum.Type)"
+      [required]="true"
+    />
+  </div>
+  <div class="ranges" formArrayName="ranges">
+    @for (range of rangesFormArray.controls; track $index) {
+      <flag-card [formGroupName]="$index">
+        <div class="header">
+          <p>{{ 'ADD_ENTITY.RANGE_TITLE' | translate: { index: $index + 1 } }}</p>
+          <button flagButton type="button" ghost (click)="removeRange($index)">
+            <flag-icon>delete</flag-icon>
+          </button>
+        </div>
+        <div class="row">
+          <app-form-field-input
+            translationKey="RANGE_START"
+            type="number"
+            [control]="getControl(entityRangeKeyEnum.Start, range)"
+            [required]="true"
+          />
+          <app-form-field-input
+            translationKey="RANGE_END"
+            type="number"
+            [control]="getControl(entityRangeKeyEnum.End, range)"
+          />
+        </div>
+        <div class="row">
+          <app-form-field-input
+            translationKey="TRANSLATION_KEY"
+            [control]="getControl(entityRangeKeyEnum.TranslationKey, range)"
+          />
+          <app-form-field-input
+            translationKey="PARENT"
+            [control]="getControl(entityRangeKeyEnum.Parent, range)"
+          />
+        </div>
+        <div class="row">
+          <app-form-field-input
+            translationKey="IMAGE_URL"
+            [control]="getControl(entityRangeKeyEnum.ImageUrl, range)"
+          />
+          <app-form-field-input
+            translationKey="TYPE"
+            [control]="getControl(entityRangeKeyEnum.Type, range)"
+          />
+        </div>
+      </flag-card>
+    }
+    <button flagButton type="button" (click)="addRange()">
+      <flag-icon>add</flag-icon>
+      {{ 'ADD_ENTITY.ADD_RANGE' | translate }}
+    </button>
+  </div>
+  <button flagButton type="submit" raised [disabled]="form.invalid || form.pristine">
+    {{ 'ADD_ENTITY' | translationKey: mode | translate }}
+  </button>
+</form>

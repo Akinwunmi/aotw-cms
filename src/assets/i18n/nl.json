@@ -5,6 +5,8 @@
   },
   "PAGES": {
     "ABOUT": "Over dit project",
+    "ADD_ENTITY": "Voeg entiteit toe",
+    "ADMIN": "Admin dashboard",
     "HOME": "Home",
     "LOGIN": "Inloggen",
     "MY_ACCOUNT": "Mijn account",
@@ -28,16 +30,16 @@
     "LOGIN": "Inloggen",
     "LOGOUT": "Uitloggen",
     "NAME": "Naam",
-    "SURNAME": "Achternaam",
     "PAGE_NOT_FOUND": "Pagina onbekend",
     "PASSWORD": "Wachtwoord",
+    "PLAY": "Afspelen",
     "SEARCH": "Zoek",
     "SIGNUP": "Registreren",
     "SORT": "Sorteer",
+    "SURNAME": "Achternaam",
     "TIMELINE": "Tijdlijn",
     "USERNAME": "Gebruikersnaam",
-    "WELCOME": "Welkom!",
-    "WELCOME_USER": "Welkom {{ username }}!"
+    "WELCOME": "Welkom!"
   },
   "MESSAGES": {
     "AUTH": {
@@ -54,6 +56,15 @@
     "CHANGE_PASSWORD": "Wachtwoord wijzigen",
     "EDIT_ACCOUNT": "Account bewerken"
   },
+  "ADMIN": {
+    "ADD_ENTITY": "Voeg entiteit toe"
+  },
+  "ADD_ENTITY": {
+    "ADD": "Voeg entiteit toe",
+    "ADD_RANGE": "Voeg periode toe",
+    "EDIT": "Update entiteit",
+    "RANGE_TITLE": "Periode {{ index }}"
+  },
   "FILTERS_AND_SORTING": {
     "ADVANCED_SEARCH": "Geavanceerd zoeken",
     "FILTER_BY": "Filteren met:"
@@ -64,7 +75,63 @@
     "ORGANIZATIONS": "Organisaties",
     "PARENT": "Onderdeel van"
   },
-  "TOPICS": {
+  "FORM": {
+    "CONTROLS": {
+      "ALT_ID": {
+        "LABEL": "Alternatieve ID",
+        "PLACEHOLDER": "Voer alternatieve ID in"
+      },
+      "EMAIL_ADDRESS": {
+        "LABEL": "E-mailadres",
+        "PLACEHOLDER": "Voer e-mailadres in"
+      },
+      "ID": {
+        "LABEL": "ID",
+        "PLACEHOLDER": "Voer ID in"
+      },
+      "IMAGE_URL": {
+        "LABEL": "Afbeelding URL",
+        "PLACEHOLDER": "Voer afbeelding URL in"
+      },
+      "NAME": {
+        "LABEL": "Voornaam",
+        "PLACEHOLDER": "Voer voornaam in"
+      },
+      "PARENT": {
+        "LABEL": "ID van moederentiteit",
+        "PLACEHOLDER": "Voer ID van moederentiteit in"
+      },
+      "PASSWORD": {
+        "LABEL": "Wachtwoord",
+        "PLACEHOLDER": "Voer wachtwoord in"
+      },
+      "RANGE_END": {
+        "LABEL": "Einde",
+        "PLACEHOLDER": "Voer eindjaar in"
+      },
+      "RANGE_START": {
+        "LABEL": "Begin",
+        "PLACEHOLDER": "Voer beginjaar in"
+      },
+      "SURNAME": {
+        "LABEL": "Achternaam",
+        "PLACEHOLDER": "Voer achternaam in"
+      },
+      "TRANSLATION_KEY": {
+        "LABEL": "Vertalingskey",
+        "PLACEHOLDER": "Voer vertalingskey in"
+      },
+      "TYPE": {
+        "LABEL": "Type",
+        "PLACEHOLDER": "Voer type in"
+      },
+      "USERNAME": {
+        "LABEL": "Gebruikersnaam",
+        "PLACEHOLDER": "Voer gebruikersnaam in"
+      }
+    }
+  },
+  "ENTITY_TYPES": {
     "COMMUNITY": "Gemeenschap",
     "CONTINENT": "Continent",
     "COUNTRY": "Land",
@@ -74,90 +141,76 @@
     "PROVINCE": "Provincie",
     "SPECIALIZED_AGENCY": "Gespecialiseerde organisatie"
   },
-  "REGIONS": {
-    "AF": "Afrika",
-    "AS": "Azië",
-    "AU": "Australië",
-    "EU": "Europa",
-    "EU_ALB": "Albanië",
-    "EU_AND": "Andorra",
-    "EU_ARM": "Armenië",
-    "EU_AUT": "Oostenrijk",
-    "EU_BEL": "België",
-    "EU_BGR": "Bulgarije",
-    "EU_BIH": "Bosnië and Herzegovina",
-    "EU_BLR": "Wit-Rusland",
-    "EU_CHE": "Zwitserland",
-    "EU_CYP": "Cyprus",
-    "EU_CZE": "Tsjechië",
-    "EU_DEU": "Duitsland",
-    "EU_DNK": "Denemarken",
-    "EU_ESP": "Spanje",
-    "EU_EST": "Estland",
-    "EU_FIN": "Finland",
-    "EU_FIN_ALA": "Åland",
-    "EU_FRA": "Frankrijk",
-    "EU_GBR": "Verenigd Koninkrijk",
-    "EU_GEO": "Georgië",
-    "EU_GIB": "Gibraltar",
-    "EU_GRC": "Griekenland",
-    "EU_HRV": "Kroatië",
-    "EU_HUN": "Hongarije",
-    "EU_IRL": "Ierland",
-    "EU_ISL": "IJsland",
-    "EU_ITA": "Italië",
-    "EU_KOS": "Kosovo",
-    "EU_LIE": "Liechtenstein",
-    "EU_LTU": "Litouwen",
-    "EU_LUX": "Luxemburg",
-    "EU_LVA": "Letland",
-    "EU_MCO": "Monaco",
-    "EU_MDA": "Moldavië",
-    "EU_MKD": "Noord-Macedonië",
-    "EU_MLT": "Malta",
-    "EU_MNE": "Montenegro",
-    "EU_NLD": "Nederland",
-    "EU_NLD_ANT": "Nederlandse Antillen",
-    "EU_NLD_ABW": "Aruba",
-    "EU_NLD_BES": "Caribisch Nederland",
-    "EU_NLD_CUR": "Curaçao",
-    "EU_NLD_DREN": "Drenthe",
-    "EU_NLD_FLEV": "Flevoland",
-    "EU_NLD_FRYS": "Friesland",
-    "EU_NLD_GELD": "Gelderland",
-    "EU_NLD_GRON": "Groningen",
-    "EU_NLD_LIMB": "Limburg",
-    "EU_NLD_NBRA": "Noord-Brabant",
-    "EU_NLD_NHOL": "Noord-Holland",
-    "EU_NLD_OVER": "Overijssel",
-    "EU_NLD_ZHOL": "Zuid-Holland",
-    "EU_NLD_UTRE": "Utrecht",
-    "EU_NLD_ZEEL": "Zeeland",
-    "EU_NLD_SXM": "Sint Maarten",
-    "EU_NOR": "Noorwegen",
-    "EU_POL": "Polen",
-    "EU_PRT": "Portugal",
-    "EU_ROU": "Roemenië",
-    "EU_RUS": "Rusland",
-    "EU_SMR": "San Marino",
-    "EU_SRB": "Servië",
-    "EU_SVK": "Slowakije",
-    "EU_SVN": "Slovenië",
-    "EU_SWE": "Zweden",
-    "EU_TUR": "Turkije",
-    "EU_UKR": "Oekraïne",
-    "EU_VAT": "Vaticaanstad",
-    "NA": "Noord-Amerika",
-    "OI": "Internationaal",
-    "OI_IOC": "Internationaal Olympisch Comité",
-    "OI_IPC": "Internationaal Paralympisch Comité",
-    "OI_UNE": "UNESCO",
-    "OI_UNX": "Verenigde Naties",
-    "OO": "Diversen",
-    "OO_LGB": "LGBT gemeenschap",
-    "OO_NON": "Non-binaire gemeenschap",
-    "OO_PAN": "Pansexuele gemeenschap",
-    "OO_TRA": "Transexuele gemeenschap",
-    "SA": "Zuid-Amerika"
+  "ENTITIES": {
+    "AFRICA": "Afrika",
+    "ALAND": "Åland",
+    "ALBANIA": "Albanië",
+    "ANDORRA": "Andorra",
+    "ARMENIA": "Armenië",
+    "ARUBA": "Aruba",
+    "ASIA": "Azië",
+    "AUSTRALIA": "Australië",
+    "AUSTRIA": "Oostenrijk",
+    "BELARUS": "Wit-Rusland",
+    "BELGIUM": "België",
+    "BOSNIA_AND_HERZEGOVINA": "Bosnië and Herzegovina",
+    "BULGARIA": "Bulgarije",
+    "CROATIA": "Kroatië",
+    "CURACAO": "Curaçao",
+    "CYPRUS": "Cyprus",
+    "CZECHIA": "Tsjechië",
+    "DENMARK": "Denemarken",
+    "ESTONIA": "Estland",
+    "EUROPE": "Europa",
+    "FINLAND": "Finland",
+    "FRANCE": "Frankrijk",
+    "GEORGIA": "Georgië",
+    "GERMANY": "Duitsland",
+    "GIBRALTAR": "Gibraltar",
+    "GREAT_BRITAIN": "Verenigd Koninkrijk",
+    "GREECE": "Griekenland",
+    "HUNGARY": "Hongarije",
+    "ICELAND": "IJsland",
+    "INTERNATIONAL": "Internationaal",
+    "IOC": "Internationaal Olympisch Comité",
+    "IPC": "Internationaal Paralympisch Comité",
+    "IRELAND": "Ierland",
+    "ITALY": "Italië",
+    "KOSOVO": "Kosovo",
+    "LATVIA": "Letland",
+    "LGBT": "LGBT gemeenschap",
+    "LIECHTENSTEIN": "Liechtenstein",
+    "LITHUANIA": "Litouwen",
+    "LUXEMBOURG": "Luxemburg",
+    "MALTA": "Malta",
+    "MISCELLANEOUS": "Diversen",
+    "MOLDOVA": "Moldavië",
+    "MONACO": "Monaco",
+    "MONTENEGRO": "Montenegro",
+    "NETHERLANDS_ANTILLES": "Nederlandse Antillen",
+    "NETHERLANDS": "Nederland",
+    "NON_BINARY": "Non-binaire gemeenschap",
+    "NORTH_AMERICA": "Noord-Amerika",
+    "NORTH_MACEDONIA": "Noord-Macedonië",
+    "NORWAY": "Noorwegen",
+    "PANSEXUAL": "Pansexuele gemeenschap",
+    "POLAND": "Polen",
+    "PORTUGAL": "Portugal",
+    "ROMANIA": "Roemenië",
+    "RUSSIA": "Rusland",
+    "SAN_MARINO": "San Marino",
+    "SERBIA": "Servië",
+    "SLOVAKIA": "Slowakije",
+    "SLOVANIA": "Slovenië",
+    "SOUTH_AMERICA": "Zuid-Amerika",
+    "SPAIN": "Spanje",
+    "SWEDEN": "Zweden",
+    "SWITZERLAND": "Zwitserland",
+    "TRANSEXUAL": "Transexuele gemeenschap",
+    "TURKEY": "Turkije",
+    "UKRAINE": "Oekraïne",
+    "UNESCO": "UNESCO",
+    "UNITED_NATIONS": "Verenigde Naties",
+    "VATICAN_CITY": "Vaticaanstad"
   }
 }

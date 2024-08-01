@@ -1,12 +1,12 @@
-@if (archiveData) {
-  <section class="header" [ngClass]="{ 'main-topic': !activeTopic }">
-    @if (activeTopic) {
-      <app-topic-header [breadcrumb]="topicsBreadcrumb" [topic]="activeTopic" />
+@if (entities) {
+  <section class="header">
+    @if (activeEntity) {
+      <app-entity-header [breadcrumb]="entitiesBreadcrumb" [entity]="activeEntity" />
     } @else {
       <app-discover-header
-        [activeTopicId]="activeMainTopicId"
-        [topics]="mainTopics"
-        (activeTopic)="setActiveTopic($event)"
+        [activeEntityId]="activeMainEntityId"
+        [entities]="mainEntities"
+        (activeEntity)="setActiveEntity($event)"
       />
     }
     <div class="actions">

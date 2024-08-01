@@ -1,0 +1,17 @@
+@let NAME_TRANSLATION = 'ENTITIES' | translationKey: entity().translationKey | translate;
+
+<figure [ngClass]="{ card: card() }">
+  <app-image
+    [src]="entity().imageUrl ?? ''"
+    [alt]="NAME_TRANSLATION"
+    [placeholder]="!entity().imageUrl"
+  />
+  @if (showLabel()) {
+    <figcaption>
+      <span class="name">{{ NAME_TRANSLATION }}</span>
+      @if (entity().parent; as parent) {
+        <span class="parent">({{ setParentLabel(parent) }})</span>
+      }
+    </figcaption>
+  }
+</figure>

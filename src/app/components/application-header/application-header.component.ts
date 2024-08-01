@@ -13,12 +13,12 @@ import {
   FlagDropdownDirective,
   FlagIconComponent,
   FlagListItemComponent,
+  FlagPillComponent,
 } from '@flagarchive/angular';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
-import { DefaultTopic } from '../../models';
+import { DefaultEntity } from '../../models';
 import { AuthService } from '../../services';
-import { SHARED_IMPORTS } from '../../shared';
 
 import { HeaderMenu } from './application-header.model';
 
@@ -26,22 +26,23 @@ import { HeaderMenu } from './application-header.model';
   selector: 'app-header',
   standalone: true,
   imports: [
-    ...SHARED_IMPORTS,
     FlagButtonDirective,
     FlagCardComponent,
     FlagDropdownDirective,
     FlagIconComponent,
     FlagListItemComponent,
+    FlagPillComponent,
+    TranslateModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './application-header.component.html',
   styleUrls: ['./application-header.component.scss'],
 })
 export class ApplicationHeaderComponent implements OnInit {
-  private authService = inject(AuthService);
-  private destroyRef = inject(DestroyRef);
-  private router = inject(Router);
-  private translate = inject(TranslateService);
+  private readonly authService = inject(AuthService);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly router = inject(Router);
+  private readonly translate = inject(TranslateService);
 
   public headerMenuEnum = HeaderMenu;
 
@@ -62,7 +63,7 @@ export class ApplicationHeaderComponent implements OnInit {
   }
 
   public goToHome(): void {
-    this.router.navigate(['discover', 'topic', DefaultTopic.Continents]);
+    this.router.navigate(['discover', 'entity', DefaultEntity.Continents]);
   }
 
   public goToPage(name: string): void {

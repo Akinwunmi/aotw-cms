@@ -1,5 +1,5 @@
 export enum DatabaseCollection {
-  Regions = 'regions',
+  Entities = 'entities',
   Users = 'users',
 }
 
