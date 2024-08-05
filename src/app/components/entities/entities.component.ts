@@ -5,7 +5,6 @@ import {
   Component,
   DestroyRef,
   OnInit,
-  computed,
   inject,
   signal
 } from '@angular/core';
@@ -50,10 +49,6 @@ export class EntitiesComponent implements OnInit {
   public parentEntityId = signal('');
 
   private entities = signal<Entity[]>([]);
-
-  private grandparentEntityId = computed(
-    () => this.parentEntityId()?.split('-').slice(-1)[0] || ''
-  );
 
   // TODO - Implement applyFilters method
   public filteredEntities: Entity[] = [];
